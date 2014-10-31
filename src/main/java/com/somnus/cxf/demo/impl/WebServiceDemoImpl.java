@@ -19,7 +19,6 @@ public class WebServiceDemoImpl implements WebServiceDemoI {
 	@Autowired
 	private SyuserServiceI userService;
 
-	@Override
 	public String helloWs(String name) {
 		if (StringUtils.isBlank(name)) {
 			name = "SunYu";
@@ -29,7 +28,6 @@ public class WebServiceDemoImpl implements WebServiceDemoI {
 		return str;
 	}
 
-	@Override
 	public Syuser getUser(String id) {
 		if (StringUtils.isBlank(id)) {
 			id = "0";

@@ -29,7 +29,6 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 	@Autowired
 	private BaseDaoI<Syuser> userDao;
 
-	@Override
 	public void updateOrganization(Syorganization syorganization) {
 		if (!StringUtils.isBlank(syorganization.getId())) {
 			Syorganization t = getById(syorganization.getId());
@@ -69,7 +68,6 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 		return false;
 	}
 
-	@Override
 	public void grant(String id, String resourceIds) {
 		Syorganization organization = getById(id);
 		if (organization != null) {
@@ -85,13 +83,11 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 		}
 	}
 
-	@Override
 	public List<Syorganization> findOrganizationByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syorganization t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
 	}
 
-	@Override
 	public void saveOrganization(Syorganization syorganization, String userId) {
 		save(syorganization);
 

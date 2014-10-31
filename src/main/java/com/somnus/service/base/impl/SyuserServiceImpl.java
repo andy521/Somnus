@@ -30,7 +30,6 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 	@Autowired
 	private BaseDaoI<Syorganization> organizationDao;
 
-	@Override
 	public void grantRole(String id, String roleIds) {
 		Syuser user = getById(id);
 		if (user != null) {
@@ -46,7 +45,6 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		}
 	}
 
-	@Override
 	public void grantOrganization(String id, String organizationIds) {
 		Syuser user = getById(id);
 		if (user != null) {
@@ -62,7 +60,6 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		}
 	}
 
-	@Override
 	public List<Map<String,Object>> userCreateDatetimeChart() {
 		List<Map<String,Object>> l = new ArrayList<Map<String,Object>>();
 		int k = 0;
@@ -79,7 +76,6 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		return l;
 	}
 
-	@Override
 	public Long countUserByRoleId(String roleId) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("roleId", roleId);
@@ -87,7 +83,6 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		return count(hql, params);
 	}
 
-	@Override
 	public Long countUserByNotRoleId() {
 		String hql = "select count(*) from Syuser t left join t.syroles role where role.id is null";
 		return count(hql);

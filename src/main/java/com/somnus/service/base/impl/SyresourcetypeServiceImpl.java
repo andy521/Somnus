@@ -25,7 +25,6 @@ public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> i
 	 * 
 	 * key是自己设定的一个ID，用来标识缓存
 	 */
-	@Override
 	@Cacheable(value = "SyresourcetypeServiceCache", key = "'SyresourcetypeList'")
 	public List<Syresourcetype> findResourcetype() {
 		return find();

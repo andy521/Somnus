@@ -27,25 +27,21 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 	@Autowired
 	private BaseDaoI<Syresource> resourceDao;
 
-	@Override
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), page, rows);
 	}
 
-	@Override
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
 	}
 
-	@Override
 	public Long countRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select count(distinct t) from Syrole t join t.syusers user";
 		return count(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());
 	}
 
-	@Override
 	public void saveRole(Syrole syrole, String userId) {
 		save(syrole);
 
@@ -53,7 +49,6 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 		user.getSyroles().add(syrole);// 把新添加的角色与当前用户关联
 	}
 
-	@Override
 	public void grant(String id, String resourceIds) {
 		Syrole role = getById(id);
 		if (role != null) {

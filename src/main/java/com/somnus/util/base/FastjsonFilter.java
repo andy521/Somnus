@@ -26,7 +26,7 @@ public class FastjsonFilter implements PropertyFilter {
 		return excludes;
 	}
 
-	@Override
+	
 	public boolean apply(Object source, String name, Object value) {
 		if (value != null && (value instanceof PersistentSet)) {// 避免hibernate对象循环引用，一切Set属性不予序列化
 			return false;

@@ -102,7 +102,6 @@ public class SyorganizationAction extends BaseAction<Syorganization> {
 		Set<Syorganization> organizations = user.getSyorganizations();
 		List<Syorganization> l = new ArrayList<Syorganization>(organizations);
 		Collections.sort(l, new Comparator<Syorganization>() {// 排序
-					@Override
 					public int compare(Syorganization o1, Syorganization o2) {
 						if (o1.getSeq() == null) {
 							o1.setSeq(1000);

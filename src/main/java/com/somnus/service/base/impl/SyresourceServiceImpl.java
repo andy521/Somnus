@@ -34,7 +34,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 	/**
 	 * 由于角色与资源关联，机构也与资源关联，所以查询用户能看到的资源菜单应该查询两次，最后合并到一起。
 	 */
-	@Override
 	public List<Syresource> getMainMenu(HqlFilter hqlFilter) {
 		List<Syresource> l = new ArrayList<Syresource>();
 		String hql = "select distinct t from Syresource t join t.syroles role join role.syusers user";
@@ -45,7 +44,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		l.addAll(resource_organization);
 		l = new ArrayList<Syresource>(new HashSet<Syresource>(l));// 去重
 		Collections.sort(l, new Comparator<Syresource>() {// 排序
-					@Override
 					public int compare(Syresource o1, Syresource o2) {
 						if (o1.getSeq() == null) {
 							o1.setSeq(1000);
@@ -59,7 +57,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		return l;
 	}
 
-	@Override
 	public List<Syresource> resourceTreeGrid(HqlFilter hqlFilter) {
 		List<Syresource> l = new ArrayList<Syresource>();
 		String hql = "select distinct t from Syresource t join t.syroles role join role.syusers user";
@@ -70,7 +67,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		l.addAll(resource_organization);
 		l = new ArrayList<Syresource>(new HashSet<Syresource>(l));// 去重
 		Collections.sort(l, new Comparator<Syresource>() {// 排序
-					@Override
 					public int compare(Syresource o1, Syresource o2) {
 						if (o1.getSeq() == null) {
 							o1.setSeq(1000);
@@ -84,7 +80,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		return l;
 	}
 
-	@Override
 	public void updateResource(Syresource syresource) {
 		if (!StringUtils.isBlank(syresource.getId())) {
 			Syresource t = getById(syresource.getId());
@@ -127,7 +122,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 	/**
 	 * 由于新添加的资源，当前用户的角色或者机构并没有访问此资源的权限，所以这个地方重写save方法，将新添加的资源放到用户的第一个角色里面或者第一个机构里面
 	 */
-	@Override
 	public void saveResource(Syresource syresource, String userId) {
 		save(syresource);
 
@@ -137,7 +131,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 			List<Syrole> l = new ArrayList<Syrole>();
 			l.addAll(roles);
 			Collections.sort(l, new Comparator<Syrole>() {
-				@Override
 				public int compare(Syrole o1, Syrole o2) {
 					if (o1.getCreatedatetime().getTime() > o2.getCreatedatetime().getTime()) {
 						return 1;
@@ -155,7 +148,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 				List<Syorganization> l = new ArrayList<Syorganization>();
 				l.addAll(organizations);
 				Collections.sort(l, new Comparator<Syorganization>() {
-					@Override
 					public int compare(Syorganization o1, Syorganization o2) {
 						if (o1.getCreatedatetime().getTime() > o2.getCreatedatetime().getTime()) {
 							return 1;
@@ -171,7 +163,6 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		}
 	}
 
-	@Override
 	public List<Syresource> findResourceByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syresource t left join t.syroles role left join t.syorganizations organization";
 		return find(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());

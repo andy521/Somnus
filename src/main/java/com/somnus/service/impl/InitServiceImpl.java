@@ -36,7 +36,7 @@ public class InitServiceImpl implements InitServiceI {
 	@Autowired
 	private BaseDaoI baseDao;
 
-	@Override
+	
 	synchronized public void initDb() {
 		try {
 			Document document = new SAXReader().read(Thread.currentThread().getContextClassLoader().getResourceAsStream(FILEPATH));

@@ -28,7 +28,6 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return sessionFactory.getCurrentSession();
 	}
 
-	@Override
 	public Serializable save(T o) {
 		if (o != null) {
 			return getCurrentSession().save(o);
@@ -36,12 +35,10 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return null;
 	}
 
-	@Override
 	public T getById(Class<T> c, Serializable id) {
 		return (T) getCurrentSession().get(c, id);
 	}
 
-	@Override
 	public T getByHql(String hql) {
 		Query q = getCurrentSession().createQuery(hql);
 		List<T> l = q.list();
@@ -51,7 +48,6 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return null;
 	}
 
-	@Override
 	public T getByHql(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
@@ -66,34 +62,29 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return null;
 	}
 
-	@Override
 	public void delete(T o) {
 		if (o != null) {
 			getCurrentSession().delete(o);
 		}
 	}
 
-	@Override
 	public void update(T o) {
 		if (o != null) {
 			getCurrentSession().update(o);
 		}
 	}
 
-	@Override
 	public void saveOrUpdate(T o) {
 		if (o != null) {
 			getCurrentSession().saveOrUpdate(o);
 		}
 	}
 
-	@Override
 	public List<T> find(String hql) {
 		Query q = getCurrentSession().createQuery(hql);
 		return q.list();
 	}
 
-	@Override
 	public List<T> find(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
@@ -104,7 +95,6 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.list();
 	}
 
-	@Override
 	public List<T> find(String hql, Map<String, Object> params, int page, int limit) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
@@ -115,19 +105,16 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).list();
 	}
 
-	@Override
 	public List<T> find(String hql, int page, int limit) {
 		Query q = getCurrentSession().createQuery(hql);
 		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).list();
 	}
 
-	@Override
 	public Long count(String hql) {
 		Query q = getCurrentSession().createQuery(hql);
 		return (Long) q.uniqueResult();
 	}
 
-	@Override
 	public Long count(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
@@ -138,13 +125,11 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return (Long) q.uniqueResult();
 	}
 
-	@Override
 	public int executeHql(String hql) {
 		Query q = getCurrentSession().createQuery(hql);
 		return q.executeUpdate();
 	}
 
-	@Override
 	public int executeHql(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
@@ -155,19 +140,16 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.executeUpdate();
 	}
 
-	@Override
 	public List<Map> findBySql(String sql) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@Override
 	public List<Map> findBySql(String sql, int page, int limit) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@Override
 	public List<Map> findBySql(String sql, Map<String, Object> params) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
@@ -178,7 +160,6 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@Override
 	public List<Map> findBySql(String sql, Map<String, Object> params, int page, int limit) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
@@ -189,13 +170,11 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@Override
 	public int executeSql(String sql) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		return q.executeUpdate();
 	}
 
-	@Override
 	public int executeSql(String sql, Map<String, Object> params) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
@@ -206,13 +185,11 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.executeUpdate();
 	}
 
-	@Override
 	public BigInteger countBySql(String sql) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		return (BigInteger) q.uniqueResult();
 	}
 
-	@Override
 	public BigInteger countBySql(String sql, Map<String, Object> params) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {

@@ -91,7 +91,6 @@ public class SyroleAction extends BaseAction<Syrole> {
 		Set<Syrole> roles = user.getSyroles();
 		List<Syrole> l = new ArrayList<Syrole>(roles);
 		Collections.sort(l, new Comparator<Syrole>() {// 排序
-					@Override
 					public int compare(Syrole o1, Syrole o2) {
 						if (o1.getSeq() == null) {
 							o1.setSeq(1000);
