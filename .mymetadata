@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Somnus Maven Webapp"
+  id="myeclipse.1408890899528"
+  context-root="/Somnus"
+  j2ee-spec="1.7"
+  archive="Somnus Maven Webapp.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
