@@ -2,10 +2,11 @@
  * cascade 级联方式:1.child子级联;2.parent,父级联,3,both全部级联  
  * checkModel:'single',//当json数据为不带checked的数据时只配置为single,带checked配置为double为单选,不配置为多选 
  */
-Ext.define("App.apply.ComboTreeBox", {  
+Ext.define("App.apply.ComboBoxTree", {  
     extend: "Ext.form.field.Picker",  
     requires: ["Ext.tree.Panel"],  
     alias: 'widget.combotree',
+    submitValue:'',
     mixins: {
         bindable: 'Ext.util.Bindable'    
     },
@@ -82,6 +83,7 @@ Ext.define("App.apply.ComboTreeBox", {
                         values.push(rec.get('id'));  
                     });  
                     me.setRawValue(values.join(';')); // 隐藏值  
+                    me.submitValue = values.join(';');
                     me.setValue(names.join(';')); // 显示值  
                 }  
             },  
@@ -89,21 +91,24 @@ Ext.define("App.apply.ComboTreeBox", {
                 var checkModel = me.checkModel;
                 console.log(record);
                 if (checkModel == 'single') {
-                    /*if (record.get('leaf')) {
-                        me.setRawValue(record.get('id')); // 隐藏值  
-                        me.setValue(record.get('text')); // 显示值  
-                    }else {  
-                        me.setRawValue(''); // 隐藏值  
-                        me.setValue(''); // 显示值  
-                    }*/
-                	me.setRawValue(record.get('id')); // 隐藏值  
+                	me.setRawValue(record.get('id')); // 隐藏值 
+                	me.submitValue = record.get('id');
                     me.setValue(record.get('text')); // 显示值  
+                    me.collapse();
                 }  
             }  
         });  
         return me.picker;  
-    },  
-    alignPicker: function() {  
+    },
+    getSubmitValue: function(){
+    	var me = this,  
+    	value = me.submitValue;
+    	if (Ext.isEmpty(value)) {
+            value = '';
+        }
+        return value;
+    },
+    alignPicker: function() {
         var me = this,  
         picker, isAbove, aboveSfx = '-above';  
         if (this.isExpanded) {

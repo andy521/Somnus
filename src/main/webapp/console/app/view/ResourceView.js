@@ -90,7 +90,7 @@ Ext.define('App.view.ResourceView',{
 			iconCls:'ext-icon-note_edit',
 			tooltip:'编辑',
 			handler: function(grid, rowIndex, colIndex, item) {
-				var rec = grid.getStore().getAt(rowIndex);
+				var record = grid.getStore().getAt(rowIndex);
                 var win = Ext.create('App.view.ResourceWindow',{
 					title : '编辑资源信息',
 					iconCls:'ext-icon-note',
@@ -104,6 +104,7 @@ Ext.define('App.view.ResourceView',{
 								{
 									if(action.result.success){
 										 grid.getStore().treeStore.reload();
+										 grid.ownerCt.ownerCt.ownerCt.child('panel treepanel').getStore().reload();
 										 btn.ownerCt.ownerCt.close();
 										 Ext.create('App.util.Notification', {
 												position: 't',
@@ -137,9 +138,10 @@ Ext.define('App.view.ResourceView',{
 					waitMsg : '正在加载数据请稍后',         
 					waitTitle : '提示',             
 					url : app.contextPath + '/base/syresource!getById.action',  
-					params:{id:rec.get('id')},                
+					params:{id:record.get('id')},                
 					method:'POST', 
 					success:function(form,action){
+						console.log(action.result.data);
 						win.down('form').getForm().setValues({
 							'data.id':action.result.data.id,
 							'data.url':action.result.data.url,
@@ -147,7 +149,7 @@ Ext.define('App.view.ResourceView',{
 							'data.seq':action.result.data.seq,
 							'data.description':action.result.data.description,
 							'data.name':action.result.data.name,
-							'data.syresourcetype.id':action.result.data.syresourcetype.name,
+							'data.syresourcetype.id':action.result.data.syresourcetype?action.result.data.syresourcetype.id:'',
 							'data.iconCls':action.result.data.iconCls,
 							'data.target':action.result.data.target
                         });
@@ -159,7 +161,42 @@ Ext.define('App.view.ResourceView',{
 			iconCls:'ext-icon-note_delete',
 			tooltip:'删除',
 			handler: function(grid, rowIndex, colIndex, item) {
-
+				var st = grid.getStore();
+				var record = grid.getStore().getAt(rowIndex);
+				Ext.Msg.confirm('确认删除', '你确定删除吗', function(btn)
+				{
+					if (btn == 'yes') 
+					{
+						//后台操作
+						Ext.Ajax.request({
+							url:app.contextPath + '/base/syresource!delete.action',
+							params:{id:record.get('id')},
+							method:"POST",
+							timeout:2000,
+							success:function(response,opts)
+							{//前端删除
+								st.remove(record);
+								st.reload();
+								grid.ownerCt.ownerCt.ownerCt.child('panel treepanel').getStore().reload();
+								Ext.Msg.show({
+									title : '信息提示',
+									msg : '删除成功!',
+									buttons : Ext.Msg.OK,
+									icon : Ext.Msg.INFO
+								});
+							},
+							failure:function()
+							{
+								Ext.Msg.show({
+									title : '错误提示',
+									msg : '删除时发生错误!',
+									buttons : Ext.Msg.OK,
+									icon : Ext.Msg.ERROR
+								})
+							}
+						});
+					}
+				});
              }
 		}]
 	}],

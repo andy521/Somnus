@@ -16,7 +16,8 @@ Ext.define("App.controller.ResourceController",{
 									success:function(form, action)
 									{
 										if(action.result.success){
-											 grid.getStore().reload();
+											 b.ownerCt.ownerCt.getStore().reload();
+											 b.ownerCt.ownerCt.ownerCt.ownerCt.child('panel treepanel').getStore().reload();
 											 btn.ownerCt.ownerCt.close();
 											 Ext.create('App.util.Notification', {
 													position: 't',
@@ -29,7 +30,7 @@ Ext.define("App.controller.ResourceController",{
 													slideBackDuration: 500,
 													slideInAnimation: 'bounceOut',
 													slideBackAnimation: 'easeIn',
-													html: '修改资源成功'
+													html: '添加资源成功'
 												}).show();
 										}else{
 											button.enable();

@@ -7,7 +7,7 @@ Ext.define("App.controller.NorthController",{
 			 */
 			'northview menuitem[id=updatepwd]':{
 				click:function(e, eOpts){
-					Ext.create('App.view.UpdatePwd',{}).show();
+					Ext.create('App.view.UpdatePwdWindow',{}).show();
 				}
 			},
 			/*

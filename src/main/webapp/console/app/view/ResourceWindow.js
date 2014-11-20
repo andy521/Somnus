@@ -1,7 +1,7 @@
 Ext.Loader.setConfig({enabled: true});
 Ext.Loader.setPath('App',app.basePath+'/console/app');
 Ext.require([
-    'App.apply.ComboTreeBox',
+    'App.apply.ComboBoxTree',
     'App.apply.ImageBrowse'
 ]);
 Ext.define('App.view.ResourceWindow',{
@@ -27,7 +27,7 @@ Ext.define('App.view.ResourceWindow',{
             	xtype : 'textfield',
 				fieldLabel : '编号',
 				name:'data.id',
-				readOnly:true,
+				/*readOnly:true,*/
 				width:280
             }, {
             	xtype : 'textfield',

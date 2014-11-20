@@ -21,7 +21,7 @@ Ext.onReady(function(){
 				},{
 					xtype:'box',
 					region: 'south',
-					html:'<div style="margin:0 auto;width:160px;padding:5px;">版权所有@<a href="mailto:928200207@qq.com">Smile</a></div>',
+					html:'<div style="margin:0 auto;width:160px;padding:5px;">版权所有@<a href="mailto:928200207@qq.com">Somnus</a></div>',
 					height: 30,
 					layout:'fit'
 				},{
