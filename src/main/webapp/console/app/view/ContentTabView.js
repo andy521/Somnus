@@ -3,6 +3,7 @@ Ext.define('App.view.ContentTabView' ,{
     alias : 'widget.contenttab',
     title : '',
     activeTab:0,
+    autoDestroy:false,
     items:[{
 		xtype:'panel',
 		layout:'fit',

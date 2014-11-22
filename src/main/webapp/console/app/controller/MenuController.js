@@ -29,13 +29,15 @@ Ext.define("App.controller.MenuController",{
     								if(target=='cmp'){
     									contenttab.getEl().mask("组件初始化中,请稍候...");
     						    		if(Ext.ClassManager.getNameByAlias('widget.'+url)){
-    							    		component = Ext.widget(url,{
+    						    			console.log(Ext.getCmp(id));
+    							    		component = Ext.getCmp(id)?Ext.getCmp(id):Ext.widget(url,{
     							    			title:title,
     							    			closable:true,
     							    			closeAction:'hide',
     							    			id:id
     							    		});
     							    		contenttab.add(component).show();
+    							    		contenttab.setActiveTab(component);
     						    		}else{
     						    			Ext.create('App.util.Notification', {
 												position: 't',
@@ -63,6 +65,7 @@ Ext.define("App.controller.MenuController",{
     									contenttab.add(panel).show();
     								}
     							}else{
+    								console.log(Ext.getCmp(id));
     								contenttab.setActiveTab(component);
     							}
     							contenttab.getEl().unmask();

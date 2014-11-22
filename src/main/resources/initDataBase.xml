@@ -112,7 +112,7 @@
 		<resource id="actionConfigBrowser" name="Action映射监控" url="/config-browser/showConstants.action" description="Action映射情况监控" seq="3" iconCls="ext-icon-monitor_lightning" pid="xtjk">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="online" name="用户登录历史监控" url="App.view.OnlineView" description="监控用户登录、注销" seq="4" iconCls="ext-icon-chart_line" pid="xtjk" target="cmp">
+		<resource id="online" name="用户登录历史监控" url="onlineview" description="监控用户登录、注销" seq="4" iconCls="ext-icon-chart_line" pid="xtjk" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="onlineGrid" name="用户登录历史列表" url="/base/syonline!grid" description="用户登录、注销历史记录列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="online">
