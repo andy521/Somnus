@@ -106,16 +106,16 @@ Ext.onReady(function(){
 				store : {
 					fields : ['text', 'value'],
 					data : [{
-						text : 'Neptune',
+						text : '海王星',
 						value : 'ext-all-neptune.css'
 					}, {
-						text : 'Classic',
+						text : '经典蓝',
 						value : 'ext-all.css'
 					},{
-						text : 'Accessibility',
+						text : '深夜黑',
 						value : 'ext-all-access.css'
 					},{
-						text : 'Gray',
+						text : '玛雅灰',
 						value : 'ext-all-gray.css'
 					}]
 				},
