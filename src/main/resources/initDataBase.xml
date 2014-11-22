@@ -11,7 +11,7 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="zygl" name="资源管理" url="App.view.ResourceView" description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl" target="cmp">
+		<resource id="zygl" name="资源管理" url="resourceview" description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="zylb" name="资源列表" url="/base/syresource!treeGrid" description="查询资源" seq="0" iconCls="ext-icon-bullet_wrench" pid="zygl">
@@ -30,7 +30,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="jsgl" name="角色管理" url="App.view.RoleView" description="管理系统中用户的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl" target="cmp">
+		<resource id="jsgl" name="角色管理" url="roleview" description="管理系统中用户的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="jslb" name="角色列表" url="/base/syrole!grid" description="查询角色列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jsgl">
@@ -52,7 +52,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="jggl" name="机构管理" url="App.view.OrganizationView" description="管理系统中用户的机构" seq="3" iconCls="ext-icon-group_link" pid="xtgl" target="cmp">
+		<resource id="jggl" name="机构管理" url="organizationview" description="管理系统中用户的机构" seq="3" iconCls="ext-icon-group_link" pid="xtgl" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="jglb" name="机构列表" url="/base/syorganization!treeGrid" description="查询机构列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jggl">
@@ -74,7 +74,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="yhgl" name="用户管理" url="App.view.UserView" description="管理系统中用户的用户" seq="4" iconCls="ext-icon-user_suit" pid="xtgl" target="cmp">
+		<resource id="yhgl" name="用户管理" url="userview" description="管理系统中用户的用户" seq="4" iconCls="ext-icon-user_suit" pid="xtgl" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="yhlb" name="用户列表" url="/base/syuser!grid" description="查询用户列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="yhgl">
@@ -123,10 +123,10 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="userCreateDatetimeChart" name="注册时间分布" url="App.view.UserCreateDatetimeChart" description="用户注册时间分布报表" seq="1" iconCls="ext-icon-chart_bar" pid="xtbb" target="cmp">
+		<resource id="userCreateDatetimeChart" name="注册时间分布" url="usercreatechart" description="用户注册时间分布报表" seq="1" iconCls="ext-icon-chart_bar" pid="xtbb" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="userRoleChart" name="用户角色分布" url="App.view.UserRoleChart" description="用户角色分布" seq="2" iconCls="ext-icon-chart_pie" pid="xtbb" target="cmp">
+		<resource id="userRoleChart" name="用户角色分布" url="userrolechart" description="用户角色分布" seq="2" iconCls="ext-icon-chart_pie" pid="xtbb" target="cmp">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 

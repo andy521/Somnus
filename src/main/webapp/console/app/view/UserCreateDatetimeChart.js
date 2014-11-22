@@ -1,5 +1,6 @@
 Ext.define('App.view.UserCreateDatetimeChart',{
 	extend:'Ext.chart.Chart',
+	alias:'widget.usercreatechart',
 	style: 'background:#fff',
     animate: true,
     shadow: true,

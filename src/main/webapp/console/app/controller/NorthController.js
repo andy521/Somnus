@@ -68,11 +68,6 @@ Ext.define("App.controller.NorthController",{
 						link.setAttribute('href',href);
 						$.cookie("extTheme", newcss,{expires : 7});
 					}
-					Ext.getCmp('main').doComponentLayout();
-					Ext.getCmp('main').down('panel').doComponentLayout();
-					Ext.getCmp('main').down('tabpanel').doComponentLayout();
-					Ext.getCmp('main').down('panel').down('northview').doComponentLayout();
-					Ext.getCmp('main').down('panel').down('northview').down('toolbar').doComponentLayout();
 				}
 			},
 			/*

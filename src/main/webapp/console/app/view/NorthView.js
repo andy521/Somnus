@@ -46,14 +46,24 @@ Ext.define("App.view.NorthView",{
 	        	items:[{
 	        		xtype:'menucheckitem',
 					group:'theme',
-					text: '蓝色经典',
-					css:'ext-all.css'
-	        	},{
-	        		xtype:'menucheckitem',
-					group:'theme',
-					text: '海王星',
+					text: 'Neptune',
 					checked:true,
 					css:'ext-all-neptune.css'
+	        	},{
+	        		xtype:'menucheckitem',
+	        		group:'theme',
+	        		text: 'Classic',
+	        		css:'ext-all.css'
+	        	},{
+	        		xtype:'menucheckitem',
+	        		group:'theme',
+	        		text: 'Accessibility',
+	        		css:'ext-all-access.css'
+	        	},{
+	        		xtype:'menucheckitem',
+	        		group:'theme',
+	        		text: 'Gray',
+	        		css:'ext-all-gray.css'
 	        	}]
 	        }
 		},{

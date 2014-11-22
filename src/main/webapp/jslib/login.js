@@ -12,29 +12,28 @@ var login = function(){
 		if (Ext.getCmp('btn_login_rememberme').pressed) {
 			$.cookie("loginname", form.findField('data.loginname').getValue(),{expires : 7});
 			$.cookie("pwd", form.findField('data.pwd').getValue(),{expires : 7});
-			$.cookie("style", form.findField('data.style').getValue(),{expires : 7});
+			$.cookie("extTheme", form.findField('data.extTheme').getValue(),{expires : 7});
 		} else {
 			$.removeCookie('loginname');
 			$.removeCookie('pwd');
-			$.removeCookie('style');
+			$.removeCookie('extTheme');
 		}
 		form.submit({
 			url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_login.action',
 			params:{'data.loginname':form.findField('data.loginname').getValue(),'data.pwd':form.findField('data.pwd').getValue()},
 			success:function(form, action)
 			{
-				if(action.result.success){
-					location.replace(app.contextPath + '/index.jsp'); 
-				}else{
-					button.enable();
-					mask.hide();
-					Ext.Msg.show({
-						title : '错误提示',
-						msg : action.result.msg,
-						buttons : Ext.Msg.OK,
-						icon : Ext.Msg.ERROR
-					});
-				}
+				location.replace(app.contextPath + '/index.jsp'); 
+			},
+			failure:function(form, action){
+				button.enable();
+				mask.hide();
+				Ext.Msg.show({
+					title : '错误提示',
+					msg : action.result.msg,
+					buttons : Ext.Msg.OK,
+					icon : Ext.Msg.ERROR
+				});
 			}
 		});
 	}
@@ -103,15 +102,27 @@ Ext.onReady(function(){
 			},{
 				xtype : 'combo',
 				fieldLabel : '界面模式',
-				name:'data.style',
+				name:'data.extTheme',
 				store : {
 					fields : ['text', 'value'],
-					data : [{text : '酷炫桌面',value : '0'}, {text : '经典菜单',value : '1'}]
+					data : [{
+						text : 'Neptune',
+						value : 'ext-all-neptune.css'
+					}, {
+						text : 'Classic',
+						value : 'ext-all.css'
+					},{
+						text : 'Accessibility',
+						value : 'ext-all-access.css'
+					},{
+						text : 'Gray',
+						value : 'ext-all-gray.css'
+					}]
 				},
 				valueField : 'value',
 				displayField : 'text',
 				queryMode : 'local',
-				value : '0'
+				value : 'ext-all-neptune.css'
 			}]
 		}],
 		dockedItems:[{
@@ -180,6 +191,6 @@ Ext.onReady(function(){
 		var form = loginWin.down('form').getForm();
 		form.findField('data.loginname').setValue($.cookie("loginname"));
 		form.findField('data.pwd').setValue($.cookie("pwd"));
-		form.findField('data.style').setValue($.cookie("style"));
+		form.findField('data.extTheme').setValue($.cookie("extTheme"));
 	}
 });

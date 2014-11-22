@@ -1,6 +1,6 @@
 Ext.define('App.view.UserRoleChart',{
 	extend:'Ext.chart.Chart',
-	xtype: 'chart',
+	alias:'widget.userrolechart',
     animate: true,
     store: 'UserRoleStore',
     shadow: true,
