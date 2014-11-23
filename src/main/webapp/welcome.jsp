@@ -9,7 +9,7 @@
 <jsp:include page="inc.jsp"></jsp:include>
 </head>
 <body style="padding:10px">
-	SSHE示例项目是一个由Eclipse Kepler创建，Struts2.3.x+Spring3.2.x+Hibernate4.2.x+CXF2.7.x+ExtJs44.2+Maven架构的示例程序
+	Somnus示例项目是一个由Eclipse Kepler创建，Struts2.3.x+Spring3.2.x+Hibernate4.2.x+CXF2.7.x+ExtJs4.2+Maven架构的示例项目
 	<br /> 当前示例演示了包括：权限控制、超大附件文件上传、ExtJs4基本组件使用等等功能，具体请自行看本示例演示功能
 	<br />SSHE框架环境需求：JAVA环境：JDK7+；数据库环境：oracle10g+/sqlserver2000+/mysql5+；WEB容器环境：jetty6+/tomcat6+；编译环境：maven：3.x+
 	<hr />
