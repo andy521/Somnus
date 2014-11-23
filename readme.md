@@ -1,4 +1,4 @@
-如何运行
+<h1>如何运行</h1>
 a 由于是maven项目，你的计算机得配置了maven环境，并且确保无误
 b 修改数据库配置文件中的相关用户名/密码，路劲 Somnus\src\main\resources\config.properties
 c 在你的数据库中，新建一个仓库，名字必须和jdbc.url中的一致，
