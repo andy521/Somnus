@@ -74,6 +74,10 @@ if (sessionInfo != null) {
 
 <script type="text/javascript">
 var app = app || {};
+app.currentUser='';
+app.loadMsg= '数据正在加载中，请稍后···';
+app.url= '';
+app.pageSize=10;
 app.contextPath = '<%=contextPath%>';
 app.basePath = '<%=basePath%>';
 app.version = '<%=version%>';
@@ -104,9 +108,6 @@ app.organization =  '<%=organizationhtml%>';
 <link rel="stylesheet" type="text/css" id='extTheme'  href="<%=contextPath%>/jslib/ext-4.2.1/resources/css/<%=extTheme%>" />
 <script type="text/javascript" src="<%=contextPath%>/jslib/ext-4.2.1/bootstrap.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/jslib/ext-4.2.1/locale/ext-lang-zh_CN.js"></script>
-
-<%-- 引入自定义全局函数--%>
-<script type="text/javascript" src="<%=contextPath%>/jslib/global.js"></script>
 
 <%-- 引入jQuery--%>
 <script type="text/javascript" src="<%=contextPath%>/jslib/jquery-2.1.0.js"></script>

@@ -8,7 +8,9 @@
 <head>
 <title>OA</title>
 <jsp:include page="inc.jsp"></jsp:include>
-<script type="text/javascript" src="<%=contextPath%>/console/app.js"></script>
+<script type="text/javascript" src="<%=contextPath%>/app/common/commons.js "></script>
+<script type="text/javascript" src="<%=contextPath%>/app/app.js"></script>
+
 <%
 	SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 	if (sessionInfo == null) {
