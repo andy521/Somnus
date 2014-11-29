@@ -243,10 +243,8 @@ Ext.define('somnus.view.Viewport', {
 						return;
 					}
 					var controllerName = url.replace('somnus.controller.', '');
-					console.log(controllerName);
 					Ext.require(url, function () {
 						var component = somnus.app.getController(controllerName).getViewInstance();
-						console.log(component);
 						if (!tabPanel.getComponent(component.id)) {
 							tabPanel.add(component)
 						}

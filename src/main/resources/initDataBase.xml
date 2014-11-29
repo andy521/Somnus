@@ -11,7 +11,7 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="zygl" name="资源管理" url="somnus.controller.management.ResourceController" description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl" target="cmp">
+		<resource id="zygl" name="资源管理" url="somnus.controller.management.ResourceController" description="管理系统的资源" seq="1" iconCls="ext-icon-newspaper_link" pid="xtgl" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="zylb" name="资源列表" url="/base/syresource!treeGrid" description="查询资源" seq="0" iconCls="ext-icon-bullet_wrench" pid="zygl">
@@ -30,7 +30,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="jsgl" name="角色管理" url="somnus.controller.management.RoleController" description="管理系统中用户的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl" target="cmp">
+		<resource id="jsgl" name="角色管理" url="somnus.controller.management.RoleController" description="管理系统中用户的角色" seq="2" iconCls="ext-icon-tux" pid="xtgl" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="jslb" name="角色列表" url="/base/syrole!grid" description="查询角色列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jsgl">
@@ -52,7 +52,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="jggl" name="机构管理" url="somnus.controller.management.OrganizationController" description="管理系统中用户的机构" seq="3" iconCls="ext-icon-group_link" pid="xtgl" target="cmp">
+		<resource id="jggl" name="机构管理" url="somnus.controller.management.OrganizationController" description="管理系统中用户的机构" seq="3" iconCls="ext-icon-group_link" pid="xtgl" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="jglb" name="机构列表" url="/base/syorganization!treeGrid" description="查询机构列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="jggl">
@@ -74,7 +74,7 @@
 			<resourcetype id="1" name="功能" />
 		</resource>
 
-		<resource id="yhgl" name="用户管理" url="somnus.controller.management.UserController" description="管理系统中用户的用户" seq="4" iconCls="ext-icon-user_suit" pid="xtgl" target="cmp">
+		<resource id="yhgl" name="用户管理" url="somnus.controller.management.UserController" description="管理系统中用户的用户" seq="4" iconCls="ext-icon-user_suit" pid="xtgl" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="yhlb" name="用户列表" url="/base/syuser!grid" description="查询用户列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="yhgl">
@@ -103,16 +103,16 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="monitoring" name="项目监控" url="/monitoring" description="监控项目" seq="1" iconCls="ext-icon-monitor_error" pid="xtjk">
+		<resource id="monitoring" name="项目监控" url="somnus.controller.monitor.MonitoringController" description="监控项目" seq="1" iconCls="ext-icon-monitor_error" pid="xtjk">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="druid" name="数据源监控" url="/druid" description="监控数据源" seq="2" iconCls="ext-icon-monitor_link" pid="xtjk">
+		<resource id="druid" name="数据源监控" url="somnus.controller.monitor.DruidController" description="监控数据源" seq="2" iconCls="ext-icon-monitor_link" pid="xtjk">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="actionConfigBrowser" name="Action映射监控" url="/config-browser/showConstants.action" description="Action映射情况监控" seq="3" iconCls="ext-icon-monitor_lightning" pid="xtjk">
+		<resource id="actionConfigBrowser" name="Action映射监控" url="somnus.controller.monitor.ActionController" description="Action映射情况监控" seq="3" iconCls="ext-icon-monitor_lightning" pid="xtjk">
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="online" name="用户登录历史监控" url="onlineview" description="监控用户登录、注销" seq="4" iconCls="ext-icon-chart_line" pid="xtjk" target="cmp">
+		<resource id="online" name="用户登录历史监控" url="somnus.controller.monitor.OnlineController" description="监控用户登录、注销" seq="4" iconCls="ext-icon-chart_line" pid="xtjk" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 		<resource id="onlineGrid" name="用户登录历史列表" url="/base/syonline!grid" description="用户登录、注销历史记录列表" seq="0" iconCls="ext-icon-bullet_wrench" pid="online">
@@ -123,10 +123,10 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="userCreateDatetimeChart" name="注册时间分布" url="usercreatechart" description="用户注册时间分布报表" seq="1" iconCls="ext-icon-chart_bar" pid="xtbb" target="cmp">
+		<resource id="userCreateDatetimeChart" name="注册时间分布" url="somnus.controller.chart.RegisterDateChartController" description="用户注册时间分布报表" seq="1" iconCls="ext-icon-chart_bar" pid="xtbb" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
-		<resource id="userRoleChart" name="用户角色分布" url="userrolechart" description="用户角色分布" seq="2" iconCls="ext-icon-chart_pie" pid="xtbb" target="cmp">
+		<resource id="userRoleChart" name="用户角色分布" url="somnus.controller.chart.UserRoleChartController" description="用户角色分布" seq="2" iconCls="ext-icon-chart_pie" pid="xtbb" >
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
@@ -134,37 +134,7 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="cxfDemo" name="ApacheCXF示例" url="/ws" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" target="_blank" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="lyDemo" name="流云的Demo" url="http://jqext.sinaapp.com" description="针对EasyUI二次开发的DEMO" seq="1" iconCls="ext-icon-award_star_bronze_1" target="_blank" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="syproDemo" name="SyProDemo" url="http://sypro.jeasyuicn.com" description="SpringMvc+Spring3+Hibernate4+Maven" seq="2" iconCls="ext-icon-award_star_bronze_2" target="_blank" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="phpDemo" name="phpDemo" url="http://php-easyui-demo.jeasyuicn.com" description="夏悸的php demo" seq="3" iconCls="ext-icon-award_star_bronze_3" target="_blank" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="appDemo" name="桌面Demo" url="http://app.btboys.com" description="桌面演示demo" seq="4" iconCls="ext-icon-award_star_gold_1" target="_blank" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiDemo" name="EasyUI官方Demo" url="http://jeasyui.com/demo/main/index.php" description="EasyUI官方Demo" seq="5" iconCls="ext-icon-medal_bronze_1" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiAPI" name="EasyUI官方API" url="http://jeasyui.com/documentation/index.php" description="EasyUI官方API" seq="6" iconCls="ext-icon-medal_bronze_2" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiTutorial" name="EasyUI进阶DEMO" url="http://jeasyui.com/tutorial/index.php" description="EasyUI辅导" seq="7" iconCls="ext-icon-medal_bronze_3" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiDownload" name="EasyUI官方下载" url="http://jeasyui.com/download/index.php" description="EasyUI官方下载" seq="8" iconCls="ext-icon-medal_gold_1" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiExtension" name="EasyUI其他扩展" url="http://jeasyui.com/extension/index.php" description="EasyUI其他扩展" seq="9" iconCls="ext-icon-medal_gold_2" pid="demo">
-			<resourcetype id="0" name="菜单" />
-		</resource>
-		<resource id="easyuiForum" name="EasyUI官方论坛" url="http://www.jeasyui.com/forum/index.php" description="EasyUI官方论坛" seq="10" iconCls="ext-icon-medal_gold_3" pid="demo">
+		<resource id="cxfDemo" name="ApacheCXF示例" url="somnus.controller.demo.CxfController" description="Apache CXF DEMO" seq="0" iconCls="ext-icon-world" target="_blank" pid="demo">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
@@ -202,16 +172,7 @@
 
 			<resource id="demo" name="其他示例" />
 
-			<resource id="lyDemo" name="流云的Demo" />
-			<resource id="syproDemo" name="SyProDemo" />
-			<resource id="phpDemo" name="phpDemo" />
-			<resource id="appDemo" name="桌面Demo" />
-			<resource id="easyuiDemo" name="EasyUI官方Demo" />
-			<resource id="easyuiAPI" name="EasyUI官方API" />
-			<resource id="easyuiTutorial" name="EasyUI进阶DEMO" />
-			<resource id="easyuiDownload" name="EasyUI官方下载" />
-			<resource id="easyuiExtension" name="EasyUI其他扩展" />
-			<resource id="easyuiForum" name="EasyUI官方论坛" />
+			<resource id="cxfDemo" name="ApacheCXF示例" />
 		</role>
 
 		<role id="2" name="admin1">

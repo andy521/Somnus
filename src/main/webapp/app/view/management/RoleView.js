@@ -6,8 +6,7 @@ Ext.define('somnus.view.management.RoleView',{
 	autoQuery: true,
 	initComponent: function () {
 		Ext.apply(this, {
-			width: 680,
-			height: 350,
+			iconCls:'ext-icon-tux',
 			store: 'management.RoleStore',
 			multiSelect: true,
 			autoQuery: true,

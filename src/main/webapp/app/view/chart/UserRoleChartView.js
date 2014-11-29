@@ -1,8 +1,11 @@
-Ext.define('somnus.view.report.UserRoleChart',{
+Ext.define('somnus.view.chart.UserRoleChartView',{
 	extend:'Ext.chart.Chart',
-	alias:'widget.userrolechart',
+	alias:'widget.userRoleChartView',
+	closable:true,
+	iconCls:'ext-icon-chart_pie',
     animate: true,
-    store: 'UserRoleStore',
+    title:'用户角色分布',
+    store: 'chart.UserRoleChartStore',
     shadow: true,
     legend: {
         position: 'right'

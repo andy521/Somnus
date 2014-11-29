@@ -16,7 +16,29 @@ Ext.define('somnus.view.user.UpdatePwdWindow',{
 	},
 	buttons:[{
 		text:'修改',
-		iconCls:'ext-icon-pencil'
+		iconCls:'ext-icon-pencil',
+		handler:function(button){
+			var form = button.ownerCt.ownerCt.items.first().getForm();
+			if(form.isValid()){
+				Ext.Ajax.request({
+					url:app.contextPath + '/base/syuser!doNotNeedSecurity_updateCurrentPwd.action',
+					params:{'data.pwd':form.findField('data.pwd').getValue()},
+					success:function(response,option)
+					{
+						var res = Ext.JSON.decode(response.responseText);
+						if(res.success){
+							button.ownerCt.ownerCt.hide();
+							Ext.Msg.show({
+								title : '提示',
+								msg : '密码修改成功',
+								buttons : Ext.Msg.OK,
+								icon : Ext.Msg.INFO
+							});
+						}
+					}
+				});
+			}
+		}
 	}],
 	items:[{
 		xtype:'form',

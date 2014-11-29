@@ -6,6 +6,7 @@ Ext.define('somnus.view.management.ResourceView',{
 	autoQuery: false,
 	initComponent: function () {
 		Ext.apply(this, {
+			iconCls:'ext-icon-newspaper_link',
 			store: 'management.ResourceStore',
 			autoQuery: false,
 			forceFit: true,

@@ -1,10 +1,13 @@
-Ext.define('somnus.view.report.UserCreateDatetimeChart',{
+Ext.define('somnus.view.chart.RegisterDateChartView',{
 	extend:'Ext.chart.Chart',
-	alias:'widget.usercreatechart',
+	alias:'widget.registerDateChartView',
+	closable:true,
+	iconCls:'ext-icon-chart_bar',
 	style: 'background:#fff',
     animate: true,
     shadow: true,
-    store: 'UserCreateDatetimeStore',
+    title:'注册时间分布',
+    store: 'chart.RegisterDateChartStore',
     axes: [{
         type: 'Numeric',
         position: 'left',

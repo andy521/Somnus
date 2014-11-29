@@ -6,9 +6,8 @@ Ext.define('somnus.view.monitor.OnlineView',{
 	autoQuery: false,
 	initComponent: function () {
 		Ext.apply(this, {
-			width: 680,
-			height: 350,
-			store: 'management.OnlineStore',
+			iconCls:'ext-icon-chart_line',
+			store: 'monitor.OnlineStore',
 			multiSelect: true,
 			autoQuery: false,
 			selModel: {
@@ -83,15 +82,10 @@ Ext.define('somnus.view.monitor.OnlineView',{
 					width: 160
 				},{
 					xtype:'btnsearch',
-					store: 'OnlineStore',
+					store: 'monitor.OnlineStore',
 					paramName:['QUERY_t#loginname_S_LK','QUERY_t#ip_S_LK','QUERY_t#type_S_EQ','QUERY_t#createdatetime_D_GE','QUERY_t#createdatetime_D_LE'],
 					text:'过滤'
 				}]
-			},{
-				xtype:'pagingtoolbar',
-				store: 'OnlineStore',
-				dock :'bottom',
-				displayInfo: true
 			}],
 		});
 		this.callParent(arguments);

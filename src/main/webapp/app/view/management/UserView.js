@@ -6,8 +6,7 @@ Ext.define('somnus.view.management.UserView',{
 	autoQuery: true,
 	initComponent: function () {
 		Ext.apply(this, {
-			width: 680,
-			height: 350,
+			iconCls:'ext-icon-user_suit',
 			store: 'management.UserStore',
 			multiSelect: true,
 			autoQuery: true,

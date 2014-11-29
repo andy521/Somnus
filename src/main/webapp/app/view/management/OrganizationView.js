@@ -6,6 +6,7 @@ Ext.define('somnus.view.management.OrganizationView',{
 	autoQuery: false,
 	initComponent: function () {
 		Ext.apply(this, {
+			iconCls:'ext-icon-group_link',
 			store: 'management.OrganizationStore',
 			autoQuery: false,
 			forceFit: true,
