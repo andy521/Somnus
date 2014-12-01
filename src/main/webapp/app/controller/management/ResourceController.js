@@ -29,26 +29,43 @@ Ext.define("somnus.controller.management.ResourceController",{
 			},
 			'resourceView toolbar button[action=add]':{
 				click:function(b,e){
-					Ext.create('somnus.view.management.ResourceWindow',{
-						title : '添加资源信息',
-						iconCls:'ext-icon-note_add',
-						buttons:[{
-							text:'添加'
-						}]
-					}).show();
+					Ext.create('somnus.view.management.ResourceWindow', {
+			            listeners: {
+			                success: function () {
+			                    this.getResourceView().getStore().load();
+			                },
+			                scope: this
+			            }
+			        }).show();
 				}
 			},
 			'resourceView actioncolumn':{
 				showclick: function(record){
-					Ext.create('somnus.view.management.ResourceWindow', {
-						pk: record.record.data.id
-					}).show();
+					var store=this.getResourceView().getStore();
+			        var userName = this.getResourceView().down('#userName').getValue();
+			        Ext.apply(store.getProxy().extraParams, {
+			            userName: userName
+			        });
+			        store.loadPage(1);
 				},
 				editclick: function(record){
-					alert(3);
+					Ext.create('somnus.view.management.ResourceWindow', {
+			            pk: record.record.data.id,
+			            listeners: {
+			                success: function () {
+			                    this.getResourceView().getStore().load();
+			                },
+			                failure: function () {
+			                    this.getResourceWindow().close();
+			                    this.getResourceView().getStore().load();
+			                },
+			                scope: this
+			            }
+			        }).show();
 				},
 				deleteclick: function(record){
-					alert(3);
+			        var grid = this.getResourceView();
+			        grid.doDelete(grid, 'id');
 				}
 			}
 		})

@@ -1,5 +1,5 @@
 // extjs程序入口
-extRoot = app.basePath+"/jslib/ext-4.2.1/";
+extRoot = app.basePath+"/jslib/ext-4.2.1";
 // 配置动态加载路径
 Ext.Loader.setConfig({
 	enabled: true,
@@ -9,7 +9,7 @@ Ext.Loader.setConfig({
 	}
 });
 
-/*Ext.require('Ext.ux.TabCloseMenu');*/
+Ext.require('Ext.ux.TabCloseMenu');
 Ext.require('somnus.common.base.BaseCombo');
 Ext.require('somnus.common.base.BaseComboModel');
 Ext.require('somnus.common.util.DateRange');

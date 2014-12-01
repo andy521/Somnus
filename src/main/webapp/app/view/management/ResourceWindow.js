@@ -1,5 +1,5 @@
 Ext.define('somnus.view.management.ResourceWindow',{
-	extend: 'somnus.common.base.BaseFormNoSave',
+	extend: 'somnus.common.base.BaseForm',
 	alias:'widget.resourceWindow',
 	title: '详细信息',
 	width: 640,
@@ -18,18 +18,18 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            items: [{
 	            	xtype : 'textfield',
 					fieldLabel : '编号',
-					name:'data.id',
+					name:'id',
 					/*readOnly:true,*/
 					width:280
 	            }, {
 	            	xtype : 'textfield',
 					fieldLabel : '资源路劲',
-					name:'data.url',
+					name:'url',
 					width:280
 	            },{
 	            	xtype : 'combotree',
 					fieldLabel : '上级资源',
-					name:'data.syresource.id',
+					name:'syresource.id',
 					store:Ext.create('Ext.data.TreeStore', {
 						fields: ['url', 'text', 'target'],
 						proxy:{
@@ -57,25 +57,25 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            },{
 	            	xtype : 'numberfield',
 					fieldLabel : '顺序',
-					name:'data.seq',
+					name:'seq',
 					width:280,
 					value:100
 	            },{
 	            	xtype : 'textarea',
 					fieldLabel : '资源描述',
-					name:'data.description',
+					name:'description',
 					width:280
 	            }]
 	        }, {
 	            items: [{
 	            	xtype : 'textfield',
 					fieldLabel : '资源名称',
-					name:'data.name',
+					name:'name',
 					width:280
 	            },{
 	            	xtype : 'combo',
 					fieldLabel : '资源类型',
-					name:'data.syresourcetype.id',
+					name:'syresourcetype.id',
 					store:{
 						fields:[{name:'id',type:'string'},{name:'name',type:'string'}],
 						proxy:{
@@ -90,7 +90,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            },{
 	            	xtype : 'imagebrowse',
 					fieldLabel : '资源图标',
-					name:'data.iconCls',
+					name:'iconCls',
 					buttonText: '',
 		            buttonConfig: {
 		                iconCls: 'ext-icon-camera'
@@ -106,7 +106,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            },{
 	            	xtype : 'textfield',
 					fieldLabel : '目标',
-					name:'data.target',
+					name:'target',
 					width:280
 	            }]
 	        }]

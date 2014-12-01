@@ -1,7 +1,7 @@
 Ext.define("somnus.common.base.BaseControllerUtil", {
-/*
-* 加载Form表单数据
-* */
+	/*
+	 * 加载Form表单数据
+	 * */
 	doLoad: function () {
 		var form = this.formPanel.getForm();
 		form.load({
@@ -12,6 +12,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			timeout: 60 * 1000,
 			success: function (form, action) {
 				var result = Ext.decode(action.response.responseText);
+				console.log(result);
 			},
 			failure: function (form, action) {
 			},
@@ -19,8 +20,8 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 		});
 	},
 	/*
-	* 新增和修改from表单信息
-	* */
+	 * 新增和修改from表单信息
+	 * */
 	doSave: function () {
 		var me = this;
 		var form = this.formPanel.getForm();

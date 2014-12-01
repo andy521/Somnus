@@ -184,6 +184,11 @@ Ext.define('somnus.view.Viewport', {
 		var tabPanel = Ext.create('Ext.tab.Panel', {
 			id: 'tabPanel',
 			region: 'center',
+			plugins: Ext.create('Ext.ux.TabCloseMenu', {
+				closeTabText: '关闭当前',
+				closeOthersTabsText: '关闭其他',
+				closeAllTabsText: '关闭所有'
+			}),
 			border: false,
 			activeTab:0,
 			items:[{
