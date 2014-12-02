@@ -73,19 +73,10 @@ Ext.define('somnus.view.management.ResourceWindow',{
 					name:'name',
 					width:280
 	            },{
-	            	xtype : 'combo',
+	            	xtype : 'basecombo',
 					fieldLabel : '资源类型',
 					name:'syresourcetype.id',
-					store:{
-						fields:[{name:'id',type:'string'},{name:'name',type:'string'}],
-						proxy:{
-							type:'ajax',
-							url:app.contextPath +'/base/syresourcetype!doNotNeedSecurity_combobox.action'
-						}
-					},
-					hiddenName : 'id',
-					valueField : 'id',
-					displayField : 'name',
+					url:app.contextPath +'/base/syresourcetype!doNotNeedSecurity_combobox.action',
 					width:280
 	            },{
 	            	xtype : 'imagebrowse',

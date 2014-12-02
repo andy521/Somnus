@@ -44,7 +44,7 @@ var xtpls = new Ext.XTemplate(
 	        '</table></fieldset>',  
 	    '</tpl>'  
 	); 
-Ext.define('somnus.view.user.UserInfoWindow',{
+Ext.define('somnus.view.system.user.UserInfoWindow',{
 	extend:'Ext.window.Window',
 	alias:'widget.userinfowindow',
 	title: '我的信息',

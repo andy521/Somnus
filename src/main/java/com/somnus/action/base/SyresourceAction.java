@@ -123,6 +123,8 @@ public class SyresourceAction extends BaseAction<Syresource> {
 			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
 			((SyresourceServiceI) service).saveResource(data, sessionInfo.getUser().getId());
 			json.setSuccess(true);
+		}else{
+			json.setMsg("提交的数据发生异常");
 		}
 		writeJson(json);
 	}

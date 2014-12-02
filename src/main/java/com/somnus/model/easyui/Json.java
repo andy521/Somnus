@@ -18,6 +18,8 @@ public class Json implements java.io.Serializable {
 	private Object obj = null;
 	
 	private Object data = null;
+	
+	private Object results;
 
 	public boolean isSuccess() {
 		return success;
@@ -49,6 +51,14 @@ public class Json implements java.io.Serializable {
 
 	public void setData(Object data) {
 		this.data = data;
+	}
+
+	public Object getResults() {
+		return results;
+	}
+
+	public void setResults(Object results) {
+		this.results = results;
 	}
 
 }

@@ -73,7 +73,7 @@ public class InitServiceImpl implements InitServiceI {
 				type = new Syresourcetype();
 			}
 			type.setId(node.valueOf("@id"));
-			type.setName(node.valueOf("@name"));
+			type.setTypeName(node.valueOf("@name"));
 			type.setDescription(node.valueOf("@description"));
 			logger.info(JSON.toJSONStringWithDateFormat(type, "yyyy-MM-dd HH:mm:ss"));
 			baseDao.saveOrUpdate(type);

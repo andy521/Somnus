@@ -7,9 +7,15 @@ Ext.define('somnus.model.management.ResourceModel', {
 	         {name: 'url',  type: 'string'},
 	         {name: 'createdatetime',  type: 'string'},
 	         {name: 'updatedatetime',  type: 'string'},
-	         {name: 'syresourcetype',  type: 'object'},
+	         {name: 'typeName',  type: 'string'},
 	         {name: 'description',  type: 'string'},
 	         {name: 'seq',  type: 'string'},
 	         {name: 'target',  type: 'string'}
-	]
+	],
+	associations: [{
+		type: 'hasOne', 
+		model: 'somnus.model.management.ResourceTypeModel' ,
+		associationKey:'syresourcetype',
+		getterName:'getType'
+	}]
 });

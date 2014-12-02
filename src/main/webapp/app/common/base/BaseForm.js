@@ -8,7 +8,7 @@ Ext.define('somnus.common.base.BaseForm', {
     plain: true,
     buttonSaveText: '保存',
     buttonCloseText: '关闭',
-    action: 'create',
+    action: 'save',
     initComponent: function () {
 
         this.buttons = this.buttons || [];

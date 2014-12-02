@@ -21,7 +21,7 @@ public class Test1 {
 		m.put("syresourcetype.name", "类型");
 		//BeanUtils.populate(r, m);
 		System.out.println(r.getName());
-		System.out.println(r.getSyresourcetype().getName());
+		System.out.println(r.getSyresourcetype().getTypeName());
 	}
 
 }

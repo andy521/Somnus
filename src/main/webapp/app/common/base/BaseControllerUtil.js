@@ -29,7 +29,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			return;
 		}
 		form.submit({
-			url:app.contextPath + '/base/'+this.baseUrl +'!save.action',
+			url:app.contextPath + '/base/'+this.baseUrl +'!'+this.action+".action",
 			submitEmptyText: false,
 			waitMsg: '正在提交...',
 			success: function (form, action) {
@@ -51,7 +51,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 				var results = Ext.decode(action.response.responseText);
 				Ext.Msg.show({
 					title: '信息',
-					msg: results.message,
+					msg: results.message||results.msg,
 					buttons: Ext.Msg.OK,
 					icon: Ext.Msg.ERROR,
 					fn: function () {

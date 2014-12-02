@@ -9,7 +9,7 @@ Ext.define('somnus.common.base.BaseCombo', {
 	idProperty: 'value',
 	loadingText: '正在加载数据，请稍侯……',
 	entityName: '',
-	url: '/json/getCombo.json',
+	/*url: '/json/getCombo.json',*/
 	// triggerAction:'all',
 	initComponent: function () {
 		var me = this;
@@ -20,10 +20,11 @@ Ext.define('somnus.common.base.BaseCombo', {
 			singleton: true,
 			proxy: {
 				type: 'ajax',
-				extraParams: {
+				/*extraParams: {
 					entityName: this.entityName
-				},
-				url: app.contextPath + me.url,
+				},*/
+				/*url: app.contextPath + me.url,*/
+				url: me.url,
 				reader: {
 					type: 'json',
 					root: 'results'

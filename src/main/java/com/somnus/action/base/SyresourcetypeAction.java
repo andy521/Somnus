@@ -1,10 +1,16 @@
 package com.somnus.action.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syresourcetype;
+import com.somnus.model.easyui.CommboBox;
+import com.somnus.model.easyui.Json;
 import com.somnus.service.base.SyresourcetypeServiceI;
 
 /**
@@ -33,7 +39,18 @@ public class SyresourcetypeAction extends BaseAction<Syresourcetype> {
 	 * 获得资源类型combobox
 	 */
 	public void doNotNeedSecurity_combobox() {
-		writeJson(((SyresourcetypeServiceI) service).findResourcetype());
+		List<Syresourcetype> list = ((SyresourcetypeServiceI) service).findResourcetype();
+		List<CommboBox> commbolist = new ArrayList<CommboBox>();
+		for(Syresourcetype data:list){
+			CommboBox commbo = new CommboBox();
+			commbo.setLabel(data.getTypeName());
+			commbo.setValue(data.getId());
+			commbolist.add(commbo);
+		}
+		Json json = new Json();
+		json.setSuccess(true);
+		json.setResults(commbolist);
+		writeJson(json);
 	}
 
 }

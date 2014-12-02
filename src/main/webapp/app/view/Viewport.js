@@ -116,8 +116,8 @@ Ext.define('somnus.view.Viewport', {
 								text: '修改密码',
 								iconCls:'ext-icon-user_edit',
 								handler:function(){
-									Ext.require('somnus.view.user.UpdatePwdWindow', function () {
-										Ext.create('somnus.view.user.UpdatePwdWindow').show();
+									Ext.require('somnus.view.system.user.UpdatePwdWindow', function () {
+										Ext.create('somnus.view.system.user.UpdatePwdWindow').show();
 									});
 								}
 							},{
@@ -126,8 +126,8 @@ Ext.define('somnus.view.Viewport', {
 								text: '我的信息',
 								iconCls:'ext-icon-user',
 								handler:function(){
-									Ext.require('somnus.view.user.UserInfoWindow', function () {
-										Ext.create('somnus.view.user.UserInfoWindow').show();
+									Ext.require('somnus.view.system.user.UserInfoWindow', function () {
+										Ext.create('somnus.view.system.user.UserInfoWindow').show();
 									});
 								}
 							}]
@@ -150,8 +150,8 @@ Ext.define('somnus.view.Viewport', {
 								Ext.Ajax.request({
 									url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_logout.action',
 									success:function(response,option){
-										Ext.require('somnus.view.user.LockWindow', function () {
-											Ext.create('somnus.view.user.LockWindow').show();
+										Ext.require('somnus.view.system.user.LockWindow', function () {
+											Ext.create('somnus.view.system.user.LockWindow').show();
 										});
 									}
 								});
