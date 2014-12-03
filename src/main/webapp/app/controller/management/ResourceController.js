@@ -1,6 +1,6 @@
 Ext.define("somnus.controller.management.ResourceController",{
 	extend: 'somnus.common.base.BaseController',
-	stores: ['management.ResourceStore'],
+	stores: ['management.ResourceStore','management.ResourceTreeStore'],
 	models: ['management.ResourceModel'],
 	views: ['management.ResourceView', 'management.ResourceWindow'],
 	refs: [
