@@ -113,7 +113,7 @@ Ext.apply(Ext.form.VTypes, {
 			return true;
 		}
 		Ext.Ajax.request({
-			url: app.contextPath + '/common/checkIsUnique',
+			url: app.contextPath + '/base!checkIsUnique.action',
 			params: params,
 			async: false,
 			success: function (response) {

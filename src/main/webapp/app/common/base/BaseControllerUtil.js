@@ -12,7 +12,6 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			timeout: 60 * 1000,
 			success: function (form, action) {
 				var result = Ext.decode(action.response.responseText);
-				console.log(result);
 			},
 			failure: function (form, action) {
 			},

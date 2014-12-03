@@ -12,6 +12,7 @@ package com.somnus.model.easyui;
 public class Json implements java.io.Serializable {
 
 	private boolean success = false;
+	private boolean isUnique = false;
 
 	private String msg = "";
 
@@ -59,6 +60,14 @@ public class Json implements java.io.Serializable {
 
 	public void setResults(Object results) {
 		this.results = results;
+	}
+
+	public boolean isUnique() {
+		return isUnique;
+	}
+
+	public void setUnique(boolean isUnique) {
+		this.isUnique = isUnique;
 	}
 
 }

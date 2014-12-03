@@ -25,11 +25,13 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            	xtype : 'textfield',
 					fieldLabel : '资源路劲',
 					name:'url',
+					vtype: 'unique',
+                    vtypeEntity: 'Resource',
 					width:280
 	            },{
 	            	xtype : 'combotree',
 					fieldLabel : '上级资源',
-					name:'syresource.id',
+					name:'pid',
 					store:Ext.create('Ext.data.TreeStore', {
 						fields: ['url', 'text', 'target'],
 						proxy:{
@@ -71,12 +73,14 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            	xtype : 'textfield',
 					fieldLabel : '资源名称',
 					name:'name',
+					vtype: 'unique',
+                    vtypeEntity: 'Resource',
 					width:280
 	            },{
 	            	xtype : 'basecombo',
 					fieldLabel : '资源类型',
-					name:'syresourcetype.id',
-					url:app.contextPath +'/base/syresourcetype!doNotNeedSecurity_combobox.action',
+					name:'typeId',
+					baseUrl:'syresourcetype',
 					width:280
 	            },{
 	            	xtype : 'imagebrowse',

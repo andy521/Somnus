@@ -55,7 +55,7 @@
 				<interceptor-ref name="encodingStack"></interceptor-ref>
 				<interceptor-ref name="sessionInterceptor">
 					<!-- doNotNeedSessionAndSecurity_ 开头的和doNotNeedSession_ 开头的方法不拦截 -->
-					<param name="excludeMethods">doNotNeedSession_*,doNotNeedSessionAndSecurity_*</param>
+					<param name="excludeMethods">doNotNeedSession_*,doNotNeedSessionAndSecurity_*,checkIsUnique</param>
 				</interceptor-ref>
 			</interceptor-stack>
 			<!-- 权限拦截器 -->
@@ -64,7 +64,7 @@
 				<interceptor-ref name="sessionStack"></interceptor-ref>
 				<interceptor-ref name="securityInterceptor">
 					<!-- doNotNeedSessionAndSecurity_ 开头的和doNotNeedSecurity_ 开头的方法不拦截 -->
-					<param name="excludeMethods">doNotNeedSecurity_*,doNotNeedSessionAndSecurity_*</param>
+					<param name="excludeMethods">doNotNeedSecurity_*,doNotNeedSessionAndSecurity_*,checkIsUnique</param>
 				</interceptor-ref>
 			</interceptor-stack>
 		</interceptors>

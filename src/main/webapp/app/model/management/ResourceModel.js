@@ -1,21 +1,18 @@
 Ext.define('somnus.model.management.ResourceModel', {
 	extend: 'Ext.data.Model',
 	fields: [
-	         {name: 'id', type: 'string'},
-	         {name: 'name', type: 'string'},
-	         {name: 'iconCls',  type: 'string'},
-	         {name: 'url',  type: 'string'},
-	         {name: 'createdatetime',  type: 'string'},
-	         {name: 'updatedatetime',  type: 'string'},
-	         {name: 'typeName',  type: 'string'},
-	         {name: 'description',  type: 'string'},
-	         {name: 'seq',  type: 'string'},
-	         {name: 'target',  type: 'string'}
+	         {name: 'id'},
+	         {name: 'name'},
+	         {name: 'iconCls'},
+	         {name: 'url',},
+	         {name: 'createdatetime'},
+	         {name: 'updatedatetime',},
+	         {name: 'pid'},
+	         {name: 'pname'},
+	         {name: 'typeId'},
+	         {name: 'typeName'},
+	         {name: 'description'},
+	         {name: 'seq'},
+	         {name: 'target'}
 	],
-	associations: [{
-		type: 'hasOne', 
-		model: 'somnus.model.management.ResourceTypeModel' ,
-		associationKey:'syresourcetype',
-		getterName:'getType'
-	}]
 });

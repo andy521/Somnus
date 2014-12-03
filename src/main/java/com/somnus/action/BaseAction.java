@@ -50,7 +50,10 @@ public class BaseAction<T> extends ActionSupport {
 	protected T data;// 数据模型(与前台表单name相同，name="data.xxx")
 
 	protected BaseServiceI<T> service;// 业务逻辑
-
+	
+	protected String entity;
+	protected String name;
+	protected String value;
 	/**
 	 * 继承BaseAction的action需要先设置这个方法，使其获得当前action的业务服务
 	 * 
@@ -122,6 +125,30 @@ public class BaseAction<T> extends ActionSupport {
 
 	public void setQ(String q) {
 		this.q = q;
+	}
+
+	public String getEntity() {
+		return entity;
+	}
+
+	public void setEntity(String entity) {
+		this.entity = entity;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	/**
@@ -333,6 +360,13 @@ public class BaseAction<T> extends ActionSupport {
 			json.setSuccess(true);
 			json.setMsg("删除成功！");
 		}
+		writeJson(json);
+	}
+	public void checkIsUnique(){
+		Json json = new Json();
+		logger.info(entity+" " + name+" "+value);
+		json.setSuccess(true);
+		json.setUnique(false);
 		writeJson(json);
 	}
 

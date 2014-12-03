@@ -89,7 +89,6 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
             },  
             itemclick: function(tree, record, item, index, e, options) {  
                 var checkModel = me.checkModel;
-                console.log(record);
                 if (checkModel == 'single') {
                 	me.setRawValue(record.get('id')); // 隐藏值 
                 	me.submitValue = record.get('id');
