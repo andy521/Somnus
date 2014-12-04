@@ -77,7 +77,45 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 	* .Msg 1 是否 不显示弹出信息
 	* }
 	* */
-	doDelete: function (grid, pkName) {
+	doDelete: function (grid, id) {
+		alert(id);
+		var store = grid.getStore(); //得到数据集合
+		Ext.MessageBox.confirm("提示", '确定要删除此记录吗', function (btn) {
+			if (btn == 'yes') {
+				Ext.Ajax.request({
+					url: store.getProxy().api['destroy'],
+					params: {
+						id: id
+					},
+					timeout: 4000,
+					success: function (response, opts) {
+						store.load();
+					}
+				})
+			}
+		});
+	},
+	doDelete2: function (grid,tree, id) {
+		alert(id);
+		var store = grid.getStore(); //得到数据集合
+		var treestore = tree.getStore(); //得到数据集合
+		Ext.MessageBox.confirm("提示", '确定要删除此记录吗', function (btn) {
+			if (btn == 'yes') {
+				Ext.Ajax.request({
+					url: store.getProxy().api['destroy'],
+					params: {
+						id: id
+					},
+					timeout: 4000,
+					success: function (response, opts) {
+						store.load();
+						treestore.load();
+					}
+				})
+			}
+		});
+	},
+	/*doDelete: function (grid, pkName) {
 		var store = grid.getStore(); //得到数据集合
 		var records = grid.getSelectionModel().getSelection();
 		var pks = [];
@@ -102,7 +140,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 		} else {
 			Ext.Msg.alert("提示", "请选择一条信息");
 		}
-	},
+	},*/
 	/**
 	* 树形删除操作
 	* @param {} Tree 要操作的树

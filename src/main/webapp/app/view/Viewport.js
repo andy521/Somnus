@@ -206,7 +206,7 @@ Ext.define('somnus.view.Viewport', {
 				scope: this
 			}
 		});
-		var menuPanel = Ext.create('Ext.Panel', {
+		var menuPanel = Ext.create('Ext.panel.Panel', {
 			layout: 'fit',
 			region: 'west',
 			title: '菜单',

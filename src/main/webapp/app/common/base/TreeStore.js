@@ -7,10 +7,10 @@ Ext.define('somnus.common.base.TreeStore', {
 				type: 'ajax',
 				url:config.url,
 				api: {
-					read: config.readUrl || app.contextPath + '/base/'+this.baseUrl,
-					create: app.contextPath + '/base/'+this.baseUrl +'!save.action',
-					update: app.contextPath + '/base/'+this.baseUrl +'!update.action',
-					destroy: app.contextPath + '/base/'+this.baseUrl +'!delete.action',
+					read: config.readUrl || app.contextPath + '/base/'+config.baseUrl,
+					create: app.contextPath + '/base/'+config.baseUrl +'!save.action',
+					update: app.contextPath + '/base/'+config.baseUrl +'!update.action',
+					destroy: app.contextPath + '/base/'+config.baseUrl +'!delete.action',
 				},
 				actionMethods: {
 					read: 'POST'
@@ -30,7 +30,7 @@ Ext.define('somnus.common.base.TreeStore', {
 		          	  				rec.expanded = false;
 		          	  				rec.leaf = true;
 		          	  			}else{
-		          	  				rec.expanded = true;
+		          	  				rec.expanded = false;
 		          	  				rec.leaf = false;
 		          	  			}
 		          	  		});

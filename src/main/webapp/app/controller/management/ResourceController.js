@@ -65,7 +65,9 @@ Ext.define("somnus.controller.management.ResourceController",{
 				},
 				deleteclick: function(record){
 			        var grid = this.getResourceView();
-			        grid.doDelete(grid, 'id');
+			        var tree = this.getResourceView().ownerCt.ownerCt.down('treepanel');
+			        var id = record.record.data.id;
+			        grid.doDelete2(grid, tree, id);
 				}
 			}
 		})
