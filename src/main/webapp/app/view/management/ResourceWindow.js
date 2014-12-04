@@ -13,58 +13,59 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            bodyStyle: 'padding: 8px;',
 	            flex: 1
 	        },
+	        trackResetOnLoad: true,//判断form是否被修改
 	        layout: 'hbox',
 	        items: [{
 	            items: [{
 	            	xtype : 'textfield',
 					fieldLabel : '编号',
-					name:'id',
-					/*readOnly:true,*/
+					name:'data.id',
+					readOnly:true,
 					width:280
 	            }, {
 	            	xtype : 'textfield',
 					fieldLabel : '资源路劲',
-					name:'url',
+					name:'data.url',
 					vtype: 'unique',
                     vtypeEntity: 'Resource',
 					width:280
 	            },{
 	            	xtype : 'combotree',
 					fieldLabel : '上级资源',
-					name:'pid',
+					name:'data.syresource.id',
 					store:'management.ResourceTreeStore',
 					checkModel:'single',
 					width:280
 	            },{
 	            	xtype : 'numberfield',
 					fieldLabel : '顺序',
-					name:'seq',
+					name:'data.seq',
 					width:280,
 					value:100
 	            },{
 	            	xtype : 'textarea',
 					fieldLabel : '资源描述',
-					name:'description',
+					name:'data.description',
 					width:280
 	            }]
 	        }, {
 	            items: [{
 	            	xtype : 'textfield',
 					fieldLabel : '资源名称',
-					name:'name',
+					name:'data.name',
 					vtype: 'unique',
                     vtypeEntity: 'Resource',
 					width:280
 	            },{
 	            	xtype : 'basecombo',
 					fieldLabel : '资源类型',
-					name:'typeId',
+					name:'data.syresourcetype.id',
 					baseUrl:'syresourcetype',
 					width:280
 	            },{
 	            	xtype : 'imagebrowse',
 					fieldLabel : '资源图标',
-					name:'iconCls',
+					name:'data.iconCls',
 					buttonText: '',
 		            buttonConfig: {
 		                iconCls: 'ext-icon-camera'
@@ -80,7 +81,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            },{
 	            	xtype : 'textfield',
 					fieldLabel : '目标',
-					name:'target',
+					name:'data.target',
 					width:280
 	            }]
 	        }]

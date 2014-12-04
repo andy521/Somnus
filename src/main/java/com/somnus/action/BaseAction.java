@@ -366,7 +366,8 @@ public class BaseAction<T> extends ActionSupport {
 		Json json = new Json();
 		logger.info(entity+" " + name+" "+value);
 		json.setSuccess(true);
-		json.setUnique(false);
+		if(value.equals("admin"))
+			json.setUnique(false);
 		writeJson(json);
 	}
 

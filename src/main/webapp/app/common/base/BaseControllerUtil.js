@@ -10,8 +10,18 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			method: 'GET',
 			waitMsg: '正在加载..',
 			timeout: 60 * 1000,
-			success: function (form, action) {
-				var result = Ext.decode(action.response.responseText);
+			success: function (formbasic, action) {
+				/*var result = Ext.decode(action.response.responseText);*/
+				formbasic.getFields().each(function(field){
+					var fieldName = field.getName();
+					if(fieldName.substring(5).indexOf(".")>0){
+						var arr = fieldName.substring(5).split(".");
+						if(!Ext.isEmpty(action.result.data[arr[0]]))
+							formbasic.findField(fieldName).setValue(action.result.data[arr[0]][arr[1]]);
+					}else{
+						formbasic.findField(fieldName).setValue(action.result.data[fieldName.substring(5)]);
+					}
+				})
 			},
 			failure: function (form, action) {
 			},

@@ -12,7 +12,7 @@ package com.somnus.model.easyui;
 public class Json implements java.io.Serializable {
 
 	private boolean success = false;
-	private boolean isUnique = false;
+	private boolean unique = true;
 
 	private String msg = "";
 
@@ -63,11 +63,11 @@ public class Json implements java.io.Serializable {
 	}
 
 	public boolean isUnique() {
-		return isUnique;
+		return unique;
 	}
 
-	public void setUnique(boolean isUnique) {
-		this.isUnique = isUnique;
+	public void setUnique(boolean unique) {
+		this.unique = unique;
 	}
 
 }

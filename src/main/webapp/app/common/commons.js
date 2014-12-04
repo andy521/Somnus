@@ -118,7 +118,8 @@ Ext.apply(Ext.form.VTypes, {
 			async: false,
 			success: function (response) {
 				var result = Ext.decode(response.responseText);
-				flag = result['isUnique'];
+				flag = result['unique'];
+				console.log(flag);
 			}
 		})
 		return flag;
