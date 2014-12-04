@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>OA</title>
+<title>通用后台管理系统</title>
 <jsp:include page="inc.jsp"></jsp:include>
 <script type="text/javascript" src="<%=contextPath%>/app/common/commons.js "></script>
 <script type="text/javascript" src="<%=contextPath%>/app/app.js"></script>
