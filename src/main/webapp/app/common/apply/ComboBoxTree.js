@@ -18,7 +18,13 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
             labelWidth: me.labelWidth  
         });  
         me.callParent();  
-    },  
+        this.on('change',function(self,newValue, oldValue, eOpts){
+        	console.log(newValue);
+        	console.log(self.getStore());
+        	/*me.submitValue = record.get('id');
+            me.setValue(record.get('text')); // 显示值  
+*/        })
+    },
     createPicker: function() {
         var me = this;  
         me.picker = new Ext.tree.Panel({
@@ -95,7 +101,7 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
                     me.setValue(record.get('text')); // 显示值  
                     me.collapse();
                 }  
-            }  
+            }
         });  
         return me.picker;  
     },

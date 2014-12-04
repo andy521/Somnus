@@ -1,6 +1,5 @@
 Ext.define("somnus.store.management.ResourceTreeStore",{
 	extend: 'Ext.data.TreeStore',
-	fields: ['url', 'text', 'target'],
 	proxy:{
 		type:'ajax',
 		url:app.contextPath + '/base/syresource!doNotNeedSecurity_getMainMenu.action',
