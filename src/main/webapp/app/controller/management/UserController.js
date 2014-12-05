@@ -11,9 +11,7 @@ Ext.define("somnus.controller.management.UserController",{
 		this.control({
 			'userView actioncolumn':{
 				showclick: function(record){
-					Ext.create('somnus.view.management.UserWindow', {
-						pk: record.record.data.id
-					}).show();
+					alert(3);
 				},
 				editclick: function(record){
 					alert(3);

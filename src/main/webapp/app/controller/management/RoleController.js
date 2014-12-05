@@ -11,9 +11,7 @@ Ext.define("somnus.controller.management.RoleController",{
 		this.control({
 			'roleView actioncolumn':{
 				showclick: function(record){
-					Ext.create('somnus.view.management.RoleWindow', {
-						pk: record.record.data.id
-					}).show();
+					alert(3);
 				},
 				editclick: function(record){
 					alert(3);

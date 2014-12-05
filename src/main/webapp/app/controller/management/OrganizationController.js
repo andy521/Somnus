@@ -9,7 +9,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 	],
 	init:function(){
 		this.control({
-			'organizationView toolbar button[action=addresource]':{
+			'organizationView toolbar button[action=add]':{
 				click:function(b,e){
 					alert();
 				}
@@ -26,7 +26,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 					tree.collapseAll();
 				}
 			},
-			'organizationView toolbar button[action=refreshresource]':{
+			'organizationView toolbar button[action=refresh]':{
 				click:function(b,e){
 					var tree = b.ownerCt.ownerCt;
 					tree.getStore().reload();
@@ -34,9 +34,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 			},
 			'organizationView actioncolumn':{
 				showclick: function(record){
-					Ext.create('somnus.view.management.OrganizationWindow', {
-						pk: record.record.data.id
-					}).show();
+					alert(3);
 				},
 				editclick: function(record){
 					alert(3);

@@ -7,6 +7,7 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
     requires: ["Ext.tree.Panel"],  
     alias: 'widget.combotree',
     submitValue:'',
+    editable: false,
     mixins: {
         bindable: 'Ext.util.Bindable'    
     },
@@ -19,11 +20,20 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
         });  
         me.callParent();  
         this.on('change',function(self,newValue, oldValue, eOpts){
-        	console.log(newValue);
-        	console.log(self.getStore());
-        	/*me.submitValue = record.get('id');
-            me.setValue(record.get('text')); // 显示值  
-*/        })
+        	if(Ext.isEmpty(oldValue)){
+        		console.log(newValue);
+            	self.getStore().load();
+            	self.getStore().on('load',function(store, node, records, successful, eOpts ){
+            		Ext.each(records,function(record){
+            			if(newValue==record.get('id')){
+            				self.submitValue = record.get('id')
+            				self.setValue(record.get('text'));
+            				return;
+            			}
+            		});
+            	});
+        	}
+        })
     },
     createPicker: function() {
         var me = this;  

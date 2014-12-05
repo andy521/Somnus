@@ -41,16 +41,14 @@ Ext.define("somnus.controller.management.ResourceController",{
 			},
 			'resourceView actioncolumn':{
 				showclick: function(record){
-					var store=this.getResourceView().getStore();
-			        var userName = this.getResourceView().down('#userName').getValue();
-			        Ext.apply(store.getProxy().extraParams, {
-			            userName: userName
-			        });
-			        store.loadPage(1);
+					Ext.create('somnus.view.management.ResourceWindow', {
+			            pk: record.record.data.id
+			        }).show();
 				},
 				editclick: function(record){
 					Ext.create('somnus.view.management.ResourceWindow', {
 			            pk: record.record.data.id,
+			            isQuery:false,
 			            listeners: {
 			                success: function () {
 			                    this.getResourceView().getStore().load();

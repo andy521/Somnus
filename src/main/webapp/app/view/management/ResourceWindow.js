@@ -6,6 +6,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	height: 320,
 	baseUrl: 'syresource',
 	initComponent: function () {
+		var me = this;
 		this.formPanel = Ext.create('Ext.form.Panel', {
 			defaults: {
 	            border: false,
@@ -74,7 +75,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 		            buttons:[{
 						text:'确定',
 						handler:function(btn){
-							selectIcon(btn.ownerCt.ownerCt,Ext.getCmp('resourcewindow').down('form').getForm().findField('data.iconCls'));
+							selectIcon(btn.ownerCt.ownerCt,me.down('form').getForm().findField('data.iconCls'));
 						}
 					}],
 					width:280
