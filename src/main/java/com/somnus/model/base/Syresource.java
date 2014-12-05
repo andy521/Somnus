@@ -31,6 +31,7 @@ import org.hibernate.annotations.DynamicUpdate;
 public class Syresource implements java.io.Serializable {
 
 	private String pid;// 虚拟属性，用于获得当前资源的父资源ID
+	private String type;// 虚拟属性，用于获得当前资源的类型
 
 	private String id;
 	private Date createdatetime;
@@ -198,5 +199,16 @@ public class Syresource implements java.io.Serializable {
 	public void setPid(String pid) {
 		this.pid = pid;
 	}
+	
+	@Transient
+	public String getType() {
+		if (syresourcetype != null && !StringUtils.isBlank(syresourcetype.getName())) {
+			return syresourcetype.getName();
+		}
+		return type;
+	}
 
+	public void setType(String type) {
+		this.type = type;
+	}
 }

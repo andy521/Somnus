@@ -43,7 +43,7 @@ public class SyresourcetypeAction extends BaseAction<Syresourcetype> {
 		List<CommboBox> commbolist = new ArrayList<CommboBox>();
 		for(Syresourcetype data:list){
 			CommboBox commbo = new CommboBox();
-			commbo.setLabel(data.getTypeName());
+			commbo.setLabel(data.getName());
 			commbo.setValue(data.getId());
 			commbolist.add(commbo);
 		}

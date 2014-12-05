@@ -27,7 +27,7 @@ public class Syresourcetype implements java.io.Serializable {
 	private String id;
 	private Date createdatetime;
 	private Date updatedatetime;
-	private String typeName;
+	private String name;
 	private String description;
 	private Set<Syresource> syresources = new HashSet<Syresource>(0);
 
@@ -69,12 +69,12 @@ public class Syresourcetype implements java.io.Serializable {
 	}
 
 	@Column(name = "NAME", nullable = false, length = 100)
-	public String getTypeName() {
-		return this.typeName;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setTypeName(String typeName) {
-		this.typeName = typeName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Column(name = "DESCRIPTION", length = 200)
