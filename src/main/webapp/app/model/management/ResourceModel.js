@@ -7,10 +7,7 @@ Ext.define('somnus.model.management.ResourceModel', {
 	         {name: 'url',},
 	         {name: 'createdatetime'},
 	         {name: 'updatedatetime',},
-	         {name: 'pid'},
-	         {name: 'pname'},
-	         {name: 'typeId'},
-	         {name: 'typeName'},
+	         {name: 'type'},
 	         {name: 'description'},
 	         {name: 'seq'},
 	         {name: 'target'}

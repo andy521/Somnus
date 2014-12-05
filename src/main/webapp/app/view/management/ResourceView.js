@@ -37,11 +37,8 @@ Ext.define('somnus.view.management.ResourceView',{
 				sortable : true
 			},{
 				text : '资源类型',
-				dataIndex : 'typeName',
-				width : 100,
-				renderer:function(value){
-					return value;
-				}
+				dataIndex : 'type',
+				width : 100
 			},{
 				text : '资源描述',
 				dataIndex : 'description',

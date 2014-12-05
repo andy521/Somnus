@@ -30,6 +30,7 @@ Ext.define("somnus.controller.management.ResourceController",{
 			'resourceView toolbar button[action=add]':{
 				click:function(b,e){
 					Ext.create('somnus.view.management.ResourceWindow', {
+						isQuery:false,
 			            listeners: {
 			                success: function () {
 			                    this.getResourceView().getStore().load();
