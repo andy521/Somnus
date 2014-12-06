@@ -21,14 +21,23 @@ Ext.define("somnus.common.apply.ComboBoxTree", {
         me.callParent();  
         this.on('change',function(self,newValue, oldValue, eOpts){
         	if(Ext.isEmpty(oldValue)){
-        		console.log(newValue);
             	self.getStore().load();
             	self.getStore().on('load',function(store, node, records, successful, eOpts ){
             		Ext.each(records,function(record){
             			if(newValue==record.get('id')){
-            				self.submitValue = record.get('id')
+            				self.submitValue = record.get('id');
             				self.setValue(record.get('text'));
             				return;
+            			}
+            			//如果父类找不到，遍历子节点
+            			if(!Ext.isEmpty(record.get('children'))){
+            				Ext.each(record.get('children'),function(rec){
+            					if(newValue==rec.id){
+                    				self.submitValue = rec.id
+                    				self.setValue(rec.text);
+                    				return;
+                    			}
+            				});
             			}
             		});
             	});
