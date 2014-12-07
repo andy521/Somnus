@@ -111,12 +111,6 @@ Ext.onReady(function(){
 					}, {
 						text : '经典蓝',
 						value : 'ext-all.css'
-					},{
-						text : '深夜黑',
-						value : 'ext-all-access.css'
-					},{
-						text : '玛雅灰',
-						value : 'ext-all-gray.css'
 					}]
 				},
 				valueField : 'value',
