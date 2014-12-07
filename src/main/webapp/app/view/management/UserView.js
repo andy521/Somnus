@@ -128,18 +128,12 @@ Ext.define('somnus.view.management.UserView',{
 					displayField : 'text',
 					queryMode : 'local',
 					emptyText:'请选择'
-				},{
-					xtype:'datefield',
-					name:'QUERY_t#createdatetime_D_GE',
-					format:'Y-m-d H:i:s',
-					fieldLabel:'创建时间',
-					labelWidth : 60,
-					width: 220
-				},'—',{
-					xtype:'datefield',
-					format:'Y-m-d H:i:s',
-					name:'QUERY_t#createdatetime_D_LE',
-					width: 160
+				},'创建时间',{
+					xtype: 'daterange',
+					itemId: 'daterange',
+					startDateName:'QUERY_t#createdatetime_D_GE',
+					endDateName:'QUERY_t#createdatetime_D_LE',
+		        	range: '-1d'
 				},{
 					xtype:'btnsearch',
 					store: 'management.UserStore',
