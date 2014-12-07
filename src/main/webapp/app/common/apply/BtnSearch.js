@@ -40,7 +40,13 @@ Ext.define('somnus.common.apply.BtnSearch', {
         		if(!Ext.isEmpty(toolbar.down('field[name="'+param+'"]').getValue())){
         			me.store.proxy.extraParams[param] = toolbar.down('field[name="'+param+'"]').getValue();
         			if(!Ext.isEmpty(toolbar.down('datefield[name="'+param+'"]'))&&!Ext.isEmpty(toolbar.down('datefield[name="'+param+'"]').getValue())){
-        				me.store.proxy.extraParams[param] = Ext.dateFormat(toolbar.down('field[name="'+param+'"]').getValue());
+        				if(param=='QUERY_t#createdatetime_D_GE'){
+        					me.store.proxy.extraParams[param] = Ext.dateFormat(toolbar.down('field[name="'+param+'"]').getValue());
+        				}
+        				else if(param=='QUERY_t#createdatetime_D_LE'){
+        					me.store.proxy.extraParams[param] = Ext.dateFormat(toolbar.down('field[name="'+param+'"]').getValue()).replace('00:00:00','23:59:59');
+        				}
+        					
         			}
         		}else{
         			delete me.store.proxy.extraParams[param];
