@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.OrganizationStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model: 'somnus.model.management.OrganizationModel',
-			readUrl: app.contextPath + '/base/syorganization!treeGrid.action'
+			baseUrl: 'syorganization'
 		}, config);
 		this.callParent([config]);
 	}

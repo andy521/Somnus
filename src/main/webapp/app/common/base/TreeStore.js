@@ -7,7 +7,7 @@ Ext.define('somnus.common.base.TreeStore', {
 				type: 'ajax',
 				url:config.url,
 				api: {
-					read: config.readUrl || app.contextPath + '/base/'+config.baseUrl,
+					read: config.readUrl || app.contextPath + '/base/'+config.baseUrl +'!treeGrid.action',
 					create: app.contextPath + '/base/'+config.baseUrl +'!save.action',
 					update: app.contextPath + '/base/'+config.baseUrl +'!update.action',
 					destroy: app.contextPath + '/base/'+config.baseUrl +'!delete.action',

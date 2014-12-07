@@ -127,13 +127,13 @@ public interface BaseServiceI<T> {
 	 * 
 	 * @param hql
 	 *            HQL语句
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param pageSize
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, int page, int rows);
+	public List<T> find(String hql, int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -142,32 +142,32 @@ public interface BaseServiceI<T> {
 	 *            HQL语句
 	 * @param params
 	 *            参数
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param pageSize
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, Map<String, Object> params, int page, int rows);
+	public List<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
 	 * 
-	 * @param page
-	 * @param rows
+	 * @param pageNo
+	 * @param pageSize
 	 * @return
 	 */
-	public List<T> find(int page, int rows);
+	public List<T> find(int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
 	 * 
 	 * @param hqlFilter
-	 * @param page
-	 * @param rows
+	 * @param pageNo
+	 * @param pageSize
 	 * @return
 	 */
-	public List<T> findByFilter(HqlFilter hqlFilter, int page, int rows);
+	public List<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize);
 
 	/**
 	 * 统计数目
@@ -238,13 +238,13 @@ public interface BaseServiceI<T> {
 	 * 
 	 * @param sql
 	 *            SQL语句
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param pageSize
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List findBySql(String sql, int page, int rows);
+	public List findBySql(String sql, int pageNo, int pageSize);
 
 	/**
 	 * 获得结果集
@@ -264,13 +264,13 @@ public interface BaseServiceI<T> {
 	 *            SQL语句
 	 * @param params
 	 *            参数
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param pageSize
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List findBySql(String sql, Map<String, Object> params, int page, int rows);
+	public List findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize);
 
 	/**
 	 * 执行SQL语句

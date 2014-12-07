@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.UserStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model:'somnus.model.management.UserModel',
-			readUrl:app.contextPath + '/base/syuser!grid.action',
+			baseUrl:'syuser',
 			root:'rows'
 		}, config);
 		this.callParent([config]);

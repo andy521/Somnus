@@ -55,7 +55,7 @@ public class SyroleAction extends BaseAction<Syrole> {
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
 		grid.setTotal(((SyroleServiceI) service).countRoleByFilter(hqlFilter));
-		grid.setRows(((SyroleServiceI) service).findRoleByFilter(hqlFilter, page, limit));
+		grid.setRows(((SyroleServiceI) service).findRoleByFilter(hqlFilter, pageNo, pageSize));
 		writeJson(grid);
 	}
 

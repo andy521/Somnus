@@ -89,25 +89,25 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
-	public List<T> find(String hql, int page, int limit) {
-		return baseDao.find(hql, page, limit);
+	public List<T> find(String hql, int pageNo, int pageSize) {
+		return baseDao.find(hql, pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> find(String hql, Map<String, Object> params, int page, int limit) {
-		return baseDao.find(hql, params, page, limit);
+	public List<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
+		return baseDao.find(hql, params, pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> find(int page, int limit) {
-		return findByFilter(new HqlFilter(), page, limit);
+	public List<T> find(int pageNo, int pageSize) {
+		return findByFilter(new HqlFilter(), pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> findByFilter(HqlFilter hqlFilter, int page, int limit) {
+	public List<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize) {
 		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
 		String hql = "select distinct t from " + className + " t";
-		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), page, limit);
+		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), pageNo, pageSize);
 	}
 
 	@Override
@@ -148,8 +148,8 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
-	public List findBySql(String sql, int page, int limit) {
-		return baseDao.findBySql(sql, page, limit);
+	public List findBySql(String sql, int pageNo, int pageSize) {
+		return baseDao.findBySql(sql, pageNo, pageSize);
 	}
 
 	@Override
@@ -158,8 +158,8 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
-	public List findBySql(String sql, Map<String, Object> params, int page, int limit) {
-		return baseDao.findBySql(sql, params, page, limit);
+	public List findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
+		return baseDao.findBySql(sql, params, pageNo, pageSize);
 	}
 
 	@Override

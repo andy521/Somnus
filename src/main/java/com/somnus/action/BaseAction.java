@@ -39,8 +39,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class BaseAction<T> extends ActionSupport {
 	private static final Logger logger = Logger.getLogger(BaseAction.class);
 
-	protected int page = 1;// 当前页
-	protected int limit = 25;// 每页显示记录数
+	protected int pageNo = 1;// 当前页
+	protected int pageSize = 25;// 每页显示记录数
 	protected String sort;// 排序字段
 	protected String order = "asc";// asc/desc
 	protected String q;// easyui的combo和其子类过滤时使用
@@ -87,20 +87,20 @@ public class BaseAction<T> extends ActionSupport {
 		this.data = data;
 	}
 
-	public int getPage() {
-		return page;
+	public int getPageNo() {
+		return pageNo;
 	}
 
-	public void setPage(int page) {
-		this.page = page;
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
 	}
 
-	public int getLimit() {
-		return limit;
+	public int getPageSize() {
+		return pageSize;
 	}
 
-	public void setLimit(int limit) {
-		this.limit = limit;
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
 	}
 
 	public String getSort() {
@@ -271,7 +271,7 @@ public class BaseAction<T> extends ActionSupport {
 	 */
 	public void find() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		writeJson(service.findByFilter(hqlFilter, page, limit));
+		writeJson(service.findByFilter(hqlFilter, pageNo, pageSize));
 	}
 
 	/**
@@ -289,7 +289,7 @@ public class BaseAction<T> extends ActionSupport {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		grid.setTotal(service.countByFilter(hqlFilter));
-		grid.setRows(service.findByFilter(hqlFilter, page, limit));
+		grid.setRows(service.findByFilter(hqlFilter, pageNo, pageSize));
 		writeJson(grid);
 	}
 

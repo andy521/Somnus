@@ -3,7 +3,7 @@ Ext.define("somnus.store.monitor.OnlineStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model:'somnus.model.monitor.OnlineModel',
-			readUrl:app.contextPath + '/base/syonline!grid.action',
+			baseUrl:'syonline',
 			root:'rows'
 		}, config);
 		this.callParent([config]);

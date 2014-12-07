@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.RoleStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model:'somnus.model.management.RoleModel',
-			readUrl:app.contextPath + '/base/syrole!grid.action',
+			baseUrl:'syrole',
 			root:'rows'
 		}, config);
 		this.callParent([config]);

@@ -9,7 +9,7 @@ Ext.define('somnus.view.monitor.OnlineView',{
 			iconCls:'ext-icon-chart_line',
 			store: 'monitor.OnlineStore',
 			multiSelect: true,
-			autoQuery: false,
+			autoQuery: true,
 			selModel: {
 				selType: 'checkboxmodel'
 			},

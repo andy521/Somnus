@@ -106,13 +106,13 @@ public interface BaseDaoI<T> {
 	 * 
 	 * @param hql
 	 *            HQL语句
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param oageSize
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, int page, int rows);
+	public List<T> find(String hql, int pageNo, int oageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -121,13 +121,13 @@ public interface BaseDaoI<T> {
 	 *            HQL语句
 	 * @param params
 	 *            参数
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param oageSize
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, Map<String, Object> params, int page, int rows);
+	public List<T> find(String hql, Map<String, Object> params, int pageNo, int oageSize);
 
 	/**
 	 * 统计数目
@@ -183,13 +183,13 @@ public interface BaseDaoI<T> {
 	 * 
 	 * @param sql
 	 *            SQL语句
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param oageSize
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql, int page, int rows);
+	public List<Map> findBySql(String sql, int pageNo, int oageSize);
 
 	/**
 	 * 获得结果集
@@ -209,13 +209,13 @@ public interface BaseDaoI<T> {
 	 *            SQL语句
 	 * @param params
 	 *            参数
-	 * @param page
+	 * @param pageNo
 	 *            要显示第几页
-	 * @param rows
+	 * @param oageSize
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql, Map<String, Object> params, int page, int rows);
+	public List<Map> findBySql(String sql, Map<String, Object> params, int pageNo, int oageSize);
 
 	/**
 	 * 执行SQL语句

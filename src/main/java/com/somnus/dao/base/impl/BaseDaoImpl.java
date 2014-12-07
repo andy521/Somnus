@@ -95,19 +95,19 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.list();
 	}
 
-	public List<T> find(String hql, Map<String, Object> params, int page, int limit) {
+	public List<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
 		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));
 			}
 		}
-		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).list();
+		return q.setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize).list();
 	}
 
-	public List<T> find(String hql, int page, int limit) {
+	public List<T> find(String hql, int pageNo, int pageSize) {
 		Query q = getCurrentSession().createQuery(hql);
-		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).list();
+		return q.setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize).list();
 	}
 
 	public Long count(String hql) {
@@ -145,9 +145,9 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	public List<Map> findBySql(String sql, int page, int limit) {
+	public List<Map> findBySql(String sql, int pageNo, int pageSize) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
-		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+		return q.setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
 	public List<Map> findBySql(String sql, Map<String, Object> params) {
@@ -160,14 +160,14 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	public List<Map> findBySql(String sql, Map<String, Object> params, int page, int limit) {
+	public List<Map> findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
 		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));
 			}
 		}
-		return q.setFirstResult((page - 1) * limit).setMaxResults(limit).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+		return q.setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
 	public int executeSql(String sql) {

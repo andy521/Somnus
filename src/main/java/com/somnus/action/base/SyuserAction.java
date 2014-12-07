@@ -211,7 +211,7 @@ public class SyuserAction extends BaseAction<Syuser> {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(q) + "%%");
 		grid.setTotal(service.countByFilter(hqlFilter));
-		grid.setRows(service.findByFilter(hqlFilter, page, limit));
+		grid.setRows(service.findByFilter(hqlFilter, pageNo, pageSize));
 		writeJson(grid);
 	}
 

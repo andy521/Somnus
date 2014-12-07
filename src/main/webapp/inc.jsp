@@ -77,7 +77,7 @@ var app = app || {};
 app.currentUser='';
 app.loadMsg= '数据正在加载中，请稍后···';
 app.url= '';
-app.pageSize=10;
+app.pageSize=20;
 app.contextPath = '<%=contextPath%>';
 app.basePath = '<%=basePath%>';
 app.version = '<%=version%>';

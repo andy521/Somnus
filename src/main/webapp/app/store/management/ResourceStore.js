@@ -3,8 +3,7 @@ Ext.define("somnus.store.management.ResourceStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model: 'somnus.model.management.ResourceModel',
-			baseUrl: 'syresource',
-			readUrl: app.contextPath + '/base/syresource!treeGrid.action'
+			baseUrl: 'syresource'
 		}, config);
 		this.callParent([config]);
 	}
