@@ -96,7 +96,6 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 		});
 	},
 	doDelete2: function (grid,tree, id) {
-		alert(id);
 		var store = grid.getStore(); //得到数据集合
 		var treestore = tree.getStore(); //得到数据集合
 		Ext.MessageBox.confirm("提示", '确定要删除此记录吗', function (btn) {

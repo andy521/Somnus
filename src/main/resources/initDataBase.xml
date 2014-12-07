@@ -130,7 +130,7 @@
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
-		<resource id="demo" name="其他示例" url="/welcome.jsp" description="EasyUI还能做到更多，只有你想不到，没有做不到！" seq="3" iconCls="ext-icon-asterisk_orange">
+		<resource id="demo" name="其他示例" url="/welcome.jsp" description="EstJs还能做到更多，只有你想不到，没有做不到！" seq="3" iconCls="ext-icon-asterisk_orange">
 			<resourcetype id="0" name="菜单" />
 		</resource>
 
