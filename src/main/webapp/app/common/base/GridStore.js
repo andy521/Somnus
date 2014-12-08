@@ -9,9 +9,9 @@ Ext.define('somnus.common.base.GridStore', {
 				limitParam: 'pageSize',
 				api: {
 					read: config.readUrl || app.contextPath + '/base/'+config.baseUrl +'!grid.action',
-					create: app.contextPath + '/base/'+this.baseUrl +'!save.action',
-					update: app.contextPath + '/base/'+this.baseUrl +'!update.action',
-					destroy: app.contextPath + '/base/'+this.baseUrl +'!delete.action',
+					create: app.contextPath + '/base/'+config.baseUrl +'!save.action',
+					update: app.contextPath + '/base/'+config.baseUrl +'!update.action',
+					destroy: app.contextPath + '/base/'+config.baseUrl +'!delete.action',
 				},
 				actionMethods: {
 					read: 'POST'

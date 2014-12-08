@@ -1,7 +1,7 @@
 Ext.define('somnus.view.management.ResourceWindow',{
 	extend: 'somnus.common.base.BaseForm',
 	alias:'widget.resourceWindow',
-	title: '详细信息',
+	title: '资源信息',
 	width: 640,
 	height: 320,
 	baseUrl: 'syresource',
@@ -14,7 +14,6 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            bodyStyle: 'padding: 8px;',
 	            flex: 1
 	        },
-	        trackResetOnLoad: true,//判断form是否被修改
 	        layout: 'hbox',
 	        items: [{
 	            items: [{

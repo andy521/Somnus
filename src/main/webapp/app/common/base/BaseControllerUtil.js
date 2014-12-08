@@ -78,7 +78,6 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 	* }
 	* */
 	doDelete: function (grid, id) {
-		alert(id);
 		var store = grid.getStore(); //得到数据集合
 		Ext.MessageBox.confirm("提示", '确定要删除此记录吗', function (btn) {
 			if (btn == 'yes') {
