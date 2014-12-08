@@ -108,6 +108,8 @@ Ext.apply(Ext.form.VTypes, {
 			value: value
 		});
 		this.uniqueText = Ext.String.format(this._uniqueText, value);
+		console.log(field);
+		console.log(value+'||'+field.originalValue);
 		if (value === field.originalValue) {
 			field.clearInvalid();
 			return true;
