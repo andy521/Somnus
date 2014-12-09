@@ -12,6 +12,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			timeout: 60 * 1000,
 			success: function (formbasic, action) {
 				/*var result = Ext.decode(action.response.responseText);*/
+				console.log(form);
 				formbasic.getFields().each(function(field){
 					var fieldName = field.getName();
 					if(fieldName.substring(5).indexOf(".")>0){
