@@ -12,7 +12,6 @@ Ext.define("somnus.controller.management.RoleController",{
 		this.control({
 			'roleGrant treepanel':{
 				checkchange:function(node,checked,options){
-					console.log(node.data.leaf);
 					if(node.data.leaf == false){
 						if(checked){
 							node.expand();
@@ -43,8 +42,7 @@ Ext.define("somnus.controller.management.RoleController",{
 							url:app.contextPath + '/base/syresource!doNotNeedSecurity_getRoleResources.action',
 							params:{id : self.getRoleGrant().pk},
 							timeout:2000,
-							success:function(response,option)
-							{
+							success:function(response,option){
 								var result = Ext.decode(response.responseText);
 								Ext.each(result,function(record){
 									var node = treestore.getNodeById(record.id);
@@ -58,7 +56,31 @@ Ext.define("somnus.controller.management.RoleController",{
 			},
 			'roleGrant button[action=grant]':{
 				click:function(){
-					alert();
+					var self = this;
+					var checkedNodes = this.getRoleGrant().down('treepanel').getChecked();
+					console.log(checkedNodes);
+					var pks = [];
+					Ext.Array.each(checkedNodes, function (node) {
+						pks.push(node.get('id'));
+					});
+					Ext.Ajax.request({
+						url:app.contextPath + '/base/syrole!grant.action',
+						params:{id:self.getRoleGrant().pk,ids : pks.join(',')},
+						timeout:2000,
+						success:function(response,option){
+							var result = Ext.decode(response.responseText);
+							console.log(response.responseText);
+							if(result.success){
+								self.getRoleGrant().close();
+								Ext.Msg.show({
+									title: '信息',
+									msg: '授权成功！',
+									buttons: Ext.Msg.OK,
+									icon: Ext.Msg.INFO
+								});
+							}
+						}
+					});
 				}
 			},
 			'roleView toolbar button[action=add]':{
