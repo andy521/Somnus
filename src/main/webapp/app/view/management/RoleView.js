@@ -64,11 +64,11 @@ Ext.define('somnus.view.management.RoleView',{
 					}
 				},{
 					iconCls:'ext-icon-key',
-					action:'auth',
+					action:'grant',
 					tooltip:'授权',
 					handler: function(grid, rowIndex, colIndex, item) {
 						var rec = grid.getStore().getAt(rowIndex);  
-						this.fireEvent('authclick', {  
+						this.fireEvent('grantclick', {  
 							record: rec  
 						});
 					}
