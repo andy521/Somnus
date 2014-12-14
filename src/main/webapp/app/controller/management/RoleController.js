@@ -36,7 +36,8 @@ Ext.define("somnus.controller.management.RoleController",{
 				},
 				afterrender:function(treepanel, eOpts){
 					var self = this;
-					treepanel.getStore().load();
+					if(!treepanel.getStore().isLoading())
+						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){
 						Ext.Ajax.request({
 							url:app.contextPath + '/base/syresource!doNotNeedSecurity_getRoleResources.action',
