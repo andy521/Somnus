@@ -59,7 +59,6 @@ Ext.define("somnus.controller.management.RoleController",{
 				click:function(){
 					var self = this;
 					var checkedNodes = this.getRoleGrant().down('treepanel').getChecked();
-					console.log(checkedNodes);
 					var pks = [];
 					Ext.Array.each(checkedNodes, function (node) {
 						pks.push(node.get('id'));
@@ -70,7 +69,6 @@ Ext.define("somnus.controller.management.RoleController",{
 						timeout:2000,
 						success:function(response,option){
 							var result = Ext.decode(response.responseText);
-							console.log(response.responseText);
 							if(result.success){
 								self.getRoleGrant().close();
 								Ext.Msg.show({
