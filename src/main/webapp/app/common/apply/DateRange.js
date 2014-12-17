@@ -1,4 +1,4 @@
-Ext.define('somnus.common.util.DateRange', {
+Ext.define('somnus.common.apply.DateRange', {
 	extend: 'Ext.form.FieldContainer',
 	alias: 'widget.daterange',
 	width: 220,
