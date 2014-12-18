@@ -37,7 +37,7 @@ Ext.define('somnus.common.base.GridStore', {
 					}
 				}
 			},
-			pageSize: config.pageSize || app.pageSize
+			/*pageSize: config.pageSize || app.pageSize*/
 		});
 		this.callParent([config]);
 	}

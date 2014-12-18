@@ -13,6 +13,7 @@ Ext.require('Ext.ux.TabCloseMenu');
 Ext.require('somnus.common.base.BaseCombo');
 Ext.require('somnus.common.base.BaseComboModel');
 
+Ext.require('somnus.common.apply.Paging');
 Ext.require('somnus.common.apply.DateRange');
 Ext.require('somnus.common.apply.BtnSearch');
 Ext.require('somnus.common.apply.ComboBoxTree');
