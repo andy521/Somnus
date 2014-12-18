@@ -4,7 +4,11 @@ Ext.define("somnus.store.management.UserStore",{
 		config = Ext.apply({
 			model:'somnus.model.management.UserModel',
 			baseUrl:'syuser',
-			root:'rows'
+			root:'rows',
+			extraParams:{
+				sort:'createdatetime',
+				order:'desc'
+			}
 		}, config);
 		this.callParent([config]);
 	}

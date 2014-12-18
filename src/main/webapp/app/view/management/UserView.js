@@ -25,13 +25,11 @@ Ext.define('somnus.view.management.UserView',{
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
-				width : 150,
-				sortable : true
+				width : 150
 			},{
 				text : '修改时间',
 				dataIndex : 'updatedatetime',
-				width : 150,
-				sortable : true
+				width : 150
 			},{
 				text:'性别',
 				dataIndex:'sex',

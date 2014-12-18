@@ -4,7 +4,11 @@ Ext.define("somnus.store.monitor.OnlineStore",{
 		config = Ext.apply({
 			model:'somnus.model.monitor.OnlineModel',
 			baseUrl:'syonline',
-			root:'rows'
+			root:'rows',
+			extraParams:{
+				sort:'createdatetime',
+				order:'desc'
+			}
 		}, config);
 		this.callParent([config]);
 	}

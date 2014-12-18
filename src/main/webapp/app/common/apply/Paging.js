@@ -26,7 +26,7 @@ Ext.define('somnus.common.apply.Paging', {
 			valueField : 'value',
 			displayField : 'text',
 			queryMode : 'local',
-			value:20,
+			value:25,
 			width:50,
 			listeners:{
 				change:function(combo,newValue, oldValue, eOpts){

@@ -25,8 +25,7 @@ Ext.define('somnus.view.monitor.OnlineView',{
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
-				width : 150,
-				sortable : true
+				width : 150
 			},{
 				text:'类别',
 				dataIndex:'type',
