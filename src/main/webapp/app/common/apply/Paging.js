@@ -39,5 +39,5 @@ Ext.define('somnus.common.apply.Paging', {
     	});
     	this.items.push('条');
         this.callParent();
-    },
+    }
 });
