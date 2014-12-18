@@ -1,6 +1,6 @@
 Ext.define("somnus.controller.management.RoleController",{
 	extend: 'somnus.common.base.BaseController',
-	stores: ['management.RoleStore','management.RoleGrantTreeStore'],
+	stores: ['management.RoleStore','management.GrantTreeStore'],
 	models: ['management.RoleModel','management.ResourceModel'],
 	views: ['management.RoleView', 'management.RoleWindow','management.RoleGrant'],
 	refs: [

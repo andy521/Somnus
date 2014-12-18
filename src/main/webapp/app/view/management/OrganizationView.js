@@ -70,6 +70,16 @@ Ext.define('somnus.view.management.OrganizationView',{
 						});
 					}
 				},{
+					iconCls:'ext-icon-group_key',
+					action:'grant',
+					tooltip:'授权',
+					handler: function(grid, rowIndex, colIndex, item) {
+						var rec = grid.getStore().getAt(rowIndex);  
+						this.fireEvent('grantclick', {  
+							record: rec  
+						});
+					}
+				},{
 					iconCls:'ext-icon-note_delete',
 					action:'delete',
 					tooltip:'删除',

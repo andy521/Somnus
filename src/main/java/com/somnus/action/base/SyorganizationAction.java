@@ -5,17 +5,21 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.easyui.Json;
+import com.somnus.model.easyui.Tree;
 import com.somnus.service.base.SyorganizationServiceI;
 import com.somnus.service.base.SyuserServiceI;
+import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.ConfigUtil;
 import com.somnus.util.base.HqlFilter;
 
@@ -80,7 +84,15 @@ public class SyorganizationAction extends BaseAction<Syorganization> {
 	 */
 	public void doNotNeedSecurity_comboTree() {
 		HqlFilter hqlFilter = new HqlFilter();
-		writeJson(service.findByFilter(hqlFilter));
+		List<Syorganization> organizations = service.findByFilter(hqlFilter);
+		List<Tree> tree = new ArrayList<Tree>();
+		for(Syorganization organization:organizations){
+			Tree node = new Tree();
+			BeanUtils.copyNotNullProperties(organization, node);
+			node.setText(organization.getName());
+			tree.add(node);
+		}
+		writeJson(tree);
 	}
 
 	/**

@@ -1,4 +1,4 @@
-Ext.define("somnus.store.management.RoleGrantTreeStore",{
+Ext.define("somnus.store.management.GrantTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	model:'somnus.model.management.ResourceModel',
 	proxy:{

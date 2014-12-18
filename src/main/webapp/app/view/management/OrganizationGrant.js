@@ -1,7 +1,7 @@
-Ext.define('somnus.view.management.RoleGrant', {
+Ext.define('somnus.view.management.OrganizationGrant', {
     extend: 'Ext.window.Window',
-    alias: 'widget.roleGrant',
-    title: '角色授权',
+    alias: 'widget.organizationGrant',
+    title: '机构授权',
     modal: true,
     initComponent: function () {
         this.treePanel = Ext.create('Ext.tree.Panel', {
