@@ -1,1 +1,1 @@
-{}
+{'sessionstatus':'timeOut'}

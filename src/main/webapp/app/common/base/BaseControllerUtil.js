@@ -3,6 +3,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 	 * 加载Form表单数据
 	 * */
 	doLoad: function () {
+		var formpanel = this.formPanel;
 		var form = this.formPanel.getForm();
 		form.load({
 			url: app.contextPath + '/base/'+ this.baseUrl+'!getById.action', 
@@ -11,8 +12,6 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			waitMsg: '正在加载..',
 			timeout: 60 * 1000,
 			success: function (formbasic, action) {
-				/*var result = Ext.decode(action.response.responseText);*/
-				console.log(form);
 				formbasic.getFields().each(function(field){
 					var fieldName = field.getName();
 					if(fieldName.substring(5).indexOf(".")>0){
@@ -24,7 +23,20 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 					}
 				})
 			},
-			failure: function (form, action) {
+			failure: function (formbasic, action) {
+				var result = Ext.decode(action.response.responseText);
+				if(!Ext.isEmpty(result.sessionstatus)&&result.sessionstatus=='timeOut'){
+					formpanel.ownerCt.close();
+					Ext.Msg.show({
+						title: '信息',
+						msg: '对不起，当前登录已过期，请重新登录！',
+						buttons: Ext.Msg.OK,
+						icon: Ext.Msg.INFO,
+						fn: function () {
+							window.location.href = app.contextPath;
+						}
+					});
+				}
 			},
 			scope: this
 		});

@@ -1,6 +1,6 @@
 Ext.util.Observable.observeClass(Ext.data.Connection);
 Ext.data.Connection.on('requestcomplete', function (conn, response) {
-	if (response && response.getResponseHeader) {
+	if (response && response.getResponseHeader){
 		if (response.getResponseHeader('sessionstatus') == 'timeOut') {
 			Ext.Msg.show({
 				title: '信息',

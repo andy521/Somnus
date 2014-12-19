@@ -43,7 +43,7 @@
     <appender name="somnus-service" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${log.base}/somnus-service.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-mybatis-%i.%d{yyyy-MM-dd}.log.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-service-%i.%d{yyyy-MM-dd}.log.gz
             </fileNamePattern>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <MaxFileSize>30MB</MaxFileSize>
