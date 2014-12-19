@@ -1,7 +1,7 @@
 Ext.util.Observable.observeClass(Ext.data.Connection);
 Ext.data.Connection.on('requestcomplete', function (conn, response) {
 	if (response && response.getResponseHeader) {
-		if (response.getResponseHeader('sessionstatus') == 'timeout') {
+		if (response.getResponseHeader('sessionstatus') == 'timeOut') {
 			Ext.Msg.show({
 				title: '信息',
 				msg: '对不起，当前登录已过期，请重新登录！',
