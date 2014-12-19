@@ -6238,3 +6238,1540 @@ ognl.NoSuchPropertyException: com.somnus.model.base.Syuser.extTheme
 2014-12-19 16:09:07.561 [] TRACE [qtp210143601-45] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 1
 2014-12-19 16:09:07.563 [] TRACE [qtp210143601-45] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresourcetype.syresources#1]
 2014-12-19 16:09:07.568 [] INFO  [qtp210143601-45] com.somnus.action.BaseAction :转换后的JSON字符串：[{"createdatetime":"2014-12-05 11:09:49","description":"编辑角色","iconCls":"ext-icon-bullet_wrench","id":"jsbj","name":"编辑角色","pid":"jsgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!update"},{"createdatetime":"2014-12-05 11:09:49","description":"查看角色","iconCls":"ext-icon-bullet_wrench","id":"jsck","name":"查看角色","pid":"jsgl","seq":4,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!getById"},{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},{"createdatetime":"2014-12-05 11:09:49","description":"查询角色列表","iconCls":"ext-icon-bullet_wrench","id":"jslb","name":"角色列表","pid":"jsgl","seq":0,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!grid"},{"createdatetime":"2014-12-05 11:09:49","description":"删除角色","iconCls":"ext-icon-bullet_wrench","id":"jssc","name":"删除角色","pid":"jsgl","seq":3,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!delete"},{"createdatetime":"2014-12-05 11:09:49","description":"角色授权","iconCls":"ext-icon-bullet_wrench","id":"jssq","name":"角色授权","pid":"jsgl","seq":5,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!grant"},{"createdatetime":"2014-12-05 11:09:49","description":"添加角色","iconCls":"ext-icon-bullet_wrench","id":"jstj","name":"添加角色","pid":"jsgl","seq":1,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统中用户的角色","iconCls":"ext-icon-tux","id":"jsgl","name":"角色管理","pid":"xtgl","seq":2,"syresource":{"createdatetime":"2014-12-05 11:09:49","description":"管理系统的资源、角色、机构、用户等信息","iconCls":"ext-icon-application_view_tile","id":"xtgl","name":"系统管理","seq":0,"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"/welcome.jsp"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"菜单类型会显示在系统首页左侧菜单中","id":"0","name":"菜单","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"菜单","updatedatetime":"2014-12-05 11:09:49","url":"somnus.controller.management.RoleController"},"syresourcetype":{"createdatetime":"2014-12-05 11:09:48","description":"功能类型不会显示在系统首页左侧菜单中","id":"1","name":"功能","updatedatetime":"2014-12-05 11:09:48"},"target":"","type":"功能","updatedatetime":"2014-12-05 11:09:49","url":"/base/syrole!save"}]
+2014-12-19 16:29:45.253 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization started
+2014-12-19 16:29:45.301 [] INFO  [main] org.springframework.web.context.support.XmlWebApplicationContext :Refreshing Root WebApplicationContext: startup date [Fri Dec 19 16:29:45 CST 2014]; root of context hierarchy
+2014-12-19 16:29:45.335 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring.xml]
+2014-12-19 16:29:45.459 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-hibernate.xml]
+2014-12-19 16:29:45.511 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-druid.xml]
+2014-12-19 16:29:45.533 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-tasks.xml]
+2014-12-19 16:29:45.572 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-ehcache.xml]
+2014-12-19 16:29:45.604 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-cxf.xml]
+2014-12-19 16:29:45.623 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-core/2.7.7/cxf-rt-core-2.7.7.jar!/META-INF/cxf/cxf.xml]
+2014-12-19 16:29:45.634 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-bindings-soap/2.7.7/cxf-rt-bindings-soap-2.7.7.jar!/META-INF/cxf/cxf-extension-soap.xml]
+2014-12-19 16:29:45.653 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-transports-http/2.7.7/cxf-rt-transports-http-2.7.7.jar!/META-INF/cxf/cxf-servlet.xml]
+2014-12-19 16:29:45.716 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [file:/E:/github/Somnus/target/classes/spring-javamelody.xml]
+2014-12-19 16:29:45.727 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/net/bull/javamelody/javamelody-core/1.47.0/javamelody-core-1.47.0.jar!/net/bull/javamelody/monitoring-spring.xml]
+2014-12-19 16:29:45.870 [] INFO  [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer :Loading properties file from class path resource [config.properties]
+2014-12-19 16:29:45.887 [] INFO  [main] o.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor :JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-12-19 16:29:45.939 [] INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory :Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@42c0cc80: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,syonlineServiceImpl,syorganizationServiceImpl,syresourceServiceImpl,syresourcetypeServiceImpl,syroleServiceImpl,syuserServiceImpl,baseServiceImpl,initServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,dataSource,sessionFactory,transactionManager,transactionAdvice,org.springframework.aop.config.internalAutoProxyCreator,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.CronTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0,org.springframework.cache.annotation.AnnotationCacheOperationSource#0,org.springframework.cache.interceptor.CacheInterceptor#0,org.springframework.cache.config.internalCacheAdvisor,cacheManagerFactory,cacheManager,cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,org.apache.cxf.jaxws.EndpointImpl---2002866981,facadeMonitoringAdvisor,monitoringAdvisor,org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator#0,springDataSourceBeanPostProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2014-12-19 16:29:46.332 [] WARN  [main] org.apache.cxf.bus.spring.OldSpringSupport :Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+2014-12-19 16:29:46.466 [] INFO  [main] com.alibaba.druid.pool.DruidDataSource :{dataSource-1} inited
+2014-12-19 16:29:46.620 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@347770e3
+2014-12-19 16:29:46.621 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@347770e3
+2014-12-19 16:29:46.621 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@347770e3
+2014-12-19 16:29:46.622 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4351c202
+2014-12-19 16:29:46.624 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration true_false -> org.hibernate.type.TrueFalseType@352d0f50
+2014-12-19 16:29:46.624 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration yes_no -> org.hibernate.type.YesNoType@11c2cada
+2014-12-19 16:29:46.626 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@e06c84e
+2014-12-19 16:29:46.627 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@e06c84e
+2014-12-19 16:29:46.627 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@e06c84e
+2014-12-19 16:29:46.628 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration character -> org.hibernate.type.CharacterType@4fc51b6e
+2014-12-19 16:29:46.629 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char -> org.hibernate.type.CharacterType@4fc51b6e
+2014-12-19 16:29:46.629 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4fc51b6e
+2014-12-19 16:29:46.631 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@730eb59
+2014-12-19 16:29:46.633 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@730eb59
+2014-12-19 16:29:46.633 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Short -> org.hibernate.type.ShortType@730eb59
+2014-12-19 16:29:46.635 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration integer -> org.hibernate.type.IntegerType@11ab65e0
+2014-12-19 16:29:46.635 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration int -> org.hibernate.type.IntegerType@11ab65e0
+2014-12-19 16:29:46.636 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@11ab65e0
+2014-12-19 16:29:46.637 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@8e2fa0b
+2014-12-19 16:29:46.638 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@8e2fa0b
+2014-12-19 16:29:46.638 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Long -> org.hibernate.type.LongType@8e2fa0b
+2014-12-19 16:29:46.640 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@d966ab4
+2014-12-19 16:29:46.640 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@d966ab4
+2014-12-19 16:29:46.640 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Float -> org.hibernate.type.FloatType@d966ab4
+2014-12-19 16:29:46.642 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@d92ee71
+2014-12-19 16:29:46.643 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@d92ee71
+2014-12-19 16:29:46.643 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@d92ee71
+2014-12-19 16:29:46.645 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2304f2f6
+2014-12-19 16:29:46.646 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2304f2f6
+2014-12-19 16:29:46.647 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3f719be1
+2014-12-19 16:29:46.647 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3f719be1
+2014-12-19 16:29:46.648 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration string -> org.hibernate.type.StringType@32347027
+2014-12-19 16:29:46.648 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.String -> org.hibernate.type.StringType@32347027
+2014-12-19 16:29:46.650 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nstring -> org.hibernate.type.StringNVarcharType@32730194
+2014-12-19 16:29:46.651 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@76955a07
+2014-12-19 16:29:46.652 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration url -> org.hibernate.type.UrlType@6b9473c7
+2014-12-19 16:29:46.652 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.net.URL -> org.hibernate.type.UrlType@6b9473c7
+2014-12-19 16:29:46.654 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration date -> org.hibernate.type.DateType@48452999
+2014-12-19 16:29:46.654 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Date -> org.hibernate.type.DateType@48452999
+2014-12-19 16:29:46.656 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration time -> org.hibernate.type.TimeType@12d0e078
+2014-12-19 16:29:46.656 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Time -> org.hibernate.type.TimeType@12d0e078
+2014-12-19 16:29:46.658 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timestamp -> org.hibernate.type.TimestampType@3c7b152b
+2014-12-19 16:29:46.659 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@3c7b152b
+2014-12-19 16:29:46.660 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Date -> org.hibernate.type.TimestampType@3c7b152b
+2014-12-19 16:29:46.661 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@20000979
+2014-12-19 16:29:46.663 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar -> org.hibernate.type.CalendarType@65430dee
+2014-12-19 16:29:46.663 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@65430dee
+2014-12-19 16:29:46.664 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@65430dee
+2014-12-19 16:29:46.665 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@355f0dcd
+2014-12-19 16:29:46.666 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration locale -> org.hibernate.type.LocaleType@71e680c7
+2014-12-19 16:29:46.666 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@71e680c7
+2014-12-19 16:29:46.667 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration currency -> org.hibernate.type.CurrencyType@222b96fc
+2014-12-19 16:29:46.668 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@222b96fc
+2014-12-19 16:29:46.669 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timezone -> org.hibernate.type.TimeZoneType@63a5ff40
+2014-12-19 16:29:46.669 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@63a5ff40
+2014-12-19 16:29:46.692 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration class -> org.hibernate.type.ClassType@3ea03391
+2014-12-19 16:29:46.695 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3ea03391
+2014-12-19 16:29:46.697 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@4fbbf9ce
+2014-12-19 16:29:46.697 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@4fbbf9ce
+2014-12-19 16:29:46.698 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@43f14fd8
+2014-12-19 16:29:46.698 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@4982176b
+2014-12-19 16:29:46.699 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration binary -> org.hibernate.type.BinaryType@45ae9817
+2014-12-19 16:29:46.700 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte[] -> org.hibernate.type.BinaryType@45ae9817
+2014-12-19 16:29:46.700 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [B -> org.hibernate.type.BinaryType@45ae9817
+2014-12-19 16:29:46.701 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@43bdb9f3
+2014-12-19 16:29:46.702 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@43bdb9f3
+2014-12-19 16:29:46.702 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@43bdb9f3
+2014-12-19 16:29:46.704 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration image -> org.hibernate.type.ImageType@2af5ea54
+2014-12-19 16:29:46.705 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration characters -> org.hibernate.type.CharArrayType@7a3a0009
+2014-12-19 16:29:46.705 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char[] -> org.hibernate.type.CharArrayType@7a3a0009
+2014-12-19 16:29:46.705 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [C -> org.hibernate.type.CharArrayType@7a3a0009
+2014-12-19 16:29:46.706 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@e2554ff
+2014-12-19 16:29:46.707 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@e2554ff
+2014-12-19 16:29:46.707 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@e2554ff
+2014-12-19 16:29:46.708 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration text -> org.hibernate.type.TextType@60236206
+2014-12-19 16:29:46.708 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ntext -> org.hibernate.type.NTextType@67e0a980
+2014-12-19 16:29:46.712 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration blob -> org.hibernate.type.BlobType@10cc4f23
+2014-12-19 16:29:46.712 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@10cc4f23
+2014-12-19 16:29:46.713 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@ef8451c
+2014-12-19 16:29:46.715 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration clob -> org.hibernate.type.ClobType@5b804fc4
+2014-12-19 16:29:46.716 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5b804fc4
+2014-12-19 16:29:46.718 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nclob -> org.hibernate.type.NClobType@38fda3b8
+2014-12-19 16:29:46.719 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@38fda3b8
+2014-12-19 16:29:46.719 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@156a8d37
+2014-12-19 16:29:46.720 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@39fdf371
+2014-12-19 16:29:46.721 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration serializable -> org.hibernate.type.SerializableType@5aa7cc6d
+2014-12-19 16:29:46.723 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration object -> org.hibernate.type.ObjectType@4e7fe31c
+2014-12-19 16:29:46.723 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@4e7fe31c
+2014-12-19 16:29:46.724 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@67533b0e
+2014-12-19 16:29:46.724 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@94a4921
+2014-12-19 16:29:46.724 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@6c071a4a
+2014-12-19 16:29:46.724 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@464f27ae
+2014-12-19 16:29:46.725 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@76b63491
+2014-12-19 16:29:46.725 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3435587a
+2014-12-19 16:29:46.725 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1a43cc5d
+2014-12-19 16:29:46.725 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@591dfb23
+2014-12-19 16:29:46.746 [] INFO  [main] org.hibernate.annotations.common.Version :HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2014-12-19 16:29:46.752 [] INFO  [main] org.hibernate.Version :HHH000412: Hibernate Core {4.2.7.SP1}
+2014-12-19 16:29:46.754 [] INFO  [main] org.hibernate.cfg.Environment :HHH000206: hibernate.properties not found
+2014-12-19 16:29:46.755 [] INFO  [main] org.hibernate.cfg.Environment :HHH000021: Bytecode provider name : javassist
+2014-12-19 16:29:47.027 [] INFO  [main] org.hibernate.dialect.Dialect :HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2014-12-19 16:29:47.173 [] INFO  [main] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator :HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-12-19 16:29:47.178 [] INFO  [main] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory :HHH000397: Using ASTQueryTranslatorFactory
+2014-12-19 16:29:47.194 [] TRACE [main] org.hibernate.type.TypeFactory :Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@1ba2c090
+2014-12-19 16:29:47.411 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000228: Running hbm2ddl schema update
+2014-12-19 16:29:47.411 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000102: Fetching database metadata
+2014-12-19 16:29:47.418 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000396: Updating schema
+2014-12-19 16:29:47.434 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syonline
+2014-12-19 16:29:47.434 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+2014-12-19 16:29:47.434 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2014-12-19 16:29:47.434 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2014-12-19 16:29:47.442 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization
+2014-12-19 16:29:47.442 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, updatedatetime, id, address, name, seq, createdatetime, code, iconcls]
+2014-12-19 16:29:47.442 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_acf7qlb04quthktalwx8c7q69]
+2014-12-19 16:29:47.443 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_acf7qlb04quthktalwx8c7q69]
+2014-12-19 16:29:47.449 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization_syresource
+2014-12-19 16:29:47.449 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syresource_id]
+2014-12-19 16:29:47.449 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_m4mfglk7odi78d8pk9pif44vc, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2014-12-19 16:29:47.450 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_m4mfglk7odi78d8pk9pif44vc, primary, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2014-12-19 16:29:47.457 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresource
+2014-12-19 16:29:47.457 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresourcetype_id, updatedatetime, id, syresource_id, description, name, target, seq, createdatetime, url, iconcls]
+2014-12-19 16:29:47.457 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2014-12-19 16:29:47.458 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2014-12-19 16:29:47.463 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresourcetype
+2014-12-19 16:29:47.463 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+2014-12-19 16:29:47.464 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2014-12-19 16:29:47.464 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2014-12-19 16:29:47.470 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole
+2014-12-19 16:29:47.470 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+2014-12-19 16:29:47.471 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2014-12-19 16:29:47.471 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2014-12-19 16:29:47.476 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole_syresource
+2014-12-19 16:29:47.476 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresource_id, syrole_id]
+2014-12-19 16:29:47.477 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_r139h669pg4ts6mbvn3ip5472, fk_kkrartsovl2frhfvriqdi7jwl]
+2014-12-19 16:29:47.477 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_r139h669pg4ts6mbvn3ip5472, primary, fk_kkrartsovl2frhfvriqdi7jwl]
+2014-12-19 16:29:47.483 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser
+2014-12-19 16:29:47.483 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+2014-12-19 16:29:47.484 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2014-12-19 16:29:47.484 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2014-12-19 16:29:47.490 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syorganization
+2014-12-19 16:29:47.490 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syuser_id]
+2014-12-19 16:29:47.490 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_63bdmtxwlk259id13rp4iryy, fk_14ewqc5wtscac0dd5rswrm5j2]
+2014-12-19 16:29:47.490 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_63bdmtxwlk259id13rp4iryy, primary, fk_14ewqc5wtscac0dd5rswrm5j2]
+2014-12-19 16:29:47.496 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syrole
+2014-12-19 16:29:47.497 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syuser_id, syrole_id]
+2014-12-19 16:29:47.497 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2014-12-19 16:29:47.497 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2014-12-19 16:29:47.498 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000232: Schema update complete
+2014-12-19 16:29:47.623 [] INFO  [main] org.springframework.orm.hibernate4.HibernateTransactionManager :Using DataSource [{
+	CreateTime:"2014-12-19 16:29:46",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:774243679, ConnectTime:"2014-12-19 16:29:47", UseCount:2, LastActiveTime:"2014-12-19 16:29:47"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+2014-12-19 16:29:47.777 [] INFO  [main] org.springframework.cache.ehcache.EhCacheManagerFactoryBean :Initializing EhCache CacheManager
+2014-12-19 16:29:47.847 [] WARN  [main] net.sf.ehcache.config.CacheConfiguration :Configuration problem for cache SyresourcetypeServiceCache: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2014-12-19 16:29:48.119 [] INFO  [main] org.apache.cxf.service.factory.ReflectionServiceFactoryBean :Creating Service {http://impl.demo.cxf.somnus.com/}webServiceDemo from class com.somnus.cxf.demo.WebServiceDemoI
+2014-12-19 16:29:48.775 [] INFO  [main] org.apache.cxf.endpoint.ServerImpl :Setting the server's publish address to be /webServiceDemo
+2014-12-19 16:29:48.969 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization completed in 3713 ms
+2014-12-19 16:29:49.086 [] INFO  [main] org.quartz.simpl.SimpleThreadPool :Job execution threads will use class loader of thread: main
+2014-12-19 16:29:49.105 [] INFO  [main] org.quartz.core.SchedulerSignalerImpl :Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-12-19 16:29:49.117 [] INFO  [main] org.quartz.core.QuartzScheduler :Quartz Scheduler v.1.6.1 created.
+2014-12-19 16:29:49.120 [] INFO  [main] org.quartz.simpl.RAMJobStore :RAMJobStore initialized.
+2014-12-19 16:29:49.134 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-12-19 16:29:49.135 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler version: 1.6.1
+2014-12-19 16:29:50.221 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-default.xml]
+2014-12-19 16:29:50.288 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-plugin.xml]
+2014-12-19 16:29:50.314 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts.xml]
+2014-12-19 16:29:50.317 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+2014-12-19 16:29:50.325 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)
+2014-12-19 16:29:50.325 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+2014-12-19 16:29:50.326 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)
+2014-12-19 16:29:50.327 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)
+2014-12-19 16:29:50.328 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)
+2014-12-19 16:29:50.328 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)
+2014-12-19 16:29:50.328 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)
+2014-12-19 16:29:50.329 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)
+2014-12-19 16:29:50.329 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)
+2014-12-19 16:29:50.329 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)
+2014-12-19 16:29:50.330 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)
+2014-12-19 16:29:50.330 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)
+2014-12-19 16:29:50.330 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+2014-12-19 16:29:50.330 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)
+2014-12-19 16:29:50.330 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+2014-12-19 16:29:50.331 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+2014-12-19 16:29:50.331 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+2014-12-19 16:29:50.331 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+2014-12-19 16:29:50.332 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+2014-12-19 16:29:50.333 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+2014-12-19 16:29:50.334 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+2014-12-19 16:29:50.335 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+2014-12-19 16:29:50.335 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+2014-12-19 16:29:50.335 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+2014-12-19 16:29:50.336 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+2014-12-19 16:29:50.336 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+2014-12-19 16:29:50.336 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+2014-12-19 16:29:50.336 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+2014-12-19 16:29:50.336 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)
+2014-12-19 16:29:50.348 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :Initializing Struts-Spring integration...
+2014-12-19 16:29:50.349 [] INFO  [main] com.opensymphony.xwork2.spring.SpringObjectFactory :Setting autowire strategy to name
+2014-12-19 16:29:50.349 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :... initialized Struts-Spring integration successfully
+2014-12-19 16:29:51.393 [] WARN  [main] org.apache.struts2.convention.PackageBasedActionConfigBuilder :The includeJars pattern [.*?/sshe*.*?jar(!/)?] did not match any jars in the classpath
+2014-12-19 16:30:01.107 [] WARN  [qtp1590716741-17] com.opensymphony.xwork2.ognl.OgnlValueStack :Error setting expression 'data.extTheme' with value '[Ljava.lang.String;@7a39109e'
+ognl.NoSuchPropertyException: com.somnus.model.base.Syuser.extTheme
+	at ognl.ObjectPropertyAccessor.setProperty(ObjectPropertyAccessor.java:166) ~[ognl-3.0.6.jar:na]
+	at com.opensymphony.xwork2.ognl.accessor.ObjectAccessor.setProperty(ObjectAccessor.java:27) ~[xwork-core-2.3.15.3.jar:2.3.15.3]
+	at ognl.OgnlRuntime.setProperty(OgnlRuntime.java:2332) ~[ognl-3.0.6.jar:na]
+	at ognl.ASTProperty.setValueBody(ASTProperty.java:127) ~[ognl-3.0.6.jar:na]
+	at ognl.SimpleNode.evaluateSetValueBody(SimpleNode.java:220) ~[ognl-3.0.6.jar:na]
+	at ognl.SimpleNode.setValue(SimpleNode.java:301) ~[ognl-3.0.6.jar:na]
+	at ognl.ASTChain.setValueBody(ASTChain.java:227) ~[ognl-3.0.6.jar:na]
+	at ognl.SimpleNode.evaluateSetValueBody(SimpleNode.java:220) ~[ognl-3.0.6.jar:na]
+	at ognl.SimpleNode.setValue(SimpleNode.java:301) ~[ognl-3.0.6.jar:na]
+	at ognl.Ognl.setValue(Ognl.java:737) ~[ognl-3.0.6.jar:na]
+	at com.opensymphony.xwork2.ognl.OgnlUtil.setValue(OgnlUtil.java:234) ~[xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.trySetValue(OgnlValueStack.java:183) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setValue(OgnlValueStack.java:170) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.ognl.OgnlValueStack.setParameter(OgnlValueStack.java:148) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.setParameters(ParametersInterceptor.java:318) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:231) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:239) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.StaticParametersInterceptor.intercept(StaticParametersInterceptor.java:191) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.interceptor.MultiselectInterceptor.intercept(MultiselectInterceptor.java:73) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.interceptor.CheckboxInterceptor.intercept(CheckboxInterceptor.java:91) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.interceptor.FileUploadInterceptor.intercept(FileUploadInterceptor.java:252) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ModelDrivenInterceptor.intercept(ModelDrivenInterceptor.java:100) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ScopedModelDrivenInterceptor.intercept(ScopedModelDrivenInterceptor.java:141) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ChainingInterceptor.intercept(ChainingInterceptor.java:145) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.PrepareInterceptor.doIntercept(PrepareInterceptor.java:171) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.I18nInterceptor.intercept(I18nInterceptor.java:161) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.interceptor.ServletConfigInterceptor.intercept(ServletConfigInterceptor.java:164) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.AliasInterceptor.intercept(AliasInterceptor.java:193) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor.intercept(ExceptionMappingInterceptor.java:189) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at net.bull.javamelody.StrutsInterceptor.intercept(StrutsInterceptor.java:68) [javamelody-core-1.47.0.jar:1.47.0]
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246) [xwork-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.impl.StrutsActionProxy.execute(StrutsActionProxy.java:54) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:563) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:99) [struts2-core-2.3.15.3.jar:2.3.15.3]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1554) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.springframework.orm.hibernate4.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:149) [spring-orm-3.2.5.RELEASE.jar:3.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-3.2.5.RELEASE.jar:3.2.5.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1554) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:124) [druid-1.0.1.jar:1.0.1]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1554) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:208) [javamelody-core-1.47.0.jar:1.47.0]
+	at net.bull.javamelody.MonitoringFilter.doFilter(MonitoringFilter.java:181) [javamelody-core-1.47.0.jar:1.47.0]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1546) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:524) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:568) [jetty-security-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1110) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:453) [jetty-servlet-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:183) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1044) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:200) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.Server.handle(Server.java:442) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:279) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:213) [jetty-server-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.io.AbstractConnection$1.run(AbstractConnection.java:505) [jetty-io-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601) [jetty-util-9.1.0.RC1.jar:9.1.0.RC1]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532) [jetty-util-9.1.0.RC1.jar:9.1.0.RC1]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_55]
+2014-12-19 16:30:01.397 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        distinct syuser0_.ID as ID1_7_,
+        syuser0_.AGE as AGE2_7_,
+        syuser0_.CREATEDATETIME as CREATEDA3_7_,
+        syuser0_.LOGINNAME as LOGINNAM4_7_,
+        syuser0_.NAME as NAME5_7_,
+        syuser0_.PHOTO as PHOTO6_7_,
+        syuser0_.PWD as PWD7_7_,
+        syuser0_.SEX as SEX8_7_,
+        syuser0_.UPDATEDATETIME as UPDATEDA9_7_ 
+    from
+        SYUSER syuser0_ 
+    where
+        1=1 
+        and syuser0_.LOGINNAME=? 
+        and syuser0_.PWD=?
+2014-12-19 16:30:01.424 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - admin
+2014-12-19 16:30:01.425 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - e10adc3949ba59abbe56e057f20f883e
+2014-12-19 16:30:01.472 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syuser.syorganizations#0]
+2014-12-19 16:30:01.473 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syuser.syroles#0]
+2014-12-19 16:30:01.483 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syroles0_.SYUSER_ID as SYUSER_I1_7_1_,
+        syroles0_.SYROLE_ID as SYROLE_I2_9_1_,
+        syrole1_.ID as ID1_5_0_,
+        syrole1_.CREATEDATETIME as CREATEDA2_5_0_,
+        syrole1_.DESCRIPTION as DESCRIPT3_5_0_,
+        syrole1_.ICONCLS as ICONCLS4_5_0_,
+        syrole1_.NAME as NAME5_5_0_,
+        syrole1_.SEQ as SEQ6_5_0_,
+        syrole1_.UPDATEDATETIME as UPDATEDA7_5_0_ 
+    from
+        SYUSER_SYROLE syroles0_ 
+    inner join
+        SYROLE syrole1_ 
+            on syroles0_.SYROLE_ID=syrole1_.ID 
+    where
+        syroles0_.SYUSER_ID=?
+2014-12-19 16:30:01.486 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:01.495 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#0]
+2014-12-19 16:30:01.495 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#0]
+2014-12-19 16:30:01.496 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#1]
+2014-12-19 16:30:01.496 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#1]
+2014-12-19 16:30:01.496 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#2]
+2014-12-19 16:30:01.497 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#2]
+2014-12-19 16:30:01.497 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#3]
+2014-12-19 16:30:01.497 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#3]
+2014-12-19 16:30:01.497 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#4]
+2014-12-19 16:30:01.498 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#4]
+2014-12-19 16:30:01.498 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#5]
+2014-12-19 16:30:01.498 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#5]
+2014-12-19 16:30:01.499 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syresources#6]
+2014-12-19 16:30:01.499 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syrole.syusers#6]
+2014-12-19 16:30:01.500 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syorganiza0_.SYUSER_ID as SYUSER_I1_7_1_,
+        syorganiza0_.SYORGANIZATION_ID as SYORGANI2_8_1_,
+        syorganiza1_.ID as ID1_1_0_,
+        syorganiza1_.ADDRESS as ADDRESS2_1_0_,
+        syorganiza1_.CODE as CODE3_1_0_,
+        syorganiza1_.CREATEDATETIME as CREATEDA4_1_0_,
+        syorganiza1_.ICONCLS as ICONCLS5_1_0_,
+        syorganiza1_.NAME as NAME6_1_0_,
+        syorganiza1_.SEQ as SEQ7_1_0_,
+        syorganiza1_.SYORGANIZATION_ID as SYORGANI9_1_0_,
+        syorganiza1_.UPDATEDATETIME as UPDATEDA8_1_0_ 
+    from
+        SYUSER_SYORGANIZATION syorganiza0_ 
+    inner join
+        SYORGANIZATION syorganiza1_ 
+            on syorganiza0_.SYORGANIZATION_ID=syorganiza1_.ID 
+    where
+        syorganiza0_.SYUSER_ID=?
+2014-12-19 16:30:01.502 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:01.505 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syorganizations#0]
+2014-12-19 16:30:01.505 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syresources#0]
+2014-12-19 16:30:01.505 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syusers#0]
+2014-12-19 16:30:01.507 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syorganizations#ba31961b-d5ac-4bb6-bb1a-f3e69f62c01c]
+2014-12-19 16:30:01.508 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syresources#ba31961b-d5ac-4bb6-bb1a-f3e69f62c01c]
+2014-12-19 16:30:01.509 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syorganization.syusers#ba31961b-d5ac-4bb6-bb1a-f3e69f62c01c]
+2014-12-19 16:30:01.510 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.513 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 6
+2014-12-19 16:30:01.517 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:30:01.517 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:30:01.518 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:30:01.519 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:30:01.520 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:30:01.520 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:30:01.521 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:30:01.521 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:30:01.522 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:30:01.522 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:30:01.522 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:30:01.523 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:30:01.523 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#onlineGrid]
+2014-12-19 16:30:01.523 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#onlineGrid]
+2014-12-19 16:30:01.524 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#onlineGrid]
+2014-12-19 16:30:01.525 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:30:01.525 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:30:01.525 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:30:01.526 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.529 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 5
+2014-12-19 16:30:01.532 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhbj]
+2014-12-19 16:30:01.533 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhbj]
+2014-12-19 16:30:01.533 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhbj]
+2014-12-19 16:30:01.533 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhck]
+2014-12-19 16:30:01.534 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhck]
+2014-12-19 16:30:01.534 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhck]
+2014-12-19 16:30:01.534 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:30:01.535 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:30:01.535 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:30:01.536 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhjg]
+2014-12-19 16:30:01.536 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhjg]
+2014-12-19 16:30:01.536 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhjg]
+2014-12-19 16:30:01.536 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhjs]
+2014-12-19 16:30:01.537 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhjs]
+2014-12-19 16:30:01.537 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhjs]
+2014-12-19 16:30:01.538 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhlb]
+2014-12-19 16:30:01.538 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhlb]
+2014-12-19 16:30:01.539 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhlb]
+2014-12-19 16:30:01.539 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhsc]
+2014-12-19 16:30:01.539 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhsc]
+2014-12-19 16:30:01.540 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhsc]
+2014-12-19 16:30:01.540 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhtj]
+2014-12-19 16:30:01.540 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhtj]
+2014-12-19 16:30:01.541 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhtj]
+2014-12-19 16:30:01.542 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.544 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:01.555 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:30:01.555 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:30:01.556 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:30:01.557 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:30:01.557 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:30:01.558 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:30:01.561 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jgbj]
+2014-12-19 16:30:01.562 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jgbj]
+2014-12-19 16:30:01.562 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jgbj]
+2014-12-19 16:30:01.563 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jgck]
+2014-12-19 16:30:01.563 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jgck]
+2014-12-19 16:30:01.563 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jgck]
+2014-12-19 16:30:01.564 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:30:01.564 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:30:01.565 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:30:01.565 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jglb]
+2014-12-19 16:30:01.565 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jglb]
+2014-12-19 16:30:01.566 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jglb]
+2014-12-19 16:30:01.566 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jgsc]
+2014-12-19 16:30:01.567 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jgsc]
+2014-12-19 16:30:01.567 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jgsc]
+2014-12-19 16:30:01.568 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jgsq]
+2014-12-19 16:30:01.568 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jgsq]
+2014-12-19 16:30:01.568 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jgsq]
+2014-12-19 16:30:01.569 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jgtj]
+2014-12-19 16:30:01.569 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jgtj]
+2014-12-19 16:30:01.569 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jgtj]
+2014-12-19 16:30:01.570 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsbj]
+2014-12-19 16:30:01.570 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsbj]
+2014-12-19 16:30:01.571 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsbj]
+2014-12-19 16:30:01.571 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsck]
+2014-12-19 16:30:01.572 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsck]
+2014-12-19 16:30:01.572 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsck]
+2014-12-19 16:30:01.572 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:30:01.572 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:30:01.573 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:30:01.573 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jslb]
+2014-12-19 16:30:01.574 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jslb]
+2014-12-19 16:30:01.575 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jslb]
+2014-12-19 16:30:01.575 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jssc]
+2014-12-19 16:30:01.576 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jssc]
+2014-12-19 16:30:01.576 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jssc]
+2014-12-19 16:30:01.577 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jssq]
+2014-12-19 16:30:01.581 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jssq]
+2014-12-19 16:30:01.582 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jssq]
+2014-12-19 16:30:01.582 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jstj]
+2014-12-19 16:30:01.583 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jstj]
+2014-12-19 16:30:01.583 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jstj]
+2014-12-19 16:30:01.584 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:30:01.584 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:30:01.585 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:30:01.593 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:30:01.593 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:30:01.594 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:30:01.594 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:30:01.594 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:30:01.595 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:30:01.595 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:30:01.595 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:30:01.596 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:30:01.596 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zybj]
+2014-12-19 16:30:01.596 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zybj]
+2014-12-19 16:30:01.597 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zybj]
+2014-12-19 16:30:01.597 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zyck]
+2014-12-19 16:30:01.597 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zyck]
+2014-12-19 16:30:01.597 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zyck]
+2014-12-19 16:30:01.598 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:30:01.598 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:30:01.600 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:30:01.601 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zylb]
+2014-12-19 16:30:01.601 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zylb]
+2014-12-19 16:30:01.601 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zylb]
+2014-12-19 16:30:01.602 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zysc]
+2014-12-19 16:30:01.602 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zysc]
+2014-12-19 16:30:01.602 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zysc]
+2014-12-19 16:30:01.603 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zytj]
+2014-12-19 16:30:01.603 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zytj]
+2014-12-19 16:30:01.603 [] TRACE [qtp1590716741-17] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zytj]
+2014-12-19 16:30:01.604 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.606 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 2
+2014-12-19 16:30:01.609 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.612 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 1
+2014-12-19 16:30:01.615 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.618 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 4
+2014-12-19 16:30:01.620 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYROLE_ID as SYROLE_I1_5_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR2_6_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYROLE_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYROLE_ID=?
+2014-12-19 16:30:01.623 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 3
+2014-12-19 16:30:01.626 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYORGANIZATION_ID as SYORGANI2_1_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR1_2_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYORGANIZATION_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYORGANIZATION_ID=?
+2014-12-19 16:30:01.628 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - ba31961b-d5ac-4bb6-bb1a-f3e69f62c01c
+2014-12-19 16:30:01.632 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    select
+        syresource0_.SYORGANIZATION_ID as SYORGANI2_1_1_,
+        syresource0_.SYRESOURCE_ID as SYRESOUR1_2_1_,
+        syresource1_.ID as ID1_3_0_,
+        syresource1_.CREATEDATETIME as CREATEDA2_3_0_,
+        syresource1_.DESCRIPTION as DESCRIPT3_3_0_,
+        syresource1_.ICONCLS as ICONCLS4_3_0_,
+        syresource1_.NAME as NAME5_3_0_,
+        syresource1_.SEQ as SEQ6_3_0_,
+        syresource1_.SYRESOURCE_ID as SYRESOU10_3_0_,
+        syresource1_.SYRESOURCETYPE_ID as SYRESOU11_3_0_,
+        syresource1_.TARGET as TARGET7_3_0_,
+        syresource1_.UPDATEDATETIME as UPDATEDA8_3_0_,
+        syresource1_.URL as URL9_3_0_ 
+    from
+        SYORGANIZATION_SYRESOURCE syresource0_ 
+    inner join
+        SYRESOURCE syresource1_ 
+            on syresource0_.SYRESOURCE_ID=syresource1_.ID 
+    where
+        syresource0_.SYORGANIZATION_ID=?
+2014-12-19 16:30:01.637 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:01.706 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    insert 
+    into
+        SYONLINE
+        (CREATEDATETIME, IP, LOGINNAME, TYPE, ID) 
+    values
+        (?, ?, ?, ?, ?)
+2014-12-19 16:30:01.708 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [TIMESTAMP] - Fri Dec 19 16:30:01 CST 2014
+2014-12-19 16:30:01.709 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 本地
+2014-12-19 16:30:01.710 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [3] as [VARCHAR] - admin
+2014-12-19 16:30:01.711 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [4] as [VARCHAR] - 1
+2014-12-19 16:30:01.712 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [5] as [VARCHAR] - 48771183-4f43-4b84-b3bd-072e806e965b
+2014-12-19 16:30:01.879 [] DEBUG [qtp1590716741-17] org.hibernate.SQL :
+    update
+        SYONLINE 
+    set
+        CREATEDATETIME=? 
+    where
+        ID=?
+2014-12-19 16:30:01.883 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [TIMESTAMP] - Fri Dec 19 16:30:01 CST 2014
+2014-12-19 16:30:01.884 [] TRACE [qtp1590716741-17] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 48771183-4f43-4b84-b3bd-072e806e965b
+2014-12-19 16:30:02.406 [] INFO  [qtp1590716741-17] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:30:02.487 [] INFO  [qtp1590716741-17] com.somnus.action.BaseAction :转换后的JSON字符串：{"msg":"","success":true,"unique":true}
+2014-12-19 16:30:03.469 [] INFO  [qtp1590716741-44] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:30:03.559 [] DEBUG [qtp1590716741-44] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:30:03.563 [] TRACE [qtp1590716741-44] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:03.564 [] TRACE [qtp1590716741-44] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:30:03.572 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:30:03.572 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:30:03.573 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:30:03.573 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:30:03.573 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:30:03.574 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:30:03.574 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:30:03.575 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:30:03.575 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:30:03.575 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:30:03.576 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:30:03.576 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:30:03.576 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:30:03.576 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:30:03.577 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:30:03.577 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:30:03.578 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:30:03.578 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:30:03.578 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:30:03.578 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:30:03.579 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:30:03.580 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:30:03.580 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:30:03.581 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:30:03.581 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:30:03.581 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:30:03.582 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:30:03.582 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:30:03.583 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:30:03.583 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:30:03.583 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:30:03.583 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:30:03.583 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:30:03.584 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:30:03.584 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:30:03.585 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:30:03.585 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:30:03.585 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:30:03.586 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:30:03.586 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:30:03.586 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:30:03.587 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:30:03.587 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:30:03.588 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:30:03.588 [] TRACE [qtp1590716741-44] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:30:03.597 [] DEBUG [qtp1590716741-44] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:30:03.602 [] TRACE [qtp1590716741-44] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:03.603 [] TRACE [qtp1590716741-44] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:30:03.620 [] INFO  [qtp1590716741-44] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:30:03.635 [] INFO  [qtp1590716741-44] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
+2014-12-19 16:30:11.234 [] INFO  [qtp1590716741-14] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:30:11.254 [] DEBUG [qtp1590716741-14] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:30:11.258 [] TRACE [qtp1590716741-14] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:11.259 [] TRACE [qtp1590716741-14] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:30:11.267 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:30:11.274 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:30:11.277 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:30:11.278 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:30:11.278 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:30:11.279 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:30:11.281 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:30:11.281 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:30:11.291 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:30:11.291 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:30:11.292 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:30:11.292 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:30:11.292 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:30:11.293 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:30:11.293 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:30:11.294 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:30:11.294 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:30:11.294 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:30:11.295 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:30:11.295 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:30:11.295 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:30:11.296 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:30:11.297 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:30:11.298 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:30:11.299 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:30:11.300 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:30:11.300 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:30:11.301 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:30:11.301 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:30:11.302 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:30:11.303 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:30:11.304 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:30:11.304 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:30:11.305 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:30:11.305 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:30:11.305 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:30:11.306 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:30:11.306 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:30:11.307 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:30:11.307 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:30:11.307 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:30:11.308 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:30:11.308 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:30:11.308 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:30:11.309 [] TRACE [qtp1590716741-14] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:30:11.317 [] DEBUG [qtp1590716741-14] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:30:11.341 [] TRACE [qtp1590716741-14] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:30:11.342 [] TRACE [qtp1590716741-14] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:30:11.359 [] INFO  [qtp1590716741-14] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:30:11.360 [] INFO  [qtp1590716741-14] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
+2014-12-19 16:31:28.393 [] INFO  [qtp1590716741-15] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:31:28.405 [] DEBUG [qtp1590716741-15] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:31:28.407 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:31:28.408 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:31:28.413 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:31:28.414 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:31:28.414 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:31:28.414 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:31:28.415 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:31:28.415 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:31:28.415 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:31:28.416 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:31:28.416 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:31:28.416 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:31:28.417 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:31:28.417 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:31:28.417 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:31:28.418 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:31:28.418 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:31:28.418 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:31:28.418 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:31:28.419 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:31:28.419 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:31:28.419 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:31:28.420 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:31:28.420 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:31:28.420 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:31:28.421 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:31:28.421 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:31:28.421 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:31:28.421 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:31:28.422 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:31:28.422 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:31:28.422 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:31:28.423 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:31:28.423 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:31:28.423 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:31:28.423 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:31:28.424 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:31:28.424 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:31:28.424 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:31:28.424 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:31:28.431 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:31:28.435 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:31:28.440 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:31:28.441 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:31:28.441 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:31:28.442 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:31:28.442 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:31:28.450 [] DEBUG [qtp1590716741-15] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:31:28.453 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:31:28.453 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:31:28.456 [] INFO  [qtp1590716741-15] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:31:28.457 [] INFO  [qtp1590716741-15] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
+2014-12-19 16:31:59.626 [] INFO  [qtp1590716741-13] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:31:59.637 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:31:59.640 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:31:59.640 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:31:59.645 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:31:59.645 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:31:59.646 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:31:59.647 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:31:59.647 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:31:59.648 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:31:59.648 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:31:59.648 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:31:59.648 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:31:59.649 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:31:59.649 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:31:59.650 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:31:59.650 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:31:59.650 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:31:59.650 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:31:59.651 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:31:59.651 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:31:59.651 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:31:59.652 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:31:59.652 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:31:59.652 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:31:59.652 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:31:59.653 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:31:59.653 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:31:59.653 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:31:59.653 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:31:59.654 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:31:59.654 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:31:59.654 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:31:59.655 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:31:59.655 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:31:59.655 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:31:59.655 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:31:59.656 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:31:59.656 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:31:59.656 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:31:59.657 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:31:59.657 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:31:59.657 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:31:59.657 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:31:59.658 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:31:59.658 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:31:59.658 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:31:59.658 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:31:59.659 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:31:59.668 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:31:59.671 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:31:59.671 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:31:59.674 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:31:59.676 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"}]
+2014-12-19 16:32:35.575 [] INFO  [qtp1590716741-13] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:32:35.584 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:32:35.587 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:32:35.587 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:32:35.593 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:32:35.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:32:35.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:32:35.598 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:32:35.598 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:32:35.598 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:32:35.598 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:32:35.598 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:32:35.599 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:32:35.599 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:32:35.600 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:32:35.600 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:32:35.600 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:32:35.600 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:32:35.601 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:32:35.601 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:32:35.601 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:32:35.602 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:32:35.602 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:32:35.602 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:32:35.602 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:32:35.603 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:32:35.603 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:32:35.603 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:32:35.604 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:32:35.604 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:32:35.604 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:32:35.605 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:32:35.605 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:32:35.605 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:32:35.605 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:32:35.606 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:32:35.606 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:32:35.606 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:32:35.607 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:32:35.607 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:32:35.608 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:32:35.608 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:32:35.608 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:32:35.608 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:32:35.609 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:32:35.609 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:32:35.609 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:32:35.610 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:32:35.610 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:32:35.627 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:32:35.630 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:32:35.630 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:32:35.636 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:32:35.638 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
+2014-12-19 16:34:50.566 [] INFO  [qtp1590716741-15] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:34:50.579 [] DEBUG [qtp1590716741-15] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:34:50.582 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:34:50.582 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:34:50.637 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:34:50.638 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:34:50.639 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:34:50.640 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:34:50.642 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:34:50.645 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:34:50.645 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:34:50.646 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:34:50.646 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:34:50.647 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:34:50.647 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:34:50.647 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:34:50.647 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:34:50.648 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:34:50.648 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:34:50.648 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:34:50.649 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:34:50.649 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:34:50.650 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:34:50.651 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:34:50.651 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:34:50.652 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:34:50.652 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:34:50.652 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:34:50.653 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:34:50.653 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:34:50.653 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:34:50.654 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:34:50.654 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:34:50.655 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:34:50.655 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:34:50.655 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:34:50.656 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:34:50.656 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:34:50.656 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:34:50.657 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:34:50.657 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:34:50.657 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:34:50.658 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:34:50.658 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:34:50.658 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:34:50.658 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:34:50.659 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:34:50.659 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:34:50.659 [] TRACE [qtp1590716741-15] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:34:50.665 [] DEBUG [qtp1590716741-15] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:34:50.668 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:34:50.669 [] TRACE [qtp1590716741-15] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:34:50.672 [] INFO  [qtp1590716741-15] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:34:50.674 [] INFO  [qtp1590716741-15] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
+2014-12-19 16:35:24.535 [] INFO  [qtp1590716741-13] com.somnus.interceptor.base.SessionInterceptor :进入session拦截器->访问路径为[/base/syresource!doNotNeedSecurity_getMainMenu.action]
+2014-12-19 16:35:24.544 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYROLE_SYRESOURCE syroles1_ 
+            on syresource0_.ID=syroles1_.SYRESOURCE_ID 
+    inner join
+        SYROLE syrole2_ 
+            on syroles1_.SYROLE_ID=syrole2_.ID 
+    inner join
+        SYUSER_SYROLE syusers3_ 
+            on syrole2_.ID=syusers3_.SYROLE_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:35:24.548 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:35:24.548 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:35:24.553 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#actionConfigBrowser]
+2014-12-19 16:35:24.554 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#actionConfigBrowser]
+2014-12-19 16:35:24.555 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#actionConfigBrowser]
+2014-12-19 16:35:24.555 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#cxfDemo]
+2014-12-19 16:35:24.555 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#cxfDemo]
+2014-12-19 16:35:24.556 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#cxfDemo]
+2014-12-19 16:35:24.556 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#demo]
+2014-12-19 16:35:24.557 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#demo]
+2014-12-19 16:35:24.557 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#demo]
+2014-12-19 16:35:24.558 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#druid]
+2014-12-19 16:35:24.558 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#druid]
+2014-12-19 16:35:24.558 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#druid]
+2014-12-19 16:35:24.558 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jggl]
+2014-12-19 16:35:24.559 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jggl]
+2014-12-19 16:35:24.559 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jggl]
+2014-12-19 16:35:24.560 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#jsgl]
+2014-12-19 16:35:24.587 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#jsgl]
+2014-12-19 16:35:24.587 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#jsgl]
+2014-12-19 16:35:24.588 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#monitoring]
+2014-12-19 16:35:24.588 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#monitoring]
+2014-12-19 16:35:24.588 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#monitoring]
+2014-12-19 16:35:24.589 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#online]
+2014-12-19 16:35:24.589 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#online]
+2014-12-19 16:35:24.589 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#online]
+2014-12-19 16:35:24.591 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userCreateDatetimeChart]
+2014-12-19 16:35:24.591 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userCreateDatetimeChart]
+2014-12-19 16:35:24.591 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userCreateDatetimeChart]
+2014-12-19 16:35:24.592 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#userRoleChart]
+2014-12-19 16:35:24.592 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#userRoleChart]
+2014-12-19 16:35:24.592 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#userRoleChart]
+2014-12-19 16:35:24.592 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtbb]
+2014-12-19 16:35:24.593 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtbb]
+2014-12-19 16:35:24.593 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtbb]
+2014-12-19 16:35:24.594 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtgl]
+2014-12-19 16:35:24.594 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtgl]
+2014-12-19 16:35:24.595 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtgl]
+2014-12-19 16:35:24.595 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#xtjk]
+2014-12-19 16:35:24.595 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#xtjk]
+2014-12-19 16:35:24.595 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#xtjk]
+2014-12-19 16:35:24.596 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#yhgl]
+2014-12-19 16:35:24.596 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#yhgl]
+2014-12-19 16:35:24.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#yhgl]
+2014-12-19 16:35:24.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syorganizations#zygl]
+2014-12-19 16:35:24.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syresources#zygl]
+2014-12-19 16:35:24.597 [] TRACE [qtp1590716741-13] org.hibernate.type.CollectionType :Created collection wrapper: [com.somnus.model.base.Syresource.syroles#zygl]
+2014-12-19 16:35:24.603 [] DEBUG [qtp1590716741-13] org.hibernate.SQL :
+    select
+        distinct syresource0_.ID as ID1_3_,
+        syresource0_.CREATEDATETIME as CREATEDA2_3_,
+        syresource0_.DESCRIPTION as DESCRIPT3_3_,
+        syresource0_.ICONCLS as ICONCLS4_3_,
+        syresource0_.NAME as NAME5_3_,
+        syresource0_.SEQ as SEQ6_3_,
+        syresource0_.SYRESOURCE_ID as SYRESOU10_3_,
+        syresource0_.SYRESOURCETYPE_ID as SYRESOU11_3_,
+        syresource0_.TARGET as TARGET7_3_,
+        syresource0_.UPDATEDATETIME as UPDATEDA8_3_,
+        syresource0_.URL as URL9_3_ 
+    from
+        SYRESOURCE syresource0_ 
+    inner join
+        SYORGANIZATION_SYRESOURCE syorganiza1_ 
+            on syresource0_.ID=syorganiza1_.SYRESOURCE_ID 
+    inner join
+        SYORGANIZATION syorganiza2_ 
+            on syorganiza1_.SYORGANIZATION_ID=syorganiza2_.ID 
+    inner join
+        SYUSER_SYORGANIZATION syusers3_ 
+            on syorganiza2_.ID=syusers3_.SYORGANIZATION_ID 
+    inner join
+        SYUSER syuser4_ 
+            on syusers3_.SYUSER_ID=syuser4_.ID 
+    where
+        1=1 
+        and syuser4_.ID=? 
+        and syresource0_.SYRESOURCETYPE_ID=?
+2014-12-19 16:35:24.606 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [1] as [VARCHAR] - 0
+2014-12-19 16:35:24.607 [] TRACE [qtp1590716741-13] org.hibernate.type.descriptor.sql.BasicBinder :binding parameter [2] as [VARCHAR] - 0
+2014-12-19 16:35:24.610 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :对象转JSON：要排除的属性[null]要包含的属性[null]
+2014-12-19 16:35:24.611 [] INFO  [qtp1590716741-13] com.somnus.action.BaseAction :转换后的JSON字符串：[{"attributes":{"target":"_blank","url":"somnus.controller.demo.CxfController"},"iconCls":"ext-icon-world","id":"cxfDemo","pid":"demo","target":"_blank","text":"ApacheCXF示例","url":"somnus.controller.demo.CxfController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-application_view_tile","id":"xtgl","target":"","text":"系统管理","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.chart.RegisterDateChartController"},"iconCls":"ext-icon-chart_bar","id":"userCreateDatetimeChart","pid":"xtbb","target":"","text":"注册时间分布","url":"somnus.controller.chart.RegisterDateChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.MonitoringController"},"iconCls":"ext-icon-monitor_error","id":"monitoring","pid":"xtjk","target":"","text":"项目监控","url":"somnus.controller.monitor.MonitoringController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-monitor","id":"xtjk","target":"","text":"系统监控","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.ResourceController"},"iconCls":"ext-icon-newspaper_link","id":"zygl","pid":"xtgl","target":"","text":"资源管理","url":"somnus.controller.management.ResourceController"},{"attributes":{"target":"","url":"somnus.controller.management.RoleController"},"iconCls":"ext-icon-tux","id":"jsgl","pid":"xtgl","target":"","text":"角色管理","url":"somnus.controller.management.RoleController"},{"attributes":{"target":"","url":"somnus.controller.chart.UserRoleChartController"},"iconCls":"ext-icon-chart_pie","id":"userRoleChart","pid":"xtbb","target":"","text":"用户角色分布","url":"somnus.controller.chart.UserRoleChartController"},{"attributes":{"target":"","url":"somnus.controller.monitor.DruidController"},"iconCls":"ext-icon-monitor_link","id":"druid","pid":"xtjk","target":"","text":"数据源监控","url":"somnus.controller.monitor.DruidController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-chart_curve","id":"xtbb","target":"","text":"系统报表","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.OrganizationController"},"iconCls":"ext-icon-group_link","id":"jggl","pid":"xtgl","target":"","text":"机构管理","url":"somnus.controller.management.OrganizationController"},{"attributes":{"target":"","url":"somnus.controller.monitor.ActionController"},"iconCls":"ext-icon-monitor_lightning","id":"actionConfigBrowser","pid":"xtjk","target":"","text":"Action映射监控","url":"somnus.controller.monitor.ActionController"},{"attributes":{"target":"","url":"/welcome.jsp"},"iconCls":"ext-icon-asterisk_orange","id":"demo","target":"","text":"其他示例","url":"/welcome.jsp"},{"attributes":{"target":"","url":"somnus.controller.management.UserController"},"iconCls":"ext-icon-user_suit","id":"yhgl","pid":"xtgl","target":"","text":"用户管理","url":"somnus.controller.management.UserController"},{"attributes":{"target":"","url":"somnus.controller.monitor.OnlineController"},"iconCls":"ext-icon-chart_line","id":"online","pid":"xtjk","target":"","text":"用户登录历史监控","url":"somnus.controller.monitor.OnlineController"}]
