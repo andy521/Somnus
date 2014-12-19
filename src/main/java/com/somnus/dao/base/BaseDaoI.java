@@ -10,7 +10,7 @@ import java.util.Map;
  * 
  * 其他DAO继承此类获取常用的数据库操作方法，基本上你能用到的方法这里都有了，不需要自己建立DAO了。
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  * @param <T>
  *            模型

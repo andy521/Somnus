@@ -17,7 +17,7 @@ import com.somnus.util.base.HqlFilter;
 /**
  * 机构业务
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Service

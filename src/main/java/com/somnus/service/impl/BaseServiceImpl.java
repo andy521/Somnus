@@ -14,7 +14,7 @@ import com.somnus.util.base.HqlFilter;
 /**
  * 基础业务逻辑
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  * @param <T>
  */

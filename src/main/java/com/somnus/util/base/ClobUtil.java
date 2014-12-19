@@ -13,7 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 大文本操作工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class ClobUtil {

@@ -9,7 +9,7 @@ import org.quartz.CronExpression;
 /**
  * CronExpression 扩展
  * 
- * @author 孙宇
+ * @author Somnus
  */
 public class CronExpressionEx extends CronExpression {
 	public static final Integer ALL_SPEC = new Integer(ALL_SPEC_INT);

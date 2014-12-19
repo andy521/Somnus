@@ -16,7 +16,7 @@ import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 /**
  * session拦截器
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class SessionInterceptor extends MethodFilterInterceptor {

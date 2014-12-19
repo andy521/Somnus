@@ -3,7 +3,7 @@ package com.somnus.service;
 /**
  * 初始化
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface InitServiceI {

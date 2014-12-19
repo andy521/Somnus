@@ -14,7 +14,7 @@ import org.apache.struts2.util.StrutsTypeConverter;
  * 
  * struts2默认自带日期转换器，但是如果前台传递的日期字符串是"null"的话，会出现错误，所以这里写了一个公共的日期转换器来替代默认的
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class DateConverter extends StrutsTypeConverter {

@@ -11,7 +11,7 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 /**
  * 字符集编码拦截器
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class EncodingInterceptor extends AbstractInterceptor {

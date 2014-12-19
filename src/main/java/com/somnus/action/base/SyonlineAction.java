@@ -10,7 +10,7 @@ import com.somnus.service.base.SyonlineServiceI;
 /**
  * 上线用户
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/base")

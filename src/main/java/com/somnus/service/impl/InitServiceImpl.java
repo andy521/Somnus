@@ -24,7 +24,7 @@ import com.alibaba.fastjson.JSON;
 /**
  * 初始化数据库
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Service

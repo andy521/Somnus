@@ -16,7 +16,7 @@ import org.springframework.util.Assert;
 /**
  * 扩展spring的BeanUtils，增加拷贝属性排除null值的功能(注：String为null不考虑)
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class BeanUtils extends org.springframework.beans.BeanUtils {

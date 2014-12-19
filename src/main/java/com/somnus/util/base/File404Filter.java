@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 如果上传的图片或者文件丢失的情况下，返回一个默认的图片，用于提示用户
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class File404Filter extends HttpServlet implements Filter {

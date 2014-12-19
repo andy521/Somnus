@@ -7,7 +7,7 @@ import com.somnus.service.BaseServiceI;
 /**
  * 资源类型业务
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface SyresourcetypeServiceI extends BaseServiceI<Syresourcetype> {

@@ -9,7 +9,7 @@ import org.springframework.web.util.HtmlUtils;
 /**
  * 用于防止XSS攻击
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class EscapeConverter extends StrutsTypeConverter {

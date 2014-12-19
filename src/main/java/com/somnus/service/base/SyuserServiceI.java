@@ -9,7 +9,7 @@ import com.somnus.service.BaseServiceI;
 /**
  * 用户业务
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface SyuserServiceI extends BaseServiceI<Syuser> {

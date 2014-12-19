@@ -10,7 +10,7 @@ import com.alibaba.fastjson.serializer.PropertyFilter;
 /**
  * 主要用于过滤不需要序列化的属性，或者包含需要序列化的属性
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class FastjsonFilter implements PropertyFilter {

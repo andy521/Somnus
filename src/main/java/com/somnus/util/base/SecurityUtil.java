@@ -13,7 +13,7 @@ import com.somnus.model.base.Syrole;
 /**
  * 用于前台页面判断是否有权限的工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class SecurityUtil {

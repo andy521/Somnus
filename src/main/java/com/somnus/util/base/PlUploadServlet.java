@@ -28,7 +28,7 @@ import com.alibaba.fastjson.JSON;
 /**
  * plUpload上传工具
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class PlUploadServlet extends HttpServlet {

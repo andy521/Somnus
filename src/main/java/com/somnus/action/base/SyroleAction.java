@@ -24,7 +24,7 @@ import com.somnus.util.base.HqlFilter;
 /**
  * 角色
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/base")

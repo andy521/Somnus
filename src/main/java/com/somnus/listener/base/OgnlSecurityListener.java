@@ -11,7 +11,7 @@ import ognl.OgnlRuntime;
 
 /**
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class OgnlSecurityListener implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener {

@@ -15,7 +15,7 @@ import com.somnus.util.base.PoiUtil;
 
 /**
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class TestPoi1 {

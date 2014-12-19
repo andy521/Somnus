@@ -8,7 +8,7 @@ import com.somnus.util.base.HqlFilter;
 /**
  * 资源业务逻辑
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface SyresourceServiceI extends BaseServiceI<Syresource> {

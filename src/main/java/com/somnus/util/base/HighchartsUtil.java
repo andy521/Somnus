@@ -24,7 +24,7 @@ import org.apache.fop.svg.PDFTranscoder;
 /**
  * 用于下载highchart图表
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class HighchartsUtil extends HttpServlet {

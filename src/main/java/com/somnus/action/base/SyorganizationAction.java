@@ -28,7 +28,7 @@ import com.somnus.util.base.HqlFilter;
  * 
  * 访问地址：/base/syorganization.action
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/base")

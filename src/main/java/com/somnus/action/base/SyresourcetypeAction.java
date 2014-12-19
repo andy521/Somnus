@@ -16,7 +16,7 @@ import com.somnus.service.base.SyresourcetypeServiceI;
 /**
  * 资源类型
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/base")

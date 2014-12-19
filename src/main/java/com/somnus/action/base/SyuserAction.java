@@ -25,7 +25,7 @@ import com.somnus.util.base.MD5Util;
  * 
  * action访问地址是/base/syuser.action
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/base")

@@ -10,7 +10,7 @@ import com.somnus.service.InitServiceI;
 /**
  * 测试初始化数据库
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @RunWith(SpringJUnit4ClassRunner.class)

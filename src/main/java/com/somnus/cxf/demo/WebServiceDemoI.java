@@ -7,7 +7,7 @@ import com.somnus.model.base.Syuser;
 /**
  * WebService接口定义
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @WebService

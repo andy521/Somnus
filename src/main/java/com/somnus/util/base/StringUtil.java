@@ -3,7 +3,7 @@ package com.somnus.util.base;
 /**
  * String工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class StringUtil {

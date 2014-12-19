@@ -10,7 +10,7 @@ import com.somnus.service.base.SyuserServiceI;
 /**
  * WebService接口实现类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @WebService(endpointInterface = "com.somnus.cxf.demo.WebServiceDemoI", serviceName = "webServiceDemo")

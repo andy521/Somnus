@@ -5,7 +5,7 @@ import com.somnus.service.BaseServiceI;
 
 /**
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface SyonlineServiceI extends BaseServiceI<Syonline> {

@@ -6,13 +6,13 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class MD5Util {
 
 	public static void main(String[] args) {
-		String s = "孙宇";
+		String s = "Somnus";
 		System.out.println(md5(s));
 	}
 

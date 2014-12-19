@@ -10,7 +10,7 @@ import com.somnus.service.impl.BaseServiceImpl;
 /**
  * 资源类型业务逻辑
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Service

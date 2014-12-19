@@ -9,7 +9,7 @@ import com.somnus.service.InitServiceI;
 /**
  * 初始化数据库使用
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @Namespace("/")

@@ -17,7 +17,7 @@ import com.alibaba.fastjson.JSONObject;
 /**
  * IP工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class IpUtil {

@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * 反射工具类
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class ReflectionUtil {

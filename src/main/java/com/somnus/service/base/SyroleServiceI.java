@@ -8,7 +8,7 @@ import com.somnus.util.base.HqlFilter;
 /**
  * 角色业务
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public interface SyroleServiceI extends BaseServiceI<Syrole> {

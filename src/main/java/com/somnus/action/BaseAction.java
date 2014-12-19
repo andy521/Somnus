@@ -30,7 +30,7 @@ import org.slf4j.LoggerFactory;
  * 
  * 注解@Action后，访问地址就是命名空间+类名(全小写，并且不包括Action后缀)，本action的访问地址就是/base.sy
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 @ParentPackage("SyPackage")

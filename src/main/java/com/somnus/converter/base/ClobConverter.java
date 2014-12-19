@@ -16,7 +16,7 @@ import org.apache.struts2.util.StrutsTypeConverter;
 /**
  * java.sql.Clob转换器
  * 
- * @author 孙宇
+ * @author Somnus
  * 
  */
 public class ClobConverter extends StrutsTypeConverter {
