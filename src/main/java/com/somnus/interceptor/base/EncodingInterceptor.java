@@ -1,6 +1,7 @@
 package com.somnus.interceptor.base;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -15,7 +16,7 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
  */
 public class EncodingInterceptor extends AbstractInterceptor {
 
-	private static final Logger logger = Logger.getLogger(EncodingInterceptor.class);
+	private static final Logger logger = LoggerFactory.getLogger(EncodingInterceptor.class);
 
 	public String intercept(ActionInvocation actionInvocation) throws Exception {
 		//ActionContext actionContext = actionInvocation.getInvocationContext();

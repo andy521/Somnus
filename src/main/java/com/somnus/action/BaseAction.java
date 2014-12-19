@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
-import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -22,7 +21,8 @@ import com.somnus.util.base.HqlFilter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.opensymphony.xwork2.ActionSupport;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * 基础ACTION,其他ACTION继承此ACTION来获得writeJson和ActionSupport的功能
  * 
@@ -37,7 +37,7 @@ import com.opensymphony.xwork2.ActionSupport;
 @Namespace("/")
 @Action
 public class BaseAction<T> extends ActionSupport {
-	private static final Logger logger = Logger.getLogger(BaseAction.class);
+	private static final Logger logger = LoggerFactory.getLogger(BaseAction.class);
 
 	protected int pageNo = 1;// 当前页
 	protected int pageSize = 25;// 每页显示记录数

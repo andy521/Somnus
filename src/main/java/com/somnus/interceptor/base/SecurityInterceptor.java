@@ -2,11 +2,13 @@ package com.somnus.interceptor.base;
 
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import com.somnus.model.base.SessionInfo;
@@ -26,7 +28,7 @@ import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
  */
 public class SecurityInterceptor extends MethodFilterInterceptor {
 
-	private static final Logger logger = Logger.getLogger(SecurityInterceptor.class);
+	private static final Logger logger = LoggerFactory.getLogger(SecurityInterceptor.class);
 
 	protected String doIntercept(ActionInvocation actionInvocation) throws Exception {
 		SessionInfo sessionInfo = (SessionInfo) ServletActionContext.getRequest().getSession().getAttribute(ConfigUtil.getSessionInfoName());

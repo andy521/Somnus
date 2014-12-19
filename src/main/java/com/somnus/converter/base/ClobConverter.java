@@ -9,7 +9,8 @@ import java.util.Map;
 import javax.sql.rowset.serial.SerialClob;
 import javax.sql.rowset.serial.SerialException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.struts2.util.StrutsTypeConverter;
 
 /**
@@ -20,7 +21,7 @@ import org.apache.struts2.util.StrutsTypeConverter;
  */
 public class ClobConverter extends StrutsTypeConverter {
 
-	private static final Logger logger = Logger.getLogger(ClobConverter.class);
+	private static final Logger logger = LoggerFactory.getLogger(ClobConverter.class);
 
 	@Override
 	public Object convertFromString(Map context, String[] values, Class toClass) {

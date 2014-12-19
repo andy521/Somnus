@@ -15,7 +15,8 @@ import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionBindingListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import com.somnus.model.base.SessionInfo;
@@ -30,7 +31,7 @@ import com.somnus.service.base.SyonlineServiceI;
  */
 public class OnlineListener implements ServletContextListener, ServletContextAttributeListener, HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener, HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
 
-	private static final Logger logger = Logger.getLogger(OnlineListener.class);
+	private static final Logger logger = LoggerFactory.getLogger(OnlineListener.class);
 
 	private static ApplicationContext ctx = null;
 

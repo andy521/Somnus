@@ -3,7 +3,8 @@ package com.somnus.service.impl;
 import java.util.HashSet;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
@@ -29,7 +30,7 @@ import com.alibaba.fastjson.JSON;
 @Service
 public class InitServiceImpl implements InitServiceI {
 
-	private static final Logger logger = Logger.getLogger(InitServiceImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(InitServiceImpl.class);
 
 	private static final String FILEPATH = "initDataBase.xml";
 

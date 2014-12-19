@@ -12,6 +12,9 @@
 		<java-version>1.7</java-version>
 		<!-- 指明使用utf-8编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- log -->
+		<slf4j.version>1.7.2</slf4j.version>
+		<logback.version>1.0.6</logback.version>
 	</properties>
 
 	<!-- 指定Maven仓库 -->
@@ -113,12 +116,45 @@
 			<version>1.1.37</version>
 		</dependency>
 
-		<!-- 加入slf4j依赖包 -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.5</version>
-		</dependency>
+		<!--******** logback and slf4j ******** -->  
+		<dependency>  
+			<groupId>ch.qos.logback</groupId>  
+			<artifactId>logback-core</artifactId>  
+			<version>${logback.version}</version>  
+		</dependency>  
+		<dependency>  
+			<groupId>ch.qos.logback</groupId>  
+			<artifactId>logback-classic</artifactId>  
+			<version>${logback.version}</version>  
+		</dependency>  
+		<dependency>  
+			<groupId>ch.qos.logback</groupId>  
+			<artifactId>logback-access</artifactId>  
+			<version>${logback.version}</version>  
+		</dependency>  
+		<dependency>  
+			<groupId>org.slf4j</groupId>  
+			<artifactId>slf4j-api</artifactId>  
+			<version>${slf4j.version}</version>  
+		</dependency>  
+		<!--jul桥接 用来输出 Java Logging Framework (JUL) -->  
+		<dependency>  
+			<groupId>org.slf4j</groupId>  
+			<artifactId>jul-to-slf4j</artifactId>  
+			<version>${slf4j.version}</version>  
+		</dependency>  
+		<!-- jcl桥接，用来输出 第三方Jakarta Commons Logging (JCL) -->  
+		<dependency>  
+			<groupId>org.slf4j</groupId>  
+			<artifactId>jcl-over-slf4j</artifactId>  
+			<version>${slf4j.version}</version>  
+		</dependency>    
+	    <!-- log4j桥接，用来输出 JAR包中log4j Logging (log4j) -->  
+	    <dependency>  
+	        <groupId>org.slf4j</groupId>  
+	        <artifactId>log4j-over-slf4j</artifactId>  
+	        <version>${slf4j.version}</version>  
+	    </dependency>
 		
 		<!-- 这个包用于显示真实执行的sql -->
 		<dependency>
