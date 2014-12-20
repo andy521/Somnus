@@ -19,12 +19,5 @@
 	</h1>
 	点击链接加入群<a href="http://jq.qq.com/?_wv=1027&k=eCdvy2" target="_blank">【若水三千】</a>
 	<hr />
-	如果发现系统有BUG，请给我发Email:928200207@qq.com
-	<hr />
-	v20141122
-	<ul>
-		<li>解决了tabpanel关闭后再打开报错的bug</li>
-	</ul>
-	<hr />
 </body>
 </html>
