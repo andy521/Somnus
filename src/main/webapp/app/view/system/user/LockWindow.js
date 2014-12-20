@@ -54,6 +54,21 @@ Ext.define('somnus.view.system.user.LockWindow', {
         						}
         					});
         				}
+        			},
+        			failure: function (form, action) {
+        				var result = Ext.decode(action.response.responseText);
+        				if(!Ext.isEmpty(result.sessionstatus)&&result.sessionstatus=='timeOut'){
+        					me.ownerCt.close();
+        					Ext.Msg.show({
+        						title: '信息',
+        						msg: '对不起，当前登录已过期，请重新登录！',
+        						buttons: Ext.Msg.OK,
+        						icon: Ext.Msg.INFO,
+        						fn: function () {
+        							window.location.href = app.contextPath;
+        						}
+        					});
+        				}
         			}
         		});
         	},
