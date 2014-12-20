@@ -3,6 +3,7 @@ Ext.define('somnus.view.system.user.UpdatePwdWindow', {
     alias: 'widget.updatePwdWindow',
     title: '修改密码',
     width: 320,
+    modal: true,
     initComponent: function () {
         this.formPanel = Ext.create('Ext.form.Panel', {
             bodyStyle: 'padding: 5px 10px',
