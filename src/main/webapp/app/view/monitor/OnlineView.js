@@ -32,9 +32,9 @@ Ext.define('somnus.view.monitor.OnlineView',{
 				renderer:function(value){
 					switch (value){
 						case '0':
-							return "<span style='color:gray;font-weight:bold;'>注销系统</span>";
+							return "<span style='color:#8C8C8C;font-weight:bold;'>注销系统</span>";
 						case '1':
-							return "<span style='color:green;font-weight:bold;'>登录系统</span>";
+							return "<span style='color:#C71585;font-weight:bold;'>登录系统</span>";
 					}
 				}
 			}],
