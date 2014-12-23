@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 下拉树
+ */
 Ext.define('somnus.common.apply.TreePicker', {
     extend: 'Ext.form.field.Picker',
     

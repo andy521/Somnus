@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 分页插件扩展，控制每页显示条数
+ */
 Ext.define('somnus.common.apply.Paging', {
     extend: 'Ext.toolbar.Paging',
     alias: 'widget.pagingtoolbar',

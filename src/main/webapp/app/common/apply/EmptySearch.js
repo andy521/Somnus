@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 清空条件查询
+ */
 Ext.define('somnus.common.apply.EmptySearch', {
     extend: 'Ext.button.Button',
 

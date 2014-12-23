@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 图片弹出框
+ */
 Ext.define('somnus.common.apply.ImageBrowse', {
     extend: 'Ext.form.field.Trigger',
 

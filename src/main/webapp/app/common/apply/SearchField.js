@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 搜索框，用于只有一个条件的查询
+ */
 Ext.define('somnus.common.apply.SearchField', {
     extend: 'Ext.form.field.Trigger',
 

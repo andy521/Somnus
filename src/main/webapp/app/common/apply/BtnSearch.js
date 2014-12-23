@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 查询按钮，关联查询框
+ */
 Ext.define('somnus.common.apply.BtnSearch', {
     extend: 'Ext.button.Button',
 

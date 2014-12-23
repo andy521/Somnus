@@ -1,3 +1,7 @@
+/*
+ * @author Somnus
+ * @description 开始日期-结束日期
+ */
 Ext.define('somnus.common.apply.DateRange', {
 	extend: 'Ext.form.FieldContainer',
 	alias: 'widget.daterange',
