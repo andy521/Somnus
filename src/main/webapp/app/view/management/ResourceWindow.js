@@ -30,7 +30,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
                     vtypeEntity: 'Resource',
 					width:280
 	            },{
-	            	xtype : 'combotree',
+	            	xtype : 'treepicker',
 					fieldLabel : '上级资源',
 					name:'data.syresource.id',
 					store:'management.ResourceTreeStore',

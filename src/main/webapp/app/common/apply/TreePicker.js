@@ -1,9 +1,7 @@
-/**
- * A Picker field that contains a tree panel on its popup, enabling selection of tree nodes.
- */
 Ext.define('somnus.common.apply.TreePicker', {
     extend: 'Ext.form.field.Picker',
-    xtype: 'treepicker',
+    
+    alias: 'widget.treepicker',
     
     requires: ['Ext.tree.Panel'],
 
@@ -12,38 +10,39 @@ Ext.define('somnus.common.apply.TreePicker', {
     mixins: {
         bindable: 'Ext.util.Bindable'    
     },
-    config: {
-        store: null,
+    
+    displayField: 'text',
 
-        displayField: 'name',
+    columns: null,
 
-        columns: null,
+    selectOnTab: true,
 
-        selectOnTab: true,
+    maxPickerHeight: 300,
 
-        maxPickerHeight: 300,
-
-        minPickerHeight: 100
-    },
+    minPickerHeight: 100,
    
     editable: false,
 
     initComponent: function() {
         var me = this;
         
-        me.callParent(arguments);
-        
-        me.bindStore(me.store || 'ext-empty-store', true);
-
         me.addEvents(
             'select'
         );
-
+        
+        me.bindStore(me.store || 'ext-empty-store', true);
+        
         me.mon(me.store, {
             scope: me,
             load: me.onLoad,
             update: me.onUpdate
         });
+        
+        me.on('afterrender',function(){
+        	me.store.load();
+        });
+        
+        me.callParent(arguments);
     },
 
     /**
@@ -61,6 +60,7 @@ Ext.define('somnus.common.apply.TreePicker', {
                 maxHeight: me.maxPickerHeight,
                 manageHeight: false,
                 shadow: false,
+                rootVisible: false,
                 listeners: {
                     scope: me,
                     itemclick: me.onItemClick
@@ -201,14 +201,8 @@ Ext.define('somnus.common.apply.TreePicker', {
             return me;
         }
             
-        /*record = value ? me.store.getNodeById(value) : me.store.getRootNode();*/
-        console.log(me);
-        console.log(me.store);
-        if (value === undefined) {
-            record = me.store.getRootNode();
-            me.value = record.getId();
-        } else {
-            record = me.store.getNodeById(value);
+        if (value != undefined) {
+        	record = me.store.getNodeById(value);
         }
 
         me.setRawValue(record ? record.get(me.displayField) : '');
@@ -247,5 +241,4 @@ Ext.define('somnus.common.apply.TreePicker', {
             this.setRawValue(rec.get(display));
         }
     }
-
 });
