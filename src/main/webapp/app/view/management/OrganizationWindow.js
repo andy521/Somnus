@@ -41,10 +41,27 @@ Ext.define('somnus.view.management.OrganizationWindow',{
 				width:280,
 				value:100
             },{
-            	xtype : 'combotree',
+            	xtype : 'treepicker',
 				fieldLabel : '上级机构',
 				name:'data.syorganization.id',
-				store:'management.OrganizationTreeStore',
+				store:Ext.create('Ext.data.TreeStore',{
+					root : {
+						id:0,
+						text : '树根',// 节点名称
+						expanded : true,// 默认展开根节点
+						children : [
+						{
+							id:1,
+							text : '节点一',// 节点名称
+							leaf : true// true说明为叶子节点
+						}, 
+						{
+							id:2,
+							text : '节点二',// 节点名称
+							leaf : true	// true说明为叶子节点
+						}]
+					}
+				}),
 				checkModel:'single',
 				width:280
             },{

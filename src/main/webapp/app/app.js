@@ -17,6 +17,7 @@ Ext.require('somnus.common.apply.Paging');
 Ext.require('somnus.common.apply.DateRange');
 Ext.require('somnus.common.apply.BtnSearch');
 Ext.require('somnus.common.apply.ComboBoxTree');
+Ext.require('somnus.common.apply.TreePicker');
 Ext.require('somnus.common.apply.EmptySearch');
 Ext.require('somnus.common.apply.ImageBrowse');
 Ext.require('somnus.common.apply.SearchField');
