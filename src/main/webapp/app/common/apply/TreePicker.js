@@ -12,6 +12,8 @@ Ext.define('somnus.common.apply.TreePicker', {
     },
     
     displayField: 'text',
+    
+    rootVisible: false,
 
     columns: null,
 
@@ -60,7 +62,7 @@ Ext.define('somnus.common.apply.TreePicker', {
                 maxHeight: me.maxPickerHeight,
                 manageHeight: false,
                 shadow: false,
-                rootVisible: false,
+                rootVisible: me.rootVisible,
                 listeners: {
                     scope: me,
                     itemclick: me.onItemClick
