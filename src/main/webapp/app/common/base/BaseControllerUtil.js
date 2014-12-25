@@ -14,12 +14,12 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			success: function (formbasic, action) {
 				formbasic.getFields().each(function(field){
 					var fieldName = field.getName();
-					if(fieldName.substring(5).indexOf(".")>0){
-						var arr = fieldName.substring(5).split(".");
-						if(!Ext.isEmpty(action.result.data[arr[0]]))
-							formbasic.findField(fieldName).setValue(action.result.data[arr[0]][arr[1]]);
-					}else{
-						formbasic.findField(fieldName).setValue(action.result.data[fieldName.substring(5)]);
+					var arr = fieldName.split(".");
+					if(arr.length == 3){
+						if(!Ext.isEmpty(action.result.data[arr[1]]))
+							formbasic.findField(fieldName).setValue(action.result.data[arr[1]][arr[2]]);
+					}else if(arr.length == 2){
+						formbasic.findField(fieldName).setValue(action.result.data[arr[1]]);
 					}
 				})
 			},
