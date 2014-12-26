@@ -1,11 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>somnus.Somnus</groupId>
+	<groupId>com.somnus</groupId>
 	<artifactId>Somnus</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Somnus Maven Webapp</name>
+	
+	<name>Somnus</name>
 	<url>http://maven.apache.org</url>
+	<description>Struts2.3.x+Spring3.2.x+Hibernate4.2.x+CXF2.7.x+ExtJs4.2+Maven架构的示例项目</description>
+	
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git@github.com:love-somnus/Somnus.git</connection>
+        <developerConnection>scm:git:git@github.com:love-somnus/Somnus.git</developerConnection>
+        <url>git@github.com:love-somnus/Somnus.git</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>Somnus</id>
+            <name>Somnus</name>
+            <email>928200207@qq.com</email>
+        </developer>
+    </developers>
 	
 	<properties>
 		<!-- 指明使用JDK7 -->
