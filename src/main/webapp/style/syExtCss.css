@@ -55,3 +55,15 @@ legend {
 	border: 1px dotted #D1D7DC;
 	font-size: small;
 }
+.x-grid-record-gray{
+	background-color:gray !important;
+}
+.x-grid-record-green{
+	background-color:green !important;
+}
+.x-grid-row-blue .x-grid-cell{
+	background-color:blue;
+}
+.x-grid-row-red .x-grid-cell{
+	background-color:red;
+}

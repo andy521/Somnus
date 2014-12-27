@@ -19,24 +19,28 @@ Ext.define('somnus.view.monitor.OnlineView',{
 				dataIndex : 'loginname',
 				width : 200
 			},{
+				text:'类别',
+				dataIndex:'type',
+				align:'center',
+				renderer:function(value,metaData){
+					console.log(metaData);
+					if(value==0){
+						metaData.css='x-grid-record-gray'; 
+						return "<span style='color:#FFF;font-weight:bold;'>注销系统</span>";
+					}else if(value==1){
+						metaData.css='x-grid-record-green'; 
+						return "<span style='color:#FFF;font-weight:bold;'>登录系统</span>";
+					}
+				}
+			},{
 				text : 'IP地址',
 				dataIndex : 'ip',
+				align:'center',
 				width : 200
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
 				width : 150
-			},{
-				text:'类别',
-				dataIndex:'type',
-				renderer:function(value){
-					switch (value){
-						case '0':
-							return "<span style='color:#8C8C8C;font-weight:bold;'>注销系统</span>";
-						case '1':
-							return "<span style='color:#C71585;font-weight:bold;'>登录系统</span>";
-					}
-				}
 			}],
 			dockedItems:[{
 				xtype : 'toolbar',
@@ -80,6 +84,18 @@ Ext.define('somnus.view.monitor.OnlineView',{
 					text:'过滤'
 				}]
 			}],
+			/*viewConfig:{
+				stripeRows: false,//是否隔行换色
+				getRowClass : function(record,rowIndex,rowParams,store){
+					var type = record.get('type');
+					switch (type){
+					case '0':
+						return 'x-grid-row-blue';
+					case '1':
+						return 'x-grid-row-red';
+					}
+				}
+			}*/
 		});
 		this.callParent(arguments);
 	}
