@@ -26,6 +26,7 @@ Ext.define('somnus.view.management.RoleWindow', {
 				name:'data.name',
 				vtype: 'unique',
                 vtypeEntity: 'Role',
+                allowBlank:false,
 				width:280
             },{
             	xtype : 'numberfield',

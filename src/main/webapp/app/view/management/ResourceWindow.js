@@ -28,13 +28,14 @@ Ext.define('somnus.view.management.ResourceWindow',{
 					name:'data.url',
 					vtype: 'unique',
                     vtypeEntity: 'Resource',
+                    allowBlank:false,
 					width:280
 	            },{
 	            	xtype : 'treepicker',
 					fieldLabel : '上级资源',
 					name:'data.syresource.id',
 					store:'management.ResourceTreeStore',
-					checkModel:'single',
+					allowBlank:false,
 					width:280
 	            },{
 	            	xtype : 'numberfield',
@@ -55,12 +56,14 @@ Ext.define('somnus.view.management.ResourceWindow',{
 					name:'data.name',
 					vtype: 'unique',
                     vtypeEntity: 'Resource',
+                    allowBlank:false,
 					width:280
 	            },{
 	            	xtype : 'basecombo',
 					fieldLabel : '资源类型',
 					name:'data.syresourcetype.id',
 					baseUrl:'syresourcetype',
+					allowBlank:false,
 					width:280
 	            },{
 	            	xtype : 'imagebrowse',

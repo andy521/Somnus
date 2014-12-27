@@ -26,6 +26,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
 				name:'data.name',
 				vtype: 'unique',
                 vtypeEntity: 'Organization',
+                allowBlank:false,
 				width:280
             },{
             	xtype : 'textfield',
@@ -33,6 +34,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
 				name:'data.code',
 				vtype: 'unique',
                 vtypeEntity: 'Organization',
+                allowBlank:false,
 				width:280
             },{
             	xtype : 'numberfield',
@@ -45,6 +47,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
 				fieldLabel : '上级机构',
 				name:'data.syorganization.id',
 				store:'management.OrganizationTreeStore',
+				allowBlank:false,
 				width:280
             },{
             	xtype : 'imagebrowse',
@@ -66,6 +69,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
             	xtype : 'textfield',
 				fieldLabel : '机构地址',
 				name:'data.address',
+				allowBlank:false,
 				width:280
             }]
         });
