@@ -138,45 +138,33 @@
 			<version>1.1.37</version>
 		</dependency>
 
-		<!--******** logback and slf4j ******** -->  
-		<dependency>  
-			<groupId>ch.qos.logback</groupId>  
-			<artifactId>logback-core</artifactId>  
-			<version>${logback.version}</version>  
-		</dependency>  
-		<dependency>  
-			<groupId>ch.qos.logback</groupId>  
-			<artifactId>logback-classic</artifactId>  
-			<version>${logback.version}</version>  
-		</dependency>  
-		<dependency>  
-			<groupId>ch.qos.logback</groupId>  
-			<artifactId>logback-access</artifactId>  
-			<version>${logback.version}</version>  
-		</dependency>  
-		<dependency>  
-			<groupId>org.slf4j</groupId>  
-			<artifactId>slf4j-api</artifactId>  
-			<version>${slf4j.version}</version>  
-		</dependency>  
-		<!--jul桥接 用来输出 Java Logging Framework (JUL) -->  
-		<dependency>  
-			<groupId>org.slf4j</groupId>  
-			<artifactId>jul-to-slf4j</artifactId>  
-			<version>${slf4j.version}</version>  
-		</dependency>  
-		<!-- jcl桥接，用来输出 第三方Jakarta Commons Logging (JCL) -->  
-		<dependency>  
-			<groupId>org.slf4j</groupId>  
-			<artifactId>jcl-over-slf4j</artifactId>  
-			<version>${slf4j.version}</version>  
-		</dependency>    
-	    <!-- log4j桥接，用来输出 JAR包中log4j Logging (log4j) -->  
-	    <dependency>  
-	        <groupId>org.slf4j</groupId>  
-	        <artifactId>log4j-over-slf4j</artifactId>  
-	        <version>${slf4j.version}</version>  
-	    </dependency>
+		<!--******** logback and slf4j ******** -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+		<!--**************** logback and slf4j **************** -->
 		
 		<!-- 这个包用于显示真实执行的sql -->
 		<dependency>
