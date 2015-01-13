@@ -76,7 +76,7 @@ Ext.onReady(function(){
 			xtype:'panel',
 			baseCls : 'x-plain',
 			region : 'center',
-			html:'<div style="width:250px;margin:0 auto;color:#fff;font-size:30px;font-weight:bold;font-family:"宋体",Arial;">通用后台管理系统</div>'
+			html:'<div style="width:250px;margin:0 auto;color:#fff;font-size:30px;font-weight:bold;font-family:"宋体",Arial;">综合应用管理平台</div>'
 		},{
 			xtype:'form',
 			region : 'south',
