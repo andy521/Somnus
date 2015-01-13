@@ -1,0 +1,450 @@
+2015-01-13 21:39:46.132 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization started
+2015-01-13 21:39:46.224 [] INFO  [main] org.springframework.web.context.support.XmlWebApplicationContext :Refreshing Root WebApplicationContext: startup date [Tue Jan 13 21:39:46 CST 2015]; root of context hierarchy
+2015-01-13 21:39:46.272 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-basic.xml]
+2015-01-13 21:39:46.499 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-cxf.xml]
+2015-01-13 21:39:46.550 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-core/2.7.7/cxf-rt-core-2.7.7.jar!/META-INF/cxf/cxf.xml]
+2015-01-13 21:39:46.574 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-bindings-soap/2.7.7/cxf-rt-bindings-soap-2.7.7.jar!/META-INF/cxf/cxf-extension-soap.xml]
+2015-01-13 21:39:46.601 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-transports-http/2.7.7/cxf-rt-transports-http-2.7.7.jar!/META-INF/cxf/cxf-servlet.xml]
+2015-01-13 21:39:46.709 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-druid.xml]
+2015-01-13 21:39:46.751 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-ehcache.xml]
+2015-01-13 21:39:46.784 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-hibernate.xml]
+2015-01-13 21:39:46.841 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-javamelody.xml]
+2015-01-13 21:39:46.863 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-tasks.xml]
+2015-01-13 21:39:47.108 [] INFO  [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer :Loading properties file from class path resource [config.properties]
+2015-01-13 21:39:47.140 [] INFO  [main] o.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor :JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-01-13 21:39:47.200 [] INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory :Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3452861b: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,syonlineServiceImpl,syorganizationServiceImpl,syresourceServiceImpl,syresourcetypeServiceImpl,syroleServiceImpl,syuserServiceImpl,baseServiceImpl,initServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,org.apache.cxf.jaxws.EndpointImpl---1971664507,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.cache.annotation.AnnotationCacheOperationSource#0,org.springframework.cache.interceptor.CacheInterceptor#0,org.springframework.cache.config.internalCacheAdvisor,cacheManagerFactory,cacheManager,dataSource,sessionFactory,transactionManager,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,facadeMonitoringAdvisor,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.CronTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-01-13 21:39:47.708 [] WARN  [main] org.apache.cxf.bus.spring.OldSpringSupport :Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+2015-01-13 21:39:47.891 [] INFO  [main] com.alibaba.druid.pool.DruidDataSource :{dataSource-1} inited
+2015-01-13 21:39:48.092 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@5e75a4ac
+2015-01-13 21:39:48.093 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@5e75a4ac
+2015-01-13 21:39:48.093 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@5e75a4ac
+2015-01-13 21:39:48.095 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@46e44198
+2015-01-13 21:39:48.097 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration true_false -> org.hibernate.type.TrueFalseType@3bfba882
+2015-01-13 21:39:48.099 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration yes_no -> org.hibernate.type.YesNoType@62489cbe
+2015-01-13 21:39:48.103 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@7c952602
+2015-01-13 21:39:48.104 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@7c952602
+2015-01-13 21:39:48.105 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7c952602
+2015-01-13 21:39:48.108 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration character -> org.hibernate.type.CharacterType@786c6c3f
+2015-01-13 21:39:48.108 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char -> org.hibernate.type.CharacterType@786c6c3f
+2015-01-13 21:39:48.109 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@786c6c3f
+2015-01-13 21:39:48.113 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@46b1f43
+2015-01-13 21:39:48.114 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@46b1f43
+2015-01-13 21:39:48.114 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Short -> org.hibernate.type.ShortType@46b1f43
+2015-01-13 21:39:48.118 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration integer -> org.hibernate.type.IntegerType@4409cb97
+2015-01-13 21:39:48.118 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration int -> org.hibernate.type.IntegerType@4409cb97
+2015-01-13 21:39:48.120 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4409cb97
+2015-01-13 21:39:48.124 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@2c4e23e0
+2015-01-13 21:39:48.124 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@2c4e23e0
+2015-01-13 21:39:48.125 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Long -> org.hibernate.type.LongType@2c4e23e0
+2015-01-13 21:39:48.128 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@47eb346b
+2015-01-13 21:39:48.128 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@47eb346b
+2015-01-13 21:39:48.129 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Float -> org.hibernate.type.FloatType@47eb346b
+2015-01-13 21:39:48.132 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@3dcbadd1
+2015-01-13 21:39:48.133 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@3dcbadd1
+2015-01-13 21:39:48.133 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@3dcbadd1
+2015-01-13 21:39:48.136 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@387681a2
+2015-01-13 21:39:48.137 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@387681a2
+2015-01-13 21:39:48.139 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_integer -> org.hibernate.type.BigIntegerType@72b003c4
+2015-01-13 21:39:48.140 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@72b003c4
+2015-01-13 21:39:48.142 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration string -> org.hibernate.type.StringType@2b5d431
+2015-01-13 21:39:48.142 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.String -> org.hibernate.type.StringType@2b5d431
+2015-01-13 21:39:48.144 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nstring -> org.hibernate.type.StringNVarcharType@26690905
+2015-01-13 21:39:48.147 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@6fd6a8c1
+2015-01-13 21:39:48.148 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration url -> org.hibernate.type.UrlType@cf29d47
+2015-01-13 21:39:48.149 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.net.URL -> org.hibernate.type.UrlType@cf29d47
+2015-01-13 21:39:48.152 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration date -> org.hibernate.type.DateType@e9bf351
+2015-01-13 21:39:48.152 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Date -> org.hibernate.type.DateType@e9bf351
+2015-01-13 21:39:48.156 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration time -> org.hibernate.type.TimeType@c8c1fb6
+2015-01-13 21:39:48.156 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Time -> org.hibernate.type.TimeType@c8c1fb6
+2015-01-13 21:39:48.160 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timestamp -> org.hibernate.type.TimestampType@230b9821
+2015-01-13 21:39:48.161 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@230b9821
+2015-01-13 21:39:48.161 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Date -> org.hibernate.type.TimestampType@230b9821
+2015-01-13 21:39:48.165 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@62183ecc
+2015-01-13 21:39:48.167 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar -> org.hibernate.type.CalendarType@26f75774
+2015-01-13 21:39:48.167 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@26f75774
+2015-01-13 21:39:48.168 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@26f75774
+2015-01-13 21:39:48.170 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2b90fa1e
+2015-01-13 21:39:48.172 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration locale -> org.hibernate.type.LocaleType@41df85a5
+2015-01-13 21:39:48.173 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@41df85a5
+2015-01-13 21:39:48.176 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration currency -> org.hibernate.type.CurrencyType@4294b016
+2015-01-13 21:39:48.176 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4294b016
+2015-01-13 21:39:48.179 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timezone -> org.hibernate.type.TimeZoneType@245c3313
+2015-01-13 21:39:48.179 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@245c3313
+2015-01-13 21:39:48.182 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration class -> org.hibernate.type.ClassType@5704cd5e
+2015-01-13 21:39:48.183 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Class -> org.hibernate.type.ClassType@5704cd5e
+2015-01-13 21:39:48.186 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@46e30bb1
+2015-01-13 21:39:48.188 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@46e30bb1
+2015-01-13 21:39:48.189 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@23d8c3de
+2015-01-13 21:39:48.192 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@9c04c4c
+2015-01-13 21:39:48.194 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration binary -> org.hibernate.type.BinaryType@1e616710
+2015-01-13 21:39:48.195 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte[] -> org.hibernate.type.BinaryType@1e616710
+2015-01-13 21:39:48.197 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [B -> org.hibernate.type.BinaryType@1e616710
+2015-01-13 21:39:48.199 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@697332e
+2015-01-13 21:39:48.200 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@697332e
+2015-01-13 21:39:48.201 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@697332e
+2015-01-13 21:39:48.203 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration image -> org.hibernate.type.ImageType@9e8205d
+2015-01-13 21:39:48.206 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration characters -> org.hibernate.type.CharArrayType@4efdbbfe
+2015-01-13 21:39:48.207 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char[] -> org.hibernate.type.CharArrayType@4efdbbfe
+2015-01-13 21:39:48.208 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [C -> org.hibernate.type.CharArrayType@4efdbbfe
+2015-01-13 21:39:48.210 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2429319a
+2015-01-13 21:39:48.212 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2429319a
+2015-01-13 21:39:48.213 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2429319a
+2015-01-13 21:39:48.216 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration text -> org.hibernate.type.TextType@39ef56e
+2015-01-13 21:39:48.217 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ntext -> org.hibernate.type.NTextType@727ff60b
+2015-01-13 21:39:48.223 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration blob -> org.hibernate.type.BlobType@2d84253b
+2015-01-13 21:39:48.224 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2d84253b
+2015-01-13 21:39:48.226 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7842f694
+2015-01-13 21:39:48.231 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration clob -> org.hibernate.type.ClobType@360ae415
+2015-01-13 21:39:48.232 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@360ae415
+2015-01-13 21:39:48.236 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nclob -> org.hibernate.type.NClobType@4f20b4b3
+2015-01-13 21:39:48.237 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4f20b4b3
+2015-01-13 21:39:48.239 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@5c32d3db
+2015-01-13 21:39:48.241 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@114af266
+2015-01-13 21:39:48.243 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration serializable -> org.hibernate.type.SerializableType@3e5550f7
+2015-01-13 21:39:48.248 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration object -> org.hibernate.type.ObjectType@25e86794
+2015-01-13 21:39:48.248 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@25e86794
+2015-01-13 21:39:48.250 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@52c41ada
+2015-01-13 21:39:48.252 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@48bf08a9
+2015-01-13 21:39:48.253 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@75d1b48e
+2015-01-13 21:39:48.255 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1aa51310
+2015-01-13 21:39:48.256 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4b868d1a
+2015-01-13 21:39:48.257 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6e99ccb2
+2015-01-13 21:39:48.259 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@334df2d8
+2015-01-13 21:39:48.260 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@42825d38
+2015-01-13 21:39:48.284 [] INFO  [main] org.hibernate.annotations.common.Version :HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2015-01-13 21:39:48.293 [] INFO  [main] org.hibernate.Version :HHH000412: Hibernate Core {4.2.7.SP1}
+2015-01-13 21:39:48.297 [] INFO  [main] org.hibernate.cfg.Environment :HHH000206: hibernate.properties not found
+2015-01-13 21:39:48.300 [] INFO  [main] org.hibernate.cfg.Environment :HHH000021: Bytecode provider name : javassist
+2015-01-13 21:39:48.675 [] INFO  [main] org.hibernate.dialect.Dialect :HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-01-13 21:39:48.894 [] INFO  [main] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator :HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-01-13 21:39:48.901 [] INFO  [main] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory :HHH000397: Using ASTQueryTranslatorFactory
+2015-01-13 21:39:48.923 [] TRACE [main] org.hibernate.type.TypeFactory :Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@24e1680f
+2015-01-13 21:39:49.380 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000228: Running hbm2ddl schema update
+2015-01-13 21:39:49.381 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000102: Fetching database metadata
+2015-01-13 21:39:49.386 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000396: Updating schema
+2015-01-13 21:39:49.417 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syonline
+2015-01-13 21:39:49.418 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+2015-01-13 21:39:49.419 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 21:39:49.421 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 21:39:49.444 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization
+2015-01-13 21:39:49.445 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, updatedatetime, id, address, name, seq, createdatetime, code, iconcls]
+2015-01-13 21:39:49.446 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_acf7qlb04quthktalwx8c7q69]
+2015-01-13 21:39:49.447 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_acf7qlb04quthktalwx8c7q69]
+2015-01-13 21:39:49.460 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization_syresource
+2015-01-13 21:39:49.462 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syresource_id]
+2015-01-13 21:39:49.463 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_m4mfglk7odi78d8pk9pif44vc, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2015-01-13 21:39:49.464 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_m4mfglk7odi78d8pk9pif44vc, primary, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2015-01-13 21:39:49.485 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresource
+2015-01-13 21:39:49.486 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresourcetype_id, updatedatetime, id, syresource_id, description, name, target, seq, createdatetime, url, iconcls]
+2015-01-13 21:39:49.488 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2015-01-13 21:39:49.489 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2015-01-13 21:39:49.501 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresourcetype
+2015-01-13 21:39:49.502 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+2015-01-13 21:39:49.503 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 21:39:49.505 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 21:39:49.519 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole
+2015-01-13 21:39:49.520 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+2015-01-13 21:39:49.521 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 21:39:49.523 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 21:39:49.534 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole_syresource
+2015-01-13 21:39:49.535 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresource_id, syrole_id]
+2015-01-13 21:39:49.536 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_r139h669pg4ts6mbvn3ip5472, fk_kkrartsovl2frhfvriqdi7jwl]
+2015-01-13 21:39:49.537 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_r139h669pg4ts6mbvn3ip5472, primary, fk_kkrartsovl2frhfvriqdi7jwl]
+2015-01-13 21:39:49.552 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser
+2015-01-13 21:39:49.555 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+2015-01-13 21:39:49.557 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 21:39:49.558 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 21:39:49.577 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syorganization
+2015-01-13 21:39:49.578 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syuser_id]
+2015-01-13 21:39:49.580 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_63bdmtxwlk259id13rp4iryy, fk_14ewqc5wtscac0dd5rswrm5j2]
+2015-01-13 21:39:49.581 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_63bdmtxwlk259id13rp4iryy, primary, fk_14ewqc5wtscac0dd5rswrm5j2]
+2015-01-13 21:39:49.691 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syrole
+2015-01-13 21:39:49.694 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syuser_id, syrole_id]
+2015-01-13 21:39:49.698 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2015-01-13 21:39:49.701 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2015-01-13 21:39:49.708 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000232: Schema update complete
+2015-01-13 21:39:49.880 [] INFO  [main] org.springframework.orm.hibernate4.HibernateTransactionManager :Using DataSource [{
+	CreateTime:"2015-01-13 21:39:47",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:2054520492, ConnectTime:"2015-01-13 21:39:48", UseCount:2, LastActiveTime:"2015-01-13 21:39:49"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+2015-01-13 21:39:50.057 [] INFO  [main] org.springframework.cache.ehcache.EhCacheManagerFactoryBean :Initializing EhCache CacheManager
+2015-01-13 21:39:50.197 [] WARN  [main] net.sf.ehcache.config.CacheConfiguration :Configuration problem for cache SyresourcetypeServiceCache: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2015-01-13 21:39:50.471 [] INFO  [main] org.apache.cxf.service.factory.ReflectionServiceFactoryBean :Creating Service {http://impl.demo.cxf.somnus.com/}webServiceDemo from class com.somnus.cxf.demo.WebServiceDemoI
+2015-01-13 21:39:51.153 [] INFO  [main] org.apache.cxf.endpoint.ServerImpl :Setting the server's publish address to be /webServiceDemo
+2015-01-13 21:39:51.229 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization completed in 5088 ms
+2015-01-13 21:39:51.363 [] INFO  [main] org.quartz.simpl.SimpleThreadPool :Job execution threads will use class loader of thread: main
+2015-01-13 21:39:51.383 [] INFO  [main] org.quartz.core.SchedulerSignalerImpl :Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-01-13 21:39:51.385 [] INFO  [main] org.quartz.core.QuartzScheduler :Quartz Scheduler v.1.6.1 created.
+2015-01-13 21:39:51.387 [] INFO  [main] org.quartz.simpl.RAMJobStore :RAMJobStore initialized.
+2015-01-13 21:39:51.388 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-01-13 21:39:51.390 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler version: 1.6.1
+2015-01-13 21:39:51.773 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-default.xml]
+2015-01-13 21:39:51.853 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-plugin.xml]
+2015-01-13 21:39:51.914 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts.xml]
+2015-01-13 21:39:51.918 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+2015-01-13 21:39:51.919 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)
+2015-01-13 21:39:51.921 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+2015-01-13 21:39:51.922 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)
+2015-01-13 21:39:51.924 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)
+2015-01-13 21:39:51.925 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)
+2015-01-13 21:39:51.926 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)
+2015-01-13 21:39:51.927 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)
+2015-01-13 21:39:51.928 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)
+2015-01-13 21:39:51.930 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)
+2015-01-13 21:39:51.931 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)
+2015-01-13 21:39:51.933 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)
+2015-01-13 21:39:51.934 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)
+2015-01-13 21:39:51.936 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+2015-01-13 21:39:51.937 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)
+2015-01-13 21:39:51.938 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+2015-01-13 21:39:51.939 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+2015-01-13 21:39:51.941 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+2015-01-13 21:39:51.942 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+2015-01-13 21:39:51.943 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+2015-01-13 21:39:51.946 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+2015-01-13 21:39:51.947 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+2015-01-13 21:39:51.948 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+2015-01-13 21:39:51.949 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+2015-01-13 21:39:51.951 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+2015-01-13 21:39:51.952 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+2015-01-13 21:39:51.954 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+2015-01-13 21:39:51.956 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+2015-01-13 21:39:51.957 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+2015-01-13 21:39:51.958 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)
+2015-01-13 21:39:51.974 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :Initializing Struts-Spring integration...
+2015-01-13 21:39:51.975 [] INFO  [main] com.opensymphony.xwork2.spring.SpringObjectFactory :Setting autowire strategy to name
+2015-01-13 21:39:51.976 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :... initialized Struts-Spring integration successfully
+2015-01-13 21:39:52.801 [] WARN  [main] org.apache.struts2.convention.PackageBasedActionConfigBuilder :The includeJars pattern [.*?/sshe*.*?jar(!/)?] did not match any jars in the classpath
+2015-01-13 22:59:08.007 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization started
+2015-01-13 22:59:08.104 [] INFO  [main] org.springframework.web.context.support.XmlWebApplicationContext :Refreshing Root WebApplicationContext: startup date [Tue Jan 13 22:59:08 CST 2015]; root of context hierarchy
+2015-01-13 22:59:08.162 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-basic.xml]
+2015-01-13 22:59:08.374 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-cxf.xml]
+2015-01-13 22:59:08.423 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-core/2.7.7/cxf-rt-core-2.7.7.jar!/META-INF/cxf/cxf.xml]
+2015-01-13 22:59:08.448 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-bindings-soap/2.7.7/cxf-rt-bindings-soap-2.7.7.jar!/META-INF/cxf/cxf-extension-soap.xml]
+2015-01-13 22:59:08.473 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from URL [jar:file:/E:/maven/repository/org/apache/cxf/cxf-rt-transports-http/2.7.7/cxf-rt-transports-http-2.7.7.jar!/META-INF/cxf/cxf-servlet.xml]
+2015-01-13 22:59:08.601 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-druid.xml]
+2015-01-13 22:59:08.646 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-ehcache.xml]
+2015-01-13 22:59:08.680 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-hibernate.xml]
+2015-01-13 22:59:08.739 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-javamelody.xml]
+2015-01-13 22:59:08.763 [] INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader :Loading XML bean definitions from class path resource [spring-tasks.xml]
+2015-01-13 22:59:08.989 [] INFO  [main] org.springframework.beans.factory.config.PropertyPlaceholderConfigurer :Loading properties file from class path resource [config.properties]
+2015-01-13 22:59:09.016 [] INFO  [main] o.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor :JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-01-13 22:59:09.077 [] INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory :Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4f5baa72: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,baseDaoImpl,syonlineServiceImpl,syorganizationServiceImpl,syresourceServiceImpl,syresourcetypeServiceImpl,syroleServiceImpl,syuserServiceImpl,baseServiceImpl,initServiceImpl,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.apache.cxf.binding.soap.SoapBindingFactory,org.apache.cxf.binding.soap.SoapTransportFactory,org.apache.cxf.binding.soap.customEditorConfigurer,org.apache.cxf.jaxws.EndpointImpl---1919979902,druid-stat-interceptor,druid-stat-pointcut,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.cache.annotation.AnnotationCacheOperationSource#0,org.springframework.cache.interceptor.CacheInterceptor#0,org.springframework.cache.config.internalCacheAdvisor,cacheManagerFactory,cacheManager,dataSource,sessionFactory,transactionManager,transactionAdvice,transactionPointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#1,facadeMonitoringAdvisor,org.springframework.scheduling.support.ScheduledMethodRunnable#0,org.springframework.scheduling.config.CronTask#0,org.springframework.scheduling.config.ContextLifecycleScheduledTaskRegistrar#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-01-13 22:59:09.728 [] WARN  [main] org.apache.cxf.bus.spring.OldSpringSupport :Import of META-INF/cxf/cxf-extension-soap.xml has been deprecated and is unnecessary.
+2015-01-13 22:59:09.930 [] INFO  [main] com.alibaba.druid.pool.DruidDataSource :{dataSource-1} inited
+2015-01-13 22:59:10.142 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@683f3621
+2015-01-13 22:59:10.143 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration boolean -> org.hibernate.type.BooleanType@683f3621
+2015-01-13 22:59:10.145 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@683f3621
+2015-01-13 22:59:10.148 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1efd11e8
+2015-01-13 22:59:10.151 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration true_false -> org.hibernate.type.TrueFalseType@70f72a63
+2015-01-13 22:59:10.152 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration yes_no -> org.hibernate.type.YesNoType@263f8949
+2015-01-13 22:59:10.155 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@4c6da4c4
+2015-01-13 22:59:10.156 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte -> org.hibernate.type.ByteType@4c6da4c4
+2015-01-13 22:59:10.156 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4c6da4c4
+2015-01-13 22:59:10.159 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration character -> org.hibernate.type.CharacterType@4174e683
+2015-01-13 22:59:10.160 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char -> org.hibernate.type.CharacterType@4174e683
+2015-01-13 22:59:10.161 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4174e683
+2015-01-13 22:59:10.165 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@4dd867a9
+2015-01-13 22:59:10.165 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration short -> org.hibernate.type.ShortType@4dd867a9
+2015-01-13 22:59:10.166 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4dd867a9
+2015-01-13 22:59:10.169 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration integer -> org.hibernate.type.IntegerType@28a634d7
+2015-01-13 22:59:10.170 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration int -> org.hibernate.type.IntegerType@28a634d7
+2015-01-13 22:59:10.172 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@28a634d7
+2015-01-13 22:59:10.176 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@6fadfcdc
+2015-01-13 22:59:10.177 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration long -> org.hibernate.type.LongType@6fadfcdc
+2015-01-13 22:59:10.177 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Long -> org.hibernate.type.LongType@6fadfcdc
+2015-01-13 22:59:10.181 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@7a5fd4e4
+2015-01-13 22:59:10.182 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration float -> org.hibernate.type.FloatType@7a5fd4e4
+2015-01-13 22:59:10.182 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Float -> org.hibernate.type.FloatType@7a5fd4e4
+2015-01-13 22:59:10.185 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@11d56084
+2015-01-13 22:59:10.186 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration double -> org.hibernate.type.DoubleType@11d56084
+2015-01-13 22:59:10.186 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@11d56084
+2015-01-13 22:59:10.189 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@70a3416
+2015-01-13 22:59:10.189 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@70a3416
+2015-01-13 22:59:10.193 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration big_integer -> org.hibernate.type.BigIntegerType@549ceb20
+2015-01-13 22:59:10.193 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@549ceb20
+2015-01-13 22:59:10.196 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration string -> org.hibernate.type.StringType@29061dd2
+2015-01-13 22:59:10.197 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.String -> org.hibernate.type.StringType@29061dd2
+2015-01-13 22:59:10.199 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nstring -> org.hibernate.type.StringNVarcharType@48d1f7ed
+2015-01-13 22:59:10.201 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@71ebca3f
+2015-01-13 22:59:10.202 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration url -> org.hibernate.type.UrlType@5e6ef4e
+2015-01-13 22:59:10.203 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.net.URL -> org.hibernate.type.UrlType@5e6ef4e
+2015-01-13 22:59:10.206 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration date -> org.hibernate.type.DateType@1dd5cb93
+2015-01-13 22:59:10.207 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Date -> org.hibernate.type.DateType@1dd5cb93
+2015-01-13 22:59:10.210 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration time -> org.hibernate.type.TimeType@5b5b4b89
+2015-01-13 22:59:10.211 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Time -> org.hibernate.type.TimeType@5b5b4b89
+2015-01-13 22:59:10.215 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timestamp -> org.hibernate.type.TimestampType@532c8ed3
+2015-01-13 22:59:10.215 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@532c8ed3
+2015-01-13 22:59:10.216 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Date -> org.hibernate.type.TimestampType@532c8ed3
+2015-01-13 22:59:10.219 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1fab137c
+2015-01-13 22:59:10.220 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar -> org.hibernate.type.CalendarType@1702d402
+2015-01-13 22:59:10.221 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@1702d402
+2015-01-13 22:59:10.222 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@1702d402
+2015-01-13 22:59:10.224 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@4c5eb494
+2015-01-13 22:59:10.226 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration locale -> org.hibernate.type.LocaleType@4e77e45d
+2015-01-13 22:59:10.227 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4e77e45d
+2015-01-13 22:59:10.229 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration currency -> org.hibernate.type.CurrencyType@4890334e
+2015-01-13 22:59:10.229 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4890334e
+2015-01-13 22:59:10.233 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration timezone -> org.hibernate.type.TimeZoneType@721cbceb
+2015-01-13 22:59:10.234 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@721cbceb
+2015-01-13 22:59:10.237 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration class -> org.hibernate.type.ClassType@582fe05e
+2015-01-13 22:59:10.238 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Class -> org.hibernate.type.ClassType@582fe05e
+2015-01-13 22:59:10.242 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@770b76b0
+2015-01-13 22:59:10.244 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@770b76b0
+2015-01-13 22:59:10.247 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@448b795c
+2015-01-13 22:59:10.249 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@32302e15
+2015-01-13 22:59:10.251 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration binary -> org.hibernate.type.BinaryType@67a0b7cb
+2015-01-13 22:59:10.252 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration byte[] -> org.hibernate.type.BinaryType@67a0b7cb
+2015-01-13 22:59:10.253 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [B -> org.hibernate.type.BinaryType@67a0b7cb
+2015-01-13 22:59:10.256 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2c7b0c43
+2015-01-13 22:59:10.257 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2c7b0c43
+2015-01-13 22:59:10.260 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2c7b0c43
+2015-01-13 22:59:10.264 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration image -> org.hibernate.type.ImageType@76b320b3
+2015-01-13 22:59:10.266 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration characters -> org.hibernate.type.CharArrayType@6d421868
+2015-01-13 22:59:10.267 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration char[] -> org.hibernate.type.CharArrayType@6d421868
+2015-01-13 22:59:10.268 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [C -> org.hibernate.type.CharArrayType@6d421868
+2015-01-13 22:59:10.271 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@3c08121c
+2015-01-13 22:59:10.273 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@3c08121c
+2015-01-13 22:59:10.274 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@3c08121c
+2015-01-13 22:59:10.277 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration text -> org.hibernate.type.TextType@4c24f9e
+2015-01-13 22:59:10.279 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration ntext -> org.hibernate.type.NTextType@6f5b29a9
+2015-01-13 22:59:10.285 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration blob -> org.hibernate.type.BlobType@519063bd
+2015-01-13 22:59:10.286 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@519063bd
+2015-01-13 22:59:10.288 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@1940242c
+2015-01-13 22:59:10.295 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration clob -> org.hibernate.type.ClobType@23eed214
+2015-01-13 22:59:10.296 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@23eed214
+2015-01-13 22:59:10.302 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration nclob -> org.hibernate.type.NClobType@6dd084f4
+2015-01-13 22:59:10.303 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6dd084f4
+2015-01-13 22:59:10.304 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@50235dcc
+2015-01-13 22:59:10.306 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@48c05fda
+2015-01-13 22:59:10.309 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration serializable -> org.hibernate.type.SerializableType@588e8d6b
+2015-01-13 22:59:10.314 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration object -> org.hibernate.type.ObjectType@2aef9c3e
+2015-01-13 22:59:10.315 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2aef9c3e
+2015-01-13 22:59:10.316 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3a5cbe59
+2015-01-13 22:59:10.317 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1ed4e2fe
+2015-01-13 22:59:10.319 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@2a82a182
+2015-01-13 22:59:10.320 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@6639739b
+2015-01-13 22:59:10.321 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@45d4f98b
+2015-01-13 22:59:10.322 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@214b387e
+2015-01-13 22:59:10.324 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@5169e945
+2015-01-13 22:59:10.325 [] DEBUG [main] org.hibernate.type.BasicTypeRegistry :Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@51dac5
+2015-01-13 22:59:10.350 [] INFO  [main] org.hibernate.annotations.common.Version :HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+2015-01-13 22:59:10.359 [] INFO  [main] org.hibernate.Version :HHH000412: Hibernate Core {4.2.7.SP1}
+2015-01-13 22:59:10.365 [] INFO  [main] org.hibernate.cfg.Environment :HHH000206: hibernate.properties not found
+2015-01-13 22:59:10.369 [] INFO  [main] org.hibernate.cfg.Environment :HHH000021: Bytecode provider name : javassist
+2015-01-13 22:59:10.781 [] INFO  [main] org.hibernate.dialect.Dialect :HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-01-13 22:59:11.024 [] INFO  [main] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator :HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-01-13 22:59:11.032 [] INFO  [main] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory :HHH000397: Using ASTQueryTranslatorFactory
+2015-01-13 22:59:11.056 [] TRACE [main] org.hibernate.type.TypeFactory :Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@34973e49
+2015-01-13 22:59:11.531 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000228: Running hbm2ddl schema update
+2015-01-13 22:59:11.532 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000102: Fetching database metadata
+2015-01-13 22:59:11.537 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000396: Updating schema
+2015-01-13 22:59:11.564 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syonline
+2015-01-13 22:59:11.566 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [id, loginname, createdatetime, type, ip]
+2015-01-13 22:59:11.567 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 22:59:11.568 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 22:59:11.585 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization
+2015-01-13 22:59:11.586 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, updatedatetime, id, address, name, seq, createdatetime, code, iconcls]
+2015-01-13 22:59:11.587 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_acf7qlb04quthktalwx8c7q69]
+2015-01-13 22:59:11.588 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_acf7qlb04quthktalwx8c7q69]
+2015-01-13 22:59:11.601 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syorganization_syresource
+2015-01-13 22:59:11.602 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syresource_id]
+2015-01-13 22:59:11.603 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_m4mfglk7odi78d8pk9pif44vc, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2015-01-13 22:59:11.604 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_m4mfglk7odi78d8pk9pif44vc, primary, fk_acpjp8a7fjo0cnn02eb0ia6uf]
+2015-01-13 22:59:11.619 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresource
+2015-01-13 22:59:11.621 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresourcetype_id, updatedatetime, id, syresource_id, description, name, target, seq, createdatetime, url, iconcls]
+2015-01-13 22:59:11.623 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2015-01-13 22:59:11.624 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_n8kk2inhw4y4gax3nra2etfup, fk_93qfpiiuk3rwb32gc5mcmmlgh]
+2015-01-13 22:59:11.637 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syresourcetype
+2015-01-13 22:59:11.639 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, createdatetime]
+2015-01-13 22:59:11.639 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 22:59:11.640 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 22:59:11.655 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole
+2015-01-13 22:59:11.656 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, description, name, seq, createdatetime, iconcls]
+2015-01-13 22:59:11.657 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 22:59:11.658 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 22:59:11.670 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syrole_syresource
+2015-01-13 22:59:11.671 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syresource_id, syrole_id]
+2015-01-13 22:59:11.672 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_r139h669pg4ts6mbvn3ip5472, fk_kkrartsovl2frhfvriqdi7jwl]
+2015-01-13 22:59:11.673 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_r139h669pg4ts6mbvn3ip5472, primary, fk_kkrartsovl2frhfvriqdi7jwl]
+2015-01-13 22:59:11.686 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser
+2015-01-13 22:59:11.687 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [updatedatetime, id, loginname, sex, pwd, name, age, createdatetime, photo]
+2015-01-13 22:59:11.689 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: []
+2015-01-13 22:59:11.689 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary]
+2015-01-13 22:59:11.702 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syorganization
+2015-01-13 22:59:11.703 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syorganization_id, syuser_id]
+2015-01-13 22:59:11.704 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_63bdmtxwlk259id13rp4iryy, fk_14ewqc5wtscac0dd5rswrm5j2]
+2015-01-13 22:59:11.705 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [fk_63bdmtxwlk259id13rp4iryy, primary, fk_14ewqc5wtscac0dd5rswrm5j2]
+2015-01-13 22:59:11.720 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000261: Table found: somnus.syuser_syrole
+2015-01-13 22:59:11.721 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000037: Columns: [syuser_id, syrole_id]
+2015-01-13 22:59:11.722 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000108: Foreign keys: [fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2015-01-13 22:59:11.723 [] INFO  [main] org.hibernate.tool.hbm2ddl.TableMetadata :HHH000126: Indexes: [primary, fk_j7iwtgslc2esrjx0ptieleoko, fk_1pi4p5h4y5ghbs5f4gdlgn620]
+2015-01-13 22:59:11.726 [] INFO  [main] org.hibernate.tool.hbm2ddl.SchemaUpdate :HHH000232: Schema update complete
+2015-01-13 22:59:11.872 [] INFO  [main] org.springframework.orm.hibernate4.HibernateTransactionManager :Using DataSource [{
+	CreateTime:"2015-01-13 22:59:09",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1715026879, ConnectTime:"2015-01-13 22:59:10", UseCount:2, LastActiveTime:"2015-01-13 22:59:11"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+2015-01-13 22:59:11.969 [] INFO  [main] org.springframework.cache.ehcache.EhCacheManagerFactoryBean :Initializing EhCache CacheManager
+2015-01-13 22:59:12.062 [] WARN  [main] net.sf.ehcache.config.CacheConfiguration :Configuration problem for cache SyresourcetypeServiceCache: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2015-01-13 22:59:12.320 [] INFO  [main] org.apache.cxf.service.factory.ReflectionServiceFactoryBean :Creating Service {http://impl.demo.cxf.somnus.com/}webServiceDemo from class com.somnus.cxf.demo.WebServiceDemoI
+2015-01-13 22:59:13.060 [] INFO  [main] org.apache.cxf.endpoint.ServerImpl :Setting the server's publish address to be /webServiceDemo
+2015-01-13 22:59:13.154 [] INFO  [main] org.springframework.web.context.ContextLoader :Root WebApplicationContext: initialization completed in 5141 ms
+2015-01-13 22:59:13.309 [] INFO  [main] org.quartz.simpl.SimpleThreadPool :Job execution threads will use class loader of thread: main
+2015-01-13 22:59:13.326 [] INFO  [main] org.quartz.core.SchedulerSignalerImpl :Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-01-13 22:59:13.328 [] INFO  [main] org.quartz.core.QuartzScheduler :Quartz Scheduler v.1.6.1 created.
+2015-01-13 22:59:13.331 [] INFO  [main] org.quartz.simpl.RAMJobStore :RAMJobStore initialized.
+2015-01-13 22:59:13.332 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-01-13 22:59:13.334 [] INFO  [main] org.quartz.impl.StdSchedulerFactory :Quartz scheduler version: 1.6.1
+2015-01-13 22:59:13.745 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-default.xml]
+2015-01-13 22:59:13.836 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts-plugin.xml]
+2015-01-13 22:59:13.869 [] INFO  [main] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider :Parsing configuration file [struts.xml]
+2015-01-13 22:59:13.874 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+2015-01-13 22:59:13.876 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.FileManagerFactory)
+2015-01-13 22:59:13.878 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+2015-01-13 22:59:13.880 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.CollectionConverter)
+2015-01-13 22:59:13.881 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.ArrayConverter)
+2015-01-13 22:59:13.882 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.DateConverter)
+2015-01-13 22:59:13.884 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.NumberConverter)
+2015-01-13 22:59:13.885 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.StringConverter)
+2015-01-13 22:59:13.886 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionPropertiesProcessor)
+2015-01-13 22:59:13.888 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionFileProcessor)
+2015-01-13 22:59:13.889 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ConversionAnnotationProcessor)
+2015-01-13 22:59:13.892 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterCreator)
+2015-01-13 22:59:13.894 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.TypeConverterHolder)
+2015-01-13 22:59:13.895 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+2015-01-13 22:59:13.897 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.LocaleProvider)
+2015-01-13 22:59:13.898 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+2015-01-13 22:59:13.899 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+2015-01-13 22:59:13.900 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+2015-01-13 22:59:13.901 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+2015-01-13 22:59:13.902 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+2015-01-13 22:59:13.905 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+2015-01-13 22:59:13.906 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+2015-01-13 22:59:13.908 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+2015-01-13 22:59:13.909 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+2015-01-13 22:59:13.910 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+2015-01-13 22:59:13.912 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+2015-01-13 22:59:13.913 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+2015-01-13 22:59:13.914 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+2015-01-13 22:59:13.915 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+2015-01-13 22:59:13.916 [] INFO  [main] org.apache.struts2.config.BeanSelectionProvider :Choosing bean (struts) for (com.opensymphony.xwork2.util.TextParser)
+2015-01-13 22:59:13.935 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :Initializing Struts-Spring integration...
+2015-01-13 22:59:13.936 [] INFO  [main] com.opensymphony.xwork2.spring.SpringObjectFactory :Setting autowire strategy to name
+2015-01-13 22:59:13.937 [] INFO  [main] org.apache.struts2.spring.StrutsSpringObjectFactory :... initialized Struts-Spring integration successfully
+2015-01-13 22:59:15.210 [] WARN  [main] org.apache.struts2.convention.PackageBasedActionConfigBuilder :The includeJars pattern [.*?/sshe*.*?jar(!/)?] did not match any jars in the classpath
