@@ -17,11 +17,11 @@ Ext.define('somnus.view.management.UserView',{
 			columns:[{
 				text : '登录名',
 				dataIndex : 'loginname',
-				width : 200
+				width : 100
 			},{
 				text : '姓名',
 				dataIndex : 'name',
-				width : 200
+				width : 100
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
@@ -49,12 +49,12 @@ Ext.define('somnus.view.management.UserView',{
 			},{
 				text : '照片',
 				dataIndex : 'photo',
-				width : 80
+				width : 40
 			},{
 				text : '操作',
 				xtype : 'actioncolumn',
 				dataIndex : 'action',
-				width : 60,
+				width : 80,
 				items:[{
 					iconCls:'ext-icon-note',
 					action:'show',
@@ -76,12 +76,22 @@ Ext.define('somnus.view.management.UserView',{
 						});
 					}
 				},{
-					iconCls:'ext-icon-key',
-					action:'auth',
-					tooltip:'授权',
+					iconCls:'ext-icon-user',
+					action:'grantRole',
+					tooltip:'用户角色',
 					handler: function(grid, rowIndex, colIndex, item) {
 						var rec = grid.getStore().getAt(rowIndex);  
-						this.fireEvent('authclick', {  
+						this.fireEvent('grantRoleclick', {  
+							record: rec  
+						});
+					}
+				},{
+					iconCls:'ext-icon-group',
+					action:'grantOrg',
+					tooltip:'用户机构',
+					handler: function(grid, rowIndex, colIndex, item) {
+						var rec = grid.getStore().getAt(rowIndex);  
+						this.fireEvent('grantOrgclick', {  
 							record: rec  
 						});
 					}
@@ -101,6 +111,11 @@ Ext.define('somnus.view.management.UserView',{
 				xtype : 'toolbar',
 				dock : 'top',
 				items:[{
+					xtype:'button',
+					action:'add',
+					text:'添加',
+					iconCls:'ext-icon-note_add'
+				},{
 					xtype:'textfield',
 					name:'QUERY_t#loginname_S_LK',
 					fieldLabel:'登录名',
