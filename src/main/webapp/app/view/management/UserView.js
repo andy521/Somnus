@@ -15,6 +15,13 @@ Ext.define('somnus.view.management.UserView',{
 			},
 			forceFit: true,
 			columns:[{
+				text : '照片',
+				dataIndex : 'photo',
+				width : 40,
+				renderer:function(value){
+					return Ext.String.format("<img width='24' height='24' src='{0}' />",value);
+				}
+			},{
 				text : '登录名',
 				dataIndex : 'loginname',
 				width : 100
@@ -36,9 +43,9 @@ Ext.define('somnus.view.management.UserView',{
 				renderer:function(value){
 					switch (value){
 						case '0':
-							return Ext.formatString("<span style='color:green;font-weight:bold;'>女</span><img src='{0}/style/images/ext_icons/user/user_female.png' />",app.contextPath);
+							return Ext.String.format("<span style='color:green;font-weight:bold;'>女</span><img src='{0}/style/images/ext_icons/user/user_female.png' />",app.contextPath);
 						case '1':
-							return Ext.formatString("<span style='color:red;font-weight:bold;'>男</span><img src='{0}/style/images/ext_icons/user/user_suit.png' />",app.contextPath);
+							return Ext.String.format("<span style='color:red;font-weight:bold;'>男</span><img src='{0}/style/images/ext_icons/user/user_suit.png' />",app.contextPath);
 					}
 				}
 			},{
@@ -46,10 +53,6 @@ Ext.define('somnus.view.management.UserView',{
 				dataIndex : 'age',
 				width : 80,
 				hidden : true
-			},{
-				text : '照片',
-				dataIndex : 'photo',
-				width : 40
 			},{
 				text : '操作',
 				xtype : 'actioncolumn',

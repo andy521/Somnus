@@ -8,7 +8,7 @@ Ext.define('somnus.view.demo.CxfView',{
 			title : 'CXF',
 			closable:true,
 			bodyStyle : 'padding:0px',
-			html:Ext.formatString('<iframe src="{0}/ws" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
+			html:Ext.String.format('<iframe src="{0}/ws" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
 		});
 		this.callParent(arguments);
 	}

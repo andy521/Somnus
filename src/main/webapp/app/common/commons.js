@@ -59,7 +59,7 @@ Ext.loadFilter= function(data, opt) {
  * 
  * @author Somnus
  * 
- * @example sy.formatString('字符串{0}字符串{1}字符串','第一个变量','第二个变量');
+ * @example Ext.formatString('字符串{0}字符串{1}字符串','第一个变量','第二个变量');
  * 
  * @returns 格式化后的字符串
  */

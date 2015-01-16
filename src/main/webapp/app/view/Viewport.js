@@ -16,7 +16,7 @@ Ext.define('somnus.view.Viewport', {
 					top:'5px',
 					width:'150px'
 				},
-				html:'<font style="font-size:15px;float:right;">'+Ext.formatString('欢迎您，{0}',app.loginname)+'</font>'
+				html:'<font style="font-size:15px;float:right;">'+Ext.String.format('欢迎您，{0}',app.loginname)+'</font>'
 			},{
 				xtype:'container',
 				style:{
@@ -25,7 +25,7 @@ Ext.define('somnus.view.Viewport', {
 					top:'0px',
 					width:'155px'
 				},
-				html:Ext.formatString('<img src="{0}/style/images/logo-screen-noglow.png"/>',app.contextPath)
+				html:Ext.String.format('<img src="{0}/style/images/logo-screen-noglow.png"/>',app.contextPath)
 			}],
 			dockedItems:[{
 				xtype : 'toolbar',
@@ -197,7 +197,7 @@ Ext.define('somnus.view.Viewport', {
 				title : '欢迎使用',
 				iconCls:'ext-icon-heart',
 				bodyStyle : 'padding:0px',
-				html:Ext.formatString('<iframe src="{0}/welcome.jsp" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
+				html:Ext.String.format('<iframe src="{0}/welcome.jsp" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
 			}],
 			listeners: {
 				remove: function (tab, component, eOpts) {
