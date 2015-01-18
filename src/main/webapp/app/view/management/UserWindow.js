@@ -28,6 +28,16 @@ Ext.define('somnus.view.management.UserWindow',{
 					name:'data.name',
                     allowBlank:false,
 					width:280
+	            },{
+	            	xtype:'panel',
+	            	padding:'60 60',
+	            	border:0,
+	            	width:273,
+	            	height:161,
+	            	autoLoad:{
+						scripts:true,
+						url:app.contextPath + '/style/uploadbtn.jsp',
+					}
 	            }]
 	        }, {
 	            items: [{
@@ -55,6 +65,22 @@ Ext.define('somnus.view.management.UserWindow',{
 					queryMode : 'local',
 					allowBlank:false,
 					width:280
+	            },{
+	            	xtype: 'hidden',
+                    name: 'data.photo'
+	            },{
+	            	xtype:'panel',
+	            	border:0,
+	            	width:280,
+	            	height:170,
+	            	listeners:{
+	            		render:function(panel){
+	            			panel.ownerCt.ownerCt.on('actioncomplete',function(){
+		            			panel.getEl().setHTML(Ext.String.format("<img style='margin:30px 105px' src='{0}'/>",
+		            					panel.ownerCt.down('hidden[name=data.photo]').getValue()));
+	            			});
+	            		}
+	            	}
 	            }]
 	        }]
 		});

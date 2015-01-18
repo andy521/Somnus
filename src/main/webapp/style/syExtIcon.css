@@ -1,6 +1,6 @@
-img {	cursor: pointer; }
+img {cursor: pointer; }
 
-.logo {	background: url('images/sshe.png') no-repeat !important; }
+.browse {background: url('images/browse.png') no-repeat !important; }
 
 .iconImg {
 	width: 16px;

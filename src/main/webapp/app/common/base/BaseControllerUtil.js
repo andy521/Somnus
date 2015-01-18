@@ -2,7 +2,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 	/*
 	 * 加载Form表单数据
 	 * */
-	doLoad: function () {
+	doLoad: function() {
 		var formpanel = this.formPanel;
 		var form = this.formPanel.getForm();
 		form.load({
