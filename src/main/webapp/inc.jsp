@@ -115,7 +115,8 @@ app.organization =  '<%=organizationhtml%>';
 <%-- 引入uploadify--%>
 <script type="text/javascript" src="<%=contextPath%>/jslib/uploadify/jquery.uploadify.min.js" ></script>
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/jslib/uploadify/uploadify.css" >
-<%-- 引入uploadify--%>
+<%-- 引入imgareaselect--%>
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/jslib/imgareaselect/css/imgareaselect-default.css" />
 <script type="text/javascript" src="<%=contextPath%>/jslib/imgareaselect/scripts/jquery.imgareaselect.pack.js" ></script>
 <%-- 引入photo上传js--%>
 <script type="text/javascript" src="<%=contextPath%>/jslib/uploadPhoto.js"></script>
