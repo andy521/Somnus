@@ -34,10 +34,7 @@ Ext.define('somnus.view.management.UserWindow',{
 	            	border:0,
 	            	width:273,
 	            	height:161,
-	            	autoLoad:{
-						scripts:true,
-						url:app.contextPath + '/style/uploadbtn.jsp',
-					}
+	            	html:'loading....'
 	            }]
 	        }, {
 	            items: [{

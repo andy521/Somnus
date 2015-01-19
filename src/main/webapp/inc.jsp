@@ -112,11 +112,3 @@ app.organization =  '<%=organizationhtml%>';
 <%-- 引入jQuery--%>
 <script type="text/javascript" src="<%=contextPath%>/jslib/jquery-2.1.0.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/jslib/jquery.cookie-1.4.0.js"></script>
-<%-- 引入uploadify--%>
-<script type="text/javascript" src="<%=contextPath%>/jslib/uploadify/jquery.uploadify.min.js" ></script>
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/jslib/uploadify/uploadify.css" >
-<%-- 引入imgareaselect--%>
-<link rel="stylesheet" type="text/css" href="<%=contextPath%>/jslib/imgareaselect/css/imgareaselect-default.css" />
-<script type="text/javascript" src="<%=contextPath%>/jslib/imgareaselect/scripts/jquery.imgareaselect.pack.js" ></script>
-<%-- 引入photo上传js--%>
-<script type="text/javascript" src="<%=contextPath%>/jslib/uploadPhoto.js"></script>
