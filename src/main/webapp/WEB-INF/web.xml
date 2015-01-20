@@ -81,16 +81,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-	<!-- 解决上传的文件或图片失效的情况下，默认返回一个图片给用户，一般用于提示 -->
-	<filter>
-		<filter-name>file404Filter</filter-name>
-		<filter-class>com.somnus.util.base.File404Filter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>file404Filter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
 	<!-- javamelody监听器 -->
 	<listener>
 		<listener-class>net.bull.javamelody.SessionListener</listener-class>
@@ -122,14 +112,14 @@
 		<url-pattern>/druid/*</url-pattern>
 	</servlet-mapping>
 
-	<!-- plUpload上传 -->
+	<!-- Upload上传 -->
 	<servlet>
-		<servlet-name>PlUpload</servlet-name>
-		<servlet-class>com.somnus.util.base.PlUploadServlet</servlet-class>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.somnus.util.base.UploadServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>PlUpload</servlet-name>
-		<url-pattern>/plupload</url-pattern>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/uploadServlet</url-pattern>
 	</servlet-mapping>
 
 	<!-- Highcharts下载图表工具类 -->

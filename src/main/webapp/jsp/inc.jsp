@@ -112,3 +112,6 @@ app.organization =  '<%=organizationhtml%>';
 <%-- 引入jQuery--%>
 <script type="text/javascript" src="<%=contextPath%>/jslib/jquery-2.1.0.js"></script>
 <script type="text/javascript" src="<%=contextPath%>/jslib/jquery.cookie-1.4.0.js"></script>
+<%-- 引入头像裁剪 --%>
+<script type="text/javascript" src="<%=contextPath%>/jslib/avatar/scripts/swfobject.js"></script>
+<script type="text/javascript" src="<%=contextPath%>/jslib/avatar/scripts/fullAvatarEditor.js"></script> 

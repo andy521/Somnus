@@ -197,7 +197,7 @@ Ext.define('somnus.view.Viewport', {
 				title : '欢迎使用',
 				iconCls:'ext-icon-heart',
 				bodyStyle : 'padding:0px',
-				html:Ext.String.format('<iframe src="{0}/welcome.jsp" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
+				html:Ext.String.format('<iframe src="{0}/jsp/welcome.jsp" allowTransparency="true" style="border: 0; width: 100%; height: 99%;" frameBorder="0"></iframe>' , app.contextPath)
 			}],
 			listeners: {
 				remove: function (tab, component, eOpts) {

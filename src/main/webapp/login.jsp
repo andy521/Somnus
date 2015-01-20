@@ -6,10 +6,8 @@
 <html>
 <head>
 <title>系统登录</title>
-<jsp:include page="inc.jsp"></jsp:include>
+<jsp:include page="jsp/inc.jsp"></jsp:include>
 <script type="text/javascript" src="<%=contextPath%>/jslib/login.js"></script>
-<style type="text/css">
-</style>
 </head>
 <body style="background: url(style/images/login/login-bg.jpg) center top repeat-x #FFF;">
 </body>

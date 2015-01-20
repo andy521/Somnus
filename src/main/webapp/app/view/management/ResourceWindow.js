@@ -73,7 +73,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 		            buttonConfig: {
 		                iconCls: 'ext-icon-camera'
 		            },
-		            url:app.contextPath + '/style/icons.jsp',
+		            url:app.contextPath + '/jsp/icons.jsp',
 		            buttons:[{
 						text:'确定',
 						handler:function(btn){
