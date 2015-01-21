@@ -3,7 +3,7 @@ Ext.define('somnus.view.management.UserWindow',{
 	alias:'widget.userWindow',
 	title: '用户信息',
 	width: 630,
-	height:600,
+	height:625,
 	baseUrl: 'syuser',
 	initComponent: function () {
 		var me = this;
@@ -15,40 +15,44 @@ Ext.define('somnus.view.management.UserWindow',{
             },  
 	        items:[{
 	        	xtype: 'panel',
-	        	/*border: false,*/
+	        	border: false,
 	        	flex: 1,
 		        layout : {  
 	                type : 'hbox',  
-	                padding : '5',  
+	                /*padding : '5',*/  
 	                align : 'stretch',
 	            },
 		        items:[{
 		        	xtype: 'panel',
-		        	/*border: false,*/
-		        	flex: 4,
+		        	border: false,
+		        	flex: 5,
 		        	items:[{
 		        		xtype : 'textfield',
 						fieldLabel : '编号',
+						labelWidth:80,
 						name:'data.id',
 						readOnly:true,
 		        	},{
 		        		xtype : 'textfield',
 						fieldLabel : '姓名',
+						labelWidth:80,
 						name:'data.name',
 	                    allowBlank:false,
 		        	}]
 		        },{
 		        	xtype: 'panel',
-		        	/*border: false,*/
-		        	flex: 4,
+		        	border: false,
+		        	flex: 5,
 		        	items:[{
 		        		xtype : 'textfield',
 						fieldLabel : '登陆名称',
+						labelWidth:80,
 						name:'data.loginname',
 	                    allowBlank:false,
 		        	},{
 		        		xtype : 'combo',
 						fieldLabel : '性别',
+						labelWidth:80,
 						name:'data.sex',
 						store : {
 							fields : ['text', 'value'],
@@ -67,21 +71,23 @@ Ext.define('somnus.view.management.UserWindow',{
 		        	}]
 		        },{
 		        	xtype: 'panel',
-		        	/*border: false,*/
-		        	flex: 1,
+		        	border: false,
+		        	flex: 2,
 		        	items:[{
 		        		xtype: 'hidden',
+		        		itemId:'photo',
 	                    name: 'data.photo'
 		        	},{
 		        		xtype:'panel',
+		        		itemId:'imgPanel',
 		            	border:1,
-		            	width: 64,
-		            	height:72,
+		            	width: 100,
+		            	height:100,
 		            	listeners:{
 		            		render:function(panel){
-		            			panel.ownerCt.ownerCt.on('actioncomplete',function(){
-			            			panel.getEl().setHTML(Ext.String.format("<img style='margin:30px 105px' src='{0}'/>",
-			            					panel.ownerCt.down('hidden[name=data.photo]').getValue()));
+		            			panel.ownerCt.ownerCt.ownerCt.on('actioncomplete',function(){
+			            			panel.getEl().setHTML(Ext.String.format("<img style='width:100px;height:100px;' src='{0}{1}'/>",
+			            					app.contextPath,panel.ownerCt.down('hidden[name=data.photo]').getValue()));
 		            			});
 		            		}
 		            	}
@@ -89,8 +95,8 @@ Ext.define('somnus.view.management.UserWindow',{
 		        }]
 	        },{
 	        	xtype: 'panel',
-	        	/*border: false,*/
-	        	flex:5,
+	        	border: false,
+	        	flex:4,
 	        	autoLoad:{
     				scripts:true,
     				url:app.contextPath+'/jsp/avatar.jsp'

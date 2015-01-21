@@ -19,7 +19,7 @@ Ext.define('somnus.view.management.UserView',{
 				dataIndex : 'photo',
 				width : 40,
 				renderer:function(value){
-					return Ext.String.format("<img width='24' height='24' src='{0}' />",value);
+					return Ext.String.format("<img width='24' height='24' src='{0}{1}' />",app.contextPath,value);
 				}
 			},{
 				text : '登录名',

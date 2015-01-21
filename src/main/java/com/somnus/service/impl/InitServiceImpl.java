@@ -219,6 +219,7 @@ public class InitServiceImpl implements InitServiceI {
 			user.setPwd(MD5Util.md5(node.valueOf("@pwd")));
 			user.setSex(node.valueOf("@sex"));
 			user.setAge(Integer.valueOf(node.valueOf("@age")));
+			user.setPhoto(node.valueOf("@photo"));
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
 			List<Syuser> ul = baseDao.find("from Syuser u where u.loginname = '" + user.getLoginname() + "' and u.id != '" + user.getId() + "'");
 			for (Syuser u : ul) {

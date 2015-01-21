@@ -16,10 +16,10 @@
 					upload_url :app.contextPath+'/uploadServlet',
 					method : 'post',	//传递到上传接口中的查询参数的提交方式。更改该值时，请注意更改上传接口中的查询参数的接收方式
 					src_upload : 1,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
-					button_visible : false,//是否显示保存、取消、拍照按钮
+					button_upload_text : '确定',
 					avatar_box_border_width : 0,
-					avatar_sizes : '100*100|50*50|32*32',
-					avatar_sizes_desc : '100*100像素|50*50像素|32*32像素'
+					avatar_sizes : '100*100|75*75',
+					avatar_sizes_desc : '100*100像素|75*75像素'
 				}, function (msg) {
 					switch(msg.code){
 						case 1 : 
@@ -42,7 +42,13 @@
 						case 5 : 
 							if(msg.type == 0){
 								if(msg.content.sourceUrl){
-									alert("原图已成功保存至服务器，url为：\n" + msg.content.sourceUrl+"\n\n" + "头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n"));
+									Ext.each(msg.content.avatarUrls,function(item,index,allItems){  
+									    if(index==0){
+									    	Ext.ComponentQuery.query("userWindow")[0].down('#photo').setValue(item);
+											Ext.ComponentQuery.query("userWindow")[0].down('#imgPanel').getEl().setHTML(Ext.String.format("<img style='width:100px;height:100px;' src='{0}{1}'/>",
+					            					app.contextPath,item));
+									    }
+									});  
 								}else{
 									alert("头像已成功保存至服务器，url为：\n" + msg.content.avatarUrls.join("\n\n"));
 								}

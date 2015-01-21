@@ -261,13 +261,13 @@
 	</organizations_resources>
 
 	<users name="用户">
-		<user id="0" loginname="admin" pwd="123456" name="admin" sex="1" age="30" />
-		<user id="1" loginname="guest" pwd="123456" name="guest" sex="1" age="30" />
-		<user id="2" loginname="admin1" pwd="123456" name="admin1" sex="0" age="30" />
-		<user id="3" loginname="admin2" pwd="123456" name="admin2" sex="0" age="30" />
-		<user id="4" loginname="admin3" pwd="123456" name="admin3" sex="0" age="30" />
-		<user id="5" loginname="admin4" pwd="123456" name="admin4" sex="0" age="30" />
-		<user id="6" loginname="admin5" pwd="123456" name="admin5" sex="0" age="30" />
+		<user id="0" loginname="admin" pwd="123456" name="admin" sex="1" age="30" photo="/upload/avatar_7200585650c749449601a01b9d5782b4.jpg"/>
+		<user id="1" loginname="guest" pwd="123456" name="guest" sex="1" age="30" photo="/upload/avatar_c029360bb6d245e18d9a6b339662d2c9.jpg"/>
+		<user id="2" loginname="admin1" pwd="123456" name="admin1" sex="0" age="30" photo="/upload/avatar_42e337cb8f0f41bca44dafd03dcaffc2.jpg"/>
+		<user id="3" loginname="admin2" pwd="123456" name="admin2" sex="0" age="30" photo="/upload/avatar_fa33a0f0e3294f85b4df944afa78d754.jpg"/>
+		<user id="4" loginname="admin3" pwd="123456" name="admin3" sex="0" age="30" photo="/upload/avatar_f2cf462812804af0b6c8dfb588745b80.jpg"/>
+		<user id="5" loginname="admin4" pwd="123456" name="admin4" sex="0" age="30" photo="/upload/avatar_4960a0f884304a779718bcf0ee4666cb.jpg"/>
+		<user id="6" loginname="admin5" pwd="123456" name="admin5" sex="0" age="30" photo="/upload/avatar_47cdbdbfdbb94687a28299f5f1ae68e9.jpg"/>
 	</users>
 
 	<users_roles name="用户和角色对应关系">
