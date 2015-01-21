@@ -3,31 +3,29 @@ Ext.define('somnus.view.management.UserWindow',{
 	alias:'widget.userWindow',
 	title: '用户信息',
 	width: 630,
-	height: 700,
+	height:600,
 	baseUrl: 'syuser',
 	initComponent: function () {
 		var me = this;
 		this.formPanel = Ext.create('Ext.form.Panel', {
-			defaults: {
-	            /*border: false,*/
-	            xtype: 'panel',
-	            bodyStyle: 'padding: 8px;',
-	        },
 	        layout: {  
 	        	type:'vbox',  
                 padding:'5',  
                 align:'stretch'  
             },  
 	        items:[{
+	        	xtype: 'panel',
+	        	/*border: false,*/
 	        	flex: 1,
-	        	defaults: {
-		            border: false,
-		            xtype: 'panel',
-		            flex: 1,
-		            bodyStyle: 'padding: 8px;',
-		        },
-		        layout:'hbox',
+		        layout : {  
+	                type : 'hbox',  
+	                padding : '5',  
+	                align : 'stretch',
+	            },
 		        items:[{
+		        	xtype: 'panel',
+		        	/*border: false,*/
+		        	flex: 4,
 		        	items:[{
 		        		xtype : 'textfield',
 						fieldLabel : '编号',
@@ -40,6 +38,9 @@ Ext.define('somnus.view.management.UserWindow',{
 	                    allowBlank:false,
 		        	}]
 		        },{
+		        	xtype: 'panel',
+		        	/*border: false,*/
+		        	flex: 4,
 		        	items:[{
 		        		xtype : 'textfield',
 						fieldLabel : '登陆名称',
@@ -65,14 +66,17 @@ Ext.define('somnus.view.management.UserWindow',{
 						allowBlank:false,
 		        	}]
 		        },{
+		        	xtype: 'panel',
+		        	/*border: false,*/
+		        	flex: 1,
 		        	items:[{
 		        		xtype: 'hidden',
 	                    name: 'data.photo'
 		        	},{
 		        		xtype:'panel',
-		            	border:0,
-		            	width:280,
-		            	height:170,
+		            	border:1,
+		            	width: 64,
+		            	height:72,
 		            	listeners:{
 		            		render:function(panel){
 		            			panel.ownerCt.ownerCt.on('actioncomplete',function(){
@@ -84,7 +88,9 @@ Ext.define('somnus.view.management.UserWindow',{
 		        	}]
 		        }]
 	        },{
-	        	flex:6,
+	        	xtype: 'panel',
+	        	/*border: false,*/
+	        	flex:5,
 	        	autoLoad:{
     				scripts:true,
     				url:app.contextPath+'/jsp/avatar.jsp'

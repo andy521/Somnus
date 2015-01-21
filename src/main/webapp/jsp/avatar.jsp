@@ -15,7 +15,8 @@
 					id : 'swf',
 					upload_url :app.contextPath+'/uploadServlet',
 					method : 'post',	//传递到上传接口中的查询参数的提交方式。更改该值时，请注意更改上传接口中的查询参数的接收方式
-					src_upload : 2,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
+					src_upload : 1,		//是否上传原图片的选项，有以下值：0-不上传；1-上传；2-显示复选框由用户选择
+					button_visible : false,//是否显示保存、取消、拍照按钮
 					avatar_box_border_width : 0,
 					avatar_sizes : '100*100|50*50|32*32',
 					avatar_sizes_desc : '100*100像素|50*50像素|32*32像素'
