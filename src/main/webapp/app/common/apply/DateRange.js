@@ -23,26 +23,30 @@ Ext.define('somnus.common.apply.DateRange', {
 		this.startDateField = Ext.create('Ext.form.field.Date', {
 			name: this.startDateName,
 			flex: 1,
+			/*itemId: 'startdt',
+            vtype: 'daterange',
+            endDateField: 'enddt',*/
 			format: 'Y-m-d',
-			showToday: true,
 			value: beginDate ? Ext.Date.format(beginDate, 'Y-m-d') : undefined
 		});
 		this.endDateField = Ext.create('Ext.form.field.Date', {
 			name: this.endDateName,
 			flex: 1,
+			/*itemId: 'enddt',
+            vtype: 'daterange',
+            startDateField: 'startdt',*/
 			format: 'Y-m-d',
-			showToday: true,
 			value: endDate ? Ext.Date.format(endDate, 'Y-m-d') : undefined
 		});
 		this.items = [
-	this.startDateField,
-	{
-		xtype: 'label',
-		text: '-',
-		style: 'padding: 2px;'
-	} ,
-	this.endDateField
-	];
+			this.startDateField,
+			{
+				xtype: 'label',
+				text: '-',
+				style: 'padding: 2px;'
+			} ,
+			this.endDateField
+		];
 		this.callParent();
 	},
 	getStartDate: function () {
