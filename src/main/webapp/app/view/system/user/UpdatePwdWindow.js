@@ -17,9 +17,17 @@ Ext.define('somnus.view.system.user.UpdatePwdWindow', {
             items: [{
                     fieldLabel: '新密码',
                     name: 'data.pwd',
-                    id: 'newPwd',
+                    itemId: 'newPwd',
                     inputType: "password",
-                    allowBlank: false
+                    allowBlank: false,
+                    listeners: {
+                        validitychange: function(field){
+                            field.next().validate();
+                        },
+                        blur: function(field){
+                            field.next().validate();
+                        }
+                    }
                 },
                 {
                     fieldLabel: '确认新密码',

@@ -133,10 +133,10 @@ Ext.apply(Ext.form.field.VTypes, {
 	_uniqueText: '【{0}】已经被使用',
 	password: function (val, field) {
 		if (field.initialPassField) {
-			var pwd = Ext.getCmp(field.initialPassField);
-			return (val == pwd.getValue());
-		}
-		return true;
+            var pwd = field.up('form').down('#' + field.initialPassField);
+            return (val == pwd.getValue());
+        }
+        return true;
 	},
 	passwordText: '确认密码不同！',
 	chinese: function (val, field) {

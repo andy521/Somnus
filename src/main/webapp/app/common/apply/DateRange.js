@@ -14,8 +14,6 @@ Ext.define('somnus.common.apply.DateRange', {
 	},
 	startDateName: 'startDate',
 	endDateName: 'endDate',
-	range: '-1d',
-	defaultInterval: Date.DAY,
 	initComponent: function () {
 		var now = new Date(), endDate, beginDate, rangeValue, interval;
 		beginDate = Ext.Date.getFirstDateOfMonth(now);
@@ -23,20 +21,20 @@ Ext.define('somnus.common.apply.DateRange', {
 		this.startDateField = Ext.create('Ext.form.field.Date', {
 			name: this.startDateName,
 			flex: 1,
-			/*itemId: 'startdt',
+			itemId: 'startdt',
             vtype: 'daterange',
-            endDateField: 'enddt',*/
+            endDateField: 'enddt',
 			format: 'Y-m-d',
-			value: beginDate ? Ext.Date.format(beginDate, 'Y-m-d') : undefined
+			/*value: beginDate ? Ext.Date.format(beginDate, 'Y-m-d') : undefined*/
 		});
 		this.endDateField = Ext.create('Ext.form.field.Date', {
 			name: this.endDateName,
 			flex: 1,
-			/*itemId: 'enddt',
+			itemId: 'enddt',
             vtype: 'daterange',
-            startDateField: 'startdt',*/
+            startDateField: 'startdt',
 			format: 'Y-m-d',
-			value: endDate ? Ext.Date.format(endDate, 'Y-m-d') : undefined
+			/*value: endDate ? Ext.Date.format(endDate, 'Y-m-d') : undefined*/
 		});
 		this.items = [
 			this.startDateField,
