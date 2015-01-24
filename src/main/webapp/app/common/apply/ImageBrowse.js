@@ -50,6 +50,7 @@ Ext.define('somnus.common.apply.ImageBrowse', {
         var me = this;
         var googleWin = Ext.create('Ext.window.Window', {
 			title : '浏览小图标',
+			modal: true,
 			width : 850,
 			height : 450,
 			closable : true,
