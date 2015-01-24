@@ -15,6 +15,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            flex: 1
 	        },
 	        layout: 'hbox',
+	        trackResetOnLoad: true,
 	        items: [{
 	            items: [{
 	            	xtype : 'textfield',

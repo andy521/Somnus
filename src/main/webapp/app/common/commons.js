@@ -107,6 +107,9 @@ Ext.apply(Ext.form.field.VTypes, {
 			value: value
 		});
 		this.uniqueText = Ext.String.format(this._uniqueText, value);
+		console.log(field.up('form'));
+		console.log(field.up('form').getForm());
+		console.log(field.up('form').getForm().isDirty());
 		console.log(field);
 		console.log(value+'||'+field.originalValue);
 		if (value === field.originalValue) {

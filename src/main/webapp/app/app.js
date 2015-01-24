@@ -24,9 +24,6 @@ Ext.require('somnus.common.apply.SearchField');
 Ext.override(Ext.form.field.Date, {
 	editable: false
 });
-Ext.override(Ext.form.Basic, {
-	trackResetOnLoad: true
-});
 
 Ext.onReady(function () {
 	Ext.application({

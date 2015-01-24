@@ -12,7 +12,8 @@ Ext.define('somnus.view.management.UserWindow',{
 	        	type:'vbox',  
                 padding:'5',  
                 align:'stretch'  
-            },  
+            },
+            trackResetOnLoad: true,
 	        items:[{
 	        	xtype: 'panel',
 	        	border: false,

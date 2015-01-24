@@ -14,6 +14,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
                 labelWidth: 80,
                 anchor: '100%'
             },
+            trackResetOnLoad: true,
             items: [{
             	xtype : 'textfield',
 				fieldLabel : '编号',
