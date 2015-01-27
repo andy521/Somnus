@@ -93,12 +93,20 @@ Ext.onReady(function(){
 			items:[{
 				xtype : 'textfield',
 				fieldLabel : '登录名',
-				name : 'data.loginname'
+				name : 'data.loginname',
+				fieldStyle: { 
+					background: Ext.String.format('#ffffff url({0}/style/images/ext_icons/user/user.png) no-repeat left center',app.contextPath), 
+					paddingLeft: '20px' 
+				}
 			},{
 				xtype : 'textfield',
 				inputType : 'password',
 				name : 'data.pwd',
-				fieldLabel : '密码'
+				fieldLabel : '密码',
+				fieldStyle: {
+					background: Ext.String.format('#ffffff url({0}/style/images/ext_icons/key.png) no-repeat left center',app.contextPath), 
+					paddingLeft: '20px' 
+				}
 			},{
 				xtype : 'combo',
 				fieldLabel : '界面模式',
