@@ -86,7 +86,7 @@ Ext.define('somnus.view.management.UserWindow',{
 		            	height:100,
 		            	listeners:{
 		            		render:function(panel){
-		            			panel.ownerCt.ownerCt.ownerCt.on('actioncomplete',function(){
+		            			panel.up('form').on('actioncomplete',function(){
 			            			panel.getEl().setHTML(Ext.String.format("<img style='width:100px;height:100px;' src='{0}{1}'/>",
 			            					app.contextPath,panel.ownerCt.down('hidden[name=data.photo]').getValue()));
 		            			});

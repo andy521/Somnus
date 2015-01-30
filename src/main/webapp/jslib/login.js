@@ -95,7 +95,7 @@ Ext.onReady(function(){
 				fieldLabel : '登录名',
 				name : 'data.loginname',
 				fieldStyle: { 
-					background: Ext.String.format('#ffffff url({0}/style/images/ext_icons/user/user.png) no-repeat left center',app.contextPath), 
+					background: Ext.String.format('#ffffff url({0}/style/images/ext_icons/user.png) no-repeat left center',app.contextPath), 
 					paddingLeft: '20px' 
 				}
 			},{

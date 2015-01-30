@@ -22,7 +22,7 @@ Ext.define('somnus.view.management.ResourceView',{
 			},{
 				text : '资源路劲',
 				dataIndex : 'url',
-				width : 200
+				width : 330
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
@@ -42,7 +42,7 @@ Ext.define('somnus.view.management.ResourceView',{
 			},{
 				text : '资源描述',
 				dataIndex : 'description',
-				width : 400
+				width : 320
 			},{
 				text : '排序',
 				dataIndex : 'seq',

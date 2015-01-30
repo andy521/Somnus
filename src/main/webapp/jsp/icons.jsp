@@ -16,7 +16,7 @@
 				}
 			});
 			return result.toString();
-		}).addClass($(':radio:checked').val());
+		}).addClass($(':radio:checked').val()).css("padding-left","20px");
 		window.hide();
 	};
 	$(function() {

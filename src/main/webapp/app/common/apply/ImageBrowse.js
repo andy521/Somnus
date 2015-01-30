@@ -33,14 +33,24 @@ Ext.define('somnus.common.apply.ImageBrowse', {
     },
 
     afterRender: function(){
+    	var me = this;
         this.callParent();
-        $(this.getEl().query('input')).css("padding-left","20px").attr('readonly','readonly');
+        me.up('form').on('actioncomplete',function(){
+        	console.log("$$$$"+me.getValue().substring(9));
+    		$(this.getEl().query('input[name=data.iconCls]')).attr('readonly','readonly').css({
+            	background: Ext.String.format('#ffffff url({0}/style/images/ext_icons/{1}.png) no-repeat left center',app.contextPath,me.getValue().substring(9)), 
+    			paddingLeft: '20px' 
+            });
+    	});
         this.triggerCell.item(0).setDisplayed(false);
     },
 
     onTrigger1Click : function(){
         var me = this;
-        $(me.getEl().query('input')).removeClass(me.getValue());
+        $(me.getEl().query('input')).removeClass(me.getValue()).css({
+        	backgroundImage:'',
+        	paddingLeft: '5px' 
+        });
         me.setValue('');
         me.triggerCell.item(0).setDisplayed(false);
         me.updateLayout();
