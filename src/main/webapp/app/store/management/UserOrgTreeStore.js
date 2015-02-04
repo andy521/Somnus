@@ -1,4 +1,4 @@
-Ext.define("somnus.store.management.OrgUserTreeStore",{
+Ext.define("somnus.store.management.UserOrgTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	proxy:{
 		type:'ajax',

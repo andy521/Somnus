@@ -1,6 +1,6 @@
 Ext.define("somnus.controller.management.UserController",{
 	extend: 'somnus.common.base.BaseController',
-	stores: ['management.UserStore','management.OrgUserTreeStore'],
+	stores: ['management.UserStore','management.UserOrgTreeStore'],
 	models: ['management.UserModel'],
 	views: ['management.UserView', 'management.UserWindow','management.UserOrgGrant'],
 	refs: [

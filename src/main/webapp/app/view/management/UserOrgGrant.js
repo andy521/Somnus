@@ -8,7 +8,7 @@ Ext.define('somnus.view.management.UserOrgGrant', {
         	width:500,
         	height:500,
         	/*displayField:'name',*/
-        	store: 'management.OrgUserTreeStore',
+        	store: 'management.UserOrgTreeStore',
 			rootVisible: false
         });
         this.grantBtn = Ext.create('Ext.button.Button', {
