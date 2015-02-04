@@ -1,6 +1,6 @@
 Ext.define("somnus.controller.management.RoleController",{
 	extend: 'somnus.common.base.BaseController',
-	stores: ['management.RoleStore','management.GrantTreeStore'],
+	stores: ['management.RoleStore','management.RoleResourceTreeStore'],
 	models: ['management.RoleModel','management.ResourceModel'],
 	views: ['management.RoleView', 'management.RoleWindow','management.RoleGrant'],
 	refs: [
@@ -36,6 +36,7 @@ Ext.define("somnus.controller.management.RoleController",{
 				},
 				afterrender:function(treepanel, eOpts){
 					var self = this;
+					console.log(self);
 					if(!treepanel.getStore().isLoading())
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){

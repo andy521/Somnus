@@ -7,8 +7,8 @@ Ext.define('somnus.view.management.RoleGrant', {
         this.treePanel = Ext.create('Ext.tree.Panel', {
         	width:500,
         	height:500,
-        	displayField:'name',
-        	store: 'management.GrantTreeStore',
+        	/*displayField:'name',*/
+        	store: 'management.RoleResourceTreeStore',
 			rootVisible: false
         });
         this.grantBtn = Ext.create('Ext.button.Button', {

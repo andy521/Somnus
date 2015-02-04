@@ -47,7 +47,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
             	xtype : 'treepicker',
 				fieldLabel : '上级机构',
 				name:'data.syorganization.id',
-				store:'management.OrganizationTreeStore',
+				store:'management.OrgComboTreeStore',
 				allowBlank:false,
 				width:280
             },{

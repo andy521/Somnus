@@ -29,6 +29,9 @@ Ext.loadFilter= function(data, opt) {
 		if(!Ext.isEmpty(record.syresourcetype)){
 			delete record.syresourcetype;
 		}
+		if(!Ext.isEmpty(record.syorganization)){
+			delete record.syorganization;
+		}
 	});
 	if (opt.parentField) {
 		idField = opt.idField || 'id';

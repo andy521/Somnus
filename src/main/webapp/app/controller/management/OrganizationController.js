@@ -1,6 +1,6 @@
 Ext.define("somnus.controller.management.OrganizationController",{
 	extend: 'somnus.common.base.BaseController',
-	stores: ['management.OrganizationStore','management.OrganizationTreeStore','management.GrantTreeStore'],
+	stores: ['management.OrgStore','management.OrgComboTreeStore','management.OrgResourceTreeStore'],
 	models: ['management.OrganizationModel','management.ResourceModel'],
 	views: ['management.OrganizationView', 'management.OrganizationWindow','management.OrganizationGrant'],
 	refs: [
@@ -54,6 +54,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 				},
 				afterrender:function(treepanel, eOpts){
 					var self = this;
+					console.log(self);
 					if(!treepanel.getStore().isLoading())
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){

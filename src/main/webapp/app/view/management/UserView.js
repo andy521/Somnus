@@ -43,9 +43,9 @@ Ext.define('somnus.view.management.UserView',{
 				renderer:function(value){
 					switch (value){
 						case '0':
-							return Ext.String.format("<span style='color:green;font-weight:bold;'>女</span><img src='{0}/style/images/ext_icons/user/user_female.png' />",app.contextPath);
+							return Ext.String.format("<span style='color:green;font-weight:bold;'>女</span><img src='{0}/style/images/ext_icons/user_female.png' />",app.contextPath);
 						case '1':
-							return Ext.String.format("<span style='color:red;font-weight:bold;'>男</span><img src='{0}/style/images/ext_icons/user/user_suit.png' />",app.contextPath);
+							return Ext.String.format("<span style='color:red;font-weight:bold;'>男</span><img src='{0}/style/images/ext_icons/user_suit.png' />",app.contextPath);
 					}
 				}
 			},{
