@@ -267,5 +267,34 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			}
 		}
 		return Node;
+	},
+	/**
+	* TreePanel事件（全选、反选）
+	* @param node
+	* @param checked 
+	* @param options pk 
+	*/
+	checkchange:function(node,checked,options){
+		if(node.data.leaf == false){
+			if(checked){
+				node.expand();
+				node.updateInfo(true,{checked:true});
+				node.eachChild(function(n){
+					n.data.checked = true;
+					n.updateInfo(true,{checked:true});
+				})
+			}else{
+				node.expand();
+				node.eachChild(function(n){
+					n.data.checked = false;
+					n.updateInfo(true,{checked:false});
+				})
+			}
+		}else{
+			if(!checked){
+				node.parentNode.data.checked = false;
+				node.parentNode.updateInfo(true,{checked:false});
+			}
+		}
 	}
 });

@@ -1,7 +1,7 @@
 Ext.define('somnus.view.management.UserOrgGrant', {
     extend: 'Ext.window.Window',
     alias: 'widget.userOrgGrant',
-    title: '修改机构',
+    title: '所属机构',
     modal: true,
     initComponent: function () {
         this.treePanel = Ext.create('Ext.tree.Panel', {
