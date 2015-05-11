@@ -276,6 +276,13 @@
 			<artifactId>quartz-all</artifactId>
 			<version>1.6.1</version>
 		</dependency>
+		
+		<!-- 加入sftp依赖包 -->
+		<dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.51</version>
+        </dependency>
 
 		<!-- 加入spring mvc依赖包 -->
 		<dependency>
