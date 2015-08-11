@@ -17,7 +17,7 @@
 	<h1>
 		<a href="http://yun.baidu.com/share/home?uk=2033389844#category/type=0" target="_blank">ExtJs4视频下载</a>
 	</h1>
-	点击链接加入群<a href="http://jq.qq.com/?_wv=1027&k=eCdvy2" target="_blank">【若水三千】</a>
+	点击链接加入群<a href="http://jq.qq.com/?_wv=1027&k=eCdvy2" target="_blank">【Java-J2EE】高级群</a>
 	<hr />
 </body>
 </html>
