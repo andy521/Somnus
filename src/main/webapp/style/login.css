@@ -12,7 +12,7 @@ input,button,select,textarea{outline:none}
 .login input.submit{border:none;font-weight:bold;color:#FFF;margin:25px 0 0 150px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow: #CCC 0px 0px 5px;-moz-box-shadow: #CCC 0px 0px 5px;box-shadow: #CCC 0px 0px 5px;background: #31b6e7;cursor: pointer;}
 .login input.submit:hover{background:#ff9229;}
 .login input.submit{padding:6px 20px;}
-.login input.qqlogin{width:63px;height:24px;border:none;margin:-26px 0 0 270px;background:url(images/login/login-qq.png) no-repeat;cursor: pointer;}
+.login input.qqlogin{width:63px;height:24px;border:none; position:absolute;top:230px;right:5px; background:url(images/login/login-qq.png) no-repeat;cursor: pointer;}
 .login .box{position:relative;z-index:100;margin:0 auto;width:700px;height:320px;background:url(images/login/login.png) center top no-repeat;}
 .login .log{position:relative;width:370px;height:260px;margin:0 auto;padding:90px 0 0 20px;}
 .login .logo{height:85px;position:absolute;top:15px;left:180px;background:url(images/login/logo-login.png) no-repeat;width:350px;height:50px;}
