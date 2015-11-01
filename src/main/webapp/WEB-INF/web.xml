@@ -7,7 +7,7 @@
 	<!-- spring配置文件位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-basic.xml</param-value>
+		<param-value>classpath:/spring-basic.xml</param-value>
 	</context-param>
 
 	<!-- 添加javamelody监控 -->
