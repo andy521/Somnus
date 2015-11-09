@@ -19,7 +19,7 @@ var login = function(){
 			$.removeCookie('extTheme');
 		}
 		form.submit({
-			url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_login.action',
+			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_login.action',
 			params:{'data.loginname':form.findField('data.loginname').getValue(),'data.pwd':form.findField('data.pwd').getValue()},
 			success:function(form, action)
 			{

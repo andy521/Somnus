@@ -4,7 +4,7 @@ Ext.define('somnus.view.management.UserWindow',{
 	title: '用户信息',
 	width: 630,
 	height:625,
-	baseUrl: 'syuser',
+	baseUrl: 'user',
 	initComponent: function () {
 		var me = this;
 		this.formPanel = Ext.create('Ext.form.Panel', {

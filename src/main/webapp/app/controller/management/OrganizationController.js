@@ -59,7 +59,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){
 						Ext.Ajax.request({
-							url:app.contextPath + '/base/syresource!doNotNeedSecurity_getOrganizationResources.action',
+							url:app.contextPath + '/base/resource!doNotNeedSecurity_getOrganizationResources.action',
 							params:{id : self.getOrganizationGrant().pk},
 							timeout:2000,
 							success:function(response,option){
@@ -83,7 +83,7 @@ Ext.define("somnus.controller.management.OrganizationController",{
 						pks.push(node.get('id'));
 					});
 					Ext.Ajax.request({
-						url:app.contextPath + '/base/syorganization!grant.action',
+						url:app.contextPath + '/base/organization!grant.action',
 						params:{id:self.getOrganizationGrant().pk,ids : pks.join(',')},
 						timeout:2000,
 						success:function(response,option){

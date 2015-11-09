@@ -14,7 +14,7 @@
 
 	<!-- 开启spring缓存 -->
 	<cache:annotation-driven cache-manager="cacheManager" />
-	<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:configLocation="classpath:ehcache.xml" p:shared="false" />
+	<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:configLocation="classpath:/cache/ehcache.xml" p:shared="false" />
 	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cacheManager-ref="cacheManagerFactory" />
 
 

@@ -4,7 +4,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	title: '资源信息',
 	width: 640,
 	height: 320,
-	baseUrl: 'syresource',
+	baseUrl: 'resource',
 	initComponent: function () {
 		var me = this;
 		this.formPanel = Ext.create('Ext.form.Panel', {

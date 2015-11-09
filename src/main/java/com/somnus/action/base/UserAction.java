@@ -15,22 +15,13 @@ import com.somnus.model.easyui.Grid;
 import com.somnus.model.easyui.Json;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.BeanUtils;
-import com.somnus.util.base.ConfigUtil;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.IpUtil;
 import com.somnus.util.base.MD5Util;
 
-/**
- * 用户
- * 
- * action访问地址是/base/syuser.action
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyuserAction extends BaseAction<Syuser> {
+public class UserAction extends BaseAction<Syuser> {
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -99,7 +90,7 @@ public class SyuserAction extends BaseAction<Syuser> {
 			}
 			user.setIp(IpUtil.getIpAddr(getRequest()));
 			sessionInfo.setUser(user);
-			getSession().setAttribute(ConfigUtil.getSessionInfoName(), sessionInfo);
+			getSession().setAttribute("sessionInfo", sessionInfo);
 		} else {
 			json.setMsg("用户名或密码错误！");
 		}
@@ -110,7 +101,7 @@ public class SyuserAction extends BaseAction<Syuser> {
 	 * 修改自己的密码
 	 */
 	public void doNotNeedSecurity_updateCurrentPwd() {
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		Json json = new Json();
 		Syuser user = service.getById(sessionInfo.getUser().getId());
 		user.setPwd(MD5Util.md5(data.getPwd()));

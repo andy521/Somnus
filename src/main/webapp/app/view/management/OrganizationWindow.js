@@ -2,7 +2,7 @@ Ext.define('somnus.view.management.OrganizationWindow',{
 	extend: 'somnus.common.base.BaseForm',
     alias: 'widget.organizationWindow',
     title: '机构信息',
-    baseUrl: 'syorganization',
+    baseUrl: 'organization',
     initComponent: function () {
     	var me = this;
         this.formPanel = Ext.create('Ext.form.Panel', {

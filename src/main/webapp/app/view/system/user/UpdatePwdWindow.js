@@ -51,7 +51,7 @@ Ext.define('somnus.view.system.user.UpdatePwdWindow', {
         			return;
         		}
         		form.submit({
-        			url:app.contextPath + '/base/syuser!doNotNeedSecurity_updateCurrentPwd.action',
+        			url:app.contextPath + '/base/user!doNotNeedSecurity_updateCurrentPwd.action',
         			submitEmptyText: false,
         			waitMsg: '正在修改密码...',
         			success: function (form, action) {

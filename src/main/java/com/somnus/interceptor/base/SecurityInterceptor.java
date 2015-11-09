@@ -5,9 +5,6 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
@@ -15,8 +12,6 @@ import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
-import com.somnus.util.base.ConfigUtil;
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 
@@ -31,7 +26,7 @@ public class SecurityInterceptor extends MethodFilterInterceptor {
 	private static final Logger logger = LoggerFactory.getLogger(SecurityInterceptor.class);
 
 	protected String doIntercept(ActionInvocation actionInvocation) throws Exception {
-		SessionInfo sessionInfo = (SessionInfo) ServletActionContext.getRequest().getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) ServletActionContext.getRequest().getSession().getAttribute("sessionInfo");
 		String servletPath = ServletActionContext.getRequest().getServletPath();
 
 		servletPath = StringUtils.substringBeforeLast(servletPath, ".");

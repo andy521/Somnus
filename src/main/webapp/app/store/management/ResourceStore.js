@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.ResourceStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model: 'somnus.model.management.ResourceModel',
-			baseUrl: 'syresource'
+			baseUrl: 'resource'
 		}, config);
 		this.callParent([config]);
 	}

@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
  * @author Somnus
  * 
  */
-@ParentPackage("SyPackage")
+@ParentPackage("Package")
 @Namespace("/")
 @Action
 public class BaseAction<T> extends ActionSupport {

@@ -2,7 +2,7 @@ Ext.define('somnus.view.management.RoleWindow', {
     extend: 'somnus.common.base.BaseForm',
     alias: 'widget.roleWindow',
     title: '角色信息',
-    baseUrl: 'syrole',
+    baseUrl: 'role',
     initComponent: function () {
 
         this.formPanel = Ext.create('Ext.form.Panel', {

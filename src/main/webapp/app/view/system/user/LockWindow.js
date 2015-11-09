@@ -38,7 +38,7 @@ Ext.define('somnus.view.system.user.LockWindow', {
         			return;
         		}
         		form.submit({
-        			url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_login.action',
+        			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_login.action',
         			submitEmptyText: false,
         			waitMsg: '正在解锁...',
         			success: function (form, action) {

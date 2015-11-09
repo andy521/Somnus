@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.RoleResourceTreeStore",{
 	model:'somnus.model.management.ResourceModel',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syresource!doNotNeedSecurity_getResourcesTree.action',
+		url:app.contextPath + '/base/resource!doNotNeedSecurity_getResourcesTree.action',
 		reader:"json",
 		extractResponseData: function(response) {
             var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),

@@ -2,7 +2,7 @@ Ext.define("somnus.store.management.UserRoleTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syrole!doNotNeedSecurity_getRolesTree.action',
+		url:app.contextPath + '/base/role!doNotNeedSecurity_getRolesTree.action',
 		reader:"json",
 		extractResponseData: function(response) {
               var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),

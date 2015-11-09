@@ -33,7 +33,7 @@ Ext.define("somnus.controller.management.UserController",{
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){
 						Ext.Ajax.request({
-							url:app.contextPath + '/base/syorganization!doNotNeedSecurity_getSyorganizationByUserId.action',
+							url:app.contextPath + '/base/organization!doNotNeedSecurity_getSyorganizationByUserId.action',
 							params:{id : self.getUserOrgGrant().pk},
 							timeout:2000,
 							success:function(response,option){
@@ -57,7 +57,7 @@ Ext.define("somnus.controller.management.UserController",{
 						pks.push(node.get('id'));
 					});
 					Ext.Ajax.request({
-						url:app.contextPath + '/base/syuser!grantOrganization.action',
+						url:app.contextPath + '/base/user!grantOrganization.action',
 						params:{id:self.getUserOrgGrant().pk,ids : pks.join(',')},
 						timeout:2000,
 						success:function(response,option){
@@ -83,7 +83,7 @@ Ext.define("somnus.controller.management.UserController",{
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){
 						Ext.Ajax.request({
-							url:app.contextPath + '/base/syrole!doNotNeedSecurity_getRoleByUserId.action',
+							url:app.contextPath + '/base/role!doNotNeedSecurity_getRoleByUserId.action',
 							params:{id : self.getUserRoleGrant().pk},
 							timeout:2000,
 							success:function(response,option){
@@ -107,7 +107,7 @@ Ext.define("somnus.controller.management.UserController",{
 						pks.push(node.get('id'));
 					});
 					Ext.Ajax.request({
-						url:app.contextPath + '/base/syuser!grantRole.action',
+						url:app.contextPath + '/base/user!grantRole.action',
 						params:{id:self.getUserRoleGrant().pk,ids : pks.join(',')},
 						timeout:2000,
 						success:function(response,option){

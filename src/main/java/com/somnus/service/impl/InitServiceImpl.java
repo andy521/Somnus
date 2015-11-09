@@ -32,7 +32,7 @@ public class InitServiceImpl implements InitServiceI {
 
 	private static final Logger logger = LoggerFactory.getLogger(InitServiceImpl.class);
 
-	private static final String FILEPATH = "initDataBase.xml";
+	private static final String FILEPATH = "init/initDataBase.xml";
 
 	@Autowired
 	private BaseDaoI baseDao;

@@ -18,18 +18,11 @@ import com.somnus.model.easyui.Grid;
 import com.somnus.model.easyui.Json;
 import com.somnus.service.base.SyroleServiceI;
 import com.somnus.service.base.SyuserServiceI;
-import com.somnus.util.base.ConfigUtil;
 import com.somnus.util.base.HqlFilter;
 
-/**
- * 角色
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyroleAction extends BaseAction<Syrole> {
+public class RoleAction extends BaseAction<Syrole> {
 
 	@Autowired
 	private SyuserServiceI userService;
@@ -52,7 +45,7 @@ public class SyroleAction extends BaseAction<Syrole> {
 	public void grid() {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
 		grid.setTotal(((SyroleServiceI) service).countRoleByFilter(hqlFilter));
 		grid.setRows(((SyroleServiceI) service).findRoleByFilter(hqlFilter, pageNo, pageSize));
@@ -65,7 +58,7 @@ public class SyroleAction extends BaseAction<Syrole> {
 	public void save() {
 		Json json = new Json();
 		if (data != null) {
-			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 			((SyroleServiceI) service).saveRole(data, sessionInfo.getUser().getId());
 			json.setSuccess(true);
 		}
@@ -86,7 +79,7 @@ public class SyroleAction extends BaseAction<Syrole> {
 	 * 获得当前用户能看到的所有角色树
 	 */
 	public void doNotNeedSecurity_getRolesTree() {
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		Syuser user = userService.getById(sessionInfo.getUser().getId());
 		Set<Syrole> roles = user.getSyroles();
 		List<Syrole> l = new ArrayList<Syrole>(roles);

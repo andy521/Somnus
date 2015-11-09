@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.apache.struts2.ServletActionContext;
 
 import com.somnus.model.base.SessionInfo;
-import com.somnus.util.base.ConfigUtil;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 
@@ -26,7 +25,7 @@ public class SessionInterceptor extends MethodFilterInterceptor {
 	protected String doIntercept(ActionInvocation actionInvocation) throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpServletResponse response = ServletActionContext.getResponse();
-		SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute("sessionInfo");
 		logger.info("进入session拦截器->访问路径为[" + request.getServletPath() + "]");
 		if (sessionInfo == null) {
 			String errMsg = "您还没有登录或登录已超时，请重新登录，然后再刷新本功能！";

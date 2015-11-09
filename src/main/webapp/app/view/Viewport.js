@@ -148,7 +148,7 @@ Ext.define('somnus.view.Viewport', {
 							iconCls:'ext-icon-lock',
 							handler:function(){
 								Ext.Ajax.request({
-									url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_logout.action',
+									url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_logout.action',
 									success:function(response,option){
 										Ext.require('somnus.view.system.user.LockWindow', function () {
 											Ext.create('somnus.view.system.user.LockWindow').show();
@@ -163,7 +163,7 @@ Ext.define('somnus.view.Viewport', {
 							iconCls:'ext-icon-door_out',
 							handler:function(){
 								Ext.Ajax.request({
-									url:app.contextPath + '/base/syuser!doNotNeedSessionAndSecurity_logout.action',
+									url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_logout.action',
 									success:function(response,option){
 										location.replace(app.contextPath + '/index.jsp'); 
 									}
@@ -217,7 +217,7 @@ Ext.define('somnus.view.Viewport', {
 			fields: ['url', 'text', 'target'],
 			proxy:{
 				type:'ajax',
-				url:app.contextPath + '/base/syresource!doNotNeedSecurity_getMainMenu.action',
+				url:app.contextPath + '/base/resource!doNotNeedSecurity_getMainMenu.action',
 				reader:"json",
 				extractResponseData: function(response) {
 		              var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),{parentField : 'pid'});

@@ -47,7 +47,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 	public void attributeAdded(HttpSessionBindingEvent evt) {
 		String name = evt.getName();
 		logger.debug("向session存入属性：" + name);
-		if (ConfigUtil.getSessionInfoName().equals(name)) {// 如果存入的属性是sessionInfo的话
+		if ("sessionInfo".equals(name)) {// 如果存入的属性是sessionInfo的话
 			HttpSession session = evt.getSession();
 			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(name);
 			if (sessionInfo != null) {
@@ -89,7 +89,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 		HttpSession session = evt.getSession();
 		if (session != null) {
 			logger.debug("session销毁：" + session.getId());
-			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
+			SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 			if (sessionInfo != null) {
 				// System.out.println(sessionInfo.getUser().getName() + "注销了");
 				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");

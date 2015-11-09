@@ -2,7 +2,7 @@ Ext.define("somnus.store.management.UserOrgTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syorganization!doNotNeedSecurity_getSyorganizationsTree.action',
+		url:app.contextPath + '/base/organization!doNotNeedSecurity_getSyorganizationsTree.action',
 		reader:"json",
 		extractResponseData: function(response) {
               var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),

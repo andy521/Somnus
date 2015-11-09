@@ -18,8 +18,7 @@ import com.somnus.util.base.DateUtil;
 @ParentPackage("json-default")
 @Namespace("/")
 @Action(results = {@Result(name = "uploadify", type = "json",params={"excludeProperties","file,fileContentType,fileFileName"})})
-public class UploadifyAction extends ActionSupport
-{
+public class UploadifyAction extends ActionSupport{
 	/*
 	 * 成员变量的名称不能随意更改, 
 	 * private File file; 						变量的名称必须和jsp中上传文件标签中的name属性的值一致.

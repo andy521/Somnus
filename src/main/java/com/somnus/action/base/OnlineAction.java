@@ -7,15 +7,9 @@ import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syonline;
 import com.somnus.service.base.SyonlineServiceI;
 
-/**
- * 上线用户
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyonlineAction extends BaseAction<Syonline> {
+public class OnlineAction extends BaseAction<Syonline> {
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑

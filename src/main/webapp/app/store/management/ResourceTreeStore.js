@@ -2,7 +2,7 @@ Ext.define("somnus.store.management.ResourceTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syresource!doNotNeedSecurity_getMainMenu.action',
+		url:app.contextPath + '/base/resource!doNotNeedSecurity_getMainMenu.action',
 		reader:"json",
 		extractResponseData: function(response) {
               var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),{parentField : 'pid'});

@@ -41,7 +41,7 @@ Ext.define("somnus.controller.management.RoleController",{
 						treepanel.getStore().load();
 					treepanel.getStore().on('load',function(treestore, node, records, successful, eOpts){
 						Ext.Ajax.request({
-							url:app.contextPath + '/base/syresource!doNotNeedSecurity_getRoleResources.action',
+							url:app.contextPath + '/base/resource!doNotNeedSecurity_getRoleResources.action',
 							params:{id : self.getRoleGrant().pk},
 							timeout:2000,
 							success:function(response,option){
@@ -65,7 +65,7 @@ Ext.define("somnus.controller.management.RoleController",{
 						pks.push(node.get('id'));
 					});
 					Ext.Ajax.request({
-						url:app.contextPath + '/base/syrole!grant.action',
+						url:app.contextPath + '/base/role!grant.action',
 						params:{id:self.getRoleGrant().pk,ids : pks.join(',')},
 						timeout:2000,
 						success:function(response,option){

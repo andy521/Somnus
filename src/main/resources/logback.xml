@@ -2,7 +2,7 @@
 <configuration>
     <jmxConfigurator />
 
-    <property name="log.base" value="logs" />
+    <property name="log.base" value="/var/logs/somnus" />
 	<property name="pattern"  value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
 	
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">

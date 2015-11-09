@@ -45,7 +45,7 @@ public class UploadServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Upload json = new Upload();
 		if ( request.getContentType().indexOf("multipart/form-data") >= 0 ){
-			String imgroot = request.getSession().getServletContext().getRealPath(ConfigUtil.get("uploadPath"));
+			String imgroot = request.getSession().getServletContext().getRealPath("/upload");
 			//如果上传目录不存在,自动创建一个
 			File dirFile = new File(imgroot);
 			if (!dirFile.exists()){
@@ -82,11 +82,11 @@ public class UploadServlet extends HttpServlet {
 							String sourceFileName = fileItem.getName();	
 							//原始文件的扩展名(不包含“.”)
 							filename = String.format("source_%s.%s", UUID.randomUUID().toString().replace("-", ""), FilenameUtils.getExtension(sourceFileName));
-							json.setSourceUrl(ConfigUtil.get("uploadPath")+ "/" + filename);
+							json.setSourceUrl("/upload"+ "/" + filename);
 						}
 						//头像图片（默认的 file 域的名称：__avatar1,2,3...，可在插件配置参数中自定义，参数名：avatar_field_names）。
 						else{
-							json.getAvatarUrls().add(ConfigUtil.get("uploadPath")+ "/" + filename);
+							json.getAvatarUrls().add("/upload"+ "/" + filename);
 						}
 						try {
 							fileItem.write( new File(imgroot,filename) );

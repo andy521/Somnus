@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.UserStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model:'somnus.model.management.UserModel',
-			baseUrl:'syuser',
+			baseUrl:'user',
 			root:'rows',
 			extraParams:{
 				sort:'createdatetime',

@@ -3,7 +3,7 @@ Ext.define("somnus.store.chart.RegisterDateChartStore",{
 	model:'somnus.model.chart.RegisterDateChartModel',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syuser!doNotNeedSecurity_userCreateDatetimeChart.action',
+		url:app.contextPath + '/base/user!doNotNeedSecurity_userCreateDatetimeChart.action',
 		reader:{
 			type:'json'
 		}

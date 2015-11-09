@@ -2,7 +2,7 @@ Ext.define("somnus.store.management.OrgComboTreeStore",{
 	extend: 'Ext.data.TreeStore',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syorganization!doNotNeedSecurity_comboTree.action',
+		url:app.contextPath + '/base/organization!doNotNeedSecurity_comboTree.action',
 		reader:"json",
 		extractResponseData: function(response) {
               var json = Ext.loadFilter(Ext.JSON.decode(response.responseText),{parentField : 'pid'});

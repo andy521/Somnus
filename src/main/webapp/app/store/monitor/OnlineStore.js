@@ -3,7 +3,7 @@ Ext.define("somnus.store.monitor.OnlineStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model:'somnus.model.monitor.OnlineModel',
-			baseUrl:'syonline',
+			baseUrl:'online',
 			root:'rows',
 			extraParams:{
 				sort:'createdatetime',

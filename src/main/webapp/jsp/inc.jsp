@@ -9,7 +9,6 @@
 <%@ page import="com.somnus.model.easyui.Tree"%>
 <%@ page import="com.somnus.util.base.DateUtil"%>
 <%@ page import="com.somnus.util.base.BeanUtils"%>
-<%@ page import="com.somnus.util.base.ConfigUtil"%>
 <%@ page import="com.somnus.util.base.StringUtil"%>
 <%@ page import="java.util.List"%>
 <%@ page import="java.util.ArrayList"%>
@@ -35,7 +34,7 @@ if (cookieMap.containsKey("extTheme")) {
 	Cookie cookie = (Cookie) cookieMap.get("extTheme");
 	extTheme = cookie.getValue();
 }
-SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
+SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 String loginname ="";
 String ip ="";
 String id ="";

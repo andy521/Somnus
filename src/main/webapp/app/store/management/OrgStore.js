@@ -3,7 +3,7 @@ Ext.define("somnus.store.management.OrgStore",{
 	constructor: function(config) {
 		config = Ext.apply({
 			model: 'somnus.model.management.OrganizationModel',
-			baseUrl: 'syorganization'
+			baseUrl: 'organization'
 		}, config);
 		this.callParent([config]);
 	}

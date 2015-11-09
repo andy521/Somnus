@@ -13,15 +13,9 @@ import com.somnus.model.easyui.CommboBox;
 import com.somnus.model.easyui.Json;
 import com.somnus.service.base.SyresourcetypeServiceI;
 
-/**
- * 资源类型
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyresourcetypeAction extends BaseAction<Syresourcetype> {
+public class ResourcetypeAction extends BaseAction<Syresourcetype> {
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑

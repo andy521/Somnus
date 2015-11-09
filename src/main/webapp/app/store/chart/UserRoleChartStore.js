@@ -3,7 +3,7 @@ Ext.define("somnus.store.chart.UserRoleChartStore",{
 	model:'somnus.model.chart.UserRoleChartModel',
 	proxy:{
 		type:'ajax',
-		url:app.contextPath + '/base/syrole!doNotNeedSecurity_userRoleChart.action',
+		url:app.contextPath + '/base/role!doNotNeedSecurity_userRoleChart.action',
 		reader:{
 			type:'json'
 		}

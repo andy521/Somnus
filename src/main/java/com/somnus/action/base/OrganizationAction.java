@@ -20,20 +20,11 @@ import com.somnus.model.easyui.Tree;
 import com.somnus.service.base.SyorganizationServiceI;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.BeanUtils;
-import com.somnus.util.base.ConfigUtil;
 import com.somnus.util.base.HqlFilter;
 
-/**
- * 机构
- * 
- * 访问地址：/base/syorganization.action
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyorganizationAction extends BaseAction<Syorganization> {
+public class OrganizationAction extends BaseAction<Syorganization> {
 
 	@Autowired
 	private SyuserServiceI userService;
@@ -56,7 +47,7 @@ public class SyorganizationAction extends BaseAction<Syorganization> {
 	public void save() {
 		Json json = new Json();
 		if (data != null) {
-			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 			((SyorganizationServiceI) service).saveOrganization(data, sessionInfo.getUser().getId());
 			json.setSuccess(true);
 		}
@@ -109,7 +100,7 @@ public class SyorganizationAction extends BaseAction<Syorganization> {
 	 * 获得当前用户能看到的所有机构树
 	 */
 	public void doNotNeedSecurity_getSyorganizationsTree() {
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		Syuser user = userService.getById(sessionInfo.getUser().getId());
 		Set<Syorganization> organizations = user.getSyorganizations();
 		List<Syorganization> l = new ArrayList<Syorganization>(organizations);

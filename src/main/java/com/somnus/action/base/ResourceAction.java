@@ -15,18 +15,11 @@ import com.somnus.model.easyui.Json;
 import com.somnus.model.easyui.Tree;
 import com.somnus.service.base.SyresourceServiceI;
 import com.somnus.util.base.BeanUtils;
-import com.somnus.util.base.ConfigUtil;
 import com.somnus.util.base.HqlFilter;
 
-/**
- * 资源
- * 
- * @author Somnus
- * 
- */
 @Namespace("/base")
 @Action
-public class SyresourceAction extends BaseAction<Syresource> {
+public class ResourceAction extends BaseAction<Syresource> {
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -61,7 +54,7 @@ public class SyresourceAction extends BaseAction<Syresource> {
 	 */
 	public void doNotNeedSecurity_getMainMenu() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
 		hqlFilter.addFilter("QUERY_t#syresourcetype#id_S_EQ", "0");// 0就是只查菜单
 		List<Syresource> resources = ((SyresourceServiceI) service).getMainMenu(hqlFilter);
@@ -84,7 +77,7 @@ public class SyresourceAction extends BaseAction<Syresource> {
 	 */
 	public void treeGrid() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
 		writeJson(((SyresourceServiceI) service).resourceTreeGrid(hqlFilter));
 	}
@@ -120,7 +113,7 @@ public class SyresourceAction extends BaseAction<Syresource> {
 	public void save() {
 		Json json = new Json();
 		if (data != null) {
-			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute(ConfigUtil.getSessionInfoName());
+			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 			((SyresourceServiceI) service).saveResource(data, sessionInfo.getUser().getId());
 			json.setSuccess(true);
 		}else{

@@ -31,7 +31,7 @@ public class SecurityUtil {
 	 * @return
 	 */
 	public boolean havePermission(String url) {
-		SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
+		SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 		List<Syresource> resources = new ArrayList<Syresource>();
 		for (Syrole role : sessionInfo.getUser().getSyroles()) {
 			resources.addAll(role.getSyresources());
