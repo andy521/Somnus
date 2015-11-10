@@ -17,6 +17,7 @@ Ext.define('somnus.view.monitor.OnlineView',{
 			columns:[{
 				text : '登录名',
 				dataIndex : 'loginname',
+				locked: true,
 				width : 200
 			},{
 				text:'类别',
