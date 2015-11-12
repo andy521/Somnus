@@ -214,7 +214,7 @@ Ext.define('somnus.view.Viewport', {
 			width: 240
 		});
 		var store = Ext.create('Ext.data.TreeStore', {
-			fields: ['url', 'text', 'target'],
+			fields: ['pid','url', 'text', 'target'],
 			proxy:{
 				type:'ajax',
 				url:app.contextPath + '/base/resource!doNotNeedSecurity_getMainMenu.action',
@@ -242,8 +242,12 @@ Ext.define('somnus.view.Viewport', {
 			rootVisible: false,
 			listeners: {
 				itemclick: function (view, record, item, index, e, options) {
+					console.info(record);
 					var url = record.get('url');
-					if (Ext.isEmpty(url)) {
+					//顶级菜单直接返回
+					if(record.get('pid') == ''){
+						return;
+					} else if (Ext.isEmpty(url)) {
 						Ext.Msg.alert("提示", "正在开发中...");
 						return;
 					}
