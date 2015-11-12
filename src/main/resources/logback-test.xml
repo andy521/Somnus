@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="pattern"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout name="StandardFormat" class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${pattern}</pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.somnus" level="trace" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+    <!-- show parameters for hibernate sql 专为 Hibernate 定制 -->  
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"  level="TRACE" />  
+    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor"  level="DEBUG" />  
+    <logger name="org.hibernate.SQL" level="DEBUG" />
+    <logger name="org.hibernate.type" level="TRACE" />
+    <logger name="org.hibernate.engine.QueryParameters" level="DEBUG" />  
+    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG" /> 
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>
