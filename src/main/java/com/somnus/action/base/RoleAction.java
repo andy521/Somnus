@@ -7,15 +7,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.model.easyui.Grid;
-import com.somnus.model.easyui.Json;
+import com.somnus.model.messege.Grid;
+import com.somnus.model.messege.Json;
 import com.somnus.service.base.SyroleServiceI;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.HqlFilter;

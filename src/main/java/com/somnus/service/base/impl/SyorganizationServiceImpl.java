@@ -2,9 +2,12 @@ package com.somnus.service.base.impl;
 
 import java.util.HashSet;
 import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
@@ -21,6 +24,7 @@ import com.somnus.util.base.HqlFilter;
  * 
  */
 @Service
+@Transactional
 public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> implements SyorganizationServiceI {
 
 	@Autowired
@@ -56,6 +60,7 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 	 *            原上级节点
 	 * @return
 	 */
+	@Transactional(readOnly = false)
 	private boolean isParentToChild(Syorganization t, Syorganization pt, Syorganization oldParent) {
 		if (pt != null && pt.getSyorganization() != null) {
 			if (StringUtils.equals(pt.getSyorganization().getId(), t.getId())) {
@@ -83,6 +88,7 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 		}
 	}
 
+	@Transactional(readOnly = false)
 	public List<Syorganization> findOrganizationByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syorganization t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());

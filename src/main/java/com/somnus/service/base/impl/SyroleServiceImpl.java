@@ -2,9 +2,12 @@ package com.somnus.service.base.impl;
 
 import java.util.HashSet;
 import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
@@ -20,6 +23,7 @@ import com.somnus.util.base.HqlFilter;
  * 
  */
 @Service
+@Transactional
 public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements SyroleServiceI {
 
 	@Autowired
@@ -27,16 +31,19 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 	@Autowired
 	private BaseDaoI<Syresource> resourceDao;
 
+	@Transactional(readOnly = false)
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), page, rows);
 	}
 
+	@Transactional(readOnly = false)
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
 	}
 
+	@Transactional(readOnly = false)
 	public Long countRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select count(distinct t) from Syrole t join t.syusers user";
 		return count(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());

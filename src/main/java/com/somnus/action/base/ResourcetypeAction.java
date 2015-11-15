@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syresourcetype;
-import com.somnus.model.easyui.CommboBox;
-import com.somnus.model.easyui.Json;
+import com.somnus.model.messege.CommboBox;
+import com.somnus.model.messege.Json;
 import com.somnus.service.base.SyresourcetypeServiceI;
 
 @Namespace("/base")

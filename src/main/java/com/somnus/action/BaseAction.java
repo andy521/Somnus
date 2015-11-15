@@ -3,17 +3,20 @@ package com.somnus.action;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
-import com.somnus.model.easyui.Grid;
-import com.somnus.model.easyui.Json;
+
+import com.somnus.model.messege.Grid;
+import com.somnus.model.messege.Json;
 import com.somnus.service.BaseServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.FastjsonFilter;
@@ -21,6 +24,7 @@ import com.somnus.util.base.HqlFilter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.opensymphony.xwork2.ActionSupport;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**

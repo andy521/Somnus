@@ -2,6 +2,9 @@ package com.somnus.service.impl;
 
 import java.util.HashSet;
 import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +12,17 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-import com.somnus.dao.base.BaseDaoI;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syresourcetype;
@@ -28,17 +39,34 @@ import com.alibaba.fastjson.JSON;
  * 
  */
 @Service
-public class InitServiceImpl implements InitServiceI {
+@Transactional
+public class InitServiceImpl implements InitServiceI ,InitializingBean,ApplicationContextAware{
 
 	private static final Logger logger = LoggerFactory.getLogger(InitServiceImpl.class);
 
 	private static final String FILEPATH = "init/initDataBase.xml";
 
-	@Autowired
-	private BaseDaoI baseDao;
+	private Session session;
+	
+	@Resource
+	private JdbcTemplate jdbcTemplate;
+	
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		Transaction tx = this.session.beginTransaction();
+		initDb();
+		tx.commit();
+	}
+	
+	@Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		SessionFactory sessionFactory = (SessionFactory)applicationContext.getBean("sessionFactory");
+        this.session = sessionFactory.openSession();
+    }
 
 	@Override
 	synchronized public void initDb() {
+		
 		try {
 			Document document = new SAXReader().read(Thread.currentThread().getContextClassLoader().getResourceAsStream(FILEPATH));
 
@@ -69,7 +97,7 @@ public class InitServiceImpl implements InitServiceI {
 		List childNodes = document.selectNodes("//resourcetypes/resourcetype");
 		for (Object obj : childNodes) {
 			Node node = (Node) obj;
-			Syresourcetype type = (Syresourcetype) baseDao.getById(Syresourcetype.class, node.valueOf("@id"));
+			Syresourcetype type = (Syresourcetype) getSession().get(Syresourcetype.class, node.valueOf("@id"));
 			if (type == null) {
 				type = new Syresourcetype();
 			}
@@ -77,7 +105,7 @@ public class InitServiceImpl implements InitServiceI {
 			type.setName(node.valueOf("@name"));
 			type.setDescription(node.valueOf("@description"));
 			logger.info(JSON.toJSONStringWithDateFormat(type, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(type);
+			getSession().saveOrUpdate(type);
 		}
 	}
 
@@ -85,7 +113,7 @@ public class InitServiceImpl implements InitServiceI {
 		List childNodes = document.selectNodes("//resources/resource");
 		for (Object obj : childNodes) {
 			Node node = (Node) obj;
-			Syresource resource = (Syresource) baseDao.getById(Syresource.class, node.valueOf("@id"));
+			Syresource resource = (Syresource) getSession().get(Syresource.class, node.valueOf("@id"));
 			if (resource == null) {
 				resource = new Syresource();
 			}
@@ -103,19 +131,19 @@ public class InitServiceImpl implements InitServiceI {
 			}
 
 			if (!StringUtils.isBlank(node.valueOf("@pid"))) {
-				resource.setSyresource((Syresource) baseDao.getById(Syresource.class, node.valueOf("@pid")));
+				resource.setSyresource((Syresource) getSession().get(Syresource.class, node.valueOf("@pid")));
 			} else {
 				resource.setSyresource(null);
 			}
 
 			Node n = node.selectSingleNode("resourcetype");
-			Syresourcetype type = (Syresourcetype) baseDao.getById(Syresourcetype.class, n.valueOf("@id"));
+			Syresourcetype type = (Syresourcetype) getSession().get(Syresourcetype.class, n.valueOf("@id"));
 			if (type != null) {
 				resource.setSyresourcetype(type);
 			}
 
 			logger.info(JSON.toJSONStringWithDateFormat(resource, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(resource);
+			getSession().saveOrUpdate(resource);
 		}
 	}
 
@@ -123,7 +151,7 @@ public class InitServiceImpl implements InitServiceI {
 		List childNodes = document.selectNodes("//roles/role");
 		for (Object obj : childNodes) {
 			Node node = (Node) obj;
-			Syrole role = (Syrole) baseDao.getById(Syrole.class, node.valueOf("@id"));
+			Syrole role = (Syrole) getSession().get(Syrole.class, node.valueOf("@id"));
 			if (role == null) {
 				role = new Syrole();
 			}
@@ -132,33 +160,33 @@ public class InitServiceImpl implements InitServiceI {
 			role.setDescription(node.valueOf("@description"));
 			role.setSeq(Integer.parseInt(node.valueOf("@seq")));
 			logger.info(JSON.toJSONStringWithDateFormat(role, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(role);
+			getSession().saveOrUpdate(role);
 		}
 	}
 
 	private void initRoleResource(Document document) {
 		List<Node> childNodes = document.selectNodes("//roles_resources/role");
 		for (Node node : childNodes) {
-			Syrole role = (Syrole) baseDao.getById(Syrole.class, node.valueOf("@id"));
+			Syrole role = (Syrole) getSession().get(Syrole.class, node.valueOf("@id"));
 			if (role != null) {
 				role.setSyresources(new HashSet());
 				List<Node> cNodes = node.selectNodes("resource");
 				for (Node n : cNodes) {
-					Syresource resource = (Syresource) baseDao.getById(Syresource.class, n.valueOf("@id"));
+					Syresource resource = (Syresource) getSession().get(Syresource.class, n.valueOf("@id"));
 					if (resource != null) {
 						role.getSyresources().add(resource);
 					}
 				}
 				logger.info(JSON.toJSONStringWithDateFormat(role, "yyyy-MM-dd HH:mm:ss"));
-				baseDao.saveOrUpdate(role);
+				getSession().saveOrUpdate(role);
 			}
 		}
 
-		Syrole role = (Syrole) baseDao.getById(Syrole.class, "0");// 将角色为0的超级管理员角色，赋予所有权限
+		Syrole role = (Syrole) getSession().get(Syrole.class, "0");// 将角色为0的超级管理员角色，赋予所有权限
 		if (role != null) {
-			role.getSyresources().addAll(baseDao.find("from Syresource t"));
+			role.getSyresources().addAll(getSession().createQuery("from Syresource t").list());
 			logger.info(JSON.toJSONStringWithDateFormat(role, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(role);
+			getSession().saveOrUpdate(role);
 		}
 	}
 
@@ -166,7 +194,7 @@ public class InitServiceImpl implements InitServiceI {
 		List childNodes = document.selectNodes("//organizations/organization");
 		for (Object obj : childNodes) {
 			Node node = (Node) obj;
-			Syorganization organization = (Syorganization) baseDao.getById(Syorganization.class, node.valueOf("@id"));
+			Syorganization organization = (Syorganization) getSession().get(Syorganization.class, node.valueOf("@id"));
 			if (organization == null) {
 				organization = new Syorganization();
 			}
@@ -177,31 +205,31 @@ public class InitServiceImpl implements InitServiceI {
 			organization.setIconCls(node.valueOf("@iconCls"));
 
 			if (!StringUtils.isBlank(node.valueOf("@pid"))) {
-				organization.setSyorganization((Syorganization) baseDao.getById(Syorganization.class, node.valueOf("@pid")));
+				organization.setSyorganization((Syorganization) getSession().get(Syorganization.class, node.valueOf("@pid")));
 			} else {
 				organization.setSyorganization(null);
 			}
 
 			logger.info(JSON.toJSONStringWithDateFormat(organization, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(organization);
+			getSession().saveOrUpdate(organization);
 		}
 	}
 
 	private void initOrganizationResource(Document document) {
 		List<Node> childNodes = document.selectNodes("//organizations_resources/organization");
 		for (Node node : childNodes) {
-			Syorganization organization = (Syorganization) baseDao.getById(Syorganization.class, node.valueOf("@id"));
+			Syorganization organization = (Syorganization) getSession().get(Syorganization.class, node.valueOf("@id"));
 			if (organization != null) {
 				organization.setSyresources(new HashSet());
 				List<Node> cNodes = node.selectNodes("resource");
 				for (Node n : cNodes) {
-					Syresource resource = (Syresource) baseDao.getById(Syresource.class, n.valueOf("@id"));
+					Syresource resource = (Syresource) getSession().get(Syresource.class, n.valueOf("@id"));
 					if (resource != null) {
 						organization.getSyresources().add(resource);
 					}
 				}
 				logger.info(JSON.toJSONStringWithDateFormat(organization, "yyyy-MM-dd HH:mm:ss"));
-				baseDao.saveOrUpdate(organization);
+				getSession().saveOrUpdate(organization);
 			}
 		}
 	}
@@ -209,7 +237,7 @@ public class InitServiceImpl implements InitServiceI {
 	private void initUser(Document document) {
 		List<Node> childNodes = document.selectNodes("//users/user");
 		for (Node node : childNodes) {
-			Syuser user = (Syuser) baseDao.getById(Syuser.class, node.valueOf("@id"));
+			Syuser user = (Syuser) getSession().get(Syuser.class, node.valueOf("@id"));
 			if (user == null) {
 				user = new Syuser();
 			}
@@ -221,64 +249,73 @@ public class InitServiceImpl implements InitServiceI {
 			user.setAge(Integer.valueOf(node.valueOf("@age")));
 			user.setPhoto(node.valueOf("@photo"));
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
-			List<Syuser> ul = baseDao.find("from Syuser u where u.loginname = '" + user.getLoginname() + "' and u.id != '" + user.getId() + "'");
+			List<Syuser> ul = getSession().createQuery("from Syuser u where u.loginname = '" 
+			+ user.getLoginname() + "' and u.id != '" + user.getId() + "'").list();
 			for (Syuser u : ul) {
-				baseDao.delete(u);
+				getSession().delete(u);
 			}
-			baseDao.saveOrUpdate(user);
+			getSession().saveOrUpdate(user);
 		}
 	}
 
 	private void initUserRole(Document document) {
 		List<Node> childNodes = document.selectNodes("//users_roles/user");
 		for (Node node : childNodes) {
-			Syuser user = (Syuser) baseDao.getById(Syuser.class, node.valueOf("@id"));
+			Syuser user = (Syuser) getSession().get(Syuser.class, node.valueOf("@id"));
 			if (user != null) {
 				user.setSyroles(new HashSet());
 				List<Node> cNodes = node.selectNodes("role");
 				for (Node n : cNodes) {
-					Syrole role = (Syrole) baseDao.getById(Syrole.class, n.valueOf("@id"));
+					Syrole role = (Syrole) getSession().get(Syrole.class, n.valueOf("@id"));
 					if (role != null) {
 						user.getSyroles().add(role);
 					}
 				}
 				logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
-				baseDao.saveOrUpdate(user);
+				getSession().saveOrUpdate(user);
 			}
 		}
 
-		Syuser user = (Syuser) baseDao.getById(Syuser.class, "0");// 用户为0的超级管理员，赋予所有角色
+		Syuser user = (Syuser) getSession().get(Syuser.class, "0");// 用户为0的超级管理员，赋予所有角色
 		if (user != null) {
-			user.getSyroles().addAll(baseDao.find("from Syrole"));
+			user.getSyroles().addAll(getSession().createQuery("from Syrole").list());
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(user);
+			getSession().saveOrUpdate(user);
 		}
 	}
 
 	private void initUserOrganization(Document document) {
 		List<Node> childNodes = document.selectNodes("//users_organizations/user");
 		for (Node node : childNodes) {
-			Syuser user = (Syuser) baseDao.getById(Syuser.class, node.valueOf("@id"));
+			Syuser user = (Syuser) getSession().get(Syuser.class, node.valueOf("@id"));
 			if (user != null) {
 				user.setSyorganizations(new HashSet());
 				List<Node> cNodes = node.selectNodes("organization");
 				for (Node n : cNodes) {
-					Syorganization organization = (Syorganization) baseDao.getById(Syorganization.class, n.valueOf("@id"));
+					Syorganization organization = (Syorganization) getSession().get(Syorganization.class, n.valueOf("@id"));
 					if (organization != null) {
 						user.getSyorganizations().add(organization);
 					}
 				}
 				logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
-				baseDao.saveOrUpdate(user);
+				getSession().saveOrUpdate(user);
 			}
 		}
 
-		Syuser user = (Syuser) baseDao.getById(Syuser.class, "0");// 用户为0的超级管理员，赋予所有机构
+		Syuser user = (Syuser) getSession().get(Syuser.class, "0");// 用户为0的超级管理员，赋予所有机构
 		if (user != null) {
-			user.getSyorganizations().addAll(baseDao.find("from Syorganization"));
+			user.getSyorganizations().addAll(getSession().createQuery("from Syorganization").list());
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
-			baseDao.saveOrUpdate(user);
+			getSession().saveOrUpdate(user);
 		}
+	}
+
+	public Session getSession() {
+		return session;
+	}
+
+	public void setSession(Session session) {
+		this.session = session;
 	}
 
 }

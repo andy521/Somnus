@@ -5,8 +5,10 @@ import java.lang.reflect.ParameterizedType;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.service.BaseServiceI;
 import com.somnus.util.base.HqlFilter;
@@ -23,6 +25,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 
 	@Autowired
 	private BaseDaoI<T> baseDao;
+	
 	@Override
 	public Serializable save(T o) {
 		return baseDao.save(o);
@@ -176,7 +179,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	public BigInteger countBySql(String sql) {
 		return baseDao.countBySql(sql);
 	}
-
+	
 	@Override
 	public BigInteger countBySql(String sql, Map<String, Object> params) {
 		return baseDao.countBySql(sql, params);

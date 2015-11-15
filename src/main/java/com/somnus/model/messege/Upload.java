@@ -1,4 +1,4 @@
-package com.somnus.model.easyui;
+package com.somnus.model.messege;
 
 import java.util.ArrayList;
 import java.util.List;

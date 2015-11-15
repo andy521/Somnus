@@ -6,9 +6,12 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
@@ -26,6 +29,7 @@ import com.somnus.util.base.HqlFilter;
  * 
  */
 @Service
+@Transactional
 public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implements SyresourceServiceI {
 
 	@Autowired
@@ -34,6 +38,7 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 	/**
 	 * 由于角色与资源关联，机构也与资源关联，所以查询用户能看到的资源菜单应该查询两次，最后合并到一起。
 	 */
+	@Transactional(readOnly = false)
 	public List<Syresource> getMainMenu(HqlFilter hqlFilter) {
 		List<Syresource> l = new ArrayList<Syresource>();
 		String hql = "select distinct t from Syresource t join t.syroles role join role.syusers user";
@@ -57,6 +62,7 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		return l;
 	}
 
+	@Transactional(readOnly = false)
 	public List<Syresource> resourceTreeGrid(HqlFilter hqlFilter) {
 		List<Syresource> l = new ArrayList<Syresource>();
 		String hql = "select distinct t from Syresource t join t.syroles role join role.syusers user";
@@ -107,6 +113,7 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 	 *            原上级节点
 	 * @return
 	 */
+	@Transactional(readOnly = false)
 	private boolean isParentToChild(Syresource t, Syresource pt, Syresource oldParent) {
 		if (pt != null && pt.getSyresource() != null) {
 			if (StringUtils.equals(pt.getSyresource().getId(), t.getId())) {
@@ -163,6 +170,7 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 		}
 	}
 
+	@Transactional(readOnly = false)
 	public List<Syresource> findResourceByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syresource t left join t.syroles role left join t.syorganizations organization";
 		return find(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());

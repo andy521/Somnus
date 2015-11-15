@@ -1,8 +1,11 @@
 package com.somnus.service.base.impl;
 
 import java.util.List;
+
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.model.base.Syresourcetype;
 import com.somnus.service.base.SyresourcetypeServiceI;
 import com.somnus.service.impl.BaseServiceImpl;
@@ -14,6 +17,7 @@ import com.somnus.service.impl.BaseServiceImpl;
  * 
  */
 @Service
+@Transactional
 public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> implements SyresourcetypeServiceI {
 
 	/**
@@ -26,6 +30,7 @@ public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> i
 	 * key是自己设定的一个ID，用来标识缓存
 	 */
 	@Cacheable(value = "SyresourcetypeServiceCache", key = "'SyresourcetypeList'")
+	@Transactional(readOnly = false)
 	public List<Syresourcetype> findResourcetype() {
 		return find();
 	}

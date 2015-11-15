@@ -6,7 +6,7 @@
 <%@ page import="com.somnus.model.base.Syrole"%>
 <%@ page import="com.somnus.model.base.Syorganization"%>
 <%@ page import="com.somnus.model.base.Syresource"%>
-<%@ page import="com.somnus.model.easyui.Tree"%>
+<%@ page import="com.somnus.model.messege.Tree"%>
 <%@ page import="com.somnus.util.base.DateUtil"%>
 <%@ page import="com.somnus.util.base.BeanUtils"%>
 <%@ page import="com.somnus.util.base.StringUtil"%>

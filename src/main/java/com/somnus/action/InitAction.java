@@ -3,7 +3,8 @@ package com.somnus.action;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.somnus.model.easyui.Json;
+
+import com.somnus.model.messege.Json;
 import com.somnus.service.InitServiceI;
 
 /**

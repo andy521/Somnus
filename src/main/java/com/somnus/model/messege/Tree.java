@@ -1,9 +1,9 @@
-package com.somnus.model.easyui;
+package com.somnus.model.messege;
 
 import java.util.List;
 
 /**
- * EasyUI tree模型
+ * extjs4 tree模型
  * 
  * @author Somnus
  * 

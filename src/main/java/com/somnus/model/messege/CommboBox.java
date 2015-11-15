@@ -1,6 +1,12 @@
-package com.somnus.model.easyui;
+package com.somnus.model.messege;
 
-public class CommboBox {
+/**
+ * @Description: 下拉模型
+ * @author Somnus
+ * @date 2015年11月14日 下午11:06:23 
+ * @version 1.0
+ */
+public class CommboBox  implements java.io.Serializable {
 	private String label;
 	private String value;
 	public String getLabel() {
@@ -15,6 +21,5 @@ public class CommboBox {
 	public void setValue(String value) {
 		this.value = value;
 	}
-	
 
 }

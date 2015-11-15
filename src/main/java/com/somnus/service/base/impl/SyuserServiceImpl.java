@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syrole;
@@ -22,6 +25,7 @@ import com.somnus.service.impl.BaseServiceImpl;
  * 
  */
 @Service
+@Transactional
 public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements SyuserServiceI {
 
 	@Autowired
@@ -60,6 +64,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		}
 	}
 
+	@Transactional(readOnly = false)
 	public List<Map<String,Object>> userCreateDatetimeChart() {
 		List<Map<String,Object>> l = new ArrayList<Map<String,Object>>();
 		int k = 0;
@@ -76,6 +81,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		return l;
 	}
 
+	@Transactional(readOnly = false)
 	public Long countUserByRoleId(String roleId) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("roleId", roleId);
@@ -83,6 +89,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 		return count(hql, params);
 	}
 
+	@Transactional(readOnly = false)
 	public Long countUserByNotRoleId() {
 		String hql = "select count(*) from Syuser t left join t.syroles role where role.id is null";
 		return count(hql);

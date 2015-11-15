@@ -1,10 +1,10 @@
-package com.somnus.model.easyui;
+package com.somnus.model.messege;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * EasyUI DataGrid模型
+ * extjs4 DataGrid模型
  * 
  * @author Somnus
  * 

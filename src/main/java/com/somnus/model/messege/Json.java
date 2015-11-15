@@ -1,4 +1,4 @@
-package com.somnus.model.easyui;
+package com.somnus.model.messege;
 
 /**
  * 
@@ -12,6 +12,7 @@ package com.somnus.model.easyui;
 public class Json implements java.io.Serializable {
 
 	private boolean success = false;
+	
 	private boolean unique = true;
 
 	private String msg = "";
