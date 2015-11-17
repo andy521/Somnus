@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,6 @@ import com.somnus.model.base.Syresourcetype;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.service.InitServiceI;
-import com.somnus.util.base.MD5Util;
 import com.alibaba.fastjson.JSON;
 
 /**
@@ -245,7 +245,7 @@ public class InitServiceImpl implements InitServiceI ,InitializingBean,Applicati
 			user.setId(node.valueOf("@id"));
 			user.setName(node.valueOf("@name"));
 			user.setLoginname(node.valueOf("@loginname"));
-			user.setPwd(MD5Util.md5(node.valueOf("@pwd")));
+			user.setPwd(DigestUtils.md5Hex(node.valueOf("@pwd")));
 			user.setSex(node.valueOf("@sex"));
 			user.setAge(Integer.valueOf(node.valueOf("@age")));
 			user.setPhoto(node.valueOf("@photo"));

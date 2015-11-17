@@ -2,6 +2,7 @@ package com.somnus.action.base;
 
 import java.util.Date;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -19,7 +20,6 @@ import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.IpUtil;
-import com.somnus.util.base.MD5Util;
 
 @Namespace("/base")
 @Action
@@ -63,7 +63,7 @@ public class UserAction extends BaseAction<Syuser> {
 		} else {
 			Syuser u = new Syuser();
 			u.setLoginname(data.getLoginname());
-			u.setPwd(MD5Util.md5(data.getPwd()));
+			u.setPwd(DigestUtils.md5Hex(data.getPwd()));
 			service.save(u);
 			doNotNeedSessionAndSecurity_login();
 		}
@@ -75,7 +75,7 @@ public class UserAction extends BaseAction<Syuser> {
 	public void doNotNeedSessionAndSecurity_login() {
 		HqlFilter hqlFilter = new HqlFilter();
 		hqlFilter.addFilter("QUERY_t#loginname_S_EQ", data.getLoginname());
-		hqlFilter.addFilter("QUERY_t#pwd_S_EQ", MD5Util.md5(data.getPwd()));
+		hqlFilter.addFilter("QUERY_t#pwd_S_EQ", DigestUtils.md5Hex(data.getPwd()));
 		Syuser user = service.getByFilter(hqlFilter);
 		Json json = new Json();
 		if (user != null) {
@@ -106,7 +106,7 @@ public class UserAction extends BaseAction<Syuser> {
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		Json json = new Json();
 		Syuser user = service.getById(sessionInfo.getUser().getId());
-		user.setPwd(MD5Util.md5(data.getPwd()));
+		user.setPwd(DigestUtils.md5Hex(data.getPwd()));
 		user.setUpdatedatetime(new Date());
 		service.update(user);
 		json.setSuccess(true);
@@ -152,7 +152,7 @@ public class UserAction extends BaseAction<Syuser> {
 			if (user != null) {
 				json.setMsg("新建用户失败，用户名已存在！");
 			} else {
-				data.setPwd(MD5Util.md5("123456"));
+				data.setPwd(DigestUtils.md5Hex("123456"));
 				service.save(data);
 				json.setMsg("新建用户成功！默认密码：123456");
 				json.setSuccess(true);
