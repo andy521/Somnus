@@ -63,7 +63,7 @@ Ext.define('somnus.view.management.ResourceWindow',{
 	            	xtype : 'basecombo',
 					fieldLabel : '资源类型',
 					name:'data.syresourcetype.id',
-					baseUrl:'syresourcetype',
+					baseUrl:'resourcetype',
 					allowBlank:false,
 					width:280
 	            },{

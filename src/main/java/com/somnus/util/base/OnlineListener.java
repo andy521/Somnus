@@ -29,7 +29,9 @@ import com.somnus.service.base.SyonlineServiceI;
  * @author Somnus
  * 
  */
-public class OnlineListener implements ServletContextListener, ServletContextAttributeListener, HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener, HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
+public class OnlineListener implements ServletContextListener, ServletContextAttributeListener, 
+			HttpSessionListener, HttpSessionAttributeListener, HttpSessionActivationListener,
+			HttpSessionBindingListener, ServletRequestListener, ServletRequestAttributeListener {
 
 	private static final Logger logger = LoggerFactory.getLogger(OnlineListener.class);
 
@@ -51,13 +53,13 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 			HttpSession session = evt.getSession();
 			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(name);
 			if (sessionInfo != null) {
-				// System.out.println(sessionInfo.getUser().getName() + "登录了");
-				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
+				logger.debug("{}登录了",sessionInfo.getUser().getName());
+				SyonlineServiceI onlineService = (SyonlineServiceI) ctx.getBean("onlineService");
 				Syonline online = new Syonline();
 				online.setType("1");// 登录
 				online.setLoginname(sessionInfo.getUser().getLoginname());
 				online.setIp(sessionInfo.getUser().getIp());
-				syonlineService.save(online);
+				onlineService.save(online);
 			}
 		}
 	}
@@ -91,8 +93,8 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 			logger.debug("session销毁：" + session.getId());
 			SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 			if (sessionInfo != null) {
-				// System.out.println(sessionInfo.getUser().getName() + "注销了");
-				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("syonlineServiceImpl");
+				logger.debug("{}注销了",sessionInfo.getUser().getName());
+				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("onlineService");
 				Syonline online = new Syonline();
 				online.setType("0");// 注销
 				online.setLoginname(sessionInfo.getUser().getLoginname());

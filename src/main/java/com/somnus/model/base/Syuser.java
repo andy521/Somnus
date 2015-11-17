@@ -38,6 +38,7 @@ public class Syuser implements java.io.Serializable {
 	private String sex;
 	private Integer age;
 	private String photo;
+	private String extTheme;
 	private Set<Syorganization> syorganizations = new HashSet<Syorganization>(0);
 	private Set<Syrole> syroles = new HashSet<Syrole>(0);
 
@@ -160,5 +161,14 @@ public class Syuser implements java.io.Serializable {
 	public void setIp(String ip) {
 		this.ip = ip;
 	}
+
+	public String getExtTheme() {
+		return extTheme;
+	}
+
+	public void setExtTheme(String extTheme) {
+		this.extTheme = extTheme;
+	}
+	
 
 }

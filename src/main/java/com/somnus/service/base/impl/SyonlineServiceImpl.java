@@ -12,7 +12,7 @@ import com.somnus.service.impl.BaseServiceImpl;
  * @author Somnus
  * 
  */
-@Service
+@Service(value="onlineService")
 @Transactional
 public class SyonlineServiceImpl extends BaseServiceImpl<Syonline> implements SyonlineServiceI {
 
