@@ -437,14 +437,14 @@
 					<finalName>${project.build.finalName}</finalName>
 					<server>tomcat7</server>
 				</configuration>
-				<executions>
+				<!-- <executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
 							<goal>run</goal>
 						</goals>
 					</execution>
-				</executions>
+				</executions> -->
 			</plugin>
 
 		</plugins>
