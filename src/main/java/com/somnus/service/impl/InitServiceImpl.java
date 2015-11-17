@@ -56,6 +56,7 @@ public class InitServiceImpl implements InitServiceI ,InitializingBean,Applicati
 		Transaction tx = this.session.beginTransaction();
 		initDb();
 		tx.commit();
+		this.session.close();
 	}
 	
 	@Override
