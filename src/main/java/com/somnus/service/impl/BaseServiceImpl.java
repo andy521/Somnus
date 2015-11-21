@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.somnus.dao.base.BaseDaoI;
 import com.somnus.service.BaseServiceI;
@@ -21,27 +22,32 @@ import com.somnus.util.base.HqlFilter;
  * @param <T>
  */
 @Service
+
 public class BaseServiceImpl<T> implements BaseServiceI<T> {
 
 	@Autowired
 	private BaseDaoI<T> baseDao;
 	
 	@Override
+	@Transactional
 	public Serializable save(T o) {
 		return baseDao.save(o);
 	}
 	
 	@Override
+	@Transactional
 	public void delete(T o) {
 		baseDao.delete(o);
 	}
 	
 	@Override
+	@Transactional
 	public void update(T o) {
 		baseDao.update(o);
 	}
 
 	@Override
+	@Transactional
 	public void saveOrUpdate(T o) {
 		baseDao.saveOrUpdate(o);
 	}
@@ -136,11 +142,13 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
+	@Transactional
 	public int executeHql(String hql) {
 		return baseDao.executeHql(hql);
 	}
 
 	@Override
+	@Transactional
 	public int executeHql(String hql, Map<String, Object> params) {
 		return baseDao.executeHql(hql, params);
 	}
@@ -166,11 +174,13 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
+	@Transactional
 	public int executeSql(String sql) {
 		return baseDao.executeSql(sql);
 	}
 
 	@Override
+	@Transactional
 	public int executeSql(String sql, Map<String, Object> params) {
 		return baseDao.executeSql(sql, params);
 	}

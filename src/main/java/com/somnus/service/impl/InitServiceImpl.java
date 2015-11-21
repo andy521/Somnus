@@ -66,6 +66,7 @@ public class InitServiceImpl implements InitServiceI ,InitializingBean,Applicati
     }
 
 	@Override
+	@Transactional
 	synchronized public void initDb() {
 		
 		try {
