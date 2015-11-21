@@ -28,11 +28,20 @@ Ext.define('somnus.common.base.GridStore', {
 				},
 				listeners: {
 					exception: function (proxy, response, operation) {
-						Ext.MessageBox.show({
+						/*Ext.MessageBox.show({
 							title: 'REMOTE EXCEPTION',
 							msg: operation.getError(),
 							icon: Ext.MessageBox.ERROR,
 							buttons: Ext.Msg.OK
+						});*/
+						Ext.Msg.show({
+							title: '信息',
+							msg: '对不起，当前登录已过期，请重新登录！',
+							buttons: Ext.Msg.OK,
+							icon: Ext.Msg.INFO,
+							fn: function () {
+								window.location.href = app.contextPath;
+							}
 						});
 					}
 				}

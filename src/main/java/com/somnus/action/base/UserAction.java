@@ -113,6 +113,37 @@ public class UserAction extends BaseAction<Syuser> {
 		}
 		writeJson(json);
 	}
+	
+	/**
+	 * 解锁登录
+	 */
+	public void doNotNeedSessionAndSecurity_logon() {
+		Json json = new Json();
+		HqlFilter hqlFilter = new HqlFilter();
+		hqlFilter.addFilter("QUERY_t#loginname_S_EQ", data.getLoginname());
+		hqlFilter.addFilter("QUERY_t#pwd_S_EQ", DigestUtils.md5Hex(data.getPwd()));
+		Syuser user = service.getByFilter(hqlFilter);
+		
+		if (user != null) {
+			json.setSuccess(true);
+
+			SessionInfo sessionInfo = new SessionInfo();
+			Hibernate.initialize(user.getSyroles());
+			Hibernate.initialize(user.getSyorganizations());
+			for (Syrole role : user.getSyroles()) {
+				Hibernate.initialize(role.getSyresources());
+			}
+			for (Syorganization organization : user.getSyorganizations()) {
+				Hibernate.initialize(organization.getSyresources());
+			}
+			user.setIp(IpUtil.getIpAddr(getRequest()));
+			sessionInfo.setUser(user);
+			getSession().setAttribute("sessionInfo", sessionInfo);
+		} else {
+			json.setMsg("用户名或密码错误！");
+		}
+		writeJson(json);
+	}
 
 	/**
 	 * 修改自己的密码

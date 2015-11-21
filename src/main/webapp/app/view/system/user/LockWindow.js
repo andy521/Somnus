@@ -38,7 +38,7 @@ Ext.define('somnus.view.system.user.LockWindow', {
         			return;
         		}
         		form.submit({
-        			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_login.action',
+        			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_logon.action',
         			submitEmptyText: false,
         			waitMsg: '正在解锁...',
         			success: function (form, action) {
@@ -68,6 +68,13 @@ Ext.define('somnus.view.system.user.LockWindow', {
         						fn: function () {
         							window.location.href = app.contextPath;
         						}
+        					});
+        				} else{
+        					Ext.Msg.show({
+        						title : '错误提示',
+        						msg : action.result.msg,
+        						buttons : Ext.Msg.OK,
+        						icon : Ext.Msg.ERROR
         					});
         				}
         			}
