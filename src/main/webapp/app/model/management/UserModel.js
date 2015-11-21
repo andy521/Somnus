@@ -7,6 +7,7 @@ Ext.define('somnus.model.management.UserModel', {
 	         {name: 'updatedatetime',  type: 'string'},
 	         {name: 'sex',  type: 'string'},
 	         {name: 'age',  type: 'string'},
+	         {name: 'status',  type: 'string'},
 	         {name: 'photo',  type: 'string'}
 	]
 });

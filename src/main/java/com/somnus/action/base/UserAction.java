@@ -7,8 +7,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.hibernate.Hibernate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.octo.captcha.service.CaptchaService;
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syorganization;
@@ -16,6 +19,7 @@ import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Json;
+import com.somnus.service.base.SyroleServiceI;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
@@ -24,7 +28,6 @@ import com.somnus.util.base.IpUtil;
 @Namespace("/base")
 @Action
 public class UserAction extends BaseAction<Syuser> {
-
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
 	 * 
@@ -36,6 +39,9 @@ public class UserAction extends BaseAction<Syuser> {
 	public void setService(SyuserServiceI service) {
 		this.service = service;
 	}
+	
+	@Autowired
+	private CaptchaService captchaService;
 
 	/**
 	 * 注销系统
@@ -73,11 +79,20 @@ public class UserAction extends BaseAction<Syuser> {
 	 * 登录
 	 */
 	public void doNotNeedSessionAndSecurity_login() {
+		Json json = new Json();
+		boolean bCaptchaCorrect = captchaService.validateResponseForID(
+				(String)getSession().getId(), data.getCaptcha());		
+		
+		if(!bCaptchaCorrect){
+			json.setMsg("验证码错误");
+			writeJson(json);
+			throw new RuntimeException("验证码错误");
+		}
 		HqlFilter hqlFilter = new HqlFilter();
 		hqlFilter.addFilter("QUERY_t#loginname_S_EQ", data.getLoginname());
 		hqlFilter.addFilter("QUERY_t#pwd_S_EQ", DigestUtils.md5Hex(data.getPwd()));
 		Syuser user = service.getByFilter(hqlFilter);
-		Json json = new Json();
+		
 		if (user != null) {
 			json.setSuccess(true);
 

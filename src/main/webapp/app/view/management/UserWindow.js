@@ -28,17 +28,34 @@ Ext.define('somnus.view.management.UserWindow',{
 		        	border: false,
 		        	flex: 5,
 		        	items:[{
-		        		xtype : 'textfield',
-						fieldLabel : '编号',
-						labelWidth:80,
-						name:'data.id',
-						readOnly:true,
+						xtype: 'hidden',
+		        		itemId:'data.id',
+	                    name: 'data.id'
 		        	},{
 		        		xtype : 'textfield',
 						fieldLabel : '姓名',
 						labelWidth:80,
 						name:'data.name',
 	                    allowBlank:false,
+		        	},{
+		        		xtype : 'combo',
+						fieldLabel : '状态',
+						labelWidth:80,
+						name:'data.status',
+						store : {
+							fields : ['text', 'value'],
+							data : [{
+								text : '禁用',
+								value : '0'
+							}, {
+								text : '启用',
+								value : '1'
+							}]
+						},
+						valueField : 'value',
+						displayField : 'text',
+						queryMode : 'local',
+						allowBlank:false,
 		        	}]
 		        },{
 		        	xtype: 'panel',

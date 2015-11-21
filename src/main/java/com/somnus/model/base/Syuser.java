@@ -34,11 +34,13 @@ public class Syuser implements java.io.Serializable {
 	private Date updatedatetime;
 	private String loginname;
 	private String pwd;
+	private String captcha;
 	private String name;
 	private String sex;
 	private Integer age;
 	private String photo;
 	private String extTheme;
+	private String status;
 	private Set<Syorganization> syorganizations = new HashSet<Syorganization>(0);
 	private Set<Syrole> syroles = new HashSet<Syrole>(0);
 
@@ -169,6 +171,20 @@ public class Syuser implements java.io.Serializable {
 	public void setExtTheme(String extTheme) {
 		this.extTheme = extTheme;
 	}
-	
+	public String getCaptcha() {
+		return captcha;
+	}
+
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 }

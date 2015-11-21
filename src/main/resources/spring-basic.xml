@@ -22,7 +22,8 @@
 	<import resource="classpath:/spring-ehcache.xml" />
     <import resource="classpath:/spring-hibernate.xml" />
     <import resource="classpath:/spring-javamelody.xml" />
-    <import resource="classpath:/spring-tasks.xml" />
+    <import resource="classpath:/spring-scheduler.xml" />
+    <import resource="classpath:/spring-resource-captcha.xml" />
     <import resource="classpath*:META-INF/monitoring-spring.xml"/>
 
 </beans>

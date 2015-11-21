@@ -16,11 +16,9 @@ Ext.define('somnus.view.management.OrganizationWindow',{
             },
             trackResetOnLoad: true,
             items: [{
-            	xtype : 'textfield',
-				fieldLabel : '编号',
-				name:'data.id',
-				readOnly:true,
-				width:280
+            	xtype: 'hidden',
+        		itemId:'data.id',
+                name: 'data.id'
             },{
             	xtype : 'textfield',
 				fieldLabel : '机构名称',

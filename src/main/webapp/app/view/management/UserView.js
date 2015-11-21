@@ -30,6 +30,17 @@ Ext.define('somnus.view.management.UserView',{
 				dataIndex : 'name',
 				width : 100
 			},{
+				text : '状态',
+				dataIndex : 'status',
+				width : 100,
+				renderer:function(value,metaData){
+					if(value==0){
+						return "<span style='color:red;font-weight:bold;'>禁用</span>";
+					}else if(value==1){
+						return "<span style='color:green;font-weight:bold;'>启用</span>";
+					}
+				}
+			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
 				width : 150
@@ -132,6 +143,20 @@ Ext.define('somnus.view.management.UserView',{
 					width: 200
 				},{
 					xtype : 'combo',
+					fieldLabel : '状态',
+					labelWidth : 50,
+					width: 150,
+					name:'QUERY_t#status_S_EQ',
+					store : {
+						fields:[{name:'text',type:'string'},{name:'value',type:'string'}],
+						data:[{text:'启用',value:'1'},{text:'禁用',value:'0'}]
+					},
+					valueField : 'value',
+					displayField : 'text',
+					queryMode : 'local',
+					emptyText:'请选择'
+				},{
+					xtype : 'combo',
 					fieldLabel : '性别',
 					labelWidth : 50,
 					width: 150,
@@ -153,7 +178,8 @@ Ext.define('somnus.view.management.UserView',{
 				},{
 					xtype:'btnsearch',
 					store: 'management.UserStore',
-					paramName:['QUERY_t#loginname_S_LK','QUERY_t#name_S_LK','QUERY_t#sex_S_EQ','QUERY_t#createdatetime_D_GE','QUERY_t#createdatetime_D_LE'],
+					paramName:['QUERY_t#loginname_S_LK','QUERY_t#name_S_LK','QUERY_t#sex_S_EQ','QUERY_t#status_S_EQ',
+					           'QUERY_t#createdatetime_D_GE','QUERY_t#createdatetime_D_LE'],
 					text:'过滤'
 				}]
 			}]

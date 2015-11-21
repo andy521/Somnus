@@ -48,6 +48,8 @@ public class BaseAction<T> extends ActionSupport {
 	protected String sort;// 排序字段
 	protected String order = "asc";// asc/desc
 	protected String q;// easyui的combo和其子类过滤时使用
+	
+	protected String captcha;
 
 	protected String id;// 主键
 	protected String ids;// 主键集合，逗号分割
@@ -154,6 +156,7 @@ public class BaseAction<T> extends ActionSupport {
 	public void setValue(String value) {
 		this.value = value;
 	}
+	
 
 	/**
 	 * 将对象转换成JSON字符串，并响应回前台

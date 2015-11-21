@@ -249,6 +249,7 @@ public class InitServiceImpl implements InitServiceI ,InitializingBean,Applicati
 			user.setSex(node.valueOf("@sex"));
 			user.setAge(Integer.valueOf(node.valueOf("@age")));
 			user.setPhoto(node.valueOf("@photo"));
+			user.setStatus(node.valueOf("@status"));
 			logger.info(JSON.toJSONStringWithDateFormat(user, "yyyy-MM-dd HH:mm:ss"));
 			List<Syuser> ul = getSession().createQuery("from Syuser u where u.loginname = '" 
 			+ user.getLoginname() + "' and u.id != '" + user.getId() + "'").list();
