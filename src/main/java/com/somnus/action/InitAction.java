@@ -4,7 +4,7 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.service.InitServiceI;
 
 /**
@@ -17,11 +17,12 @@ import com.somnus.service.InitServiceI;
 @Action
 public class InitAction extends BaseAction {
 
+	private static final long serialVersionUID = 515728369692931207L;
 	@Autowired
 	private InitServiceI service;
 
 	synchronized public void doNotNeedSessionAndSecurity_initDb() {
-		Json j = new Json();
+		Message j = new Message();
 		service.initDb();
 		j.setSuccess(true);
 		writeJson(j);

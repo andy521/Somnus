@@ -24,6 +24,7 @@
     <import resource="classpath:/spring-javamelody.xml" />
     <import resource="classpath:/spring-scheduler.xml" />
     <import resource="classpath:/spring-resource-captcha.xml" />
+    <import resource="classpath:/msg/spring-message.xml" />
     <import resource="classpath*:META-INF/monitoring-spring.xml"/>
 
 </beans>

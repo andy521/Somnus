@@ -70,13 +70,13 @@
 		</interceptors>
 		<!-- 全局拦截器栈 -->
 		<default-interceptor-ref name="securityStack"></default-interceptor-ref>
-		<!-- 
+		
 		<global-results>
 			<result name="noSession">/error/noSession.jsp</result>
 			<result name="noSecurity">/error/noSecurity.jsp</result>
-			<result name="strutsException">/error/strutsException.jsp</result>
+			<!-- <result name="strutsException">/error/strutsException.jsp</result> -->
 		</global-results>
-		-->
+		
 		<global-exception-mappings>
 			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
 		</global-exception-mappings>

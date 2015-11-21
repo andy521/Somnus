@@ -24,6 +24,7 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 				})
 			},
 			failure: function (formbasic, action) {
+				console.info(action.response.responseText);
 				var result = Ext.decode(action.response.responseText);
 				if(!Ext.isEmpty(result.sessionstatus)&&result.sessionstatus=='timeOut'){
 					formpanel.ownerCt.close();
@@ -55,11 +56,10 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 			submitEmptyText: false,
 			waitMsg: '正在提交...',
 			success: function (form, action) {
-				var results = Ext.decode(action.response.responseText);
-				if (results.success) {
+				if(action.result.repCode == '000000'){
 					Ext.Msg.show({
 						title: '信息',
-						msg: '操作成功！',
+						msg: '保存成功！',
 						buttons: Ext.Msg.OK,
 						icon: Ext.Msg.INFO,
 						fn: function () {
@@ -67,20 +67,34 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 							me.close();
 						}
 					});
+				} else {
+					Ext.Msg.show({
+						title : '错误提示',
+						msg : action.result.repMsg,
+						buttons : Ext.Msg.OK,
+						icon : Ext.Msg.ERROR,
+						fn: function () {
+							me.fireEvent('failure');
+						}
+					});
 				}
 			},
-			failure: function (form, action) {
-				var results = Ext.decode(action.response.responseText);
-				Ext.Msg.show({
-					title: '信息',
-					msg: results.message||results.msg,
-					buttons: Ext.Msg.OK,
-					icon: Ext.Msg.ERROR,
-					fn: function () {
-						me.fireEvent('failure');
-					}
-				});
-			}
+			failure: function (formbasic, action) {
+				var result = Ext.decode(action.response.responseText);
+				if(!Ext.isEmpty(result.sessionstatus)&&result.sessionstatus=='timeOut'){
+					formpanel.ownerCt.close();
+					Ext.Msg.show({
+						title: '信息',
+						msg: '对不起，当前登录已过期，请重新登录！',
+						buttons: Ext.Msg.OK,
+						icon: Ext.Msg.INFO,
+						fn: function () {
+							window.location.href = app.contextPath;
+						}
+					});
+				}
+			},
+			scope: this
 		});
 	},
 	/*
@@ -102,6 +116,21 @@ Ext.define("somnus.common.base.BaseControllerUtil", {
 					timeout: 4000,
 					success: function (response, opts) {
 						store.load();
+					},
+					failure: function (formbasic, action) {
+						var result = Ext.decode(action.response.responseText);
+						if(!Ext.isEmpty(result.sessionstatus)&&result.sessionstatus=='timeOut'){
+							formpanel.ownerCt.close();
+							Ext.Msg.show({
+								title: '信息',
+								msg: '对不起，当前登录已过期，请重新登录！',
+								buttons: Ext.Msg.OK,
+								icon: Ext.Msg.INFO,
+								fn: function () {
+									window.location.href = app.contextPath;
+								}
+							});
+						}
 					}
 				})
 			}

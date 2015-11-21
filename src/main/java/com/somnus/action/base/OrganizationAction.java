@@ -10,22 +10,26 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.MessageSourceAccessor;
 
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syuser;
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
 import com.somnus.service.base.SyorganizationServiceI;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
+import com.somnus.util.base.MessageUtil;
+import com.somnus.util.base.MsgCodeList;
 
 @Namespace("/base")
 @Action
 public class OrganizationAction extends BaseAction<Syorganization> {
 
+	private static final long serialVersionUID = 3397120120217500923L;
 	@Autowired
 	private SyuserServiceI userService;
 
@@ -40,34 +44,37 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	public void setService(SyorganizationServiceI service) {
 		this.service = service;
 	}
+	
+	@Autowired
+	private MessageSourceAccessor msa;
 
 	/**
 	 * 保存一个机构
 	 */
 	public void save() {
-		Json json = new Json();
+		Message message = new Message();
 		if (data != null) {
 			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 			((SyorganizationServiceI) service).saveOrganization(data, sessionInfo.getUser().getId());
-			json.setSuccess(true);
+			MessageUtil.createCommMsg(message);
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
 	 * 更新机构
 	 */
 	public void update() {
-		Json json = new Json();
+		Message message = new Message();
 		if (!StringUtils.isBlank(data.getId())) {
 			if (data.getSyorganization() != null && StringUtils.equals(data.getId(), data.getSyorganization().getId())) {
-				json.setMsg("父机构不可以是自己！");
+				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300001));
 			} else {
 				((SyorganizationServiceI) service).updateOrganization(data);
-				json.setSuccess(true);
+				MessageUtil.createCommMsg(message);
 			}
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
@@ -90,10 +97,10 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	 * 机构授权
 	 */
 	public void grant() {
-		Json json = new Json();
+		Message message = new Message();
 		((SyorganizationServiceI) service).grant(id, ids);
-		json.setSuccess(true);
-		writeJson(json);
+		MessageUtil.createCommMsg(message);
+		writeJson(message);
 	}
 
 	/**

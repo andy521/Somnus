@@ -24,7 +24,9 @@ import com.octo.captcha.service.image.ImageCaptchaService;
 @Action
 public class CaptchaAction extends BaseAction {
     
-    protected transient Logger log = LoggerFactory.getLogger(this.getClass());
+	private static final long serialVersionUID = 8426255117508424084L;
+
+	protected transient Logger log = LoggerFactory.getLogger(this.getClass());
     
     @Autowired
     private ImageCaptchaService captchaService;

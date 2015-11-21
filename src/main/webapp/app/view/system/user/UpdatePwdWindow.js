@@ -55,17 +55,23 @@ Ext.define('somnus.view.system.user.UpdatePwdWindow', {
         			submitEmptyText: false,
         			waitMsg: '正在修改密码...',
         			success: function (form, action) {
-        				var results = Ext.decode(action.response.responseText);
-        				if (results.success) {
+        				if(action.result.repCode == '000000'){
         					Ext.Msg.show({
         						title: '信息',
-        						msg: '修改成功！',
+        						msg: '修改密码成功！',
         						buttons: Ext.Msg.OK,
         						icon: Ext.Msg.INFO,
         						fn: function () {
         							me.fireEvent('success');
         							me.close();
         						}
+        					});
+        				} else {
+        					Ext.Msg.show({
+        						title : '错误提示',
+        						msg : action.result.repMsg,
+        						buttons : Ext.Msg.OK,
+        						icon : Ext.Msg.ERROR
         					});
         				}
         			},

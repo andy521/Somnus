@@ -10,12 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syresourcetype;
 import com.somnus.model.messege.CommboBox;
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.service.base.SyresourcetypeServiceI;
+import com.somnus.util.base.MessageUtil;
 
 @Namespace("/base")
 @Action
 public class ResourcetypeAction extends BaseAction<Syresourcetype> {
+
+	private static final long serialVersionUID = -7002295700153580687L;
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -41,10 +44,10 @@ public class ResourcetypeAction extends BaseAction<Syresourcetype> {
 			commbo.setValue(data.getId());
 			commbolist.add(commbo);
 		}
-		Json json = new Json();
-		json.setSuccess(true);
-		json.setResults(commbolist);
-		writeJson(json);
+		Message message = new Message();
+		MessageUtil.createCommMsg(message);
+		message.setResults(commbolist);
+		writeJson(message);
 	}
 
 }

@@ -16,17 +16,21 @@ import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 
 import com.somnus.model.messege.Grid;
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.service.BaseServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.FastjsonFilter;
 import com.somnus.util.base.HqlFilter;
+import com.somnus.util.base.MessageUtil;
+import com.somnus.util.base.MsgCodeList;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.opensymphony.xwork2.ActionSupport;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.MessageSourceAccessor;
 /**
  * 基础ACTION,其他ACTION继承此ACTION来获得writeJson和ActionSupport的功能
  * 
@@ -41,7 +45,13 @@ import org.slf4j.LoggerFactory;
 @Namespace("/")
 @Action
 public class BaseAction<T> extends ActionSupport {
+	
+	private static final long serialVersionUID = -5039657025856216857L;
+
 	private static final Logger logger = LoggerFactory.getLogger(BaseAction.class);
+	
+	@Autowired
+	private MessageSourceAccessor msa;
 
 	protected int pageNo = 1;// 当前页
 	protected int pageSize = 25;// 每页显示记录数
@@ -261,15 +271,14 @@ public class BaseAction<T> extends ActionSupport {
 	 */
 	public void getById() {
 		if (!StringUtils.isBlank(id)) {
-			Json j = new Json();
-			j.setSuccess(true);
-			j.setData(service.getById(id));
-			writeJson(j);
+			Message message = new Message();
+			MessageUtil.createCommMsg(message);
+			message.setData(service.getById(id));
+			writeJson(message);
 		} else {
-			Json j = new Json();
-			j.setSuccess(false);
-			j.setMsg("主键不可为空！");
-			writeJson(j);
+			Message message = new Message();
+			MessageUtil.errRetrunInAction(message,msa.getMessage(MsgCodeList.ERROR_300003));
+			writeJson(message);
 		}
 	}
 
@@ -324,20 +333,19 @@ public class BaseAction<T> extends ActionSupport {
 	 * 保存一个对象
 	 */
 	public void save() {
-		Json json = new Json();
+		Message message = new Message();
 		if (data != null) {
 			service.save(data);
-			json.setSuccess(true);
-			json.setMsg("新建成功！");
+			MessageUtil.createCommMsg(message);
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
 	 * 更新一个对象
 	 */
 	public void update() {
-		Json json = new Json();
+		Message message = new Message();
 		String reflectId = null;
 		try {
 			if (data != null) {
@@ -350,27 +358,25 @@ public class BaseAction<T> extends ActionSupport {
 			T t = service.getById(reflectId);
 			BeanUtils.copyNotNullProperties(data, t, new String[] { "createdatetime" });
 			service.update(t);
-			json.setSuccess(true);
-			json.setMsg("更新成功！");
+			MessageUtil.createCommMsg(message);
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
 	 * 删除一个对象
 	 */
 	public void delete() {
-		Json json = new Json();
+		Message message = new Message();
 		if (!StringUtils.isBlank(id)) {
 			T t = service.getById(id);
 			service.delete(t);
-			json.setSuccess(true);
-			json.setMsg("删除成功！");
+			MessageUtil.createCommMsg(message);
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 	public void checkIsUnique(){
-		Json json = new Json();
+		Message json = new Message();
 		logger.info(entity+" " + name+" "+value);
 		json.setSuccess(true);
 		if(value.equals("admin"))

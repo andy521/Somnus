@@ -42,8 +42,7 @@ Ext.define('somnus.view.system.user.LockWindow', {
         			submitEmptyText: false,
         			waitMsg: '正在解锁...',
         			success: function (form, action) {
-        				var results = Ext.decode(action.response.responseText);
-        				if (results.success) {
+        				if(action.result.repCode == '000000'){
         					Ext.Msg.show({
         						title: '信息',
         						msg: '解锁成功！',
@@ -53,6 +52,13 @@ Ext.define('somnus.view.system.user.LockWindow', {
         							me.fireEvent('success');
         							me.close();
         						}
+        					});
+        				} else {
+        					Ext.Msg.show({
+        						title : '错误提示',
+        						msg : action.result.repMsg,
+        						buttons : Ext.Msg.OK,
+        						icon : Ext.Msg.ERROR
         					});
         				}
         			},
@@ -68,13 +74,6 @@ Ext.define('somnus.view.system.user.LockWindow', {
         						fn: function () {
         							window.location.href = app.contextPath;
         						}
-        					});
-        				} else{
-        					Ext.Msg.show({
-        						title : '错误提示',
-        						msg : action.result.msg,
-        						buttons : Ext.Msg.OK,
-        						icon : Ext.Msg.ERROR
         					});
         				}
         			}

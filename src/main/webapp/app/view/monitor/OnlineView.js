@@ -37,11 +37,11 @@ Ext.define('somnus.view.monitor.OnlineView',{
 				text : 'IP地址',
 				dataIndex : 'ip',
 				align:'center',
-				width : 200
+				width : 400
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
-				width : 150
+				width : 600
 			}],
 			dockedItems:[{
 				xtype : 'toolbar',

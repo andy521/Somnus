@@ -21,19 +21,23 @@ var login = function(){
 		form.submit({
 			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_login.action',
 			params:{'data.loginname':form.findField('data.loginname').getValue(),'data.pwd':form.findField('data.pwd').getValue()},
-			success:function(form, action)
-			{
-				location.replace(app.contextPath + '/index.jsp'); 
-			},
-			failure:function(form, action){
-				button.enable();
-				mask.hide();
-				Ext.Msg.show({
-					title : '错误提示',
-					msg : action.result.msg,
-					buttons : Ext.Msg.OK,
-					icon : Ext.Msg.ERROR
-				});
+			success:function(form, action){
+				var result = Ext.decode(action.response.responseText);
+				console.info(result);
+				console.info(action.result);
+				console.info(action.result.repCode == '000000');
+				if(action.result.repCode == '000000'){
+					location.replace(app.contextPath + '/index.jsp');
+				} else {
+					button.enable();
+					mask.hide();
+					Ext.Msg.show({
+						title : '错误提示',
+						msg : action.result.repMsg,
+						buttons : Ext.Msg.OK,
+						icon : Ext.Msg.ERROR
+					});
+				}
 			}
 		});
 	}

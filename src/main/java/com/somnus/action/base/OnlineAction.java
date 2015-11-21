@@ -11,6 +11,8 @@ import com.somnus.service.base.SyonlineServiceI;
 @Action
 public class OnlineAction extends BaseAction<Syonline> {
 
+	private static final long serialVersionUID = -2378343644242373911L;
+
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
 	 * 

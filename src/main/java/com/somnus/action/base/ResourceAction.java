@@ -9,19 +9,24 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.MessageSourceAccessor;
 
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syresource;
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
 import com.somnus.service.base.SyresourceServiceI;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
+import com.somnus.util.base.MessageUtil;
+import com.somnus.util.base.MsgCodeList;
 
 @Namespace("/base")
 @Action
 public class ResourceAction extends BaseAction<Syresource> {
+
+	private static final long serialVersionUID = -8075796405277817L;
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -34,21 +39,24 @@ public class ResourceAction extends BaseAction<Syresource> {
 	public void setService(SyresourceServiceI service) {
 		this.service = service;
 	}
+	
+	@Autowired
+	private MessageSourceAccessor msa;
 
 	/**
 	 * 更新资源
 	 */
 	public void update() {
-		Json json = new Json();
+		Message message = new Message();
 		if (!StringUtils.isBlank(data.getId())) {
 			if (data.getSyresource() != null && StringUtils.equals(data.getId(), data.getSyresource().getId())) {
-				json.setMsg("父资源不可以是自己！");
+				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300002));
 			} else {
 				((SyresourceServiceI) service).updateResource(data);
-				json.setSuccess(true);
+				MessageUtil.createCommMsg(message);
 			}
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
@@ -113,15 +121,11 @@ public class ResourceAction extends BaseAction<Syresource> {
 	 * 保存一个资源
 	 */
 	public void save() {
-		Json json = new Json();
-		if (data != null) {
-			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
-			((SyresourceServiceI) service).saveResource(data, sessionInfo.getUser().getId());
-			json.setSuccess(true);
-		}else{
-			json.setMsg("提交的数据发生异常");
-		}
-		writeJson(json);
+		Message message = new Message();
+		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
+		((SyresourceServiceI) service).saveResource(data, sessionInfo.getUser().getId());
+		MessageUtil.createCommMsg(message);
+		writeJson(message);
 	}
 
 }

@@ -11,21 +11,24 @@ import java.util.Set;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.MessageSourceAccessor;
 
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
-import com.somnus.model.messege.Json;
+import com.somnus.model.messege.Message;
 import com.somnus.service.base.SyroleServiceI;
 import com.somnus.service.base.SyuserServiceI;
 import com.somnus.util.base.HqlFilter;
+import com.somnus.util.base.MessageUtil;
 
 @Namespace("/base")
 @Action
 public class RoleAction extends BaseAction<Syrole> {
 
+	private static final long serialVersionUID = -6844403961976605199L;
 	@Autowired
 	private SyuserServiceI userService;
 
@@ -40,6 +43,9 @@ public class RoleAction extends BaseAction<Syrole> {
 	public void setService(SyroleServiceI service) {
 		this.service = service;
 	}
+	
+	@Autowired
+	private MessageSourceAccessor msa;
 
 	/**
 	 * 角色grid
@@ -58,23 +64,23 @@ public class RoleAction extends BaseAction<Syrole> {
 	 * 保存一个角色
 	 */
 	public void save() {
-		Json json = new Json();
+		Message message = new Message();
 		if (data != null) {
 			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 			((SyroleServiceI) service).saveRole(data, sessionInfo.getUser().getId());
-			json.setSuccess(true);
+			MessageUtil.createCommMsg(message);
 		}
-		writeJson(json);
+		writeJson(message);
 	}
 
 	/**
 	 * 角色授权
 	 */
 	public void grant() {
-		Json json = new Json();
+		Message message = new Message();
 		((SyroleServiceI) service).grant(id, ids);
-		json.setSuccess(true);
-		writeJson(json);
+		MessageUtil.createCommMsg(message);
+		writeJson(message);
 	}
 
 	/**
