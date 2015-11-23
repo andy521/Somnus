@@ -49,7 +49,7 @@
     </appender>
     
     <logger name="com.somnus.service" additivity="false">
-        <level value="info" />
+        <level value="ERROR" />
         <appender-ref ref="somnus-service" />
     </logger>
 	

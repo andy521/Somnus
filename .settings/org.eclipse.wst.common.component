@@ -6,5 +6,6 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <property name="java-output-path" value="/Somnus Maven Webapp/src/main/webapp/src/main/java"/>
         <property name="context-root" value="Somnus"/>
+        <property name="component.exclusion.patterns" value="WEB-INF/classes/logback-test.xml"/>
     </wb-module>
 </project-modules>
