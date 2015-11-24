@@ -10,18 +10,23 @@
 <script type="text/javascript" src="jslib/balloon.js"></script>
 <script type="text/javascript">
 $(function(){
+	$("#captcha-img").attr("src", 'captcha!doNotNeedSessionAndSecurity_handleCaptcha.action?rc=' + new Date().getTime());
+    $("#captcha-img").click(function(){
+        $(this).attr("src",'captcha!doNotNeedSessionAndSecurity_handleCaptcha.action?rc=' + new Date().getTime());  
+    });
 	$('.submit').click(function(){
 		$.ajax({
 	        type: "POST",
-	        url: 'base/syuser!doNotNeedSessionAndSecurity_login.action',
+	        url: 'base/user!doNotNeedSessionAndSecurity_login.action',
 	        dataType: "JSON",
 	        data: {'data.loginname':$(".login :input[name=username]").val(),
-	            'data.pwd':$(".login :input[name=password]").val()},
+	            'data.pwd':$(".login :input[name=password]").val(),
+	            'data.captcha':$(".login :input[name=captcha]").val()},
 	        success:function(data){
-	            if(data.success==true){
+	            if(data.repCode == '000000'){
 	            	location.replace('index.jsp'); 
 	            }else{
-	            	alert(data.msg);
+	            	alert(data.repMsg);
 	            }
 	        }
 	    });
@@ -43,6 +48,11 @@ $(function(){
 						<label>密 码</label>
 						<input type="password" class="text" placeholder="密码" name="password" /> 
 					</div>
+					<div class="captcha">
+                        <label>验证码</label>
+                        <input type="text" class="text" placeholder="验证码" name="captcha" style="width:114px;"/>
+                        <img id="captcha-img" style="padding:0px 0px;height:24px;vertical-align:middle;"/>
+                    </div>
 					<input type="button" class="submit" value="登录" />
 					<!-- <input type="button" class="qqlogin" onclick="window.open('http://openapi.qzone.qq.com/oauth/show?which=ConfirmPage&amp;display=pc&amp;response_type=code&amp;client_id=101165906&amp;redirect_uri=http://demo.linbsoft.com/linbdesk/json/thirdcallback.ashx&amp;state=QQ', '_blank', 'width=720,height=600,toolbar=no,menubar=no,scrollbars=no,location=no,status=no')"/> -->
 				</div>
