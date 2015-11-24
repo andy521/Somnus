@@ -19,6 +19,7 @@ import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
 import com.somnus.service.base.SyuserServiceI;
+import com.somnus.support.captcha.CustomGenericManageableCaptchaService;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.IpUtil;
@@ -29,7 +30,6 @@ import com.somnus.util.base.MsgCodeList;
 @Action
 public class UserAction extends BaseAction<Syuser> {
 	private static final long serialVersionUID = 4204388266989531679L;
-
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
 	 * 
@@ -43,7 +43,7 @@ public class UserAction extends BaseAction<Syuser> {
 	}
 	
 	@Autowired
-	private CaptchaService captchaService;
+	private CustomGenericManageableCaptchaService captchaService;
 	
 	@Autowired
 	private MessageSourceAccessor msa;
@@ -99,6 +99,8 @@ public class UserAction extends BaseAction<Syuser> {
 		Syuser user = service.getByFilter(hqlFilter);
 		
 		if (user != null) {
+		    //成功以后移除验证码信息
+		    captchaService.removeCaptcha((String)getSession().getId());
 			SessionInfo sessionInfo = new SessionInfo();
 			Hibernate.initialize(user.getSyroles());
 			Hibernate.initialize(user.getSyorganizations());

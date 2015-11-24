@@ -5,10 +5,10 @@
     
     <!-- 验证码服务 -->
     <bean id="captchaService"
-        class="com.octo.captcha.service.multitype.GenericManageableCaptchaService">
+        class="com.somnus.support.captcha.CustomGenericManageableCaptchaService">
         <constructor-arg index="0" ref="customImageCaptchaEngine"/>
         <constructor-arg index="1"><!-- delay -->
-        	<value>300</value>
+        	<value>100</value>
         </constructor-arg>
         <constructor-arg index="2"><!-- store size -->
         	<value>200000</value>

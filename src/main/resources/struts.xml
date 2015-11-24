@@ -77,9 +77,9 @@
 			<!-- <result name="strutsException">/error/strutsException.jsp</result> -->
 		</global-results>
 		
-		<global-exception-mappings>
+		<!-- <global-exception-mappings>
 			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
-		</global-exception-mappings>
+		</global-exception-mappings> -->
 	</package>
 
 </struts>

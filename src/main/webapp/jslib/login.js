@@ -22,10 +22,8 @@ var login = function(){
 			url:app.contextPath + '/base/user!doNotNeedSessionAndSecurity_login.action',
 			params:{'data.loginname':form.findField('data.loginname').getValue(),'data.pwd':form.findField('data.pwd').getValue()},
 			success:function(form, action){
-				var result = Ext.decode(action.response.responseText);
-				console.info(result);
+				console.info(Ext.decode(action.response.responseText));
 				console.info(action.result);
-				console.info(action.result.repCode == '000000');
 				if(action.result.repCode == '000000'){
 					location.replace(app.contextPath + '/index.jsp');
 				} else {
@@ -101,6 +99,11 @@ Ext.define('somnus.ux.VerifyCode', {
         // 重新定义图片地址
         this.image.setSrc(this.codeImgUrl + '?time=' + new Date().getTime());
         this.reset();
+    },
+    listeners : {
+    	onImgClick : function(){
+    		this.onImgClick();
+    	}
     },
     getImgMarginProp : function() {
         return 'margin-left:';
