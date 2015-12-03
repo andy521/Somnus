@@ -11,7 +11,7 @@
 	</context-param>
 	<context-param>
         <param-name>spring.profiles.default</param-name>
-        <param-value>${profiles.choice}</param-value>
+        <param-value>${profiles.active}</param-value>
     </context-param>
 
 	<!-- 添加javamelody监控 -->
