@@ -472,4 +472,25 @@
 
 		</plugins>
 	</build>
+	
+	<profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.choice>dev</profiles.choice>
+            </properties>
+        </profile>
+        <profile>
+            <id>sit</id>
+            <properties>
+                <profiles.choice>sit</profiles.choice>
+            </properties>
+        </profile>
+        <profile>
+            <id>prd</id>
+            <properties>
+                <profiles.choice>prd</profiles.choice>
+            </properties>
+        </profile>
+    </profiles>
 </project>
