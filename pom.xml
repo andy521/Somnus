@@ -408,6 +408,23 @@
 
 	<build>
 		<finalName>Somnus</finalName>
+		
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>WEB-INF/web.xml</include>
+                </includes>
+                <!-- 构建目录，缺省为target -->             
+                <!-- 产出物名称，缺省为${project.artifactId}-${project.version} -->
+                <targetPath>${project.build.directory}/${project.build.finalName}</targetPath>
+            </resource>
+        </resources>
 
 		<plugins>
 			<!-- 编译的时候使用JDK7和UTF8编码 -->
@@ -428,16 +445,7 @@
                     <packagingExcludes>
                         WEB-INF/classes/logback-test.xml
                     </packagingExcludes>
-					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
-					<webResources>
-						<resource>
-							<!-- 元配置文件的目录，相对于pom.xml文件的路径 -->
-							<directory>${basedir}/src/main/webapp/WEB-INF/</directory>
-							<!-- 是否过滤文件，也就是是否启动auto-config的功能 -->
-							<filtering>true</filtering>
-        					<targetPath>WEB-INF</targetPath>
-						</resource>
-    				</webResources>
+                    <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>
             </plugin>
 
