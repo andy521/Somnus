@@ -414,16 +414,6 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
-            <resource>
-                <directory>src/main/webapp</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>WEB-INF/web.xml</include>
-                </includes>
-                <!-- 构建目录，缺省为target -->             
-                <!-- 产出物名称，缺省为${project.artifactId}-${project.version} -->
-                <targetPath>${project.build.directory}/${project.build.finalName}</targetPath>
-            </resource>
         </resources>
 
 		<plugins>
@@ -477,8 +467,6 @@
 					<uriEncoding>UTF-8</uriEncoding>
 					<finalName>${project.build.finalName}</finalName>
 					<server>tomcat7</server>
-					<warFile>${project.build.directory}/Somnus.war</warFile>
-                    <warSourceDirectory>${project.build.directory}/${project.build.finalName}</warSourceDirectory>
 				</configuration>
 				<!-- <executions>
 					<execution>

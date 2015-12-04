@@ -1,14 +1,11 @@
 ##如何运行
 
-####1、到Somnus/pom.xml修改数据库配置：
+####到Somnus/pom.xml修改数据库配置：
 *  默认修改：Somnus\src\main\resources\config.properties下的
 *  jdbc.username
 *  jdbc.password
 *  在你的数据库中，新建一个仓库，名字必须和jdbc.url中的一致
 
-####2、到项目的根下
-* maven install.bat 安装jar包到本地仓库（jdk6即可）
-* maven jetty run.bat 启动web应用 默认端口9999 可以到Somnus/pom.xml下修改
 
 ##介绍
 * Somnus示例项目是一个由Struts2.3.x+Spring3.2.x+Hibernate4.2.x+CXF2.7.x+ExtJs4.2+Maven架构的示例项目
