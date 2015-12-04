@@ -477,6 +477,8 @@
 					<uriEncoding>UTF-8</uriEncoding>
 					<finalName>${project.build.finalName}</finalName>
 					<server>tomcat7</server>
+					<warFile>${project.build.directory}/Somnus.war</warFile>
+                    <warSourceDirectory>${project.build.directory}/${project.build.finalName}</warSourceDirectory>
 				</configuration>
 				<!-- <executions>
 					<execution>
