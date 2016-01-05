@@ -403,6 +403,13 @@
 			<artifactId>cglib</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+		
+		<!--###################### jdbcdslog ###################### -->
+        <dependency>
+            <groupId>com.googlecode.usc</groupId>
+            <artifactId>jdbcdslog</artifactId>
+            <version>1.0.6.2</version>
+        </dependency>
 
 	</dependencies>
 

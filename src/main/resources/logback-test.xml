@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <!--###################### 属性定义 ###################### -->
     <property name="pattern"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
+        value="%d{yyyyMMdd:HH:mm:ss.SSS} [%thread] [%X{traceNo}] [%class] %-5level  %msg%n" />
 
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="ROOT_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <layout name="StandardFormat" class="ch.qos.logback.classic.PatternLayout">
             <pattern>${pattern}</pattern>
         </layout>
     </appender>
 
-    <logger name="com.somnus" level="trace" additivity="false">
-        <appender-ref ref="console"/>
+    <!-- 应用 Logger节点定义 -->
+    <logger name="com.somnus" level="debug" additivity="false">
+        <appender-ref ref="ROOT_CONSOLE" />
     </logger>
 
-    <!-- show parameters for hibernate sql 专为 Hibernate 定制 -->  
-    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"  level="TRACE" />  
-    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor"  level="DEBUG" />  
-    <logger name="org.hibernate.SQL" level="DEBUG" />
-    <logger name="org.hibernate.type" level="TRACE" />
-    <logger name="org.hibernate.engine.QueryParameters" level="DEBUG" />  
-    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG" /> 
+    <!-- JDBC Logger节点定义 -->
+    <logger name="org.jdbcdslog.ConnectionLogger" level="info"
+        additivity="false">
+        <appender-ref ref="ROOT_CONSOLE" />
+    </logger>
 
-    <root level="INFO">
-        <appender-ref ref="console"/>
+    <logger name="org.jdbcdslog.StatementLogger" level="info"
+        additivity="false">
+        <appender-ref ref="ROOT_CONSOLE" />
+    </logger>
+
+    <logger name="org.jdbcdslog.SlowQueryLogger" level="ERROR"
+        additivity="false">
+        <appender-ref ref="ROOT_CONSOLE" />
+    </logger>
+
+    <logger name="org.jdbcdslog.ResultSetLogger" level="ERROR"
+        additivity="false">
+        <appender-ref ref="ROOT_CONSOLE" />
+    </logger>
+    
+
+    <!-- 根 Logger节点定义 -->
+    <root level="info">
+        <appender-ref ref="ROOT_CONSOLE" />
     </root>
+
 </configuration>

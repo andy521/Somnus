@@ -1,68 +1,72 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <jmxConfigurator />
+    <!--###################### 属性定义 ###################### -->
+    <property name="USER_HOME" value="/var/logs/somnus" />
+    <property name="pattern"
+        value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
 
-    <property name="log.base" value="/var/logs/somnus" />
-	<property name="pattern"  value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
-	
-	<appender name="root" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-root.log</file>
+    <!--###################### appender定义 ###################### -->
+    <!-- 根日志Appender定义 -->
+    <appender name="ROOT_FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${USER_HOME}/ROOT_LOG.txt</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-root-%i.%d{yyyy-MM-dd}.log.gz
+            <fileNamePattern>${USER_HOME}/%d{yyyy-MM-dd}/ROOT_LOG-%i.%d{yyyy-MM-dd}.gz
             </fileNamePattern>
-            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <MaxFileSize>30MB</MaxFileSize>
-            </TimeBasedFileNamingAndTriggeringPolicy>
+            <timeBasedFileNamingAndTriggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>30MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>
         </rollingPolicy>
-        <encoder>
+        <layout>
             <pattern>${pattern}</pattern>
-        </encoder>
+        </layout>
+    </appender>
+
+
+    <!-- JDBC日志Appender定义 -->
+    <appender name="JDBC_FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${USER_HOME}/JDBC_LOG.txt</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${USER_HOME}/%d{yyyy-MM-dd}/JDBC_LOG-%i.%d{yyyy-MM-dd}.gz
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>30MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <layout>
+            <pattern>${pattern}</pattern>
+        </layout>
     </appender>
     
-	<!-- 异常 -->
-    <appender name="exception" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-exception.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-exception-%i.%d{yyyy-MM-dd}.log.gz
-            </fileNamePattern>
-            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <MaxFileSize>30MB</MaxFileSize>
-            </TimeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <encoder>
-            <pattern>${pattern}</pattern>
-        </encoder>
-    </appender>
-    
-    <appender name="somnus-service" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.base}/somnus-service.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/somnus-service-%i.%d{yyyy-MM-dd}.log.gz
-            </fileNamePattern>
-            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <MaxFileSize>30MB</MaxFileSize>
-            </TimeBasedFileNamingAndTriggeringPolicy>
-        </rollingPolicy>
-        <encoder>
-            <pattern>${pattern}</pattern>
-        </encoder>
-    </appender>
-    
-    <logger name="com.somnus.service" additivity="false">
-        <level value="ERROR" />
-        <appender-ref ref="somnus-service" />
+
+    <!-- JDBC Logger节点定义 -->
+    <logger name="org.jdbcdslog.ConnectionLogger" level="info"
+        additivity="false">
+        <appender-ref ref="JDBC_FILE" />
     </logger>
-	
-	<!-- show parameters for hibernate sql 专为 Hibernate 定制 -->  
-    <logger name="org.hibernate.type.descriptor.sql.BasicBinder"  level="TRACE" />  
-    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor"  level="DEBUG" />  
-    <logger name="org.hibernate.SQL" level="DEBUG" />
-    <logger name="org.hibernate.type" level="TRACE" />
-    <logger name="org.hibernate.engine.QueryParameters" level="DEBUG" />  
-    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG" />  
 
-	<!-- root级别控制 -->
-	<root level="INFO">
-		<appender-ref ref="root" />
-	</root>
+    <logger name="org.jdbcdslog.StatementLogger" level="info"
+        additivity="false">
+        <appender-ref ref="JDBC_FILE" />
+    </logger>
+
+    <logger name="org.jdbcdslog.SlowQueryLogger" level="ERROR"
+        additivity="false">
+        <appender-ref ref="JDBC_FILE" />
+    </logger>
+
+    <logger name="org.jdbcdslog.ResultSetLogger" level="ERROR"
+        additivity="false">
+        <appender-ref ref="JDBC_FILE" />
+    </logger>
+
+    <!-- 根 Logger节点定义 -->
+    <root level="info">
+        <appender-ref ref="ROOT_FILE" />
+    </root>
 </configuration>
