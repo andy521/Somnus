@@ -34,14 +34,19 @@ Ext.define('somnus.view.monitor.OnlineView',{
 					}
 				}
 			},{
-				text : 'IP地址',
+				text : 'IP',
 				dataIndex : 'ip',
+				align:'center',
+				width : 300
+			},{
+				text : 'IP地址',
+				dataIndex : 'attribution',
 				align:'center',
 				width : 400
 			},{
 				text : '创建时间',
 				dataIndex : 'createdatetime',
-				width : 600
+				width : 400
 			}],
 			dockedItems:[{
 				xtype : 'toolbar',

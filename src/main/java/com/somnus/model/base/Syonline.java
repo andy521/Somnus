@@ -23,6 +23,7 @@ public class Syonline implements java.io.Serializable {
 	private String id;
 	private String loginname;
 	private String ip;
+	private String attribution;
 	private Date createdatetime;
 	private String type;// 1.登录0.注销
 
@@ -33,10 +34,11 @@ public class Syonline implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Syonline(String id, String loginname, String ip, Date createdatetime, String type) {
+	public Syonline(String id, String loginname, String ip,String attribution, Date createdatetime, String type) {
 		this.id = id;
 		this.loginname = loginname;
 		this.ip = ip;
+		this.attribution = attribution;
 		this.createdatetime = createdatetime;
 		this.type = type;
 	}
@@ -70,6 +72,15 @@ public class Syonline implements java.io.Serializable {
 
 	public void setIp(String ip) {
 		this.ip = ip;
+	}
+	
+	@Column(name = "ATTRIBUTION", length = 100)
+	public String getAttribution() {
+		return this.attribution;
+	}
+
+	public void setAttribution(String attribution) {
+		this.attribution = attribution;
 	}
 
 	@Temporal(TemporalType.TIMESTAMP)

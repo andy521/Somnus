@@ -59,6 +59,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 				online.setType("1");// 登录
 				online.setLoginname(sessionInfo.getUser().getLoginname());
 				online.setIp(sessionInfo.getUser().getIp());
+				online.setAttribution(IpUtil.getIpInfo(online.getIp()));
 				onlineService.save(online);
 			}
 		}
@@ -99,6 +100,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 				online.setType("0");// 注销
 				online.setLoginname(sessionInfo.getUser().getLoginname());
 				online.setIp(sessionInfo.getUser().getIp());
+				online.setAttribution(IpUtil.getIpInfo(online.getIp()));
 				syonlineService.save(online);
 			}
 		}
