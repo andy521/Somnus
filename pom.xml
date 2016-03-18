@@ -80,13 +80,6 @@
 	<!-- maven依赖包的书写是有顺序的，请不要更改下面dependency的顺序，避免造成JAR包冲突 -->
 	<dependencies>
 
-		<!-- H2数据库，用他做测试数据库比较方便，使用他的内存数据库模式 -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.179</version>
-		</dependency>
-
 		<!-- 加入mysql驱动依赖包 -->
 		<dependency>
 			<groupId>mysql</groupId>
