@@ -29,7 +29,7 @@ import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syresourcetype;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.InitServiceI;
+import com.somnus.service.InitService;
 import com.alibaba.fastjson.JSON;
 
 /**
@@ -40,7 +40,7 @@ import com.alibaba.fastjson.JSON;
  */
 @Service
 @Transactional
-public class InitServiceImpl implements InitServiceI ,InitializingBean,ApplicationContextAware{
+public class InitServiceImpl implements InitService ,InitializingBean,ApplicationContextAware{
 
 	private static final Logger logger = LoggerFactory.getLogger(InitServiceImpl.class);
 

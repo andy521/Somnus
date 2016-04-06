@@ -1,8 +1,10 @@
 package com.somnus.service.base;
 
 import java.util.List;
+
 import com.somnus.model.base.Syrole;
-import com.somnus.service.BaseServiceI;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.BaseService;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -11,7 +13,7 @@ import com.somnus.util.base.HqlFilter;
  * @author Somnus
  * 
  */
-public interface SyroleServiceI extends BaseServiceI<Syrole> {
+public interface SyroleService extends BaseService<Syrole> {
 
 	/**
 	 * 查找角色
@@ -21,7 +23,7 @@ public interface SyroleServiceI extends BaseServiceI<Syrole> {
 	 * @param rows
 	 * @return
 	 */
-	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows);
+	public PageResponse<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows);
 
 	/**
 	 * 查找角色

@@ -10,8 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDaoI;
-import com.somnus.service.BaseServiceI;
+import com.somnus.dao.base.BaseDao;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.BaseService;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -23,10 +24,10 @@ import com.somnus.util.base.HqlFilter;
  */
 @Service
 
-public class BaseServiceImpl<T> implements BaseServiceI<T> {
+public class BaseServiceImpl<T> implements BaseService<T> {
 
 	@Autowired
-	private BaseDaoI<T> baseDao;
+	private BaseDao<T> baseDao;
 	
 	@Override
 	@Transactional
@@ -54,8 +55,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 
 	@Override
 	public T getById(Serializable id) {
-		Class<T> c = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-		return baseDao.getById(c, id);
+		return baseDao.getById(id);
 	}
 	
 	@Override
@@ -98,22 +98,22 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
-	public List<T> find(String hql, int pageNo, int pageSize) {
+	public PageResponse<T> find(String hql, int pageNo, int pageSize) {
 		return baseDao.find(hql, pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
+	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
 		return baseDao.find(hql, params, pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> find(int pageNo, int pageSize) {
+	public PageResponse<T> find(int pageNo, int pageSize) {
 		return findByFilter(new HqlFilter(), pageNo, pageSize);
 	}
 
 	@Override
-	public List<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize) {
+	public PageResponse<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize) {
 		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
 		String hql = "select distinct t from " + className + " t";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), pageNo, pageSize);
@@ -130,6 +130,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	}
 
 	@Override
+	@Deprecated
 	public Long countByFilter(HqlFilter hqlFilter) {
 		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
 		String hql = "select count(distinct t) from " + className + " t";

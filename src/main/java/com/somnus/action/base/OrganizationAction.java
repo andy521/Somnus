@@ -18,8 +18,8 @@ import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
-import com.somnus.service.base.SyorganizationServiceI;
-import com.somnus.service.base.SyuserServiceI;
+import com.somnus.service.base.SyorganizationService;
+import com.somnus.service.base.SyuserService;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
@@ -31,7 +31,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 
 	private static final long serialVersionUID = 3397120120217500923L;
 	@Autowired
-	private SyuserServiceI userService;
+	private SyuserService userService;
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -41,7 +41,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyorganizationServiceI service) {
+	public void setService(SyorganizationService service) {
 		this.service = service;
 	}
 	
@@ -55,7 +55,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 		Message message = new Message();
 		if (data != null) {
 			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
-			((SyorganizationServiceI) service).saveOrganization(data, sessionInfo.getUser().getId());
+			((SyorganizationService) service).saveOrganization(data, sessionInfo.getUser().getId());
 			MessageUtil.createCommMsg(message);
 		}
 		writeJson(message);
@@ -70,7 +70,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 			if (data.getSyorganization() != null && StringUtils.equals(data.getId(), data.getSyorganization().getId())) {
 				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300001));
 			} else {
-				((SyorganizationServiceI) service).updateOrganization(data);
+				((SyorganizationService) service).updateOrganization(data);
 				MessageUtil.createCommMsg(message);
 			}
 		}
@@ -98,7 +98,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	 */
 	public void grant() {
 		Message message = new Message();
-		((SyorganizationServiceI) service).grant(id, ids);
+		((SyorganizationService) service).grant(id, ids);
 		MessageUtil.createCommMsg(message);
 		writeJson(message);
 	}
@@ -131,7 +131,7 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	public void doNotNeedSecurity_getSyorganizationByUserId() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", id);
-		List<Syorganization> organizations = ((SyorganizationServiceI) service).findOrganizationByFilter(hqlFilter);
+		List<Syorganization> organizations = ((SyorganizationService) service).findOrganizationByFilter(hqlFilter);
 		writeJson(organizations);
 	}
 

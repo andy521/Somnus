@@ -5,6 +5,8 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
+import com.somnus.model.messege.PageResponse;
+
 /**
  * 基础数据库操作类
  * 
@@ -15,7 +17,7 @@ import java.util.Map;
  * @param <T>
  *            模型
  */
-public interface BaseDaoI<T> {
+public interface BaseDao<T> {
 
 	/**
 	 * 保存一个对象
@@ -59,7 +61,7 @@ public interface BaseDaoI<T> {
 	 *            主键
 	 * @return 对象
 	 */
-	public T getById(Class<T> c, Serializable id);
+	public T getById(Serializable id);
 
 	/**
 	 * 通过HQL语句获取一个对象
@@ -112,7 +114,7 @@ public interface BaseDaoI<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, int pageNo, int oageSize);
+	public PageResponse<T> find(String hql, int pageNo, int oageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -127,7 +129,7 @@ public interface BaseDaoI<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, Map<String, Object> params, int pageNo, int oageSize);
+	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int oageSize);
 
 	/**
 	 * 统计数目
@@ -176,7 +178,7 @@ public interface BaseDaoI<T> {
 	 *            SQL语句
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql);
+	public List<Map<String, Object>> findBySql(String sql);
 
 	/**
 	 * 获得结果集
@@ -189,7 +191,7 @@ public interface BaseDaoI<T> {
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql, int pageNo, int oageSize);
+	public List<Map<String, Object>> findBySql(String sql, int pageNo, int oageSize);
 
 	/**
 	 * 获得结果集
@@ -200,7 +202,7 @@ public interface BaseDaoI<T> {
 	 *            参数
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql, Map<String, Object> params);
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params);
 
 	/**
 	 * 获得结果集
@@ -215,7 +217,7 @@ public interface BaseDaoI<T> {
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List<Map> findBySql(String sql, Map<String, Object> params, int pageNo, int oageSize);
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params, int pageNo, int oageSize);
 
 	/**
 	 * 执行SQL语句

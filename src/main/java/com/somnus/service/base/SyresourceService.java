@@ -2,7 +2,7 @@ package com.somnus.service.base;
 
 import java.util.List;
 import com.somnus.model.base.Syresource;
-import com.somnus.service.BaseServiceI;
+import com.somnus.service.BaseService;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -11,7 +11,7 @@ import com.somnus.util.base.HqlFilter;
  * @author Somnus
  * 
  */
-public interface SyresourceServiceI extends BaseServiceI<Syresource> {
+public interface SyresourceService extends BaseService<Syresource> {
 
 	/**
 	 * 获得资源树，或者combotree(只查找菜单类型的节点)

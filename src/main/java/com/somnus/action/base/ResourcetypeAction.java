@@ -11,7 +11,7 @@ import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syresourcetype;
 import com.somnus.model.messege.CommboBox;
 import com.somnus.model.messege.Message;
-import com.somnus.service.base.SyresourcetypeServiceI;
+import com.somnus.service.base.SyresourcetypeService;
 import com.somnus.util.base.MessageUtil;
 
 @Namespace("/base")
@@ -28,7 +28,7 @@ public class ResourcetypeAction extends BaseAction<Syresourcetype> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyresourcetypeServiceI service) {
+	public void setService(SyresourcetypeService service) {
 		this.service = service;
 	}
 
@@ -36,7 +36,7 @@ public class ResourcetypeAction extends BaseAction<Syresourcetype> {
 	 * 获得资源类型combobox
 	 */
 	public void doNotNeedSecurity_combobox() {
-		List<Syresourcetype> list = ((SyresourcetypeServiceI) service).findResourcetype();
+		List<Syresourcetype> list = ((SyresourcetypeService) service).findResourcetype();
 		List<CommboBox> commbolist = new ArrayList<CommboBox>();
 		for(Syresourcetype data:list){
 			CommboBox commbo = new CommboBox();

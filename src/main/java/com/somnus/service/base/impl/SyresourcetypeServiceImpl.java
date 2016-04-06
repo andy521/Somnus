@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.somnus.model.base.Syresourcetype;
-import com.somnus.service.base.SyresourcetypeServiceI;
+import com.somnus.service.base.SyresourcetypeService;
 import com.somnus.service.impl.BaseServiceImpl;
 
 /**
@@ -18,7 +18,7 @@ import com.somnus.service.impl.BaseServiceImpl;
  */
 @Service
 @Transactional
-public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> implements SyresourcetypeServiceI {
+public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> implements SyresourcetypeService {
 
 	/**
 	 * 为列表添加了缓存，查询一次过后，只要不重启服务，缓存一直存在，不需要再查询数据库了，节省了一些资源

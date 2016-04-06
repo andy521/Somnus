@@ -16,7 +16,7 @@ import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
-import com.somnus.service.base.SyresourceServiceI;
+import com.somnus.service.base.SyresourceService;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
@@ -36,7 +36,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyresourceServiceI service) {
+	public void setService(SyresourceService service) {
 		this.service = service;
 	}
 	
@@ -52,7 +52,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 			if (data.getSyresource() != null && StringUtils.equals(data.getId(), data.getSyresource().getId())) {
 				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300002));
 			} else {
-				((SyresourceServiceI) service).updateResource(data);
+				((SyresourceService) service).updateResource(data);
 				MessageUtil.createCommMsg(message);
 			}
 		}
@@ -67,7 +67,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
 		hqlFilter.addFilter("QUERY_t#syresourcetype#id_S_EQ", "0");// 0就是只查菜单
-		List<Syresource> resources = ((SyresourceServiceI) service).getMainMenu(hqlFilter);
+		List<Syresource> resources = ((SyresourceService) service).getMainMenu(hqlFilter);
 		List<Tree> tree = new ArrayList<Tree>();
 		for (Syresource resource : resources) {
 			Tree node = new Tree();
@@ -89,7 +89,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
-		writeJson(((SyresourceServiceI) service).resourceTreeGrid(hqlFilter));
+		writeJson(((SyresourceService) service).resourceTreeGrid(hqlFilter));
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 	public void doNotNeedSecurity_getRoleResources() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_role#id_S_EQ", id);
-		writeJson(((SyresourceServiceI) service).findResourceByFilter(hqlFilter));
+		writeJson(((SyresourceService) service).findResourceByFilter(hqlFilter));
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 	public void doNotNeedSecurity_getOrganizationResources() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_organization#id_S_EQ", id);
-		writeJson(((SyresourceServiceI) service).findResourceByFilter(hqlFilter));
+		writeJson(((SyresourceService) service).findResourceByFilter(hqlFilter));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ResourceAction extends BaseAction<Syresource> {
 	public void save() {
 		Message message = new Message();
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
-		((SyresourceServiceI) service).saveResource(data, sessionInfo.getUser().getId());
+		((SyresourceService) service).saveResource(data, sessionInfo.getUser().getId());
 		MessageUtil.createCommMsg(message);
 		writeJson(message);
 	}

@@ -11,11 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDaoI;
+import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.base.SyuserServiceI;
+import com.somnus.service.base.SyuserService;
 import com.somnus.service.impl.BaseServiceImpl;
 
 /**
@@ -26,13 +26,13 @@ import com.somnus.service.impl.BaseServiceImpl;
  */
 @Service
 @Transactional
-public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements SyuserServiceI {
+public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements SyuserService {
 
 	@Autowired
-	private BaseDaoI<Syrole> roleDao;
+	private BaseDao<Syrole> roleDao;
 
 	@Autowired
-	private BaseDaoI<Syorganization> organizationDao;
+	private BaseDao<Syorganization> organizationDao;
 
 	public void grantRole(String id, String roleIds) {
 		Syuser user = getById(id);
@@ -40,7 +40,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 			user.setSyroles(new HashSet<Syrole>());
 			for (String roleId : roleIds.split(",")) {
 				if (!StringUtils.isBlank(roleId)) {
-					Syrole role = roleDao.getById(Syrole.class, roleId);
+					Syrole role = roleDao.getById(roleId);
 					if (role != null) {
 						user.getSyroles().add(role);
 					}
@@ -55,7 +55,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 			user.setSyorganizations(new HashSet<Syorganization>());
 			for (String organizationId : organizationIds.split(",")) {
 				if (!StringUtils.isBlank(organizationId)) {
-					Syorganization organization = organizationDao.getById(Syorganization.class, organizationId);
+					Syorganization organization = organizationDao.getById(organizationId);
 					if (organization != null) {
 						user.getSyorganizations().add(organization);
 					}

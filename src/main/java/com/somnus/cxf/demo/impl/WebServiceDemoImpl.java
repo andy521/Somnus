@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.somnus.cxf.demo.WebServiceDemoI;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.base.SyuserServiceI;
+import com.somnus.service.base.SyuserService;
 
 /**
  * WebService接口实现类
@@ -17,7 +17,7 @@ import com.somnus.service.base.SyuserServiceI;
 public class WebServiceDemoImpl implements WebServiceDemoI {
 
 	@Autowired
-	private SyuserServiceI userService;
+	private SyuserService userService;
 
 	public String helloWs(String name) {
 		if (StringUtils.isBlank(name)) {

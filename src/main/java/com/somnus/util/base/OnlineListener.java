@@ -21,7 +21,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syonline;
-import com.somnus.service.base.SyonlineServiceI;
+import com.somnus.service.base.SyonlineService;
 
 /**
  * 监听在线用户上线下线
@@ -54,7 +54,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 			SessionInfo sessionInfo = (SessionInfo) session.getAttribute(name);
 			if (sessionInfo != null) {
 				logger.debug("{}登录了",sessionInfo.getUser().getName());
-				SyonlineServiceI onlineService = (SyonlineServiceI) ctx.getBean("onlineService");
+				SyonlineService onlineService = (SyonlineService) ctx.getBean("onlineService");
 				Syonline online = new Syonline();
 				online.setType("1");// 登录
 				online.setLoginname(sessionInfo.getUser().getLoginname());
@@ -95,7 +95,7 @@ public class OnlineListener implements ServletContextListener, ServletContextAtt
 			SessionInfo sessionInfo = (SessionInfo) session.getAttribute("sessionInfo");
 			if (sessionInfo != null) {
 				logger.debug("{}注销了",sessionInfo.getUser().getName());
-				SyonlineServiceI syonlineService = (SyonlineServiceI) ctx.getBean("onlineService");
+				SyonlineService syonlineService = (SyonlineService) ctx.getBean("onlineService");
 				Syonline online = new Syonline();
 				online.setType("0");// 注销
 				online.setLoginname(sessionInfo.getUser().getLoginname());

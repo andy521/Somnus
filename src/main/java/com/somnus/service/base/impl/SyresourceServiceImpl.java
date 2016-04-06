@@ -12,12 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDaoI;
+import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.base.SyresourceServiceI;
+import com.somnus.service.base.SyresourceService;
 import com.somnus.service.impl.BaseServiceImpl;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
@@ -30,10 +30,10 @@ import com.somnus.util.base.HqlFilter;
  */
 @Service
 @Transactional
-public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implements SyresourceServiceI {
+public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implements SyresourceService {
 
 	@Autowired
-	private BaseDaoI<Syuser> userDao;
+	private BaseDao<Syuser> userDao;
 
 	/**
 	 * 由于角色与资源关联，机构也与资源关联，所以查询用户能看到的资源菜单应该查询两次，最后合并到一起。
@@ -132,7 +132,7 @@ public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implement
 	public void saveResource(Syresource syresource, String userId) {
 		save(syresource);
 
-		Syuser user = userDao.getById(Syuser.class, userId);
+		Syuser user = userDao.getById(userId);
 		Set<Syrole> roles = user.getSyroles();
 		if (roles != null && !roles.isEmpty()) {// 如果用户有角色，就将新资源放到用户的第一个角色里面
 			List<Syrole> l = new ArrayList<Syrole>();

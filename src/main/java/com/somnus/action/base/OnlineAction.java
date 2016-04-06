@@ -5,7 +5,7 @@ import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.Syonline;
-import com.somnus.service.base.SyonlineServiceI;
+import com.somnus.service.base.SyonlineService;
 
 @Namespace("/base")
 @Action
@@ -21,7 +21,7 @@ public class OnlineAction extends BaseAction<Syonline> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyonlineServiceI service) {
+	public void setService(SyonlineService service) {
 		this.service = service;
 	}
 

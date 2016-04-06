@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
+
+import com.somnus.model.messege.PageResponse;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -13,7 +15,7 @@ import com.somnus.util.base.HqlFilter;
  * 
  * @param <T>
  */
-public interface BaseServiceI<T> {
+public interface BaseService<T> {
 
 	/**
 	 * 保存一个对象
@@ -133,7 +135,7 @@ public interface BaseServiceI<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, int pageNo, int pageSize);
+	public PageResponse<T> find(String hql, int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -148,7 +150,7 @@ public interface BaseServiceI<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public List<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize);
+	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -157,7 +159,7 @@ public interface BaseServiceI<T> {
 	 * @param pageSize
 	 * @return
 	 */
-	public List<T> find(int pageNo, int pageSize);
+	public PageResponse<T> find(int pageNo, int pageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -167,7 +169,7 @@ public interface BaseServiceI<T> {
 	 * @param pageSize
 	 * @return
 	 */
-	public List<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize);
+	public PageResponse<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize);
 
 	/**
 	 * 统计数目

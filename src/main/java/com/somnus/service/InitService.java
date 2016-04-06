@@ -6,7 +6,7 @@ package com.somnus.service;
  * @author Somnus
  * 
  */
-public interface InitServiceI {
+public interface InitService {
 
 	/**
 	 * 初始化数据库

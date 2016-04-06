@@ -5,7 +5,7 @@ import org.apache.struts2.convention.annotation.Namespace;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.somnus.model.messege.Message;
-import com.somnus.service.InitServiceI;
+import com.somnus.service.InitService;
 
 /**
  * 初始化数据库使用
@@ -19,7 +19,7 @@ public class InitAction extends BaseAction {
 
 	private static final long serialVersionUID = 515728369692931207L;
 	@Autowired
-	private InitServiceI service;
+	private InitService service;
 
 	synchronized public void doNotNeedSessionAndSecurity_initDb() {
 		Message j = new Message();

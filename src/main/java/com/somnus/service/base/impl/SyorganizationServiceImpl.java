@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDaoI;
+import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.base.SyorganizationServiceI;
+import com.somnus.service.base.SyorganizationService;
 import com.somnus.service.impl.BaseServiceImpl;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
@@ -25,13 +25,13 @@ import com.somnus.util.base.HqlFilter;
  */
 @Service
 @Transactional
-public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> implements SyorganizationServiceI {
+public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> implements SyorganizationService {
 
 	@Autowired
-	private BaseDaoI<Syresource> resourceDao;
+	private BaseDao<Syresource> resourceDao;
 
 	@Autowired
-	private BaseDaoI<Syuser> userDao;
+	private BaseDao<Syuser> userDao;
 
 	public void updateOrganization(Syorganization syorganization) {
 		if (!StringUtils.isBlank(syorganization.getId())) {
@@ -79,7 +79,7 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 			organization.setSyresources(new HashSet<Syresource>());
 			for (String resourceId : resourceIds.split(",")) {
 				if (!StringUtils.isBlank(resourceId)) {
-					Syresource resource = resourceDao.getById(Syresource.class, resourceId);
+					Syresource resource = resourceDao.getById(resourceId);
 					if (resource != null) {
 						organization.getSyresources().add(resource);
 					}
@@ -97,7 +97,7 @@ public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> i
 	public void saveOrganization(Syorganization syorganization, String userId) {
 		save(syorganization);
 
-		Syuser user = userDao.getById(Syuser.class, userId);
+		Syuser user = userDao.getById(userId);
 		user.getSyorganizations().add(syorganization);
 	}
 

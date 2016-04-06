@@ -18,7 +18,8 @@ import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.service.base.SyuserServiceI;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.base.SyuserService;
 import com.somnus.support.captcha.CustomGenericManageableCaptchaService;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
@@ -38,7 +39,7 @@ public class UserAction extends BaseAction<Syuser> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyuserServiceI service) {
+	public void setService(SyuserService service) {
 		this.service = service;
 	}
 	
@@ -169,7 +170,7 @@ public class UserAction extends BaseAction<Syuser> {
 	 */
 	public void grantRole() {
 		Message json = new Message();
-		((SyuserServiceI) service).grantRole(id, ids);
+		((SyuserService) service).grantRole(id, ids);
 		json.setSuccess(true);
 		writeJson(json);
 	}
@@ -179,7 +180,7 @@ public class UserAction extends BaseAction<Syuser> {
 	 */
 	public void grantOrganization() {
 		Message json = new Message();
-		((SyuserServiceI) service).grantOrganization(id, ids);
+		((SyuserService) service).grantOrganization(id, ids);
 		json.setSuccess(true);
 		writeJson(json);
 	}
@@ -188,7 +189,7 @@ public class UserAction extends BaseAction<Syuser> {
 	 * 统计用户注册时间图表
 	 */
 	public void doNotNeedSecurity_userCreateDatetimeChart() {
-		writeJson(((SyuserServiceI) service).userCreateDatetimeChart());
+		writeJson(((SyuserService) service).userCreateDatetimeChart());
 	}
 
 	/**
@@ -252,8 +253,9 @@ public class UserAction extends BaseAction<Syuser> {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(q) + "%%");
-		grid.setTotal(service.countByFilter(hqlFilter));
-		grid.setRows(service.findByFilter(hqlFilter, pageNo, pageSize));
+		PageResponse<Syuser> page = service.findByFilter(hqlFilter, pageNo, pageSize);
+		grid.setTotal(page.getCount());
+		grid.setRows(page.getResult());
 		writeJson(grid);
 	}
 

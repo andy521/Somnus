@@ -17,7 +17,8 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.service.BaseServiceI;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.BaseService;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.FastjsonFilter;
 import com.somnus.util.base.HqlFilter;
@@ -65,7 +66,7 @@ public class BaseAction<T> extends ActionSupport {
 	protected String ids;// 主键集合，逗号分割
 	protected T data;// 数据模型(与前台表单name相同，name="data.xxx")
 
-	protected BaseServiceI<T> service;// 业务逻辑
+	protected BaseService<T> service;// 业务逻辑
 	
 	protected String entity;
 	protected String name;
@@ -75,7 +76,7 @@ public class BaseAction<T> extends ActionSupport {
 	 * 
 	 * @param service
 	 */
-	public void setService(BaseServiceI<T> service) {
+	public void setService(BaseService<T> service) {
 		this.service = service;
 	}
 
@@ -304,8 +305,9 @@ public class BaseAction<T> extends ActionSupport {
 	public void grid() {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		grid.setTotal(service.countByFilter(hqlFilter));
-		grid.setRows(service.findByFilter(hqlFilter, pageNo, pageSize));
+		PageResponse<T> page = service.findByFilter(hqlFilter, pageNo, pageSize);
+		grid.setTotal(page.getCount());
+		grid.setRows(page.getResult());
 		writeJson(grid);
 	}
 

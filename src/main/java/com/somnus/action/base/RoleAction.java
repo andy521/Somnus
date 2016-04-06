@@ -19,8 +19,9 @@ import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.service.base.SyroleServiceI;
-import com.somnus.service.base.SyuserServiceI;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.base.SyroleService;
+import com.somnus.service.base.SyuserService;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
 
@@ -30,7 +31,7 @@ public class RoleAction extends BaseAction<Syrole> {
 
 	private static final long serialVersionUID = -6844403961976605199L;
 	@Autowired
-	private SyuserServiceI userService;
+	private SyuserService userService;
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -40,7 +41,7 @@ public class RoleAction extends BaseAction<Syrole> {
 	 * @param service
 	 */
 	@Autowired
-	public void setService(SyroleServiceI service) {
+	public void setService(SyroleService service) {
 		this.service = service;
 	}
 	
@@ -55,8 +56,9 @@ public class RoleAction extends BaseAction<Syrole> {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
-		grid.setTotal(((SyroleServiceI) service).countRoleByFilter(hqlFilter));
-		grid.setRows(((SyroleServiceI) service).findRoleByFilter(hqlFilter, pageNo, pageSize));
+		PageResponse<Syrole> page = ((SyroleService) service).findRoleByFilter(hqlFilter, pageNo, pageSize);
+		grid.setTotal(page.getCount());
+		grid.setRows(page.getResult());
 		writeJson(grid);
 	}
 
@@ -67,7 +69,7 @@ public class RoleAction extends BaseAction<Syrole> {
 		Message message = new Message();
 		if (data != null) {
 			SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
-			((SyroleServiceI) service).saveRole(data, sessionInfo.getUser().getId());
+			((SyroleService) service).saveRole(data, sessionInfo.getUser().getId());
 			MessageUtil.createCommMsg(message);
 		}
 		writeJson(message);
@@ -78,7 +80,7 @@ public class RoleAction extends BaseAction<Syrole> {
 	 */
 	public void grant() {
 		Message message = new Message();
-		((SyroleServiceI) service).grant(id, ids);
+		((SyroleService) service).grant(id, ids);
 		MessageUtil.createCommMsg(message);
 		writeJson(message);
 	}
@@ -111,7 +113,7 @@ public class RoleAction extends BaseAction<Syrole> {
 	public void doNotNeedSecurity_getRoleByUserId() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", id);
-		List<Syrole> roles = ((SyroleServiceI) service).findRoleByFilter(hqlFilter);
+		List<Syrole> roles = ((SyroleService) service).findRoleByFilter(hqlFilter);
 		writeJson(roles);
 	}
 

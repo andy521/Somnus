@@ -1,13 +1,13 @@
 package com.somnus.service.base;
 
 import com.somnus.model.base.Syonline;
-import com.somnus.service.BaseServiceI;
+import com.somnus.service.BaseService;
 
 /**
  * 
  * @author Somnus
  * 
  */
-public interface SyonlineServiceI extends BaseServiceI<Syonline> {
+public interface SyonlineService extends BaseService<Syonline> {
 
 }

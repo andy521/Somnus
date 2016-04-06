@@ -2,7 +2,7 @@ package com.somnus.service.base;
 
 import java.util.List;
 import com.somnus.model.base.Syorganization;
-import com.somnus.service.BaseServiceI;
+import com.somnus.service.BaseService;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -11,7 +11,7 @@ import com.somnus.util.base.HqlFilter;
  * @author Somnus
  * 
  */
-public interface SyorganizationServiceI extends BaseServiceI<Syorganization> {
+public interface SyorganizationService extends BaseService<Syorganization> {
 
 	/**
 	 * 更新机构

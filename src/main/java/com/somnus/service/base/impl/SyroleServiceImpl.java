@@ -8,11 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDaoI;
+import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.service.base.SyroleServiceI;
+import com.somnus.model.messege.PageResponse;
+import com.somnus.service.base.SyroleService;
 import com.somnus.service.impl.BaseServiceImpl;
 import com.somnus.util.base.HqlFilter;
 
@@ -24,15 +25,15 @@ import com.somnus.util.base.HqlFilter;
  */
 @Service
 @Transactional
-public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements SyroleServiceI {
+public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements SyroleService {
 
 	@Autowired
-	private BaseDaoI<Syuser> userDao;
+	private BaseDao<Syuser> userDao;
 	@Autowired
-	private BaseDaoI<Syresource> resourceDao;
+	private BaseDao<Syresource> resourceDao;
 
 	@Transactional(readOnly = false)
-	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows) {
+	public PageResponse<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), page, rows);
 	}
@@ -44,6 +45,7 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 	}
 
 	@Transactional(readOnly = false)
+	@Deprecated
 	public Long countRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select count(distinct t) from Syrole t join t.syusers user";
 		return count(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());
@@ -52,7 +54,7 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 	public void saveRole(Syrole syrole, String userId) {
 		save(syrole);
 
-		Syuser user = userDao.getById(Syuser.class, userId);
+		Syuser user = userDao.getById(userId);
 		user.getSyroles().add(syrole);// 把新添加的角色与当前用户关联
 	}
 
@@ -62,7 +64,7 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 			role.setSyresources(new HashSet<Syresource>());
 			for (String resourceId : resourceIds.split(",")) {
 				if (!StringUtils.isBlank(resourceId)) {
-					Syresource resource = resourceDao.getById(Syresource.class, resourceId);
+					Syresource resource = resourceDao.getById(resourceId);
 					if (resource != null) {
 						role.getSyresources().add(resource);
 					}

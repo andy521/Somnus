@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.somnus.model.base.Syuser;
-import com.somnus.service.BaseServiceI;
+import com.somnus.service.BaseService;
 
 /**
  * 用户业务
@@ -12,7 +12,7 @@ import com.somnus.service.BaseServiceI;
  * @author Somnus
  * 
  */
-public interface SyuserServiceI extends BaseServiceI<Syuser> {
+public interface SyuserService extends BaseService<Syuser> {
 
 	/**
 	 * 修改用户角色
