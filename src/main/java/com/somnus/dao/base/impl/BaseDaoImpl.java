@@ -99,7 +99,7 @@ public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
         				query.setParameter(key, params.get(key));
         			}
         		}
-                return new PageResponse(query.list(),count(hql,params));
+                return new PageResponse<T>(query.list(),count(hql,params));
             }
         });
 	}
@@ -109,7 +109,7 @@ public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
             public PageResponse<T> doInHibernate(Session session) throws HibernateException, SQLException {
                 Query query = session.createQuery(hql).setFirstResult((pageNo - 1) * pageSize)
                     .setMaxResults(pageSize);
-                return new PageResponse(query.list(),count(hql));
+                return new PageResponse<T>(query.list(),count(hql));
             }
         });
 	}
