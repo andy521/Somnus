@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!--###################### 属性定义 ###################### -->
-    <property name="USER_HOME" value="/var/logs/somnus" />
+    <property name="log.base" value="/var/logs/somnus" />
     <property name="pattern"
         value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
 
@@ -9,9 +9,9 @@
     <!-- 根日志Appender定义 -->
     <appender name="ROOT_FILE"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${USER_HOME}/ROOT_LOG.txt</file>
+        <file>${log.base}/ROOT_LOG.txt</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${USER_HOME}/%d{yyyy-MM-dd}/ROOT_LOG-%i.%d{yyyy-MM-dd}.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/ROOT_LOG-%i.%d{yyyy-MM-dd}.gz
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -43,25 +43,22 @@
         </layout>
     </appender>
     
+    <logger name="com.somnus" level="info" />
 
     <!-- JDBC Logger节点定义 -->
-    <logger name="org.jdbcdslog.ConnectionLogger" level="info"
-        additivity="false">
+    <logger name="org.jdbcdslog.ConnectionLogger" level="info" additivity="false">
         <appender-ref ref="JDBC_FILE" />
     </logger>
 
-    <logger name="org.jdbcdslog.StatementLogger" level="info"
-        additivity="false">
+    <logger name="org.jdbcdslog.StatementLogger" level="info" additivity="false">
         <appender-ref ref="JDBC_FILE" />
     </logger>
 
-    <logger name="org.jdbcdslog.SlowQueryLogger" level="ERROR"
-        additivity="false">
+    <logger name="org.jdbcdslog.SlowQueryLogger" level="info" additivity="false">
         <appender-ref ref="JDBC_FILE" />
     </logger>
 
-    <logger name="org.jdbcdslog.ResultSetLogger" level="ERROR"
-        additivity="false">
+    <logger name="org.jdbcdslog.ResultSetLogger" level="info" additivity="false">
         <appender-ref ref="JDBC_FILE" />
     </logger>
 
