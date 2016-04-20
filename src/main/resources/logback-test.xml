@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!--###################### 属性定义 ###################### -->
-    <property name="pattern"
-        value="%d{yyyyMMdd:HH:mm:ss.SSS} [%thread] [%X{traceNo}] [%class] %-5level  %msg%n" />
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度  %msg表示日志消息，%n表示换行符-->  
+    <property name="pattern" value="%d{yyyyMMdd:HH:mm:ss.SSS} [%thread] [%X{traceNo}] [%class] %-5level  %msg%n" />
 
     <appender name="ROOT_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <layout name="StandardFormat" class="ch.qos.logback.classic.PatternLayout">

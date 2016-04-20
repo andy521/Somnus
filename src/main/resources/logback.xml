@@ -2,8 +2,8 @@
 <configuration>
     <!--###################### 属性定义 ###################### -->
     <property name="log.base" value="/var/logs/somnus" />
-    <property name="pattern"
-        value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{sessionId}] %-5level [%thread] %logger{80} :%msg%n" />
+    <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度  %msg表示日志消息，%n表示换行符-->  
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{80} :%msg%n" />
 
     <!--###################### appender定义 ###################### -->
     <!-- 根日志Appender定义 -->
