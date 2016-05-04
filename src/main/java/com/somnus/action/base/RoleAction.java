@@ -19,9 +19,11 @@ import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.base.SyroleService;
 import com.somnus.service.base.SyuserService;
+import com.somnus.support.constant.Constants;
+import com.somnus.support.pagination.Pageable;
+import com.somnus.support.pagination.impl.PageRequest;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
 
@@ -56,9 +58,16 @@ public class RoleAction extends BaseAction<Syrole> {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		SessionInfo sessionInfo = (SessionInfo) getSession().getAttribute("sessionInfo");
 		hqlFilter.addFilter("QUERY_user#id_S_EQ", sessionInfo.getUser().getId());
-		PageResponse<Syrole> page = ((SyroleService) service).findRoleByFilter(hqlFilter, pageNo, pageSize);
-		grid.setTotal(page.getCount());
-		grid.setRows(page.getResult());
+		Pageable pageable = null;
+		if(getRequest().getParameter("pageSize") == null){
+			Integer start = findIntegerParameterValue(getRequest(), Constants.PAGE_PARAM_START);
+			pageable = new PageRequest(start == null ? 1 : start,Constants.DEFAULT_LIMIT);
+		} else {
+			pageable = this.findPage(getRequest());
+		}
+		Pageable result = ((SyroleService) service).findRoleByFilter(hqlFilter, pageable);
+		grid.setTotal(result.getCount());
+		grid.setRows(result.getResult(List.class));
 		writeJson(grid);
 	}
 

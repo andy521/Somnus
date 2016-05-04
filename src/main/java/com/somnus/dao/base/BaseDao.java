@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-import com.somnus.model.messege.PageResponse;
+import com.somnus.support.pagination.impl.PageResponse;
 
 /**
  * 基础数据库操作类
@@ -114,7 +114,7 @@ public interface BaseDao<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public PageResponse<T> find(String hql, int pageNo, int oageSize);
+	public PageResponse find(String hql, int pageNo, int oageSize);
 
 	/**
 	 * 获得分页后的对象列表
@@ -129,16 +129,16 @@ public interface BaseDao<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int oageSize);
+	public PageResponse find(String hql, Map<String, Object> params, int pageNo, int oageSize);
 
 	/**
 	 * 统计数目
 	 * 
 	 * @param hql
 	 *            HQL语句(select count(*) from T)
-	 * @return long
+	 * @return Integer
 	 */
-	public Long count(String hql);
+	public Integer count(String hql);
 
 	/**
 	 * 统计数目
@@ -147,9 +147,9 @@ public interface BaseDao<T> {
 	 *            HQL语句(select count(*) from T where xx = :xx)
 	 * @param params
 	 *            参数
-	 * @return long
+	 * @return Integer
 	 */
-	public Long count(String hql, Map<String, Object> params);
+	public Integer count(String hql, Map<String, Object> params);
 
 	/**
 	 * 执行一条HQL语句

@@ -5,7 +5,7 @@ Ext.define('somnus.common.base.GridStore', {
 		Ext.applyIf(config, {
 			proxy: {
 				type: 'ajax',
-				pageParam: 'pageNo',
+				pageParam: 'page',
 				limitParam: 'pageSize',
 				api: {
 					read: config.readUrl || app.contextPath + '/base/'+config.baseUrl +'!grid.action',

@@ -28,9 +28,9 @@
     <!-- JDBC日志Appender定义 -->
     <appender name="JDBC_FILE"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${USER_HOME}/JDBC_LOG.txt</file>
+        <file>${log.base}/JDBC_LOG.txt</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${USER_HOME}/%d{yyyy-MM-dd}/JDBC_LOG-%i.%d{yyyy-MM-dd}.gz
+            <fileNamePattern>${log.base}/%d{yyyy-MM-dd}/JDBC_LOG-%i.%d{yyyy-MM-dd}.gz
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">

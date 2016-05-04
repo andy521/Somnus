@@ -2,6 +2,7 @@ package com.somnus.service.impl;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
@@ -11,8 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.somnus.dao.base.BaseDao;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.BaseService;
+import com.somnus.support.pagination.Pageable;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -28,6 +29,21 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 
 	@Autowired
 	private BaseDao<T> baseDao;
+	
+	protected String getEntityName() {
+        return this.getGenericClass(this.getClass(), 0).getName();
+    }
+	
+	private Class<?> getGenericClass(Class<?> clazz, int index) {
+        Type genType = clazz.getGenericSuperclass();
+        if (genType instanceof ParameterizedType) {
+            Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
+            if ((params != null) && (params.length >= (index - 1))) {
+                return (Class<?>) params[index];
+            }
+        }
+        return null;
+    }
 	
 	@Override
 	@Transactional
@@ -70,8 +86,7 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 
 	@Override
 	public T getByFilter(HqlFilter hqlFilter) {
-		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
-		String hql = "select distinct t from " + className + " t";
+		String hql = "select distinct t from " + getEntityName() + " t";
 		return getByHql(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
 	}
 
@@ -92,53 +107,50 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 
 	@Override
 	public List<T> findByFilter(HqlFilter hqlFilter) {
-		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
-		String hql = "select distinct t from " + className + " t";
+		String hql = "select distinct t from " + getEntityName() + " t";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
 	}
 
 	@Override
-	public PageResponse<T> find(String hql, int pageNo, int pageSize) {
-		return baseDao.find(hql, pageNo, pageSize);
+	public Pageable find(String hql, Pageable pageable) {
+		return baseDao.find(hql, pageable.getPageStart(), pageable.getPageLimit());
 	}
 
 	@Override
-	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
-		return baseDao.find(hql, params, pageNo, pageSize);
+	public Pageable find(String hql, Map<String, Object> params, Pageable pageable) {
+		return baseDao.find(hql, params, pageable.getPageStart(), pageable.getPageLimit());
 	}
 
 	@Override
-	public PageResponse<T> find(int pageNo, int pageSize) {
-		return findByFilter(new HqlFilter(), pageNo, pageSize);
+	public Pageable find(Pageable pageable) {
+		return findByFilter(new HqlFilter(), pageable);
 	}
 
 	@Override
-	public PageResponse<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize) {
-		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
-		String hql = "select distinct t from " + className + " t";
-		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), pageNo, pageSize);
+	public Pageable findByFilter(HqlFilter hqlFilter,Pageable pageable) {
+		String hql = "select distinct t from " + getEntityName() + " t";
+		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(),pageable);
 	}
 
 	@Override
-	public Long count(String hql) {
+	public Integer count(String hql) {
 		return baseDao.count(hql);
 	}
 
 	@Override
-	public Long count(String hql, Map<String, Object> params) {
+	public Integer count(String hql, Map<String, Object> params) {
 		return baseDao.count(hql, params);
 	}
 
 	@Override
 	@Deprecated
-	public Long countByFilter(HqlFilter hqlFilter) {
-		String className = ((Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0]).getName();
-		String hql = "select count(distinct t) from " + className + " t";
+	public Integer countByFilter(HqlFilter hqlFilter) {
+		String hql = "select count(distinct t) from " + getEntityName() + " t";
 		return count(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());
 	}
 
 	@Override
-	public Long count() {
+	public Integer count() {
 		return countByFilter(new HqlFilter());
 	}
 
@@ -155,22 +167,22 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 	}
 
 	
-	public List findBySql(String sql) {
+	public List<Map<String, Object>> findBySql(String sql) {
 		return baseDao.findBySql(sql);
 	}
 
 	@Override
-	public List findBySql(String sql, int pageNo, int pageSize) {
+	public List<Map<String, Object>> findBySql(String sql, int pageNo, int pageSize) {
 		return baseDao.findBySql(sql, pageNo, pageSize);
 	}
 
 	@Override
-	public List findBySql(String sql, Map<String, Object> params) {
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params) {
 		return baseDao.findBySql(sql, params);
 	}
 
 	@Override
-	public List findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
 		return baseDao.findBySql(sql, params, pageNo, pageSize);
 	}
 

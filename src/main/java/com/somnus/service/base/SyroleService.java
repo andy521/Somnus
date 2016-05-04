@@ -3,8 +3,8 @@ package com.somnus.service.base;
 import java.util.List;
 
 import com.somnus.model.base.Syrole;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.BaseService;
+import com.somnus.support.pagination.Pageable;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -23,20 +23,12 @@ public interface SyroleService extends BaseService<Syrole> {
 	 * @param rows
 	 * @return
 	 */
-	public PageResponse<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows);
+	public Pageable findRoleByFilter(HqlFilter hqlFilter, Pageable pageable);
 
 	/**
 	 * 查找角色
 	 */
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter);
-
-	/**
-	 * 统计角色
-	 * 
-	 * @param hqlFilter
-	 * @return
-	 */
-	public Long countRoleByFilter(HqlFilter hqlFilter);
 
 	/**
 	 * 添加一个角色

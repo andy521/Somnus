@@ -5,7 +5,7 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-import com.somnus.model.messege.PageResponse;
+import com.somnus.support.pagination.Pageable;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -135,7 +135,7 @@ public interface BaseService<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public PageResponse<T> find(String hql, int pageNo, int pageSize);
+	public Pageable find(String hql, Pageable pageable);
 
 	/**
 	 * 获得分页后的对象列表
@@ -150,7 +150,7 @@ public interface BaseService<T> {
 	 *            每页显示多少条
 	 * @return List
 	 */
-	public PageResponse<T> find(String hql, Map<String, Object> params, int pageNo, int pageSize);
+	public Pageable find(String hql, Map<String, Object> params,Pageable pageable);
 
 	/**
 	 * 获得分页后的对象列表
@@ -159,7 +159,7 @@ public interface BaseService<T> {
 	 * @param pageSize
 	 * @return
 	 */
-	public PageResponse<T> find(int pageNo, int pageSize);
+	public Pageable find(Pageable pageable);
 
 	/**
 	 * 获得分页后的对象列表
@@ -169,16 +169,16 @@ public interface BaseService<T> {
 	 * @param pageSize
 	 * @return
 	 */
-	public PageResponse<T> findByFilter(HqlFilter hqlFilter, int pageNo, int pageSize);
-
+	public Pageable findByFilter(HqlFilter hqlFilter,Pageable pageable);
+	
 	/**
 	 * 统计数目
 	 * 
 	 * @param hql
 	 *            HQL语句(select count(*) from T)
-	 * @return long
+	 * @return Integer
 	 */
-	public Long count(String hql);
+	public Integer count(String hql);
 
 	/**
 	 * 统计数目
@@ -187,9 +187,9 @@ public interface BaseService<T> {
 	 *            HQL语句(select count(*) from T where xx = :xx)
 	 * @param params
 	 *            参数
-	 * @return long
+	 * @return Integer
 	 */
-	public Long count(String hql, Map<String, Object> params);
+	public Integer count(String hql, Map<String, Object> params);
 
 	/**
 	 * 统计数目
@@ -197,14 +197,14 @@ public interface BaseService<T> {
 	 * @param hqlFilter
 	 * @return
 	 */
-	public Long countByFilter(HqlFilter hqlFilter);
+	public Integer countByFilter(HqlFilter hqlFilter);
 
 	/**
 	 * 统计数目
 	 * 
-	 * @return long
+	 * @return Integer
 	 */
-	public Long count();
+	public Integer count();
 
 	/**
 	 * 执行一条HQL语句
@@ -233,7 +233,7 @@ public interface BaseService<T> {
 	 *            SQL语句
 	 * @return 结果集
 	 */
-	public List findBySql(String sql);
+	public List<Map<String, Object>> findBySql(String sql);
 
 	/**
 	 * 获得结果集
@@ -246,7 +246,7 @@ public interface BaseService<T> {
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List findBySql(String sql, int pageNo, int pageSize);
+	public List<Map<String, Object>> findBySql(String sql, int pageNo, int pageSize);
 
 	/**
 	 * 获得结果集
@@ -257,7 +257,7 @@ public interface BaseService<T> {
 	 *            参数
 	 * @return 结果集
 	 */
-	public List findBySql(String sql, Map<String, Object> params);
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params);
 
 	/**
 	 * 获得结果集
@@ -272,7 +272,7 @@ public interface BaseService<T> {
 	 *            每页显示多少条
 	 * @return 结果集
 	 */
-	public List findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize);
+	public List<Map<String, Object>> findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize);
 
 	/**
 	 * 执行SQL语句

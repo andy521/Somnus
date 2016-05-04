@@ -82,7 +82,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 	}
 
 	@Transactional(readOnly = false)
-	public Long countUserByRoleId(String roleId) {
+	public Integer countUserByRoleId(String roleId) {
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("roleId", roleId);
 		String hql = "select count(*) from Syuser t join t.syroles role where role.id = :roleId";
@@ -90,7 +90,7 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 	}
 
 	@Transactional(readOnly = false)
-	public Long countUserByNotRoleId() {
+	public Integer countUserByNotRoleId() {
 		String hql = "select count(*) from Syuser t left join t.syroles role where role.id is null";
 		return count(hql);
 	}

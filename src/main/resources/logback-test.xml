@@ -19,24 +19,11 @@
 
 	<!-- 如果日志等级比root级别低，如果采用 <logger name="org.jdbcdslog.ConnectionLogger" level="info" /> -->
 	<!-- 将会无效， 必须自己重新指定，不然可以直接使用上述配置，相当于继承了 root的配置-->
-    <logger name="org.jdbcdslog.ConnectionLogger" level="trace" additivity="false">
-    	<appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
-    <logger name="org.jdbcdslog.StatementLogger" level="trace" additivity="false">
-    	<appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
-    <logger name="org.jdbcdslog.SlowQueryLogger" level="trace" additivity="false">
-    	<appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
-    <logger name="org.jdbcdslog.ResultSetLogger" level="trace" additivity="false">
-    	<appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
-    <logger name="org.springframework" level="trace" additivity="false">
-    	<appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
-    <logger name="org.apache.activemq.transport.AbstractInactivityMonitor" level="trace" additivity="false">
-        <appender-ref ref="ROOT_CONSOLE"/>
-    </logger>
+    <logger name="org.jdbcdslog.ConnectionLogger" level="info"/>
+    <logger name="org.jdbcdslog.StatementLogger" level="info" />
+    <logger name="org.jdbcdslog.SlowQueryLogger" level="info" />
+    <logger name="org.jdbcdslog.ResultSetLogger" level="info" />
+    <logger name="org.springframework" level="info" />
 	
     <root level="info">
         <appender-ref ref="ROOT_CONSOLE"/>

@@ -1,7 +1,12 @@
 package com.somnus.action;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
@@ -17,8 +23,11 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.BaseService;
+import com.somnus.support.constant.Constants;
+import com.somnus.support.exception.SysRuntimeException;
+import com.somnus.support.pagination.Pageable;
+import com.somnus.support.pagination.impl.PageRequest;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.FastjsonFilter;
 import com.somnus.util.base.HqlFilter;
@@ -32,6 +41,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.MessageSourceAccessor;
+import org.springframework.web.util.WebUtils;
 /**
  * 基础ACTION,其他ACTION继承此ACTION来获得writeJson和ActionSupport的功能
  * 
@@ -54,12 +64,6 @@ public class BaseAction<T> extends ActionSupport {
 	@Autowired
 	private MessageSourceAccessor msa;
 
-	protected int pageNo = 1;// 当前页
-	protected int pageSize = 25;// 每页显示记录数
-	protected String sort;// 排序字段
-	protected String order = "asc";// asc/desc
-	protected String q;// easyui的combo和其子类过滤时使用
-	
 	protected String captcha;
 
 	protected String id;// 主键
@@ -102,46 +106,6 @@ public class BaseAction<T> extends ActionSupport {
 
 	public void setData(T data) {
 		this.data = data;
-	}
-
-	public int getPageNo() {
-		return pageNo;
-	}
-
-	public void setPageNo(int pageNo) {
-		this.pageNo = pageNo;
-	}
-
-	public int getPageSize() {
-		return pageSize;
-	}
-
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
-	}
-
-	public String getSort() {
-		return sort;
-	}
-
-	public void setSort(String sort) {
-		this.sort = sort;
-	}
-
-	public String getOrder() {
-		return order;
-	}
-
-	public void setOrder(String order) {
-		this.order = order;
-	}
-
-	public String getQ() {
-		return q;
-	}
-
-	public void setQ(String q) {
-		this.q = q;
 	}
 
 	public String getEntity() {
@@ -288,7 +252,15 @@ public class BaseAction<T> extends ActionSupport {
 	 */
 	public void find() {
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		writeJson(service.findByFilter(hqlFilter, pageNo, pageSize));
+		Pageable pageable = null;
+		if(getRequest().getParameter("pageSize") == null){
+			Integer start = findIntegerParameterValue(getRequest(), Constants.PAGE_PARAM_START);
+			pageable = new PageRequest(start == null ? 1 : start,Constants.DEFAULT_LIMIT);
+		} else {
+			pageable = this.findPage(getRequest());
+		}
+		Pageable result = service.findByFilter(hqlFilter, pageable);
+		writeJson(result.getResult(List.class));
 	}
 
 	/**
@@ -305,9 +277,16 @@ public class BaseAction<T> extends ActionSupport {
 	public void grid() {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		PageResponse<T> page = service.findByFilter(hqlFilter, pageNo, pageSize);
-		grid.setTotal(page.getCount());
-		grid.setRows(page.getResult());
+		Pageable pageable = null;
+		if(getRequest().getParameter("pageSize") == null){
+			Integer start = findIntegerParameterValue(getRequest(), Constants.PAGE_PARAM_START);
+			pageable = new PageRequest(start == null ? 1 : start,Constants.DEFAULT_LIMIT);
+		} else {
+			pageable = this.findPage(getRequest());
+		}
+		Pageable result = service.findByFilter(hqlFilter, pageable);
+		grid.setTotal(result.getCount());
+		grid.setRows(result.getResult(List.class));
 		writeJson(grid);
 	}
 
@@ -318,7 +297,7 @@ public class BaseAction<T> extends ActionSupport {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
 		List<T> l = service.findByFilter(hqlFilter);
-		grid.setTotal((long) l.size());
+		grid.setTotal(l.size());
 		grid.setRows(l);
 		writeJson(grid);
 	}
@@ -384,6 +363,115 @@ public class BaseAction<T> extends ActionSupport {
 		if(value.equals("admin"))
 			json.setUnique(false);
 		writeJson(json);
+	}
+	
+	/**
+	 * @Description 获取分页信息
+	 * @param request
+	 * @return
+	 */
+	protected Pageable findPage(HttpServletRequest request){		
+		return findPage(request, Constants.PAGE_PARAM_START, Constants.PAGE_PARAM_LIMIT);
+	}
+
+	/**
+	 * @Description 获取分页信息
+	 * @param request
+	 * @param pageFieldName 起始页字段名称
+	 * @param pageSizeFieldName 单页总量字段名称
+	 * @return
+	 */
+	protected Pageable findPage(HttpServletRequest request, String pageFieldName, String pageSizeFieldName){
+		Validate.notBlank(pageFieldName, "page field name required");
+		Validate.notBlank(pageSizeFieldName, "pageSize field name required");
+		Integer start = findIntegerParameterValue(request, pageFieldName);
+		Integer limit = findIntegerParameterValue(request, pageSizeFieldName);
+		if(limit == null){
+			throw new SysRuntimeException("pageSize is required");
+		}
+		//限制pageSize <= 100
+		if(limit > 100){
+			logger.warn("pageSize must be less than 100");
+			limit = 100;
+		};
+		return new PageRequest(
+				start == null ? 1 : start,
+				limit	
+		);
+	}
+	
+	/**
+	 * @Description 从请求中获取Integer类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @return
+	 */
+	protected Integer findIntegerParameterValue(HttpServletRequest request,
+			String name) {
+		String pv = WebUtils.findParameterValue(request, name);
+		return StringUtils.isBlank(pv) ? null : Integer.parseInt(pv);
+	}
+
+	/**
+	 * @Description 从请求中获取Long类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @return
+	 */
+	protected Long findLongParameterValue(HttpServletRequest request,
+			String name) {
+		String pv = WebUtils.findParameterValue(request, name);
+		return StringUtils.isBlank(pv) ? null : Long.parseLong(pv);
+	}
+	
+	/**
+	 * @Description 从请求中获取BigDecimal类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @return
+	 */
+	protected BigDecimal findBigDecimalParameterValue(HttpServletRequest request,
+			String name) {
+		String pv = WebUtils.findParameterValue(request, name);
+		return StringUtils.isBlank(pv) ? null : new BigDecimal(pv);
+	}
+
+	/**
+	 * @Description 从请求中获取String类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @return
+	 */
+	protected String findStringParameterValue(HttpServletRequest request,
+			String name) {
+		return WebUtils.findParameterValue(request, name);
+	}
+
+	/**
+	 * @Description 从请求中获取Boolean类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @return
+	 */
+	protected Boolean findBooleanParameterValue(HttpServletRequest request,
+			String name) {
+		String pv = WebUtils.findParameterValue(request, name);
+		return StringUtils.isBlank(pv) ? null : Boolean.parseBoolean(pv);
+	}
+
+	/**
+	 * @Description 从请求中获取Date类型参数
+	 * @param request
+	 * @param name 参数名称
+	 * @param datePattern 日期模式
+	 * @return
+	 * @throws ParseException
+	 */
+	protected Date findDateParameterValue(HttpServletRequest request,
+			String name, String datePattern) throws ParseException {
+		DateFormat dateFormat = new SimpleDateFormat(datePattern);
+		String pv = WebUtils.findParameterValue(request, name);
+		return StringUtils.isBlank(pv) ? null : dateFormat.parse(WebUtils.findParameterValue(request, name));
 	}
 
 }

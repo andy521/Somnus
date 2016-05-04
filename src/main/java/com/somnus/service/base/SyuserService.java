@@ -47,13 +47,13 @@ public interface SyuserService extends BaseService<Syuser> {
 	 * @param roleId
 	 * @return
 	 */
-	public Long countUserByRoleId(String roleId);
+	public Integer countUserByRoleId(String roleId);
 
 	/**
 	 * 统计没有角色的用户数量
 	 * 
 	 * @return
 	 */
-	public Long countUserByNotRoleId();
+	public Integer countUserByNotRoleId();
 
 }

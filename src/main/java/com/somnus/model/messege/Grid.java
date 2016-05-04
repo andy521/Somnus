@@ -11,14 +11,14 @@ import java.util.List;
  */
 public class Grid implements java.io.Serializable {
 
-	private Long total = 0L;
+	private Integer total = 0;
 	private List rows = new ArrayList();
 
-	public Long getTotal() {
+	public Integer getTotal() {
 		return total;
 	}
 
-	public void setTotal(Long total) {
+	public void setTotal(Integer total) {
 		this.total = total;
 	}
 

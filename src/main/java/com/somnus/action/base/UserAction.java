@@ -1,6 +1,7 @@
 package com.somnus.action.base;
 
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -10,7 +11,6 @@ import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.MessageSourceAccessor;
 
-import com.octo.captcha.service.CaptchaService;
 import com.somnus.action.BaseAction;
 import com.somnus.model.base.SessionInfo;
 import com.somnus.model.base.Syorganization;
@@ -18,9 +18,11 @@ import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
 import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.base.SyuserService;
 import com.somnus.support.captcha.CustomGenericManageableCaptchaService;
+import com.somnus.support.constant.Constants;
+import com.somnus.support.pagination.Pageable;
+import com.somnus.support.pagination.impl.PageRequest;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.IpUtil;
@@ -240,10 +242,18 @@ public class UserAction extends BaseAction<Syuser> {
 	 */
 	public void doNotNeedSessionAndSecurity_loginNameComboBox() {
 		HqlFilter hqlFilter = new HqlFilter();
-		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(q) + "%%");
+		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(getRequest().getParameter("q")) + "%%");
 		hqlFilter.addSort("t.loginname");
 		hqlFilter.addOrder("asc");
-		writeJsonByIncludesProperties(service.findByFilter(hqlFilter, 1, 10), new String[] { "loginname" });
+		Pageable pageable = null;
+		if(getRequest().getParameter("pageSize") == null){
+			Integer start = findIntegerParameterValue(getRequest(), Constants.PAGE_PARAM_START);
+			pageable = new PageRequest(start == null ? 1 : start,Constants.DEFAULT_LIMIT);
+		} else {
+			pageable = this.findPage(getRequest());
+		}
+		Pageable result = service.findByFilter(hqlFilter, pageable);
+		writeJsonByIncludesProperties(result.getResult(List.class), new String[] { "loginname" });
 	}
 
 	/**
@@ -252,10 +262,18 @@ public class UserAction extends BaseAction<Syuser> {
 	public void doNotNeedSessionAndSecurity_loginNameComboGrid() {
 		Grid grid = new Grid();
 		HqlFilter hqlFilter = new HqlFilter(getRequest());
-		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(q) + "%%");
-		PageResponse<Syuser> page = service.findByFilter(hqlFilter, pageNo, pageSize);
-		grid.setTotal(page.getCount());
-		grid.setRows(page.getResult());
+		hqlFilter.addFilter("QUERY_t#loginname_S_LK", "%%" + StringUtils.defaultString(getRequest().getParameter("q")) + "%%");
+		Pageable pageable = null;
+		
+		if(getRequest().getParameter("pageSize") == null){
+			Integer start = findIntegerParameterValue(getRequest(), Constants.PAGE_PARAM_START);
+			pageable = new PageRequest(start == null ? 1 : start,Constants.DEFAULT_LIMIT);
+		} else {
+			pageable = this.findPage(getRequest());
+		}
+		Pageable result = service.findByFilter(hqlFilter, pageable);
+		grid.setTotal(result.getCount());
+		grid.setRows(result.getResult(List.class));
 		writeJson(grid);
 	}
 

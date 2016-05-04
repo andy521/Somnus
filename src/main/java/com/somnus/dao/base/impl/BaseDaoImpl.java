@@ -4,36 +4,34 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.math.BigInteger;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateCallback;
-import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.somnus.dao.base.BaseDao;
-import com.somnus.model.messege.PageResponse;
+import com.somnus.support.pagination.impl.PageResponse;
 
 @Repository
-public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
+public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	@Autowired
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        super.setSessionFactory(sessionFactory);
-    }
+	private SessionFactory sessionFactory;
 
-	@Override
-    public Session getSession() {
-        return super.getSession();
-    }
+	/**
+	 * 获得当前事物的session
+	 * 
+	 * @return org.hibernate.Session
+	 */
+	public Session getCurrentSession() {
+		return sessionFactory.getCurrentSession();
+	}
 	
 	protected Class<?> getEntityClass() {
         return this.getGenericClass(this.getClass(), 0);
@@ -49,95 +47,118 @@ public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
         }
         return null;
     }
-	
-	@SuppressWarnings("unchecked")
+
+	@Override
+	public Serializable save(T o) {
+		if (o != null) {
+			return getCurrentSession().save(o);
+		}
+		return null;
+	}
+
+	@Override
 	public T getById(Serializable id) {
-		if (id == null)
-            return null;
-        return (T) get(getEntityClass(), id);
+		return (T) getCurrentSession().get(getEntityClass(), id);
 	}
 
-	@SuppressWarnings("unchecked")
+	@Override
 	public T getByHql(String hql) {
-		List<T> l = (List<T>) super.find(hql);
-		if (l != null && l.size() > 0) {
-			return l.get(0);
-		}
-		return null;
+		return getByHql(hql,null);
 	}
 
+	@Override
 	public T getByHql(String hql, Map<String, Object> params) {
-		List<T> l = this.find(hql, params);
+		Query q = getCurrentSession().createQuery(hql);
+		if (params != null && !params.isEmpty()) {
+			for (String key : params.keySet()) {
+				q.setParameter(key, params.get(key));
+			}
+		}
+		List<T> l = q.list();
 		if (l != null && l.size() > 0) {
 			return l.get(0);
 		}
 		return null;
 	}
 
-	public List<T> find(final String hql, final Map<String, Object> params) {
-		return this.execute(new HibernateCallback<List<T>>() {
-            @SuppressWarnings("unchecked")
-			public List<T> doInHibernate(Session session) throws HibernateException, SQLException {
-                Query query = session.createQuery(hql);
-                if (params != null && !params.isEmpty()) {
-        			for (String key : params.keySet()) {
-        				query.setParameter(key, params.get(key));
-        			}
-        		}
-                return query.list();
-            }
-        });
+	@Override
+	public void delete(T o) {
+		if (o != null) {
+			getCurrentSession().delete(o);
+		}
 	}
 
-	public PageResponse<T> find(final String hql, final Map<String, Object> params, final int pageNo, final int pageSize) {
-		return this.execute(new HibernateCallback<PageResponse<T>>() {
-            public PageResponse<T> doInHibernate(Session session) throws HibernateException, SQLException {
-                Query query = session.createQuery(hql).setFirstResult((pageNo - 1) * pageSize)
-                    .setMaxResults(pageSize);
-                if (params != null && !params.isEmpty()) {
-        			for (String key : params.keySet()) {
-        				query.setParameter(key, params.get(key));
-        			}
-        		}
-                return new PageResponse<T>(query.list(),count(hql,params));
-            }
-        });
+	@Override
+	public void update(T o) {
+		if (o != null) {
+			getCurrentSession().update(o);
+		}
 	}
 
-	public PageResponse<T> find(final String hql, final int pageNo, final int pageSize) {
-		return this.execute(new HibernateCallback<PageResponse<T>>() {
-            public PageResponse<T> doInHibernate(Session session) throws HibernateException, SQLException {
-                Query query = session.createQuery(hql).setFirstResult((pageNo - 1) * pageSize)
-                    .setMaxResults(pageSize);
-                return new PageResponse<T>(query.list(),count(hql));
-            }
-        });
+	@Override
+	public void saveOrUpdate(T o) {
+		if (o != null) {
+			getCurrentSession().saveOrUpdate(o);
+		}
 	}
 
-	public Long count(String hql) {
-		hql = "select count(*) as nums " + hql.substring(hql.toLowerCase().indexOf("from"));
-		Query q = getSession().createQuery(hql);
-		return (Long) q.uniqueResult();
+	@Override
+	public List<T> find(String hql) {
+		return find(hql,null);
 	}
 
-	public Long count(String hql, Map<String, Object> params) {
-		hql = "select count(*) as nums " + hql.substring(hql.toLowerCase().indexOf("from"));
-		Query q = getSession().createQuery(hql);
+	@Override
+	public List<T> find(String hql, Map<String, Object> params) {
+		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));
 			}
 		}
-		return (Long) q.uniqueResult();
+		return q.list();
+	}
+	
+	@Override
+	public PageResponse find(String hql, int pageNo, int pageSize) {
+		return find(hql,null,pageNo,pageSize);
+	}
+	
+	@Override
+	public PageResponse find(String hql, Map<String, Object> params, int pageNo, int pageSize) {
+		Query query = getCurrentSession().createQuery(hql).setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize);
+		if (params != null && !params.isEmpty()) {
+			for (String key : params.keySet()) {
+				query.setParameter(key, params.get(key));
+			}
+		}
+		return new PageResponse(query.list(),count(hql,params));
 	}
 
+	@Override
+	public Integer count(String hql) {
+		return count(hql,null);
+	}
+
+	@Override
+	public Integer count(String hql, Map<String, Object> params) {
+		hql = "select count(*) as nums " + hql.substring(hql.toLowerCase().indexOf("from"));
+		Query q = getCurrentSession().createQuery(hql);
+		if (params != null && !params.isEmpty()) {
+			for (String key : params.keySet()) {
+				q.setParameter(key, params.get(key));
+			}
+		}
+		return Integer.valueOf(q.uniqueResult().toString());
+	}
+
+	@Override
 	public int executeHql(String hql) {
-		Query q = getSession().createQuery(hql);
-		return q.executeUpdate();
+		return executeHql(hql,null);
 	}
 
+	@Override
 	public int executeHql(String hql, Map<String, Object> params) {
-		Query q = getSession().createQuery(hql);
+		Query q = getCurrentSession().createQuery(hql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));
@@ -146,50 +167,46 @@ public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
 		return q.executeUpdate();
 	}
 
-	@SuppressWarnings("unchecked")
-	public List<Map<String,Object>> findBySql(String sql) {
-		Query query = getSession().createSQLQuery(sql);
-        return query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
-	}
-
-	@SuppressWarnings("unchecked")
+	@Override
 	public List<Map<String,Object>> findBySql(String sql, int pageNo, int pageSize) {
-		Query query = getSession().createSQLQuery(sql).setFirstResult((pageNo - 1) * pageSize)
-                .setMaxResults(pageSize);
-            return query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
-		
+		return findBySql(sql, null, pageNo, pageSize);
+	}
+	
+	@Override
+	public List<Map<String,Object>> findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
+		Query q = getCurrentSession().createSQLQuery(sql).setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize);
+		if (params != null && !params.isEmpty()) {
+			for (String key : params.keySet()) {
+				q.setParameter(key, params.get(key));
+			}
+		}
+		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@SuppressWarnings("unchecked")
+	@Override
+	public List<Map<String,Object>> findBySql(String sql) {
+		return findBySql(sql,null);
+	}
+	
+	@Override
 	public List<Map<String,Object>> findBySql(String sql, Map<String, Object> params) {
-		Query query = getSession().createSQLQuery(sql);
-        if (params != null && !params.isEmpty()) {
+		Query q = getCurrentSession().createSQLQuery(sql);
+		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
-				query.setParameter(key, params.get(key));
+				q.setParameter(key, params.get(key));
 			}
 		}
-        return query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
+		return q.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
 	}
 
-	@SuppressWarnings("unchecked")
-	public List<Map<String,Object>> findBySql(String sql,Map<String,Object> params,int pageNo,int pageSize) {
-		Query query = getSession().createSQLQuery(sql).setFirstResult((pageNo - 1) * pageSize)
-                .setMaxResults(pageSize);
-        if (params != null && !params.isEmpty()) {
-			for (String key : params.keySet()) {
-				query.setParameter(key, params.get(key));
-			}
-		}
-        return query.setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP).list();
-	}
-
+	@Override
 	public int executeSql(String sql) {
-		SQLQuery q = getSession().createSQLQuery(sql);
-		return q.executeUpdate();
+		return executeSql(sql,null);
 	}
 
+	@Override
 	public int executeSql(String sql, Map<String, Object> params) {
-		SQLQuery q = getSession().createSQLQuery(sql);
+		Query q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));
@@ -198,13 +215,14 @@ public class BaseDaoImpl<T> extends HibernateTemplate implements BaseDao<T> {
 		return q.executeUpdate();
 	}
 
+	@Override
 	public BigInteger countBySql(String sql) {
-		SQLQuery q = getSession().createSQLQuery(sql);
-		return (BigInteger) q.uniqueResult();
+		return countBySql(sql,null);
 	}
 
+	@Override
 	public BigInteger countBySql(String sql, Map<String, Object> params) {
-		SQLQuery q = getSession().createSQLQuery(sql);
+		SQLQuery q = getCurrentSession().createSQLQuery(sql);
 		if (params != null && !params.isEmpty()) {
 			for (String key : params.keySet()) {
 				q.setParameter(key, params.get(key));

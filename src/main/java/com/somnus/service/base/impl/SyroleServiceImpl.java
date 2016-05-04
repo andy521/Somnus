@@ -12,9 +12,9 @@ import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
-import com.somnus.model.messege.PageResponse;
 import com.somnus.service.base.SyroleService;
 import com.somnus.service.impl.BaseServiceImpl;
+import com.somnus.support.pagination.Pageable;
 import com.somnus.util.base.HqlFilter;
 
 /**
@@ -33,22 +33,15 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 	private BaseDao<Syresource> resourceDao;
 
 	@Transactional(readOnly = false)
-	public PageResponse<Syrole> findRoleByFilter(HqlFilter hqlFilter, int page, int rows) {
+	public Pageable findRoleByFilter(HqlFilter hqlFilter, Pageable pageable) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
-		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), page, rows);
+		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams(), pageable);
 	}
 
 	@Transactional(readOnly = false)
 	public List<Syrole> findRoleByFilter(HqlFilter hqlFilter) {
 		String hql = "select distinct t from Syrole t join t.syusers user";
 		return find(hql + hqlFilter.getWhereAndOrderHql(), hqlFilter.getParams());
-	}
-
-	@Transactional(readOnly = false)
-	@Deprecated
-	public Long countRoleByFilter(HqlFilter hqlFilter) {
-		String hql = "select count(distinct t) from Syrole t join t.syusers user";
-		return count(hql + hqlFilter.getWhereHql(), hqlFilter.getParams());
 	}
 
 	public void saveRole(Syrole syrole, String userId) {
