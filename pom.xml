@@ -409,12 +409,20 @@
 	<build>
 		<finalName>Somnus</finalName>
 		
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>WEB-INF/web.xml</include>
+				</includes>
+				<targetPath>${project.build.directory}/${project.build.finalName}</targetPath>
+			</resource>
+		</resources>
 
 		<plugins>
 			<!-- 编译的时候使用JDK7和UTF8编码 -->
@@ -435,7 +443,9 @@
                     <packagingExcludes>
                         WEB-INF/classes/logback-test.xml
                     </packagingExcludes>
+                    <!-- http://maven.apache.org/plugins/maven-war-plugin/ -->
                     <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+            		<outputDirectory>${war.outpath}</outputDirectory>
                 </configuration>
             </plugin>
 
