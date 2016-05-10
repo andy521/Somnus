@@ -63,7 +63,6 @@
 		<jee:jndi-lookup id="dataSource" jndi-name="${jndi.name}"/>
 	</beans>
 
-
 	<!-- PRD环境 -->
 	<beans profile="prd">
 		<context:property-placeholder
