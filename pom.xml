@@ -427,7 +427,7 @@
 					<packagingExcludes>
                         WEB-INF/classes/logback-test.xml
                     </packagingExcludes>
-					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 					<webResources>
 						<resource>
 							<!-- 元配置文件的目录，相对于pom.xml文件的路径 -->
