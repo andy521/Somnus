@@ -427,20 +427,18 @@
 					<packagingExcludes>
                         WEB-INF/classes/logback-test.xml
                     </packagingExcludes>
-					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 					<webResources>
 						<resource>
-							<!-- 元配置文件的目录，相对于pom.xml文件的路径 -->
-							<directory>${basedir}/src/main/webapp/WEB-INF</directory>
-							<!-- 是否过滤文件，也就是是否启动auto-config的功能 -->
-							<filtering>true</filtering>
-							<!-- 不包括以下文件夹下的文件 -->
-							<!-- <excludes>
-								<exclude>template/**</exclude>
-							</excludes> -->
-							<targetPath>WEB-INF</targetPath>
+							<filtering>true</filtering>  
+                            <directory>src/main/profile</directory>  
+                            <targetPath>WEB-INF</targetPath>  
+                            <includes>  
+                                <include>**/web.xml</include>  
+                            </includes>  
 						</resource>  
-					</webResources>  
+					</webResources>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
             </plugin>
 
