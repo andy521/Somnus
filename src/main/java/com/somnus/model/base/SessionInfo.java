@@ -8,6 +8,7 @@ package com.somnus.model.base;
  */
 public class SessionInfo implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Syuser user;
 
 	public Syuser getUser() {

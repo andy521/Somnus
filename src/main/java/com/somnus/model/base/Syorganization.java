@@ -30,6 +30,8 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate(true)
 public class Syorganization implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	private String pid;// 虚拟属性，用于获得当前机构的父机构ID
 
 	private String id;

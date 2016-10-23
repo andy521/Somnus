@@ -11,6 +11,8 @@ package com.somnus.model.messege;
  */
 public class Message implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	private boolean success = true;
 	
 	private boolean unique = true;

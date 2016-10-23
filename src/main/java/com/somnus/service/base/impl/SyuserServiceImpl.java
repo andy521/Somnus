@@ -11,7 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
+import com.somnus.dao.base.SyorganizationDao;
+import com.somnus.dao.base.SyroleDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
@@ -29,10 +30,10 @@ import com.somnus.service.impl.BaseServiceImpl;
 public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements SyuserService {
 
 	@Autowired
-	private BaseDao<Syrole> roleDao;
+	private SyroleDao roleDao;
 
 	@Autowired
-	private BaseDao<Syorganization> organizationDao;
+	private SyorganizationDao organizationDao;
 
 	public void grantRole(String id, String roleIds) {
 		Syuser user = getById(id);

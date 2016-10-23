@@ -56,6 +56,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T getById(Serializable id) {
 		return (T) getCurrentSession().get(getEntityClass(), id);
@@ -66,6 +67,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return getByHql(hql,null);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T getByHql(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
@@ -107,6 +109,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return find(hql,null);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> find(String hql, Map<String, Object> params) {
 		Query q = getCurrentSession().createQuery(hql);
@@ -172,6 +175,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return findBySql(sql, null, pageNo, pageSize);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Map<String,Object>> findBySql(String sql, Map<String, Object> params, int pageNo, int pageSize) {
 		Query q = getCurrentSession().createSQLQuery(sql).setFirstResult((pageNo - 1) * pageSize).setMaxResults(pageSize);
@@ -188,6 +192,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 		return findBySql(sql,null);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Map<String,Object>> findBySql(String sql, Map<String, Object> params) {
 		Query q = getCurrentSession().createSQLQuery(sql);

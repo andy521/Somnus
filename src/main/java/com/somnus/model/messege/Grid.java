@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Grid implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private Integer total = 0;
 	private List rows = new ArrayList();
 

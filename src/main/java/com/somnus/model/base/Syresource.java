@@ -30,6 +30,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate(true)
 public class Syresource implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private String pid;// 虚拟属性，用于获得当前资源的父资源ID
 	private String type;// 虚拟属性，用于获得当前资源的类型
 

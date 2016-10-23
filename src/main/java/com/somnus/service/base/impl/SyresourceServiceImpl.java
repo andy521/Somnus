@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
+import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
@@ -33,7 +33,7 @@ import com.somnus.util.base.HqlFilter;
 public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implements SyresourceService {
 
 	@Autowired
-	private BaseDao<Syuser> userDao;
+	private SyuserDao userDao;
 
 	/**
 	 * 由于角色与资源关联，机构也与资源关联，所以查询用户能看到的资源菜单应该查询两次，最后合并到一起。

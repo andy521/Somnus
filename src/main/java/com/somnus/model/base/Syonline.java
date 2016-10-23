@@ -20,6 +20,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate(true)
 public class Syonline implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String loginname;
 	private String ip;

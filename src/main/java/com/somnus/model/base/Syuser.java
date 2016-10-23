@@ -27,6 +27,8 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate(true)
 public class Syuser implements java.io.Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	private String ip;// 此属性不存数据库，虚拟属性
 
 	private String id;

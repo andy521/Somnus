@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
+import com.somnus.dao.base.SyresourceDao;
+import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syuser;
@@ -28,10 +29,10 @@ import com.somnus.util.base.HqlFilter;
 public class SyorganizationServiceImpl extends BaseServiceImpl<Syorganization> implements SyorganizationService {
 
 	@Autowired
-	private BaseDao<Syresource> resourceDao;
+	private SyresourceDao resourceDao;
 
 	@Autowired
-	private BaseDao<Syuser> userDao;
+	private SyuserDao userDao;
 
 	public void updateOrganization(Syorganization syorganization) {
 		if (!StringUtils.isBlank(syorganization.getId())) {

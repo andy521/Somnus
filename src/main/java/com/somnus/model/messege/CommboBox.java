@@ -7,6 +7,7 @@ package com.somnus.model.messege;
  * @version 1.0
  */
 public class CommboBox  implements java.io.Serializable {
+	private static final long serialVersionUID = 1L;
 	private String label;
 	private String value;
 	public String getLabel() {

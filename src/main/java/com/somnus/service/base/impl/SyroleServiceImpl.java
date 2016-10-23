@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
+import com.somnus.dao.base.SyresourceDao;
+import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
@@ -28,9 +29,9 @@ import com.somnus.util.base.HqlFilter;
 public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements SyroleService {
 
 	@Autowired
-	private BaseDao<Syuser> userDao;
+	private SyuserDao userDao;
 	@Autowired
-	private BaseDao<Syresource> resourceDao;
+	private SyresourceDao resourceDao;
 
 	@Transactional(readOnly = false)
 	public Pageable findRoleByFilter(HqlFilter hqlFilter, Pageable pageable) {
