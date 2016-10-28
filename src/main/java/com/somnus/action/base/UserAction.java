@@ -113,7 +113,7 @@ public class UserAction extends BaseAction<Syuser> {
 			for (Syorganization organization : user.getSyorganizations()) {
 				Hibernate.initialize(organization.getSyresources());
 			}
-			user.setIp(IpUtil.getIpAddr(getRequest()));
+			user.setIp(IpUtil.getIpAddress(getRequest()));
 			sessionInfo.setUser(user);
 			getSession().setAttribute("sessionInfo", sessionInfo);
 			MessageUtil.createCommMsg(message);
@@ -143,7 +143,7 @@ public class UserAction extends BaseAction<Syuser> {
 			for (Syorganization organization : user.getSyorganizations()) {
 				Hibernate.initialize(organization.getSyresources());
 			}
-			user.setIp(IpUtil.getIpAddr(getRequest()));
+			user.setIp(IpUtil.getIpAddress(getRequest()));
 			sessionInfo.setUser(user);
 			getSession().setAttribute("sessionInfo", sessionInfo);
 			MessageUtil.createCommMsg(message);
