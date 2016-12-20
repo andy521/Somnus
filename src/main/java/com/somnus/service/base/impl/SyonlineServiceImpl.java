@@ -1,11 +1,10 @@
 package com.somnus.service.base.impl;
 
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
+import com.somnus.dao.base.SyonlineDao;
 import com.somnus.model.base.Syonline;
 import com.somnus.service.base.SyonlineService;
 import com.somnus.service.impl.BaseServiceImpl;
@@ -19,6 +18,9 @@ import com.somnus.service.impl.BaseServiceImpl;
 @Transactional
 public class SyonlineServiceImpl extends BaseServiceImpl<Syonline> implements SyonlineService {
 
-	@Resource(name="syonlineDaoImpl")
-	private BaseDao<Syonline> baseDao;
+	
+	@Autowired
+	public void setBaseDao(SyonlineDao baseDao) {
+		this.baseDao = baseDao;
+	}
 }

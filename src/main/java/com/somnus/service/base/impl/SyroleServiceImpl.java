@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.somnus.dao.base.BaseDao;
 import com.somnus.dao.base.SyresourceDao;
+import com.somnus.dao.base.SyroleDao;
 import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syresource;
 import com.somnus.model.base.Syrole;
@@ -71,6 +72,11 @@ public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements Syrole
 				}
 			}
 		}
+	}
+	
+	@Autowired
+	public void setBaseDao(SyroleDao baseDao) {
+		this.baseDao = baseDao;
 	}
 
 }

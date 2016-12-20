@@ -6,16 +6,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
 import com.somnus.dao.base.SyorganizationDao;
 import com.somnus.dao.base.SyroleDao;
+import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syrole;
 import com.somnus.model.base.Syuser;
@@ -32,9 +30,6 @@ import com.somnus.service.impl.BaseServiceImpl;
 @Transactional
 public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements SyuserService {
 
-	@Resource(name="syuserDaoImpl")
-	private BaseDao<Syuser> baseDao;
-	
 	@Autowired
 	private SyroleDao roleDao;
 
@@ -100,6 +95,11 @@ public class SyuserServiceImpl extends BaseServiceImpl<Syuser> implements Syuser
 	public Integer countUserByNotRoleId() {
 		String hql = "select count(*) from Syuser t left join t.syroles role where role.id is null";
 		return count(hql);
+	}
+	
+	@Autowired
+	public void setBaseDao(SyuserDao baseDao) {
+		this.baseDao = baseDao;
 	}
 
 }

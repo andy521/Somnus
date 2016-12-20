@@ -23,7 +23,7 @@ import com.somnus.util.base.HqlFilter;
  */
 public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
-	private BaseDao<T> baseDao;
+	protected  BaseDao<T> baseDao;
 	
 	protected String getEntityName() {
         return this.getGenericClass(this.getClass(), 0).getName();
