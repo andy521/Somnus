@@ -1,8 +1,13 @@
 package com.somnus.support.captcha;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.MessageSourceAccessor;
+
 import com.octo.captcha.engine.CaptchaEngine;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.multitype.GenericManageableCaptchaService;
+import com.somnus.support.exception.BizException;
+import com.somnus.util.base.MsgCodeList;
 
 /** 
  * @Description: TODO
@@ -12,6 +17,9 @@ import com.octo.captcha.service.multitype.GenericManageableCaptchaService;
  */
 public class CustomGenericManageableCaptchaService extends GenericManageableCaptchaService{
 
+	@Autowired
+	private MessageSourceAccessor msa;
+	
     /**
      * @param captchaEngine
      * @param minGuarantedStorageDelayInSeconds
@@ -37,8 +45,7 @@ public class CustomGenericManageableCaptchaService extends GenericManageableCapt
     public Boolean validateResponseForID(String ID, Object response)
             throws CaptchaServiceException {
         if (!this.store.hasCaptcha(ID)) {
-            throw new CaptchaServiceException(
-                    "Invalid ID, could not validate unexisting or already validated captcha");
+        	throw new BizException(msa.getMessage(MsgCodeList.ERROR_300008));
         }
         Boolean valid = this.store.getCaptcha(ID).validateResponse(response);
         //源码的这一句是没被注释的，这里我们注释掉，在下面暴露一个方法给我们自己来移除sessionId

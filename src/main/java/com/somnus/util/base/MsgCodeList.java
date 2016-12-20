@@ -42,6 +42,11 @@ public class MsgCodeList {
 	public static final String ERROR_300005 = "300005";
 	
 	/**
+	 * 验证码已过期
+	 */
+	public static final String ERROR_300008 = "300008";
+	
+	/**
 	 * 用户名已存在
 	 */
 	public static final String ERROR_300006 = "300006";

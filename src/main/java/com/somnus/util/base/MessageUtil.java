@@ -1,6 +1,7 @@
 package com.somnus.util.base;
 
 import com.somnus.model.messege.Message;
+import com.somnus.support.exception.BizException;
 
 public class MessageUtil {
 	
@@ -11,8 +12,9 @@ public class MessageUtil {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Message errRetrunInAction(String errMsg) {
+	public static Message errRetrunInAction(BizException ex) {
 		Message message = new Message();
+		String errMsg = ex.getMessage();
 		if (errMsg != null && errMsg.split("[|]").length > 1) {
 			String[] errs = errMsg.split("[|]");
 			// 错误信息设置
@@ -21,7 +23,7 @@ public class MessageUtil {
 		} else {
 			// 错误信息设置
 			message.setRepCode(MsgCodeList.ERROR_999999);
-			message.setRepMsg("处理失败!");
+			message.setRepMsg(ex.getMessage());
 		}
 		return message;
 	}
@@ -50,7 +52,8 @@ public class MessageUtil {
 		return message;
 	}
 	
-	public static void errRetrunInAction(Message message,String errMsg) {
+	public static void errRetrunInAction(Message message,BizException ex) {
+		String errMsg = ex.getMessage();
 		if (errMsg != null && errMsg.split("[|]").length > 1) {
 			String[] errs = errMsg.split("[|]");
 			// 错误信息设置
@@ -59,7 +62,7 @@ public class MessageUtil {
 		} else {
 			// 错误信息设置
 			message.setRepCode(MsgCodeList.ERROR_999999);
-			message.setRepMsg("处理失败!");
+			message.setRepMsg(ex.getMessage());
 		}
 	}
 	

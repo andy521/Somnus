@@ -16,4 +16,9 @@ public class Constants {
 	 * 默认每页条数
 	 * */
     public static final Integer DEFAULT_LIMIT = 50;
+    
+    /**系统异常*/
+	public static final String EXCEPTION_ERROR = " EXCEPTION ERROR :";
+	/**业务异常*/
+	public static final String BUSINESS_ERROR = " BUSINESS ERROR :";
 }

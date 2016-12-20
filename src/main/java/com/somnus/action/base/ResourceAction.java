@@ -8,6 +8,8 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.MessageSourceAccessor;
 
@@ -17,6 +19,8 @@ import com.somnus.model.base.Syresource;
 import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
 import com.somnus.service.base.SyresourceService;
+import com.somnus.support.constant.Constants;
+import com.somnus.support.exception.BizException;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
@@ -27,6 +31,8 @@ import com.somnus.util.base.MsgCodeList;
 public class ResourceAction extends BaseAction<Syresource> {
 
 	private static final long serialVersionUID = -8075796405277817L;
+	
+	private transient Logger	log = LoggerFactory.getLogger(this.getClass());
 
 	/**
 	 * 注入业务逻辑，使当前action调用service.xxx的时候，直接是调用基础业务逻辑
@@ -48,13 +54,23 @@ public class ResourceAction extends BaseAction<Syresource> {
 	 */
 	public void update() {
 		Message message = new Message();
-		if (!StringUtils.isBlank(data.getId())) {
-			if (data.getSyresource() != null && StringUtils.equals(data.getId(), data.getSyresource().getId())) {
-				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300002));
-			} else {
-				((SyresourceService) service).updateResource(data);
-				MessageUtil.createCommMsg(message);
+		try {
+			if (!StringUtils.isBlank(data.getId())) {
+				if (data.getSyresource() != null && StringUtils.equals(data.getId(), data.getSyresource().getId())) {
+					throw new BizException(msa.getMessage(MsgCodeList.ERROR_300002));
+				} else {
+					((SyresourceService) service).updateResource(data);
+					MessageUtil.createCommMsg(message);
+				}
 			}
+		} catch (BizException e) {
+			log.error(Constants.BUSINESS_ERROR, e);
+			// 组织错误报文
+			MessageUtil.errRetrunInAction(message, e);
+		} catch (Exception ex) {
+			log.error(Constants.EXCEPTION_ERROR, ex);
+			// 组织错误报文
+			MessageUtil.createErrorMsg(message);
 		}
 		writeJson(message);
 	}

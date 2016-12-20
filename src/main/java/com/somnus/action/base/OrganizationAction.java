@@ -9,6 +9,8 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.MessageSourceAccessor;
 
@@ -20,6 +22,8 @@ import com.somnus.model.messege.Message;
 import com.somnus.model.messege.Tree;
 import com.somnus.service.base.SyorganizationService;
 import com.somnus.service.base.SyuserService;
+import com.somnus.support.constant.Constants;
+import com.somnus.support.exception.BizException;
 import com.somnus.util.base.BeanUtils;
 import com.somnus.util.base.HqlFilter;
 import com.somnus.util.base.MessageUtil;
@@ -30,6 +34,9 @@ import com.somnus.util.base.MsgCodeList;
 public class OrganizationAction extends BaseAction<Syorganization> {
 
 	private static final long serialVersionUID = 3397120120217500923L;
+	
+	private transient Logger	log = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private SyuserService userService;
 
@@ -66,13 +73,23 @@ public class OrganizationAction extends BaseAction<Syorganization> {
 	 */
 	public void update() {
 		Message message = new Message();
-		if (!StringUtils.isBlank(data.getId())) {
-			if (data.getSyorganization() != null && StringUtils.equals(data.getId(), data.getSyorganization().getId())) {
-				MessageUtil.errRetrunInAction(message, msa.getMessage(MsgCodeList.ERROR_300001));
-			} else {
-				((SyorganizationService) service).updateOrganization(data);
-				MessageUtil.createCommMsg(message);
+		try {
+			if (!StringUtils.isBlank(data.getId())) {
+				if (data.getSyorganization() != null && StringUtils.equals(data.getId(), data.getSyorganization().getId())) {
+					throw new BizException(msa.getMessage(MsgCodeList.ERROR_300001));
+				} else {
+					((SyorganizationService) service).updateOrganization(data);
+					MessageUtil.createCommMsg(message);
+				}
 			}
+		} catch (BizException e) {
+			log.error(Constants.BUSINESS_ERROR, e);
+			// 组织错误报文
+			MessageUtil.errRetrunInAction(message, e);
+		} catch (Exception ex) {
+			log.error(Constants.EXCEPTION_ERROR, ex);
+			// 组织错误报文
+			MessageUtil.createErrorMsg(message);
 		}
 		writeJson(message);
 	}

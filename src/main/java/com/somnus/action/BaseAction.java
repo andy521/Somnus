@@ -25,6 +25,7 @@ import com.somnus.model.messege.Grid;
 import com.somnus.model.messege.Message;
 import com.somnus.service.BaseService;
 import com.somnus.support.constant.Constants;
+import com.somnus.support.exception.BizException;
 import com.somnus.support.exception.SysRuntimeException;
 import com.somnus.support.pagination.Pageable;
 import com.somnus.support.pagination.impl.PageRequest;
@@ -59,7 +60,7 @@ public class BaseAction<T> extends ActionSupport {
 	
 	private static final long serialVersionUID = -5039657025856216857L;
 
-	private static final Logger logger = LoggerFactory.getLogger(BaseAction.class);
+	private transient Logger	log = LoggerFactory.getLogger(this.getClass());
 	
 	@Autowired
 	private MessageSourceAccessor msa;
@@ -151,7 +152,7 @@ public class BaseAction<T> extends ActionSupport {
 			if (includesProperties != null && includesProperties.length > 0) {
 				filter.getIncludes().addAll(Arrays.<String> asList(includesProperties));
 			}
-			logger.info("对象转JSON：要排除的属性[" + excludesProperties + "]要包含的属性[" + includesProperties + "]");
+			log.info("对象转JSON：要排除的属性[" + excludesProperties + "]要包含的属性[" + includesProperties + "]");
 			String json;
 			String User_Agent = getRequest().getHeader("User-Agent");
 			if (StringUtils.indexOfIgnoreCase(User_Agent, "MSIE 6") > -1) {
@@ -162,7 +163,7 @@ public class BaseAction<T> extends ActionSupport {
 				// 使用SerializerFeature.DisableCircularReferenceDetect特性关闭引用检测和生成
 				json = JSON.toJSONString(object, filter, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.DisableCircularReferenceDetect);
 			}
-			logger.info("转换后的JSON字符串：" + json);
+			log.info("转换后的JSON字符串：" + json);
 			getResponse().setContentType("text/html;charset=utf-8");
 			getResponse().getWriter().write(json);
 			getResponse().getWriter().flush();
@@ -235,16 +236,24 @@ public class BaseAction<T> extends ActionSupport {
 	 * 获得一个对象
 	 */
 	public void getById() {
-		if (!StringUtils.isBlank(id)) {
-			Message message = new Message();
-			MessageUtil.createCommMsg(message);
-			message.setData(service.getById(id));
-			writeJson(message);
-		} else {
-			Message message = new Message();
-			MessageUtil.errRetrunInAction(message,msa.getMessage(MsgCodeList.ERROR_300003));
-			writeJson(message);
+		Message message = new Message();
+		try {
+			if (!StringUtils.isBlank(id)) {
+				MessageUtil.createCommMsg(message);
+				message.setData(service.getById(id));
+			} else {
+				throw new BizException(msa.getMessage(MsgCodeList.ERROR_300003));
+			}
+		} catch (BizException e) {
+			log.error(Constants.BUSINESS_ERROR, e);
+			// 组织错误报文
+			MessageUtil.errRetrunInAction(message, e);
+		} catch (Exception ex) {
+			log.error(Constants.EXCEPTION_ERROR, ex);
+			// 组织错误报文
+			MessageUtil.createErrorMsg(message);
 		}
+		writeJson(message);
 	}
 
 	/**
@@ -358,7 +367,7 @@ public class BaseAction<T> extends ActionSupport {
 	}
 	public void checkIsUnique(){
 		Message json = new Message();
-		logger.info(entity+" " + name+" "+value);
+		log.info(entity+" " + name+" "+value);
 		json.setSuccess(true);
 		if(value.equals("admin"))
 			json.setUnique(false);
@@ -391,7 +400,7 @@ public class BaseAction<T> extends ActionSupport {
 		}
 		//限制pageSize <= 100
 		if(limit > 100){
-			logger.warn("pageSize must be less than 100");
+			log.warn("pageSize must be less than 100");
 			limit = 100;
 		};
 		return new PageRequest(
