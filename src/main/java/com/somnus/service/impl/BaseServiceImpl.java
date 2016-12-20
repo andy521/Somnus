@@ -7,8 +7,6 @@ import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.somnus.dao.base.BaseDao;
@@ -23,11 +21,8 @@ import com.somnus.util.base.HqlFilter;
  * 
  * @param <T>
  */
-@Service
+public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
-public class BaseServiceImpl<T> implements BaseService<T> {
-
-	@Autowired
 	private BaseDao<T> baseDao;
 	
 	protected String getEntityName() {
@@ -206,6 +201,10 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 	@Override
 	public BigInteger countBySql(String sql, Map<String, Object> params) {
 		return baseDao.countBySql(sql, params);
+	}
+
+	public void setBaseDao(BaseDao<T> baseDao) {
+		this.baseDao = baseDao;
 	}
 
 }

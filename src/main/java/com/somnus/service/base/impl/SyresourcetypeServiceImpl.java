@@ -2,10 +2,13 @@ package com.somnus.service.base.impl;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.somnus.dao.base.BaseDao;
 import com.somnus.model.base.Syresourcetype;
 import com.somnus.service.base.SyresourcetypeService;
 import com.somnus.service.impl.BaseServiceImpl;
@@ -20,6 +23,9 @@ import com.somnus.service.impl.BaseServiceImpl;
 @Transactional
 public class SyresourcetypeServiceImpl extends BaseServiceImpl<Syresourcetype> implements SyresourcetypeService {
 
+	@Resource(name="syresourcetypeDaoImpl")
+	private BaseDao<Syresourcetype> baseDao;
+	
 	/**
 	 * 为列表添加了缓存，查询一次过后，只要不重启服务，缓存一直存在，不需要再查询数据库了，节省了一些资源
 	 * 

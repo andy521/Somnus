@@ -7,11 +7,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.annotation.Resource;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.somnus.dao.base.BaseDao;
 import com.somnus.dao.base.SyuserDao;
 import com.somnus.model.base.Syorganization;
 import com.somnus.model.base.Syresource;
@@ -32,6 +35,9 @@ import com.somnus.util.base.HqlFilter;
 @Transactional
 public class SyresourceServiceImpl extends BaseServiceImpl<Syresource> implements SyresourceService {
 
+	@Resource(name="syresourceDaoImpl")
+	private BaseDao<Syresource> baseDao;
+	
 	@Autowired
 	private SyuserDao userDao;
 
