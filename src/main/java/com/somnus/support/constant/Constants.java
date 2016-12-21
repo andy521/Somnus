@@ -1,6 +1,8 @@
 package com.somnus.support.constant;
 
 public class Constants {
+	
+	public static final String SESSION_ID = "sessionId";
 
 	/**
 	 * 分页请求起始参数

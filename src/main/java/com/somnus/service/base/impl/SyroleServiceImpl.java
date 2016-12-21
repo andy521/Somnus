@@ -3,14 +3,11 @@ package com.somnus.service.base.impl;
 import java.util.HashSet;
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.somnus.dao.base.BaseDao;
 import com.somnus.dao.base.SyresourceDao;
 import com.somnus.dao.base.SyroleDao;
 import com.somnus.dao.base.SyuserDao;
@@ -32,11 +29,9 @@ import com.somnus.util.base.HqlFilter;
 @Transactional
 public class SyroleServiceImpl extends BaseServiceImpl<Syrole> implements SyroleService {
 
-	@Resource(name="syroleDaoImpl")
-	private BaseDao<Syrole> baseDao;
-	
 	@Autowired
 	private SyuserDao userDao;
+	
 	@Autowired
 	private SyresourceDao resourceDao;
 

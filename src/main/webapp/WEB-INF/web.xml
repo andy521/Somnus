@@ -145,6 +145,17 @@
 		<servlet-name>cxfService</servlet-name>
 		<url-pattern>/ws/*</url-pattern>
 	</servlet-mapping>
+	
+	<filter>
+		<filter-name>loggingFilter</filter-name>
+		<filter-class>com.somnus.support.web.filter.LoggingProcessFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loggingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
 
 	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>
